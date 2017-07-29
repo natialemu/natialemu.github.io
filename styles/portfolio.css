@@ -48,11 +48,12 @@ body * {
 	
 }
 
-@media screen and (max-width: 1003px)
+@media screen and (max-width: 1003px){
 .maia-aux{
 	padding-left: 10px;
 	padding-right: 10px;
 	
+}
 }
 
 #maia-header{
@@ -98,12 +99,13 @@ body * {
 	border-bottom: 4px solid rgb(35, 135, 243);
 }
 
-@media (max-width: 850px)
+@media (max-width: 850px){
 #portfolio-banner {
     background-image: url(images/7135.jpg);
     transform: scaleX(-1);
     background-position: right !important;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+}
 }
 
 #portfolio-banner{
@@ -115,14 +117,16 @@ body * {
 	overflow:  hidden;
 }
 	
-@media (max-width: 850px)
+@media (max-width: 850px){
 #portfolio-banner .maia-aux {
     transform: scaleX(-1);
 }
+}
 
-@media (max-width: 850px)
+@media (max-width: 850px){
 #portfolio-banner .maia-aux {
     transform: scaleX(-1);
+}
 }
 
 .relative-position {
@@ -142,9 +146,12 @@ body * {
     top: -25px;
     transition: .2s;
 	background: url(../images/Github-Mark-32px.png) no-repeat center;
+
 }
-
-
+.GitHubLogo{
+    margin-top: 20px;
+}
+ 
 .homepage-banner-text {
     color: #fff;
 }
@@ -187,9 +194,10 @@ body * {
     padding-top: 40px;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .page-row--split-blocks {
     padding-bottom: 0;
+}
 }
 
 .content-subtitle {
@@ -206,11 +214,12 @@ body * {
     padding-bottom: 40px;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .content-container {
     max-width: 480px;
     padding-left: 16px;
     padding-right: 16px;
+}
 }
 
 .content-container {
@@ -221,10 +230,11 @@ body * {
     padding-right: 4%;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .grid {
     margin-left: -12px;
     margin-top: -12px;
+}
 }
 
 .grid {
@@ -238,10 +248,11 @@ body * {
     display: flex;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .grid .grid__item {
     padding-left: 12px;
     padding-top: 12px;
+}
 }
 
 .grid__item {
@@ -249,22 +260,22 @@ body * {
     padding-top: 24px;
 }
 
-
 .blog__item{
 	width: 50%;
 }
-
 .grid__item {
     box-sizing: border-box;
+	
 }
 
 .grid--equal .story-panel {
     flex: 1;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .story-panel--small {
     min-height: 210px;
+}
 }
 
 .story-panel--small {
@@ -297,9 +308,10 @@ body * {
     top: 0;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .story-panel--small .story-panel__content {
     height: 140px;
+}
 }
 
 .story-panel--small .story-panel__content {
@@ -325,10 +337,11 @@ body * {
 	
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .story-panel--small .story-panel__title {
     margin-top: 5px;
     max-width: 300px;
+}
 }
 
 .story-panel--purple {
@@ -358,17 +371,20 @@ body a {
     vertical-align: middle;
 }
 
-@media only screen and (min-width: 1024px)
+@media only screen and (min-width: 1024px){
+	
 .desk--one--quarter {
     width: 25%;
+}
 }
 
 
 
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .content-header--homepage {
     max-width: 300px;
+}
 }
 
 .content-header--homepage {
@@ -382,11 +398,12 @@ body a {
 }
 
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .content-title {
     font-size: 30px;
     line-height: 1.35;
 	padding: 0 24px;
+}
 }
 
 .content-title {
@@ -414,9 +431,10 @@ body a {
 
 
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .page-row--split-blocks {
     padding-bottom: 0;
+}
 }
 
 .page-row {
@@ -424,12 +442,13 @@ body a {
     padding-top: 40px;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .page-row--split-blocks .content-container {
     max-width: none;
     margin-bottom: 14px;
     padding-left: 0;
     padding-right: 0;
+}
 }
 .content-row--short {
     margin-top: 32px;
@@ -441,12 +460,13 @@ body a {
 
 
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .page-row--split-blocks .caption-panel {
     margin: 0 auto;
     max-width: 480px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 }
 
 .grid {
@@ -456,9 +476,11 @@ body a {
     margin-top: -24px;
 }
 
+
 .project__item{
 	min-height: 271px;
 	width: 25%;
+    	
 }
 
 .grid__item{
@@ -466,25 +488,59 @@ body a {
 	
 }
 
-@media only screen and (max-width: 1023px) and (min-width: 681px)
+@media only screen and (max-width: 1023px) and (min-width: 681px){
 .grid .grid__item {
     padding-left: 16px;
     padding-top: 16px;
 }
-
-@media only screen and (max-width: 1023px) and (min-width: 681px)
-.tablet--one-half{
-    width: 50%;
 }
-@media only screen and (min-width: 1024px)
-.desk--one-quarter{
+
+
+@media only screen and (min-width: 1023px){
+.tablet--one-half{
     width: 25%;
 }
+}
 
-@media only screen and (max-width: 1023px) and (min-width: 681px)
+
+}
+@media only screen and (min-width: 1023px){
+.desk--one--quarter{
+    width: 25%;
+}
+}
+
+
+@media only screen and (max-width: 681px){
+.desk--one--quarter{
+	width: 100%;
+}
+}
+
+
+@media only screen and (max-width: 681px){
+.caption-panel__content{
+	padding: 0;
+}
+}
+@media only screen and (max-width: 1023px) and (min-width: 681px){
+.desk--one--quarter {
+    width: 50%;
+}
+}
+
+
+@media only screen and (max-width: 720px){
+.desk--one-half{
+	width: 100%;
+}
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 681px){
 .grid .grid__item {
     padding-left: 16px;
     padding-top: 16px;
+}
 }
 
 .caption-panel {
@@ -509,9 +565,11 @@ body a {
 	height: 150px;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .caption-panel__image {
-    height: 255px;
+	background-position: 50% 30%;
+    height: 141px;
+}
 }
 
 .caption-panel__image-wrapper {
@@ -531,13 +589,14 @@ body a {
     -ms-flex: 0 1 auto;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .caption-panel__content {
     margin-bottom: 31.2px;
     padding: 22.008px 15px;
 }
+}
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .caption-panel__heading {
 	color: #414141;
 	font-family: "Roboto Slab",serif;
@@ -546,11 +605,13 @@ body a {
     letter-spacing: .46px;
     line-height: 30px;
 }
-@media only screen and (max-width: 680px)
+}
+@media only screen and (max-width: 680px){
 .caption-panel__heading {
     font-size: 20px;
     letter-spacing: .46px;
     line-height: 30px;
+}
 }
 
 .caption-panel__heading {
@@ -559,9 +620,10 @@ body a {
     margin-bottom: 8px;
 }
 
-@media only screen and (max-width: 680px)
+@media only screen and (max-width: 680px){
 .caption-panel__text {
     margin-top: 8px;
+}
 }
 
 
@@ -667,3 +729,5 @@ body a {
 .story-panel__link{
 	color: #fff;
 }
+
+

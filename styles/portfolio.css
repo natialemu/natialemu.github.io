@@ -144,6 +144,10 @@ body * {
     transition: .2s;
 }
 
+.GithubNavLink{
+	background-image: url("../images/GitHub-Mark-120px-plus.png")
+}
+
 .homepage-banner-text {
     color: #fff;
 }

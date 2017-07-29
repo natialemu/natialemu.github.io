@@ -250,9 +250,12 @@ body * {
 }
 
 
+.blog__item{
+	width: 50%;
+}
+
 .grid__item {
     box-sizing: border-box;
-    width: 50%;
 }
 
 .grid--equal .story-panel {
@@ -453,13 +456,11 @@ body a {
     margin-top: -24px;
 }
 
-.grid__equal {
-    display: flex;
+.project__item{
 	min-height: 271px;
-	margin-left: 24px;
-	margin-top: 24px;
-	width: 22%;
+	width: 25%;
 }
+
 .grid__item{
 	box-sizing: border-box;
 	

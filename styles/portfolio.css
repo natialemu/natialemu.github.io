@@ -48,13 +48,7 @@ body * {
 	
 }
 
-@media screen and (max-width: 1003px){
-.maia-aux{
-	padding-left: 10px;
-	padding-right: 10px;
-	
-}
-}
+
 
 #maia-header{
 	min-height: 33px;
@@ -662,8 +656,8 @@ body a {
 }
 
 .link-icon-blog-color1{
-	fill: #4480FF;
-    stroke: #4480FF;
+	fill: #fff;
+    stroke: #fff;
 }
 
 .link-icon-blog-color{
@@ -682,9 +676,10 @@ body a {
 
 
 #maia-footer {
-    height: 49px;
+    height: 80px;
     background-color: rgb(237, 237, 237);
-	
+	margin: 0px;
+	padding: 0px;
 	box-shadow: 0 2px 7px rgba(0,0,0,0.15);
 }
 #maia-signature {
@@ -728,6 +723,19 @@ body a {
 }
 .story-panel__link{
 	color: #fff;
+}
+
+.github{
+	margin-top: 5px;
+}
+
+#maia-footer-global .maia-aux .follow a {
+    float: right;
+    margin-left: 15px;
+}
+
+.footer-links{
+	float: right;
 }
 
 

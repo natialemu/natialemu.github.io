@@ -2,7 +2,7 @@
 {
 	html,input,textarea
 	{
-		font-family: arial,sans-serif;
+		font-family: 'Roboto',sans-serif;
 	}
 	html
 	{
@@ -67,12 +67,10 @@
 		margin: 0;
 	}
 	h1,h2,h3,h4,em,i
-	{
-		font-weight: bold;
-	}
+	{	}
 	h1,h2,h3,h4,blockquote,q
 	{
-		font-family: "open sans",arial,sans-serif;
+		font-family: "Roboto",sans-serif;
 	}
 	h1,h2,h3,h4,h5,h6
 	{
@@ -86,10 +84,7 @@
 	{
 		line-height: 1.29;
 	}
-	h1
-	{
-		font-size: 20px;
-	}
+	
 	h1.maia-display
 	{
 		color: #333;
@@ -240,14 +235,7 @@
 	{
 		height: 38px;
 	}
-	#maia-header h1,#maia-header h2
-	{
-		float: left;
-		font-size: 32px;
-		font-weight: 300;
-		line-height: 1.375;
-		margin: 0;
-	}
+	
 	[dir=rtl] #maia-header h1,[dir=rtl] #maia-header h2
 	{
 		float: right;
@@ -548,7 +536,6 @@
 	#maia-nav-x.maia-compact h1
 	{
 		cursor: pointer;
-		font: bold 14px/3.15 arial,sans-serif;
 		height: 44px;
 		margin: 0 -15px;
 		moz-user-select: none;

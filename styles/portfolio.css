@@ -151,7 +151,7 @@ body * {
     position: relative;
     top: -25px;
     transition: .2s;
-	background: url(../images/Github-Mark-32px.png) no-repeat center;
+	background: url(../images/GitHub-Mark-32px.png) no-repeat center;
 	transition-property: all;
 	transition-duration: 150nm;
 	transition-timing-function: ease-out;

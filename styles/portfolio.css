@@ -151,7 +151,7 @@ body * {
     position: relative;
     top: -25px;
     transition: .2s;
-	background: url(../images/GitHub-Mark-32px.png) no-repeat center;
+	background: url(../images/Github-Mark-32px.png) no-repeat center;
 	transition-property: all;
 	transition-duration: 150nm;
 	transition-timing-function: ease-out;
@@ -379,8 +379,9 @@ body * {
 	background-repeat: no-repeat;
 	background-size: cover;
 	flex-shrink: 0;
-	min-height: 240px;
-	width: 41%;
+	min-height: 220px;
+	width: 31%;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.17);
 }
 #blog_left_side__image1{
 	background-color: #673ab7;
@@ -438,7 +439,7 @@ body * {
 .image-aside {
    
     align-items: stretch;
-    min-height: 240px;
+    min-height: 220px;
 }
 
 @media only screen and (max-width: 700px){
@@ -648,7 +649,7 @@ body a {
 
 
 .project__item{
-	min-height: 271px;
+	min-height: 284px;
 	width: 25%;
     	
 }

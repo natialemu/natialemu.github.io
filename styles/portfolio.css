@@ -151,7 +151,7 @@ body * {
     position: relative;
     top: -25px;
     transition: .2s;
-	background: url(../images/Github-Mark-32px.png) no-repeat center;
+	background: url(../images/GitHub-Mark-32px.png) no-repeat center;
 	transition-property: all;
 	transition-duration: 150nm;
 	transition-timing-function: ease-out;
@@ -1093,4 +1093,19 @@ button{
     margin: 0.1em 0 20px;
 }
 
+@media only screen and (min-width: 1024px){
+.push--desk--one-third, .push--desk--two-sixths, .push--desk--four-twelfths {
+    left: 33.333%;
+}
+}
+
+[class*="push--"] {
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px){
+.desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
+    width: 66.666%;
+}
+}
 

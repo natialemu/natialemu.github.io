@@ -737,7 +737,6 @@ body a {
 }
 .caption-panel--home .caption-panel__image {
     border-radius: 2px;
-	background-image: url(../images/7135.jpg);
 	background-position: center;
     background-size: cover;
     display: block;

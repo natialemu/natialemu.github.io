@@ -101,6 +101,63 @@
 		   
 	   </div>
 	   
+	            <script id="blog-modal-template" type="text/x-handlebars-template">
+	                <div class="grid__item blog__item desk--one-half story-panel-red">
+				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
+					     
+						 
+						<div class="blog_left_side" style="background-color:{{BlogTileColor}}">
+						
+						
+						
+						</div>
+						
+						
+						     
+						<div class="blog_right_side">	
+
+                            <div class="image-aside__align">	
+							 
+							   <h2 class="image-aside__title">
+								   {{BlogTileTitle}}
+								 </h2>
+
+							
+							 
+							   <div class="image-aside__text">
+							       <p>
+								        {{BlogTileDescription}}
+								   </p>
+								 
+								 
+							 
+							   </div>
+							 
+							   <a id="{{BlogTileId}}" class="image-aside__link">
+							     Read more
+								 <!-- add a vector here-->
+								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+									 
+									 </path>
+									 
+								  </svg>
+	
+	
+								 </a>
+							 
+							   </span>
+							</div>
+						 
+						</div>
+						
+					  
+					  </div>
+					  
+				   </div>
+
+                </script>				   
+	   
 	   
 	   <!-- Blog section -->
 	   <div class="page-row--split-blocks page-row-blog centeredText">
@@ -112,218 +169,13 @@
 	   
 	   <div class="page-row page-row--medium page-row--grid">
 	       <div class="content-container">
-		       <div class="grid grid--equal">
+		       <div class="grid grid--equal" id="blogContent">
 			      
 				  
-				  <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
-					     
-						 
-						<div class="blog_left_side" id="blog_left_side__image1">
-						
-						
-						
-						</div>
-						
-						
-						     
-						<div class="blog_right_side">	
-
-                            <div class="image-aside__align">	
-							 
-							   <h2 class="image-aside__title">
-								   Predicting Software Quality Using Machine Learning
-								 </h2>
-
-							
-							 
-							   <div class="image-aside__text">
-							       <p>
-								   
-								   </p>
-								 
-								 
-							 
-							   </div>
-							 
-							   <a href="blogs/knapsack.html" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									 </path>
-									 
-								  </svg>
-	
-	
-								 </a>
-							 
-							   </span>
-							</div>
-						 
-						</div>
-						
-					  
-					  </div>
-					  
-				   </div>	
-				   
-				   <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
-					     
-						<div class="blog_left_side" id="blog_left_side__image2">
-						
-						</div>
-						
-						<div class="blog_right_side">	
-
-                            <div class="image-aside__align">	
-							 
-							   <h2 class="image-aside__title">
-								   Testing Observables and Subscribers in RxJava
-								 </h2>
-							 
-							   <div class="image-aside__text">
-							       <p>
-								   
-								   </p>
-								
-							   </div>
-							 
-							   <a href="blogs/knapsack.html" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									 </path>
-									 
-								  </svg>
-	
-	
-								 </a>
-							 
-							   </span>
-							</div>
-						 
-						</div>	
-					  
-					  </div>
-					  
-				   </div>	
-				   
-				   
-				   
-				  <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
-					     
-						 
-						<div class="blog_left_side" id="blog_left_side__image3">
-						
-						
-						
-						</div>
-						
-						
-						     
-						<div class="blog_right_side">	
-
-                            <div class="image-aside__align">	
-							 
-							   <h2 class="image-aside__title">
-								   Knapsack problem generalization
-								 </h2>
-
-							
-							 
-							   <div class="image-aside__text">
-							       <p>
-								   
-								   </p>
-								 
-								 
-							 
-							   </div>
-							 
-							   <a href="blogs/knapsack.html" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									 </path>
-									 
-								  </svg>
-	
-	
-								 </a>
-							 
-							   </span>
-							</div>
-						 
-						</div>
-						
-					  
-					  </div>
-					  
-				   </div>	
+				  
 
 
-
-                  <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
-					     
-						 
-						<div class="blog_left_side" id="blog_left_side__image4">
-						
-						
-						
-						</div>
-						
-						
-						     
-						<div class="blog_right_side">	
-
-                            <div class="image-aside__align">	
-							 
-							   <h2 class="image-aside__title">
-								   Predicting Software Quality Using Machine Learning
-								 </h2>
-
-							
-							 
-							   <div class="image-aside__text">
-							       <p>
-								   
-								   </p>
-								 
-								 
-							 
-							   </div>
-							 
-							   <a href="blogs/knapsack.html" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									 </path>
-									 
-								  </svg>
-	
-	
-								 </a>
-							 
-							   </span>
-							</div>
-						 
-						</div>
-						
-					  
-					  </div>
-					  
-				   </div>				   
+                  			   
 			   
 			   </div>
 		   
@@ -352,18 +204,11 @@
 		   
 		</div>
 	   
-	   <!-- Projects title -->
-	   <div class="page-row page-row--split-blocks page-row-project">
-	       
-		   
-		   <!-- Project cards -->
-		   <div class="content-container content-row content-row--short">
-		        <div class="grid grid--equal">
-				
-				    <div class="grid__item project__item desk--one--quarter tablet--one-half">
+	        <script id="project-modal-template" type="text/x-handlebars-template">
+	            <div class="grid__item project__item desk--one--quarter tablet--one-half">
 					    <div class="caption-panel caption-panel--home">
 						     <a class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-							      <div class="caption-panel__image" style="background-color: green;">
+							      <div class="caption-panel__image" style="background-color: green;background-image: url(images/{{ProjectTileImage}});">
 								  
 								  </div>
 							 </a>
@@ -372,19 +217,19 @@
 							       <a data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
 								        <h3 class="image-aside__title">
 										
-										   Social Network Analysis
+										   {{ProjectTileTitle}}
 										
 										</h3>
 								   
 								   </a>
 								   
 								   <p class="caption-panel__text">
-								     Some project description will go here. this is just a test. this is more test
+								     {{ProjectTileDescription}}
 								   
 								   </p>
 								   
 								   <div class="caption-panel__links">
-								        <a href="#" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
+								        <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
 										   <span>
 										       Learn more
 											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
@@ -405,141 +250,21 @@
 						</div>
 					</div>
 					
-					<div class="grid__item project__item desk--one--quarter tablet--one-half">
-					    <div class="caption-panel caption-panel--home">
-						     <a href="#" class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-							      <div class="caption-panel__image" style="background-color: green;">
-								  
-								  </div>
-							 </a>
-							 
-							 <div class="caption-panel__content">
-							       <a href="#" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-								        <h3 class="image-aside__title">
-										
-										   Social Network Analysis
-										
-										</h3>
-								   
-								   </a>
-								   
-								   <p class="caption-panel__text">
-								     Some project description will go here. this is just a test. this is more test
-								   
-								   </p>
-								   
-								   <div class="caption-panel__links">
-								        <a id="socialNetworkAnalysis" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
-										   <span>
-										       Learn more
-											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
-								                   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									               </path>
-	
-	
-								                </svg>
-										   </span>
-										</a>
-								   
-								   </div>
-							 
-							 </div>
-						
-						
-						</div>
-					</div>
-					
-					<div class="grid__item project__item desk--one--quarter tablet--one-half">
-					    <div class="caption-panel caption-panel--home">
-						     <a href="#" class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-							      <div class="caption-panel__image" style="background-color: green;">
-								  
-								  </div>
-							 </a>
-							 
-							 <div class="caption-panel__content">
-							       <a href="#" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-								        <h3 class="image-aside__title">
-										
-										   Social Network Analysis
-										
-										</h3>
-								   
-								   </a>
-								   
-								   <p class="caption-panel__text">
-								     Some project description will go here. this is just a test. this is more test
-								   
-								   </p>
-								   
-								   <div class="caption-panel__links">
-								        <a data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
-										   <span>
-										       Learn more
-											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
-								                   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									               </path>
-	
-	
-								                </svg>
-										   </span>
-										</a>
-								   
-								   </div>
-							 
-							 </div>
-						
-						
-						</div>
-					</div>
+			    </script>
 					
 					
-					<div class="grid__item project__item desk--one--quarter tablet--one-half">
-					    <div class="caption-panel caption-panel--home">
-						     <a href="#" class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-							      <div class="caption-panel__image" style="background-color: green;">
-								  
-								  </div>
-							 </a>
-							 
-							 <div class="caption-panel__content">
-							       <a href="#" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-								        <h3 class="image-aside__title">
-										
-										   Social Network Analysis
-										
-										</h3>
-								   
-								   </a>
-								   
-								   <p class="caption-panel__text">
-								     Some project description will go here. this is just a test. this is more test
-								   
-								   </p>
-								   
-								   <div class="caption-panel__links">
-								        <a id="lastProject" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
-										   <span>
-										       Learn more
-											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
-								                   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									               </path>
-	
-	
-								                </svg>
-										   </span>
-										</a>
-								   
-								   </div>
-							 
-							 </div>
-						
-						
-						</div>
-					</div>
+	   <!-- Projects title -->
+	   <div class="page-row page-row--split-blocks page-row-project">
+	       
+		   
+		   <!-- Project cards -->
+		   <div class="content-container content-row content-row--short">
+		        <div class="grid grid--equal" id="content">
+				
+				    
+					
+					
+				
 		   
 		   </div>
 	   
@@ -556,13 +281,19 @@
 	
 	
 	
+	
+	
+	<!-- Modal for project description when any project tile is clicked -->
    <script id="modal-template" type="text/x-handlebars-template">
 	
 	<div id="projectModal" class="modal fade" role="dialog">
 	
 	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;">
+	  
 	     <div class="modal-content" style="width:100%;height:100%;">
+		 
 		    <div class="modal-body">
+			
 			    <div class="page-body">
 				    <button class="modal__close-btn" data-modal-close>
 					   <svg alt class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
@@ -592,13 +323,10 @@
 					</div>
 				</div>
 				
-			    
-			
-				
-				
-				
 		    </div>
+			
 	    </div>
+		
 	   </div>
 	</div>
 	    
@@ -613,12 +341,21 @@
 	<script type="text/javascript">
 	     $(function(){
 		 
+		 var source = $("#blog-modal-template").html();
+	     var blog_modal_template = Handlebars.compile(source);
+		 
+		 var source = $("#project-modal-template").html();
+	     var project_modal_template = Handlebars.compile(source);
+		 
 		 
 		 var source1 = $("#modal-template").html();
 	     var modal_template = Handlebars.compile(source1);
 		 
 		 var projectData1 = {
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
@@ -630,15 +367,200 @@
 	       appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
-		   projectId: "project1",
+		   ProjectTileId: "project1",
 		   imageID: "image1"
 	   };
+	   
+	   var projectData2 = {
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   ProjectTileId: "project2",
+		   imageID: "image1"
+	   };
+	   
+	   var projectData3 = {
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   ProjectTileId: "project3",
+		   imageID: "image1"
+	   };
+	   var projectData4 = {
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   ProjectTileId: "project4",
+		   imageID: "image1"
+	   };
+	   
+	   var blogData1 = {
+	       BlogTileColor:"#673ab7",
+		   BlogTileTitle:"Predicting Software Quality Using Machine Learning",
+		   BlogTileDescription:"",
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   BlogTileId: "blog1",
+		   imageID: "image1"
+	   };
+	   
+	   var blogData2 = {
+	       BlogTileColor:"#E53935",
+		   BlogTileTitle:"Testing Observables and Subscribers in RxJava",
+		   BlogTileDescription:"",
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   BlogTileId: "blog2",
+		   imageID: "image1"
+	   };
+	   
+	   var blogData3 = {
+	       BlogTileColor:"#004D40",
+		   BlogTileTitle:"Knapsack problem generalization",
+		   BlogTileDescription:"",
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   BlogTileId: "blog3",
+		   imageID: "image1"
+	   };
+	   
+	   var blogData4 = {
+	       BlogTileColor:"#4E342E",
+		   BlogTileTitle:"Creating an algorithm that identifies underground water sources in developing countries",
+		   BlogTileDescription:"",
+	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+		   ProjectTileImage:"7135.jpg",
+		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
+	       projectImage:"something",
+	       ProjectTitle: "2048 Player",
+	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
+		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
+		   paragraph2AndHalf:"",
+		   paragraph4: "",
+		   paragraph5: "",
+		   paragraph3:"",
+	       appStatus:"Python Application",
+	       projectDescription: "Machine Learning program that plays 2048",
+	       projectName: "2048 Player",
+		   BlogTileId: "blog4",
+		   imageID: "image1"
+	   };
+	   
+	   
+	   
+	   //populate the blog tile within the homepage
+	   var blog_html = blog_modal_template(blogData1);
+	   
+	   $("#blogContent").append(blog_html);
+	   blog_html = blog_modal_template(blogData2);
+	   $("#blogContent").append(blog_html);
+	   
+	   blog_html = blog_modal_template(blogData3);
+	   $("#blogContent").append(blog_html);
+	   
+	   
+	   blog_html = blog_modal_template(blogData4);
+	   $("#blogContent").append(blog_html);
+	   
+	   
+	   //populate the project tiles within the homepage
+	   var html = project_modal_template(projectData1);
+	   
+	   $("#content").append(html);
+	   html = project_modal_template(projectData2);
+	   $("#content").append(html);
+	   
+	   html =project_modal_template(projectData3);
+	   $("#content").append(html);
+	   
+	   
+	   html = project_modal_template(projectData4);
+	   $("#content").append(html);
+	   
 	   
 	  
 	   
 	   
-	   
-	   $("#socialNetworkAnalysis").click(function(){
+	   /*
+	       OnClickHandler for the project tiles
+	   */
+	   $("#project1").click(function(){
 	      var html1 = modal_template(projectData1);
 		  
 		  $("#modalContent").html(html1);
@@ -654,6 +576,125 @@
 		  
 	   });
 	   
+	   
+	   $("#project2").click(function(){
+	      var html1 = modal_template(projectData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   
+	   $("#project3").click(function(){
+	      var html1 = modal_template(projectData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   
+	   $("#project4").click(function(){
+	      var html1 = modal_template(projectData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   
+	   /*
+	      onClickListner for Blog tiles on the homepage
+	   */
+	   
+	   $("#blog1").click(function(){
+	      var html1 = modal_template(blogData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   $("#blog2").click(function(){
+	      var html1 = modal_template(blogData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   $("#blog3").click(function(){
+	      var html1 = modal_template(blogData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
+	   
+	   $("#blog4").click(function(){
+	      var html1 = modal_template(blogData1);
+		  
+		  $("#modalContent").html(html1);
+		  $("#projectModal").modal("show");
+		  
+		  $(".modal__close-btn").click(function(){
+		  
+		       $("#projectModal").modal("hide");
+		  
+		 
+	      });
+		  
+		  
+	   });
 	    
 		 
 		 });

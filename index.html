@@ -52,7 +52,7 @@
 		      <ul>
 			     <li class="activepage"> Home </li>
 				 <li>
-				     <a href="projects.html" class="otherNavLinks"> Portfolio </a>
+				     <a href="projects.html"> Portfolio </a>
 				 </li>
 				 <li>
 				     <a href="blog.html" class="otherNavLinks"> Blog </a>
@@ -288,19 +288,18 @@
 	
 	<div id="projectModal" class="modal fade" role="dialog">
 	
-	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;">
+	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;overflow:auto">
 	  
-	     <div class="modal-content" style="width:100%;height:100%;">
+	     <div class="modal-content" style="width:100%;height:100%;overflow:auto;">
 		 
 		    <div class="modal-body">
 			
 			    <div class="page-body">
 				    <button class="modal__close-btn" data-modal-close>
-					   <svg alt class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-					       <path d="M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z">
-						   
-						   </path>
-					   </svg>
+					   <svg class="svg-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                           <path d="M0 0h24v24H0z" fill="none"/>
+                       </svg>
 					</button>
 				</div>
 				
@@ -309,9 +308,13 @@
 					<div class="content-container content-row story-page story-page--restricted story-page--bottom">
 					     <div class="grid">
 						    <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-							    <h1 class="content-title content-title--story">
+							   
+							     <h1 class="content-title content-title--story">
 								   {{ProjectTitle}}
-								</h1>
+								 </h1>
+								 
+								 
+								
 								
 								<p>{{paragraph1}} </p>
 								<p>{{paragraph2}} </p>
@@ -354,10 +357,9 @@
 		 var projectData1 = {
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
-		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileTitle:"GitLet",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
 		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
 		   paragraph2AndHalf:"",
@@ -374,7 +376,7 @@
 	   var projectData2 = {
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
-		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileTitle:"Continental Divide",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
@@ -394,7 +396,7 @@
 	   var projectData3 = {
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
-		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileTitle:"Facility Management System",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
@@ -413,7 +415,7 @@
 	   var projectData4 = {
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
-		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileTitle:"JS Parser",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
@@ -432,7 +434,7 @@
 	   
 	   var blogData1 = {
 	       BlogTileColor:"#673ab7",
-		   BlogTileTitle:"Predicting Software Quality Using Machine Learning",
+		   BlogTileTitle:"Social network analysis: Lifecycle of a hashtag on Twitter",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -478,7 +480,7 @@
 	   
 	   var blogData3 = {
 	       BlogTileColor:"#004D40",
-		   BlogTileTitle:"Knapsack problem generalization",
+		   BlogTileTitle:"Knapsack problem is much more than just stealing gold",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -501,11 +503,11 @@
 	   
 	   var blogData4 = {
 	       BlogTileColor:"#4E342E",
-		   BlogTileTitle:"Creating an algorithm that identifies underground water sources in developing countries",
+		   BlogTileTitle:"Alert app: How to keep up with events on campus",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
-		   ProjectTileTitle:"Social Network Analysis",
+		   ProjectTileTitle:"Alert app: How to keep up with events on campus",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",

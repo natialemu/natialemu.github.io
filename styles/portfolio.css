@@ -69,7 +69,7 @@ body * {
 
 #maia-nav-x{
 	box-shadow: 0 3px 5px rgba(0,0,0,0.17);
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 #maia-nav-x .maia-aux {
     position: relative;
@@ -490,7 +490,12 @@ body a {
     font-weight: 500;
 	font-size: 14px;
 }
-
+@media only screen and (min-width: 1024px){
+	
+.related-content__link {
+    font-size: 18px;
+}
+}
 .related-content__link {
     align-self: flex-start;
     font-size: 16px;
@@ -996,7 +1001,7 @@ body a {
 .page-body {
     color: #747474;
     font-family: "Roboto",sans-serif;
-    font-size: .82353rem;
+    font-size: 1.52353rem;
     line-height: 1.5;
     background-color: #fff;
     margin: 0 auto;
@@ -1014,13 +1019,14 @@ body a {
 }
 
 .modal__close-btn {
-    background-color: #DB4437;
+    background-color: #FFFFFF;
     border: 0;
     border-radius: 50%;
     box-shadow: 0 1px 1.5px 0 rgba(0,0,0,0.12), 0 1px 1px 0 rgba(0,0,0,0.24);
     color: #fff;
     fill: #fff;
-    height: 48px;
+    height: 46px;
+	vertical-align: center;
     transition: background-color .2s cubic-bezier(0.4, 0, 0.2, 1),box-shadow .3s cubic-bezier(0.4, 0, 0.2, 1),color .2s cubic-bezier(0.4, 0, 0.2, 1),fill .2s cubic-bezier(0.4, 0, 0.2, 1);
     width: 48px;
     position: fixed;
@@ -1056,7 +1062,7 @@ button{
 }
 
 .content-header--story {
-    background-color: #B0B0B0;
+    background-color: #C0CA33;
     background-position: center;
     background-size: cover;
     height: 500px;
@@ -1086,7 +1092,7 @@ button{
 
 .story-page h1.content-title {
     color: #414141;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 200;
     line-height: 1.4;
     margin: 0.1em 0 20px;
@@ -1106,5 +1112,28 @@ button{
 .desk--two-thirds, .desk--four-sixths, .desk--eight-twelfths {
     width: 66.666%;
 }
+}
+
+.modal-down-divider{
+	width: 48px;
+    height: 48px;
+    border-radius: 25px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    transition: .2s;
+	background: url(../images/GitHub-Mark-32px.png) no-repeat center;
+	transition-property: all;
+	transition-duration: 150nm;
+	transition-timing-function: ease-out;
+	transition-delay: initial;
+	box-shadow: 4px 4px 30px rgba(0,0,0,0.4);
+}
+
+.down-divider:hover{
+	box-shadow: 6px 6px 30px rgba(0,0,0,0.65);
+	background-color: rgb(200,200,200);
+	opacity: 0.7;
+
 }
 

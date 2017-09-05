@@ -747,7 +747,7 @@ body a {
     display: block;
     overflow: hidden;
     width: 100%;
-	height: 150px;
+	height: 180px;
 }
 
 @media only screen and (max-width: 680px){
@@ -764,7 +764,7 @@ body a {
     display: block;
     overflow: hidden;
     width: 100%;
-	height: 150px;
+	height: 180px;
 }
 
 .caption-panel__content {

@@ -312,35 +312,28 @@
 								 </h1>
 								 
 								 </br>
-								<h2>
+								<h3>
 								   {{ProjectSubtitle0}}
-								 </h2>
+								 </h3>
 								 
 								
 								<p style="padding-left:{{Paragraph1LeftMargin}}">{{paragraph1}} </p>
 								<image style="padding-left:{{Paragraph1LeftMargin}}" src="images/{{ModalSubImage1}}" />
 								<p style="padding-left:{{Paragraph2LeftMargin}}">{{paragraph2}} </p>
 								<image style="padding-left:{{Paragraph2LeftMargin}}"  src="images/{{ModalSubImage2}}" />
-								<h2>
-								   {{ProjectSubtitle1}}
-								 </h2>
+								
 								<p style="padding-left:{{Paragraph3LeftMargin}}">{{paragraph3}} </p>
 								<image style="padding-left:{{Paragraph3LeftMargin}}" src="images/{{ModalSubImage3}}" />
-								<h2>
-								   {{ProjectSubtitle2}}
-								 </h2>
-								 
+								
 								<p style="padding-left:{{Paragraph4LeftMargin}}">{{paragraph4}} </p>
 								<image style="padding-left:{{Paragraph4LeftMargin}}"  src="images/{{ModalSubImage4}}" />
-								<h2>
-								   {{ProjectSubtitle3}}
-								 </h2>
+								
 								<p style="padding-left:{{Paragraph5LeftMargin}}">{{paragraph5}} </p>
 								<image style="padding-left:{{Paragraph5LeftMargin}}" src="images/{{ModalSubImage5}}" />
 								
-								<h2>
+								<h3>
 								   {{ProjectSubtitle4}}
-								 </h2>
+								 </h3>
 								
 								<p style="margin-left:{{Paragraph6LeftMargin}}">{{paragraph6}} </p>
 								<image style="padding-left:{{Paragraph6LeftMargin}}"  src="images/{{ModalSubImage6}}" />
@@ -399,17 +392,48 @@
 		 
 		 var projectData1 = {
 	       gitHubLink:"https://github.com/natialemu/GitLet",
+		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"gitlet-tile.png",
 		   ProjectTileTitle:"GitLet",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
-		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
-		   paragraph2AndHalf:"",
-		   paragraph4: "",
-		   paragraph5: "",
-		   paragraph3:"",
-	       appStatus:"Python Application",
+	       paragraph1: "Gitlet is a version control system similar to git. Its purpose is to save snapshots or commits of a file at different points in time. That way, if you mess them up later, you can return to earlier versions of your files. A lot of its features are based on git even though some differences exist. ",
+		   ModalSubImage1: "gitletWug.png",
+		   paragraph2: "Gitlet is implemented by using a tree in which a node only has a reference to its parent. Each node in the tree represents a single commit. One feature of the commit tree that it is in some sense immutable: once a commit node has been created, it can never be destroyed(or changed at all). Each path within the tree will represent a branch, while the tail node on each branch will represent the most recent commit on that branch.",
+	       paragraph3: "All copies of files and other metadata are stored in a folder called .gitlet. A gitlet system is considered initialized in a particular location if it has the .gitlet folder there. The default location where a gitlet system will be initialized is in a folder named workingDirectory in root of the project, unless specified otherwise. State of the data structures used to store information about commits is persisted using Java’s serializable interface.  The settings are serialized on to a file within the .gitlet folder. Here are a few of the commands available on gitlet and their differences from git:",
+		   paragraph4: "Initialize: Creates a new gitlet version control system in the current directory. This system will automatically start with one commit: a commit that contains no files and has the commit message initial commit.",
+		   Paragraph4LeftMargin: "50px;",
+		   paragraph5: "Add: Indicates you want the file to be included in the upcoming commit as having been changed. Adding a file is also called staging the file. If the file had been marked for removal, instead just unmark it.  In Gitlet, if a file is added, then modified, then committed, the contents of the file at the time of the commit command are recorded (not the contents at the time of add). By contrast, in Git, if a file is added, then modified, then committed, the contents of the file at the time of the add command are recorded (not the contents at the time of commit). In short, real Git creates snapshots for every add, whereas in Gitlet, this does not occur.",
+		   Paragraph5LeftMargin: "50px",
+		   paragraph6: "Commit: Saves a snapshot of certain files that can be viewed or restored at a later time. In real git, commits are not associated with any old id number, but a special kind of hash code. ",
+		   Paragraph6LeftMargin: "50px",
+		   paragraph7: "Log: displays information about each commit backwards along the commit tree until the initial commit",
+		   Paragraph7LeftMargin: "50px",
+		   paragraph8: "Remove: Mark the file for removal; this means it will not be inherited as an old file in the next commit. If the file had been staged, instead unstage it.",
+		   Paragraph8LeftMargin: "50px",
+		   paragraph9: "Status: Displays what branches currently exist and also identifies current branch. It displays what files have been staged or marked for removal as well.",
+		   Paragraph9LeftMargin: "50px",
+		   paragraph10: "Global log: Like log, except displays information about all commits ever made.",
+		   Paragraph10LeftMargin: "50px",
+		   paragraph11: "Find: Prints out the id of the commit that has the given commit message. This command does not exist in real git",
+		   Paragraph11LeftMargin: "50px",
+		   paragraph12: "Checkout: There are 3 possible use cases: Restores the given file in the working directory to its state at the commit at the head of the current branch: Restores the given file in the working directory to its state at the given commit: Restores all files in the working directory to their versions in the commit at the head of the given branch.",
+		   Paragraph12LeftMargin: "50px",
+		   paragraph13: "Branch: Creates a new branch with the given name",
+		   Paragraph13LeftMargin: "50px",
+		   paragraph14: "Remove branch: Deletes the branch with the given name",
+		   Paragraph14LeftMargin: "50px",
+		   paragraph15: "Reset: Restores all files to their versions in the commit with the given id. It also sets the current commit to the commit with the provided commit id.",
+		   Paragraph15LeftMargin: "50px",
+		   paragraph16: "Merge: Merges files from two branches. There are a few differences from git. For one, if git doesn't run into any merge conflicts, it will automatically create a new commit for you at the end, but gitlet does not. In git, this new commit at the end of merge is special, because it maintains two back pointers remembering which two branches it came from. But gitlet only maintains one normal back pointer on the current branch.",
+		   Paragraph16LeftMargin: "50px",
+		   paragraph17: "Rebase: Conceptually, what rebase does is find the split point of the current branch and the given branch, then snaps off the current branch at this point, then reattaches the current branch to the head of the given branch.",
+		   Paragraph17LeftMargin: "50px",
+		   paragraph18: "Interactive rebase: It does what rebase does except it will allow the user to change the commit’s message or skip replaying the commit. This command resembles git’s “git rebase -I [branch name]” than it does git’s interactive rebase.",
+		   Paragraph18LeftMargin: "50px",
+		   paragraph19: "Test Driven development approach was used when creating this program. The design consists of three layers(view, domain, and domain Access) and it has been separated into multiple modules to make testing easier and also make addition of newer features convenient. Future versions of gitlet will add remote features such as push pull and clone.",
+		   Paragraph19LeftMargin: "50px",
+		   appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "GitLet",
 		   ProjectTileId: "project1",
@@ -418,18 +442,25 @@
 	   
 	   var projectData2 = {
 	       gitHubLink:"https://github.com/natialemu/ContinentalDivide",
+		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"continental-divide-tile.png",
 		   ProjectTileTitle:"Continental Divide",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
-	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
-		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
-		   paragraph2AndHalf:"",
-		   paragraph4: "",
-		   paragraph5: "",
-		   paragraph3:"",
-	       appStatus:"Python Application",
+	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. For example, in Africa, the continental divide splits the continent in three parts, without assuming flow of water into lakes:",
+		   paragraph2: "1.	Land with water flow to the Indian ocean",
+		   Paragraph2LeftMargin:"50px",
+		   paragraph3: "2.	Land with water flow to the Atlantic ocean",
+		   Paragraph3LeftMargin: "50px",
+		   paragraph4: "3.	Land with water flow to the Mediterranean Sea",
+		   Paragraph4LeftMargin: "50px",
+		   paragraph5: "The app determines the continental divide of a square landmass generated by an algorithm known as the diamond-square terrain generation algorithm. It’s an algorithm that’s pretty good at generating realistic looking terrain. It works on a 2D array that’s 2n+1 square and will need to have the four corners of the original array to have a value set before it starts. The algorithm first sets the center point by averaging the four corner values and adding a small random amount of noise. This step is called the diamond step. The next step of the algorithm is set the four mid points between each corner. After recursively repeating the first two steps for each square that is formed, a realistic looking terrain will be generated.",
+	       ModalSubImage5: "continental-divide-visuals.png",
+		   ProjectSubtitle4: "Design",
+		   paragraph6: "The application implements two algorithms for determining the continental divide of the generated landmass. One is a dynamic programming based recursive algorithm while the other is a non-dynamic programming based recursive algorithm."
+		   + " The continental divide is visualized by shading the cells of the map different colors depending on where water flows on that part of the continent. A future version of the app will provide an ability to view the continent in 3D using a projection known as ‘isometric’ projection.",
+		   appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Continental Divide",
 		   ProjectTileId: "project2",
@@ -478,18 +509,25 @@
 	   };
 	   var projectData4 = {
 	       gitHubLink:"https://github.com/natialemu/javascript-parser",
+		   ProjectSubtitle0:"Overview",
 		   ProjectTileImage:"jsparser-tile-4.png",
 		   ProjectTileTitle:"JS Parser",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
-	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
-		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
-		   paragraph2AndHalf:"",
-		   paragraph4: "",
-		   paragraph5: "",
-		   paragraph3:"",
-	       appStatus:"Python Application",
+	       paragraph1:"The program builds an abstract syntax tree for different constructs in Javascript as well as the dynamic language semantics such as assignments, variables, conditionals and loops as part of  the evaluator. It also has support for constructs such as structure creation, field creation, assignment to an existing field in a structure, and addition of a new field to a structure. The language supports named state, where a mutable store or memory maps named variables to storage cells where values can be stored. If there is a failure, the whole program terminates immediately with that first failure. ",
+		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures. This was based on the following grammar:",
+		   ModalSubImage2: "Grammar.png",
+		   paragraph3: "The un-parser converts an abstract syntax tree back to concrete syntax following some uniform rules. Format of if and while statements is as follows:",
+		   ModalSubImage5: "ifGrammar.png",
+		   paragraph8: "Indentation occurs in increments of two spaces based on nesting depth.",
+		   ModalSubImage8: "indentation.png",
+		   ProjectSubtitle7: "Design and Testing",
+		   paragraph9: "Good design principles such as separation of concerns and TDD were used when building the program. The following test cases were using during testing for the parser and un-parser:",
+	       ModalSubImage9: "firstTestcase.png",
+		   paragraph10: "The following were test cases used during testing for the dynamic constructs:",
+		   ModalSubImage10: "secondTestcase.png",
+		   appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "JavaScript Parser and Interpreter",
 		   ProjectTileId: "project4",

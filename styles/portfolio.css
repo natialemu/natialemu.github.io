@@ -1160,3 +1160,16 @@ button{
 	margin-top: 10px;
 }
 
+.blog-subtitles{
+	color:#4480FF;
+}
+
+.paragraphFontStyle{
+	font-size: 17px;
+	font-weight: 400
+}
+
+.listItemFonts{
+	position: relative;
+	left: 10%;
+}

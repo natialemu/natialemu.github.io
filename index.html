@@ -131,7 +131,7 @@
 							 
 							   </div>
 							 
-							   <a id="{{BlogTileId}}" class="image-aside__link">
+							   <a id="{{BlogTileId}}" href="blogs/{{BlogLink}}" class="image-aside__link">
 							     Read more
 								 <!-- add a vector here-->
 								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
@@ -540,6 +540,7 @@
 	   
 	   var blogData1 = {
 	       BlogTileColor:"#673ab7",
+		   BlogLink:"hashtag-lifecycle.html",
 		   BlogTileTitle:"Social network analysis: Lifecycle of a hashtag on Twitter",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
@@ -563,6 +564,7 @@
 	   
 	   var blogData2 = {
 	       BlogTileColor:"#E53935",
+		   BlogLink: "testing-rxjava.html",
 		   BlogTileTitle:"Testing Observables and Subscribers in RxJava",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
@@ -586,6 +588,7 @@
 	   
 	   var blogData3 = {
 	       BlogTileColor:"#004D40",
+		   BlogLink: "knapsack.html",
 		   BlogTileTitle:"Knapsack problem is much more than just stealing gold",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
@@ -609,6 +612,7 @@
 	   
 	   var blogData4 = {
 	       BlogTileColor:"#4E342E",
+		   BlogLink:"alertapp.html",
 		   BlogTileTitle:"Alert app: How to keep up with events on campus",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
@@ -633,17 +637,17 @@
 	   
 	   
 	   //populate the blog tile within the homepage
-	   var blog_html = blog_modal_template(blogData1);
+	   var blog_html = blog_modal_template(blogData3);
 	   
 	   $("#blogContent").append(blog_html);
 	   blog_html = blog_modal_template(blogData2);
 	   $("#blogContent").append(blog_html);
 	   
-	   blog_html = blog_modal_template(blogData3);
+	   blog_html = blog_modal_template(blogData4);
 	   $("#blogContent").append(blog_html);
 	   
 	   
-	   blog_html = blog_modal_template(blogData4);
+	   blog_html = blog_modal_template(blogData1);
 	   $("#blogContent").append(blog_html);
 	   
 	   
@@ -741,91 +745,9 @@
 	   });
 	   
 	   
-	   /*
-	      onClickListner for Blog tiles on the homepage
-	   */
+	  
 	   
-	   $("#blog1").click(function(){
-	      var html1 = modal_template(blogData1);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
-		  
-		  
-	   });
-	   
-	   $("#blog2").click(function(){
-	      var html1 = modal_template(blogData2);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
-		  
-		  
-	   });
-	   
-	   $("#blog3").click(function(){
-	      var html1 = modal_template(blogData3);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
-		  
-		  
-	   });
-	   
-	   $("#blog4").click(function(){
-	      var html1 = modal_template(blogData4);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
-		  
-		  
-	   });
-	   
-	   
-	   function makeVisible(list_of_ids){
-		       for (i = 0; i < list_of_ids.length; i++){
-			       tagId = list_of_ids.length[i];
-				   //make that tag invisible
-				   $('#'+tagId).css("display","none");
-			   }
-		 }
-		 
-		 
-		 function makeInVisible(list_of_ids){
-		       for (i = 0; i < list_of_ids.length; i++){
-			       tagId = list_of_ids.length[i];
-				   //make that tag's display none
-				   $('#'+tagId).css("display","inline");
-			   }
-		 }
+	
 	    
 		 
 		 });

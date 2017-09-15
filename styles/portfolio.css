@@ -1049,7 +1049,7 @@ body a {
     width: 48px;
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 10px;
     z-index: 102;
 }
 button,a{
@@ -1172,4 +1172,25 @@ button{
 .listItemFonts{
 	position: relative;
 	left: 10%;
+}
+
+.blogPageLeftSide{
+	width: 35%; 
+	
+	height: 400px; 
+	float: left;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.19);
+}
+
+#knapsackLeftSide{
+	background-color: #004D40;
+	
+}
+#rxjavaLeftSide{
+	background-color: #1A237E;
+	
+}
+
+#alertappLeftSide{
+	background-color: #4E342E;
 }

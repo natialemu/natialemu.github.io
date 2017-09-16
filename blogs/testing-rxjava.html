@@ -101,11 +101,11 @@
 								
 								
 								
-		<!-- image -->				<img src="" />
+		<!-- image -->				<img src="../images/ExampleRepositoryRxJava.png" />
 
 		
 								<p class = "paragraphFontStyle"> The getAllData() method of the ExampleRepository class will utilize the repositoryHelper method to retrieve data from the database and return it as an observable. So, anything that subscribes to that observable will be able to get a continuous stream of data that fits the query. </p>
-		<!-- image -->				<img src="" />						
+		<!-- image -->				<img src="../images/ExamplePresenter.png" />						
 								
 								<p class = "paragraphFontStyle"> Within the loadData() of the ExamplePresenter class above,  we see that we are subscribing to the observable returned by the getAllData() method of the Example repository class. This means any steam of data the observable gets will be streamed to the presenter. The presenter will then pass that on to the view as shown above. </p>
 								
@@ -120,10 +120,10 @@
 								<p class = "paragraphFontStyle"> We can perform assertions or analyze each received stream of event using TestSubscriber. So, we can not only test if the right data is received but also test for completion or unsubscribing as well. </p>
 								
 								<p class = "paragraphFontStyle"> Here is an image of what the test looks like: </p>
-		<!-- image -->				<img src="" />							
+		<!-- image -->				<img src="../images/testSubscriber.png" />							
 								<p class = "paragraphFontStyle"> Another way of testing Observables will look something like this: </p>
 								
-		<!-- image -->				<img src="" />		
+		<!-- image -->				<img src="../images/testingObservableVersion2.png" />		
 
 		
 								<p class = "paragraphFontStyle"> This method works because it allows us to make the observable output synchronous. </p>
@@ -137,16 +137,18 @@
 								<p class = "paragraphFontStyle"> However, RxJava provides a way to manipulate the execution such that subscribers always execute first. This forces the unit test to complete only when the subscriber’s onComplete method has been called. This is done by overriding the global schedulers for RxJava and RxAndroid with the ones that cause immediate execution. It is important that these are executed before any tests are executed. One way to achieve this is by placing the code in the method with @BeforeClass annotation so that this method is invoked before the test begins. So replace the default schedulers with either Schedulers.immediate() or Schedulers.trampoline(). </p>
 								
 								<p class = "paragraphFontStyle"> If you’re using Robolectric, since the scheduler must be replaced before RxJava is initialied, the replacement must be done before super.onCreate() runs. The following piece of code will replace the default Schedulers: </p>
-		<!-- image -->				<img src="../images/rxjavaTestPlugin.png" />		
+		<!-- image -->				<img src="../images/immediateSchedulerRx.png" />		
 
 		
 								<p class = "paragraphFontStyle"> In the above picture, RxJavaTestPlugins() rather than RxJavaPlugins.getInstance().reset() is called. This is because RxJavaPlugins.reset() is a package private method so we must create a class and place it inside of a package named rx.plugins. </p>
+								
+		<!-- image -->				<img src="../images/rxjavaTestPlugin.png" />						
 								
 								<p class = "paragraphFontStyle"> When testing subscribers, you can use built in classes within RxJava to generate mock Observables Observable.just(), Observable.error(), or Observable.from().  </p>
 								
 								<p class = "paragraphFontStyle"> Look at the picture below of the test for the getAvailableData() method of the presenter </p>
 								
-		<!-- image -->				<img src="../images/rxjavaTestPlugin.png" />
+		<!-- image -->				<img src="../images/examplePresenterTest.png" />
 		
 		
 								<h3 style = "font-weight:500;" class = "blog-subtitles">

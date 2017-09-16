@@ -146,7 +146,7 @@
 								<p class="paragraphFontStyle"> Now that we’ve defined what our problem is, let’s imagine that we’ve put some pieces of gold into our knapsack in an optimal way and we have W amount of weight left. If we are sure that we have put the right types of gold in so far, the next best move to make would be to put in the gold piece that gives us the maximum value. Let’s look at the recurrence relationship below. If we assume that we have an infinite supply of N distinct types of gold:
  </p>
 								
-	<!-- image -->				<img src="" />
+	<!-- image -->				<img src="../images/thirdReccurence.png" />
 	
 	                            
 								
@@ -154,13 +154,13 @@
 								
 								<p class="paragraphFontStyle"> We can modify the problem in a different way. Instead of trying to maximize the amount of value the thieves get, if they are not very smart and they want to minimize the value of gold they get then, the recurrence relationship then becomes: </p>
 								
-	<!-- image -->				<img src="" />
+	<!-- image -->				<img src="../images/secondReccurence.png" />
 	
 	                            <p class="paragraphFontStyle"> If instead we don’t have an infinite supply of different types of gold, then the situation becomes a bit different. As we put more gold items into our knapsack, not only does the amount of available space decrease, but we can no longer repeat and put the same type of gold we had put into our knapsack earlier. This is because we don’t have an infinite supply of each type of gold. As a result, we need to definite our recurrence relationship in terms of the amount of weight remaining W and also the amount of gold pieces we still haven’t used. Let’s look at the definition of the problem assuming we have a set of gold pieces, N: </p>
 	                            
 								<p class="paragraphFontStyle"> K[W, i]   this is the maximum value we can get if we have the first i of our gold pieces available and we have a knapsack of capacity W. If we again imagine that we’ve put some distinct pieces of gold into our knapsack in an optimal way and we have W amount of weight left and i pieces of gold left, when we consider the ith gold, we are either going to put that gold in the knapsack if we think it will give us the best value of or we won’t. so the recurrence relationship will then be: </p>
 								
-	<!-- image -->				<img src="" />
+	<!-- image -->				<img src="../images/fourthReccurence.png" />
 	
 								
 								
@@ -168,24 +168,24 @@
 								
 								
 								<p class="paragraphFontStyle"> In a similar way, if we want to minimize the value we get under these conditions, the recurrence relationship would be, </p>
-	<!-- image -->				<img src="" />		
+	<!-- image -->				<img src="../images/firstReccurence.png" />		
 
 	                             <p class="paragraphFontStyle"> Now let’s say the thieves are bored and want to play a game. Instead of trying to maximize or even minimize their gain, they just want to find out in how many ways they can exactly fill the knapsack of weight limit W using the available gold, regardless of weather it is finite or infinite. The recurrence relationship for that is going to be very similar to the one above. We’re first going to define K[W,i] to be the number of ways to fill a knapsack of weight limit W with i types of gold. Assuming you’ve counted the number of ways to fill the knapsack with gold until a certain point optimally and you have i gold pieces left and a weight limit of W, the next option you’ll face is weather the ith gold will help fill the knapsack exactlly or weather the knapsack will have to be filled with the other remaining pieces of gold. We simply then add the two cases to find the total number of ways to fill a knapsack of weight limit W and i pieces of gold. </p>
-	<!-- image -->				<img src="" />	
+	<!-- image -->				<img src="../images/fifthReccurence.png" />	
                                 <p class="paragraphFontStyle"> We can now provide recurrence relationships for the five forms/cases of the knapsack problem we save above. </p>
 	
 	
 	                             <div class="listItemFonts"><ol class="">
                                       <li class= "paragraphFontStyle "> <strong> Intent 1: </strong> Minimize the value of the way we use our finite resources with each resource having a cost of wi and a target of W. the recurrence relationship will then look like the following: </li>
-			<!-- image -->				<img src="" />						  
+			<!-- image -->				<img src="../images/firstReccurence.png" />						  
                                       <li class= "paragraphFontStyle "> <strong> Intent 2: </strong>Minimize the value of the way we use our infinite resources with each resource having a cost of wi, value of Ni and a target of W. the recurrence relationship will then look like the following:</li>
-            <!-- image -->				<img src="" />                          
+            <!-- image -->				<img src="../images/secondReccurence.png" />                          
 									  <li class= "paragraphFontStyle "> <strong> Intent 3: </strong>Maximize the value of the way we use our infinite resources with each resource having a cost of wi, value of Ni and a target of W. the recurrence relationship will then look like the following:</li>
-			<!-- image -->				<img src="" />						  
+			<!-- image -->				<img src="../images/thirdReccurence.png" />						  
 									  <li class= "paragraphFontStyle "> <strong> Intent 4: </strong>Maximize the value of the way we use our finite resources with each resource having a cost of w and a target of W. the recurrence relationship will then look like the following:</li>
-			<!-- image -->				<img src="" />						  
+			<!-- image -->				<img src="../images/fourthReccurence.png" />						  
 									  <li class= "paragraphFontStyle "> <strong> Intent 5: </strong>Determine in how many ways we can use our resources (finite or infinite) with each resource having a cost of Wi and a target of W.</li>
-            <!-- image -->				<img src="" />                   
+            <!-- image -->				<img src="../images/fifthReccurence.png" />                   
 							   </ol> </div>
 							   
 							   
@@ -209,7 +209,7 @@
 								<p class="paragraphFontStyle">One form of the coin change problem is as follows: Given a set of coin denominations and a target amount of T dollars, in how many ways can you provide change for T dollars using the given coin denominations.   </p>
 								<p class="paragraphFontStyle"> We can see the resemblance of the problem to the way we defined the knapsack problem. Our resource in this problem are the coins and our goal is to determine in how many ways we can use our resource(coins). This is exactly the fifth form of the knapsack problem.  Which means we should be able to solve this problem with the following recurrence relationship: </p>
 								
-			<!-- image -->				<img src="" /> 					
+			<!-- image -->				<img src="../images/fifthReccurence.png" /> 					
 								<p class="paragraphFontStyle"> Given a target of W, i resources, and cost of the ith resource being wi. So let’s define each of the terms we’ll need to solve the problem: </p>
 								
 								<div class="listItemFonts"><ol class="">
@@ -220,22 +220,22 @@
                                 </ol> </div>
 								
 								<p class="paragraphFontStyle"> These three terms are all the things we will need to solve the problem. We have defined a cost for each resource, we know how many types of resources we have, and we know what our target is. So, if we say the cost of the ith  resources is Ti, the target is T, and we have a set of S coin denominations, then our recurrence relationship becomes: </p>
-			<!-- image -->				<img src="" /> 		
+			<!-- image -->				<img src="../images/coinChangeAndStairs.png" /> 		
 			
 	                            <p class="paragraphFontStyle"> Another form of the coin change problem may look as follows: Given a set of coin denominations, and target of T dollars, what is the minimum number of coins needed to provide change to T dollars, assuming there is an infinite supply of each denomination?</p>
 								
 								<p class="paragraphFontStyle"> We can also see that this is a knapsack problem because we are trying to utilize our resource(coins) in a certain way. To be more specific, we are trying to minimize the value (number of coins) of our resource(coins) when we have an infinite amount of each resource. This looks like the second form of the knapsack problem. So, we can solve this with the following recurrence relationship:  </p>
 								
-			<!-- image -->				<img src="" /> 		
+			<!-- image -->				<img src="../images/secondReccurence.png" /> 		
 			
 								<p class="paragraphFontStyle"> The only new term we need to define for this problem that we didn’t need to for the previous form of the coin change problem is the term ‘value’. To define value, we need to ask ourselves, ‘what is the value of each resource with respect to our intent?’ if our intent is to minimize the <strong> number </strong>of coins we use to make change, then each coin must have the exact same value.</p>
 								
 								<p class="paragraphFontStyle"> So, we assume that Ni is the value of each coin, Ti is the cost of ith coin in our set of denominations, T is the target and we have a set of S denominations, then the recurrence relationship for this one becomes: </p>
-			<!-- image -->				<img src="" /> 			
+			<!-- image -->				<img src="../images/secondReccurenceWithT.png" /> 			
 
                                 <p class="paragraphFontStyle"> <strong> Exercise: </strong> Given a set of S denominations, the maximal coverage is defined as the positive integer right before the first Target value that can’t get any change using the S denominations. The goal is to find the maximal coverage given a set of denominations S. </p>
 								
-			<!-- image -->				<img src="" />		
+			<!-- image -->				<img src="../images/maximalCoverage.png" />		
 			
 								<h3 style = "font-weight:500;" class = "blog-subtitles">
 								    Problem 3: Stairs Problem
@@ -245,14 +245,14 @@
 								
 								<p class="paragraphFontStyle"> This problem can be solved using the same reccurence relationship as finding the nth fibinaci sequence. If you assume that you are at the end, the last step you could have taken may be one step or two steps. Assuming you know in how many ways you could get to the step before the end and the step 2 steps away from the end, the number of ways to get to the end will simply be the sum of the two. More formally, if K[i] if the number of ways you could get to ith step, then  </p>
 								
-			<!-- image -->				<img src="" />
+			<!-- image -->				<img src="../images/fibinnaci.png" />
 			
 								
 								<p class="paragraphFontStyle"> However, the problem with this recurrence relationship is that it breaks down the moment the problem is modified to allow for more steps. To find a more general solution to any form of the problem, let’s try to think of this as a knapsack problem.  </p>
 								
 								<p class="paragraphFontStyle"> The trickiest part might be trying to determine what our resources are. However, we defined resources at the beginning to be “any physical or abstract object that we can use in some way such as gold or time or a decision/action we can take”. So our resources for this problem are the set of steps that we are allowed to take. For our problem, since we can take 1 step or 2 steps any number of times on our way to the end, we have an infinite amount of resources(steps to take). We can frame the problem in a way that resembles the knapsack problem: given a set of steps, in how many ways can you combine these steps to form N steps? If we frame the problem this way, it is obvious that this falls under the 5th form of the knapsack problem. So we can solve it using the following recurrence relation, assuming we can define what the terms “cost”, “Target/Constraint”, and our resources are: </p>
 								
-			<!-- image -->				<img src="" />
+			<!-- image -->				<img src="../images/fifthReccurence.png" />
                                 
 								<div class="listItemFonts"><ol class="">
                                       <li class= "paragraphFontStyle "> <strong> Resources: </strong> our resources here are the steps we are allowed to take - 1 or 2 steps. Since we can take 1 or 2 steps any number of times, we can assume we have an infinite amount of our resources.</li>
@@ -261,7 +261,7 @@
 									  
                                 </ol> </div>
 			                    <p class="paragraphFontStyle"> So, if we assume that we are allowed to take a set of S steps, and we have a T step stairway with the cost of the ith step we can take being Ti. Then the recurrence relation becomes: </p>
-			<!-- image -->				<img src="" />					
+			<!-- image -->				<img src="../images/coinChangeAndStairs.png" />					
 								
 								
 								<h3 style = "font-weight:500;" class = "blog-subtitles">
@@ -273,7 +273,7 @@
 								<p class="paragraphFontStyle"> We can see that our goal here is to study the chapters(resources) within the time limit(constraint) in such a way that we end up maximizing the likelihood of getting the most possible score on the exam. We can’t study the same chapter again since that would be pointless so this problem looks more like the fourth form of the knapsack problem we discussed above. So, we can solve it with the following recurrence relationship: </p>
 								
 								
-			<!-- image -->				<img src="" />					
+			<!-- image -->				<img src="../images/fourthReccurence.png" />					
 			
 								<p class="paragraphFontStyle"> Let’s define the terms we will need to solve the recurrence relationship: </p>
 								
@@ -286,7 +286,7 @@
 								
 								<p class="paragraphFontStyle"> So now that we have defined the terms, we can solve it with the following recurrence relation:  </p>
 								
-			<!-- image -->				<img src="" />										
+			<!-- image -->				<img src="../images/fourthReccurence.png" />										
 								<p class="paragraphFontStyle"> Assuming W is the constraint, Wi is the cost of each chapter, and we are given a set of S chapters to cover for the exam. </p>
 								
 								
@@ -300,7 +300,7 @@
 								
 								<p class="paragraphFontStyle"> We can immediately notice that the total length of the rod should be the constraint, the length of each cut rod would be the cost of each resource and the value of each resource would be the profit associated with each cut. Also, we can see that we have a finite amount of our cuts since we cant produce infinite amounts of the various types of cuts by cutting up the rod. So, this problem resembles the fourth form of the knapsack problem which we can solve with the following recurrence relation: </p>
 								
-			<!-- image -->				<img src="" />
+			<!-- image -->				<img src="../images/fourthReccurence.png" />
 			
 			                    <h3 style = "font-weight:500;" class = "blog-subtitles">
 								    Problem 6: Scheduling problems
@@ -311,7 +311,7 @@
 								
 								<p class="paragraphFontStyle"> A more explicit and recognizable form of the question is as follows: given a set S of meetings to schedule with a target of T and cost of the ith meeting being Ti and the value of each meeting being their priority, how can you maximize the overall priority of all the scheduled meetings? This can then be solved with the recurrence relation of the fourth form of the knapsack problem: </p>
 								
-				<!-- image -->				<img src="" />				
+				<!-- image -->				<img src="../images/fourthReccurence.png" />				
 								
 								
 								<p class="paragraphFontStyle"> Notice here that our resources are finite here since we can’t schedule the same meeting again. </p>

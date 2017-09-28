@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+    <title>Lakeshore Marketplace</title>
+</head>
+<body>
+
+<!-- This is the header of the webiste -->
+<div class="maia-header" id="maia-header" role="banner">
+    <div class="maia-aux">
+        <h1 class="portfolio-text">
+            Welcome to my
+
+            Portfolio
+
+        </h1>
+    </div>
+</div>
+
+
+<!-- Navigation -->
+
+<div class="maia-nav" id="maia-nav-x" rold="navigation">
+    <div class="maia-aux">
+        <ul>
+            <li>
+                <a href="../index.html"> Home </a></li>
+            <li>
+                <a href="../projects.html"> Portfolio </a>
+            </li>
+            <li>
+                <a href="../blog.html" class="otherNavLinks"> Blog </a>
+            </li>
+
+            <li>
+                <a href="#" class="otherNavLinks"> Resume </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+
+    <div>
+        <div class="blogPageLeftSide" id="alertappLeftSide"></div>
+        <div class="content-header--story"
+             style="background-image: url(../images/alertapp-main-left.png); width: 65%; left: 35%;"></div>
+
+
+    </div>
+
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+            <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
+                <h1 style="font-weight:500;" class="content-title content-title--story">
+                    Lakeshore Market: E-commerce on-campus
+                </h1>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Introduction
+                </h3>
+
+                <p class="paragraphFontStyle"> AlertApp is a cross-platform app written using react native through which
+                    various student organizations or individuals can send out alerts for events to students who register
+                    for an account using their LUC email address. The app is not only limited to student organizations
+                    and students. Campus safety or the university can issue out warnings or notify students of dangerous
+                    weather conditions. As such, the app serves as a unified event management system for events ranging
+                    from social events, academic-related events or safety-related concerns. Users can subscribe to
+                    events or be added to certain events. Once a user decides on an event to subscribe to, they can keep
+                    track of it and manage it through their My Events List. </p>
+
+                <p class="paragraphFontStyle"> My team and I came up with the idea because we thought it would be a
+                    great way to help people connect with the community around them by creating an opportunity for
+                    students to be able to view all the available events happening around campus. The project seemed
+                    intriguing because of its possible use cases by campus organizations and authorities. For example,
+                    Campus Safety would be able to send out emergency alerts, while the DOP (Department of Programming)
+                    could send out events such as the current movie being shown on campus, fundraisers, and other sorts
+                    of activities. Professors could also use this app to notify students of class cancellations,
+                    classroom changes, assignment changes, or notify students of any exam changes. Users can modify how
+                    inclusive they want the event to be by tailoring it to the appropriate audience. </p>
+
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Design Specifications and Considerations
+                </h3>
+
+                <p class="paragraphFontStyle"> The app was built using React Native. At a high-level, our goal was to
+                    deliver a functional app with a well-designed user experience. At a slightly lower level the goal
+                    was to architect the app in such a way as to maximize its scalability. This was achieved by using a
+                    handful of third party libraries along with React Native and good software design using a high level
+                    of abstraction to drive the application state management. The primary third-party libraries used
+                    were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga
+                    and Reselect. The client-side application architecture is diagramed as follows: </p>
+
+                <!-- image --> <img src="../images/alertapp-design.png"/>
+
+
+                <p class="paragraphFontStyle"> The application has two distinct layers. The business logic layer and the
+                    view layer. The view layer is a react.js style hierarchical component structure. The business logic
+                    layer encapsulates the store tree, entity definitions, and selectors. The data itself is based on a
+                    first order field abstraction that has a key, category, subcategory, and type at the minimum. The
+                    type property of a field is used to determine what type formatter to use for displaying the data.
+                    For example, a time/unix type will convert a Unix timestamp to a human readable date. A collection
+                    of fields is defined as an entity which can have either a parent or child entry. The entity
+                    definitions are used to normalize the data into an object graph. </p>
+                <p class="paragraphFontStyle"> The entire application is instantiated through factory methods. One for
+                    the React Native view layer and a few for the business logic layer. The view layer factory takes in
+                    a platform parameter (being iOS or Android) to determine what, if any, variations would need to be
+                    accounted for between native builds. The business logic layer is instantiated using an es6 module
+                    that defines the sublevel stores (some built through factories, like the records store, and others
+                    are specific one-offs), es6 module defined by a factory to build the object graph definition, and a
+                    store configuration factory that builds the store tree of the state of the application. </p>
+                <p class="paragraphFontStyle"> For the User Interface we wanted a clean, well refined interface. We
+                    chose a flat color scheme with slight color contrast to create an attractive color scheme that draws
+                    in users. A tab bar and sub-tab bar were used for navigation allowing easy escape hatches if a user
+                    gets confused. </p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Testing and Iterative Design
+                </h3>
+                <p class="paragraphFontStyle"> The application was built in two phases: business layer phase, and view
+                    layer phase. The business layer phase involved setting up the factories to drive instantiating the
+                    business layer of the application. The view layer phase involved designing the user interface, and
+                    developing said interface. The business layer is designed to be entirely separate from the view
+                    layer. As a result, it can have its own comprehensive unit test suite. Very limited unit tests were
+                    written for the project because we focused on application functionality. Our development process was
+                    extremely agile because we had to be testing and exploring modern technologies. As a result, not a
+                    lot of time was left for writing the unit tests. If we continue with this application to a
+                    production ready-state, writing the unit tests would be the next step. </p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Limitations and Constraints
+                </h3>
+
+                <p class="paragraphFontStyle"> We encountered few constraints while developing our application. The only
+                    major one was very major. In the React Native version we started with the React Native Polyfill for
+                    es6 did not work for es6 Symbols when transpiling to native Android applications. This prevented us
+                    from focusing on the android build of the application. Instead we focused on the iOS build. </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+        <p class="mdl-typography--font-light">
+
+            © 2017 Nathnael
+
+            <a href="../index.html">
+                Go to homepage
+            </a>
+
+            <a href="../projects.html">
+                Explore projects
+            </a>
+
+            <a href="../blog.html">
+                Read blogs
+            </a>
+
+            <a href="https://github.com/natialemu">
+                Jump to Github
+            </a>
+
+            <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+                View LinkedIn
+            </a>
+
+        </p
+    </div>
+
+</footer>
+
+
+</body>
+
+
+</html>

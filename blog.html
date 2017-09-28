@@ -247,7 +247,7 @@
 	   };
 	   
 	   var blogData2 = {
-	       BlogTileColor:"#E53935",
+	       BlogTileColor:"#1A237E",
 		   BlogLink: "testing-rxjava.html",
 		   BlogTileTitle:"Testing Observables and Subscribers in RxJava",
 		   BlogTileDescription:"",
@@ -273,7 +273,7 @@
 	   var blogData3 = {
 	       BlogTileColor:"#004D40",
 		   BlogLink: "knapsack.html",
-		   BlogTileTitle:"Knapsack problem is much more than just stealing gold",
+		   BlogTileTitle:"Common theme of subset problems",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -343,7 +343,7 @@
 	   };
 	   
 	   var blogData6 = {
-	       BlogTileColor:"#C0CA33",
+	       BlogTileColor:"#424242",
 		   BlogLink:"reccomendation-system.html",
 		   BlogTileTitle:"Building a reccomendation system",
 		   BlogTileDescription:"",
@@ -402,10 +402,17 @@
 	   var blog_html = blog_modal_template(blogData1);
 	   
 	   $("#blogContent").append(blog_html);
-	   blog_html = blog_modal_template(blogData2);
+
+	   blog_html = blog_modal_template(blogData7);
 	   $("#blogContent").append(blog_html);
-	   
+
+	   blog_html = blog_modal_template(blogData6);
+	   $("#blogContent").append(blog_html);
+
 	   blog_html = blog_modal_template(blogData3);
+	   $("#blogContent").append(blog_html);
+
+	   blog_html = blog_modal_template(blogData2);
 	   $("#blogContent").append(blog_html);
 	   
 	   
@@ -415,11 +422,9 @@
 	   blog_html = blog_modal_template(blogData5);
 	   $("#blogContent").append(blog_html);
 	   
-	   blog_html = blog_modal_template(blogData6);
-	   $("#blogContent").append(blog_html);
 
-             blog_html = blog_modal_template(blogData7);
-             $("#blogContent").append(blog_html);
+
+
 	   
 	   
 	   

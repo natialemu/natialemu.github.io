@@ -486,7 +486,7 @@
 		   ProjectSubtitle0:"Overview",
 		   ProjectModalLeftSide: "#004D40",
 		   ProjectTileImage:"facility-managment-tile-3.png",
-		   ProjectTileTitle:"Facility Management System",
+		   ProjectTileTitle:"Facility Manager",
 		   ProjectTileDescription:"A software that handles the use, maintenance and management of facilities",
 	       projectImage:"something",
 	       ProjectTitle: "2048 Player",
@@ -624,7 +624,7 @@
 	   };
 
 	   var blogData4 = {
-	       BlogTileColor:"#4E342E",
+	       BlogTileColor:"#263238",
 		   BlogLink:"lakeshore-market.html",
 		   BlogTileTitle:"Lakeshore Market: E-commerce on-campus",
 		   BlogTileDescription:"",
@@ -653,11 +653,13 @@
 	   var blog_html = blog_modal_template(blogData3);
 
 	   $("#blogContent").append(blog_html);
-	   blog_html = blog_modal_template(blogData2);
-	   $("#blogContent").append(blog_html);
 
 	   blog_html = blog_modal_template(blogData4);
 	   $("#blogContent").append(blog_html);
+
+	   blog_html = blog_modal_template(blogData2);
+	   $("#blogContent").append(blog_html);
+
 
 
 	   blog_html = blog_modal_template(blogData1);

@@ -13,17 +13,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
 
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
-    </script>
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
-        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
-
-        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/handlebars-v4.0.5.js"></script>    <!-- handlebar library -->
     <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
-    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+    <script src="../scripts/jquery.lettering.js"></script>    <!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>    <!-- textillate library -->
     <title>Lakeshore Marketplace</title>
 </head>
 <body>
@@ -82,84 +80,143 @@
 
                 <h3 style="font-weight:500;" class="blog-subtitles">
                     Introduction
-                </h3>
+                    <h3>
 
-                <p class="paragraphFontStyle"> AlertApp is a cross-platform app written using react native through which
-                    various student organizations or individuals can send out alerts for events to students who register
-                    for an account using their LUC email address. The app is not only limited to student organizations
-                    and students. Campus safety or the university can issue out warnings or notify students of dangerous
-                    weather conditions. As such, the app serves as a unified event management system for events ranging
-                    from social events, academic-related events or safety-related concerns. Users can subscribe to
-                    events or be added to certain events. Once a user decides on an event to subscribe to, they can keep
-                    track of it and manage it through their My Events List. </p>
+                        <p class="paragraphFontStyle"> Lakeshore marketplace is a system that provides e-commerce
+                            related web service APIs exclusively for students of Loyola University Chicago’s lake shore
+                            campus. It lets students buy anything that is up for sale by other students by providing
+                            services like other e-commerce sites except that the features here are tailored specifically
+                            to this niche. </p>
 
-                <p class="paragraphFontStyle"> My team and I came up with the idea because we thought it would be a
-                    great way to help people connect with the community around them by creating an opportunity for
-                    students to be able to view all the available events happening around campus. The project seemed
-                    intriguing because of its possible use cases by campus organizations and authorities. For example,
-                    Campus Safety would be able to send out emergency alerts, while the DOP (Department of Programming)
-                    could send out events such as the current movie being shown on campus, fundraisers, and other sorts
-                    of activities. Professors could also use this app to notify students of class cancellations,
-                    classroom changes, assignment changes, or notify students of any exam changes. Users can modify how
-                    inclusive they want the event to be by tailoring it to the appropriate audience. </p>
+                        <h3 style="font-weight:500;" class="blog-subtitles">
+                            Motivation
+                            <h3>
 
-
-                <h3 style="font-weight:500;" class="blog-subtitles">
-                    Design Specifications and Considerations
-                </h3>
-
-                <p class="paragraphFontStyle"> The app was built using React Native. At a high-level, our goal was to
-                    deliver a functional app with a well-designed user experience. At a slightly lower level the goal
-                    was to architect the app in such a way as to maximize its scalability. This was achieved by using a
-                    handful of third party libraries along with React Native and good software design using a high level
-                    of abstraction to drive the application state management. The primary third-party libraries used
-                    were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga
-                    and Reselect. The client-side application architecture is diagramed as follows: </p>
-
-                <!-- image --> <img src="../images/alertapp-design.png"/>
+                                <p class="paragraphFontStyle"> At the moment, when students want to engage in the
+                                    buying/selling process involving things such as used books, room items and others,
+                                    students usually post it on a Facebook page which can go wrong in many ways. For
+                                    example, students who need the product might not see the post around the time it is
+                                    posted on Facebook. There is also no way for students to search for advertised
+                                    products on the Facebook page. Facebook was meant to be used for a lot of things but
+                                    e-commerce was not one of them. This project aims to solve these issues and others
+                                    associated with the current way students engage in buying/selling of products
+                                    on-campus. </p>
 
 
-                <p class="paragraphFontStyle"> The application has two distinct layers. The business logic layer and the
-                    view layer. The view layer is a react.js style hierarchical component structure. The business logic
-                    layer encapsulates the store tree, entity definitions, and selectors. The data itself is based on a
-                    first order field abstraction that has a key, category, subcategory, and type at the minimum. The
-                    type property of a field is used to determine what type formatter to use for displaying the data.
-                    For example, a time/unix type will convert a Unix timestamp to a human readable date. A collection
-                    of fields is defined as an entity which can have either a parent or child entry. The entity
-                    definitions are used to normalize the data into an object graph. </p>
-                <p class="paragraphFontStyle"> The entire application is instantiated through factory methods. One for
-                    the React Native view layer and a few for the business logic layer. The view layer factory takes in
-                    a platform parameter (being iOS or Android) to determine what, if any, variations would need to be
-                    accounted for between native builds. The business logic layer is instantiated using an es6 module
-                    that defines the sublevel stores (some built through factories, like the records store, and others
-                    are specific one-offs), es6 module defined by a factory to build the object graph definition, and a
-                    store configuration factory that builds the store tree of the state of the application. </p>
-                <p class="paragraphFontStyle"> For the User Interface we wanted a clean, well refined interface. We
-                    chose a flat color scheme with slight color contrast to create an attractive color scheme that draws
-                    in users. A tab bar and sub-tab bar were used for navigation allowing easy escape hatches if a user
-                    gets confused. </p>
+                                <p class="paragraphFontStyle"> So, after initially working on a project that was
+                                    supposed to be a regular e-commerce system whose functionalities are exposed through
+                                    RESTful web APIs, I spoke with my professor about the possibility of pivoting the
+                                    project in a direction that fits within the context of an on-campus marketplace, and
+                                    he ended up being very supportive of the idea. </p>
 
-                <h3 style="font-weight:500;" class="blog-subtitles">
-                    Testing and Iterative Design
-                </h3>
-                <p class="paragraphFontStyle"> The application was built in two phases: business layer phase, and view
-                    layer phase. The business layer phase involved setting up the factories to drive instantiating the
-                    business layer of the application. The view layer phase involved designing the user interface, and
-                    developing said interface. The business layer is designed to be entirely separate from the view
-                    layer. As a result, it can have its own comprehensive unit test suite. Very limited unit tests were
-                    written for the project because we focused on application functionality. Our development process was
-                    extremely agile because we had to be testing and exploring modern technologies. As a result, not a
-                    lot of time was left for writing the unit tests. If we continue with this application to a
-                    production ready-state, writing the unit tests would be the next step. </p>
 
-                <h3 style="font-weight:500;" class="blog-subtitles">
-                    Limitations and Constraints
-                </h3>
+                                <h3 style="font-weight:500;" class="blog-subtitles">
+                                    How does it work?
+                                    <h3>
 
-                <p class="paragraphFontStyle"> We encountered few constraints while developing our application. The only
-                    major one was very major. In the React Native version we started with the React Native Polyfill for
-                    es6 did not work for es6 Symbols when transpiling to native Android applications. This prevented us
-                    from focusing on the android build of the application. Instead we focused on the iOS build. </p>
+                                        <p class="paragraphFontStyle"> When someone wants to sell some new or used
+                                            product, they will sign up for an account and then add the product they want
+                                            to sell. From a buyer’s perspective, the user has the option to search for a
+                                            specific product, or they can simply pick from a filtered list of products
+                                            based on popularity or how recently the products were added. </p>
+
+                                        <p class="paragraphFontStyle"> Users will select a default payment method upon
+                                            registration. Payment validation and processing is handled with the use of
+                                            Braintree’s APIs. Once an order has been verified and ordered, the seller
+                                            will be notified of the order and will also be provided with delivery
+                                            location services by using Google’s Map API. Since this is specifically made
+                                            for students that live on or near Loyola University’s lakeshore campus,
+                                            delivery is usually just a matter of travelling from one point on campus to
+                                            another. </p>
+
+
+                                        <h3 style="font-weight:500;" class="blog-subtitles">
+                                            How can it be used?
+                                            <h3>
+
+                                                <p class="paragraphFontStyle"> All the necessary functionalities are
+                                                    offered as REST web service APIs. Another person will be working on
+                                                    designing and creating a view that utilizes the services provided in
+                                                    the Lakeshore marketplace APIs.</p>
+
+
+                                                <h3 style="font-weight:500;" class="blog-subtitles">
+                                                    Design
+                                                    <h3>
+
+                                                        <p class="paragraphFontStyle"> At a higher level, the project
+                                                            was designed in 3 separate layers with high emphasis placed
+                                                            on decoupling and coherence of the system. This is mainly
+                                                            achieved by modularizing our code and using various
+                                                            principles such as dependency inversion, open-closed
+                                                            principle and single responsibility principles. Various
+                                                            design patterns have also been used to represent repeated
+                                                            design elements. The three layers used in the design of the
+                                                            program are the service layer, domain layer, and data access
+                                                            layer. The service layer is a structure built using Java and
+                                                            CXF running on Apache’s tomcat server. The domain layer is
+                                                            written in java and uses ReactiveX Java to manage
+                                                            asynchronous tasks and uses spring to manage dependency
+                                                            injection. This makes testing easier and minimizes code
+                                                            modifications when adding new features. The data access
+                                                            layer uses hibernate to persist objects into a MySQL
+                                                            database server. At various stages in the design process, we
+                                                            were iteratively modifying our designs. </p>
+
+
+                                                        <p class="paragraphFontStyle">The program is currently under
+                                                            development and we are currently working on developing the
+                                                            following modules: </p>
+
+
+                                                        <div class="listItemFonts">
+                                                            <ol class="">
+                                                                <li class="paragraphFontStyle "><strong>Review
+                                                                    System:</strong>strong> this will manage any ratings
+                                                                    and/or reviews that a product receives from a user
+                                                                </li>
+
+
+                                                                <li class="paragraphFontStyle "><strong> User
+                                                                    subscriptions: </strong>this will allow uses to
+                                                                    subscribe so that when a seller uploads a new
+                                                                    product or a certain product category is uploaded,
+                                                                    the user gets an email notification
+                                                                </li>
+                                                                <li class="paragraphFontStyle "><strong> Product
+                                                                    recommendations: </strong> product recommendation
+                                                                    features will be integrated based on user’s recent
+                                                                    purchases and ratings of products
+                                                                </li>
+
+                                                            </ol>
+                                                        </div>
+
+                                                        <p class="paragraphFontStyle"> We’re also currently working on
+                                                            making our APIs robust with proper error and exception
+                                                            handling, enhanced security features such as support for an
+                                                            API key, implementation of SSL, as well as OAuth
+                                                            implementation.</p>
+
+                                                        <h3 style="font-weight:500;" class="blog-subtitles">
+                                                            Testing and Iterative Design
+                                                            <h3>
+
+
+                                                                <p class="paragraphFontStyle"> The program was built
+                                                                    incrementally following a test-driven approach. It
+                                                                    was built in several phases which started by
+                                                                    implementing the domain, data access layers, and the
+                                                                    database corresponding to a few of the key features
+                                                                    of the program followed by implementing the service
+                                                                    layer and incrementally adding new features and
+                                                                    making design changes along the way. </p>
+
+                                                                <h3 style="font-weight:500;" class="blog-subtitles">
+                                                                    Wrap up
+                                                                    <h3>
+
+
             </div>
         </div>
     </div>

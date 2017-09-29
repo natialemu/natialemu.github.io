@@ -1,147 +1,217 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-       <meta charset="utf-8">
-       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	   
-       <link href="../styles/maia.experimental.css" rel="stylesheet">
-	   
-	   <link href="../styles/portfolio.css" rel="stylesheet">
-	   
-	   <link href="../styles/bootstrap.css" rel="stylesheet">
-       
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
-	   
-	   
-	   
-       </script>
-   
-       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
-	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
-	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
-	   
-	   <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
-	   <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-	   <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
-	   <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
-	
-	   
-       <title> Home </title>
-   </head>
-   
-   <body>
-   
-       <!-- This is the header of the webiste -->
-       <div class="maia-header" id="maia-header" role="banner">
-	       <div class="maia-aux">
-		      <h1 class="portfolio-text"> 
-                  Welcome to my
-				  
-				  Portfolio
-			      
-			  </h1>
-		   </div>
-	   </div>
-	   
-	   
-	   <!-- Navigation -->
-	   
-	   <div class="maia-nav" id="maia-nav-x" rold="navigation">
-	       <div class="maia-aux">
-		      <ul>
-			     <li> 
-				     <a href="../index.html"> Home  </a></li>
-				 <li>
-				     <a href="../projects.html"> Portfolio </a>
-				 </li>
-				 <li>
-				     <a href="../blog.html" class="otherNavLinks"> Blog </a>
-				 </li>
-				 
-				 <li>
-				     <a href="#" class="otherNavLinks"> Resume </a>
-				 </li>
-			  </ul>
-		   </div>
-	   </div>
-	   
-	   <div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
-				    <div class="content-header--story" style="background-image: url(images/{{something}})" > </div>
-					<div class="content-container content-row story-page story-page--restricted story-page--bottom">
-					     <div class="grid">
-						    <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-							    <h1 style="font-weight:500;"class="content-title content-title--story">
-								   Building a reccomendation system
-								</h1>
-								
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								    Introduction
-								<h3> 
-								
-								<h1 style="font-weight:500; text-align: center;"class="content-title content-title--story">
-								   Page is under developement
-								</h1>
-								
-								
-							</div>
-						 </div>
-					</div>
-				</div>
-	   
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-	
-	
-	
-	
-	
-	
-	    
-	  
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
 
-	
-	
-	
+    <link href="../styles/portfolio.css" rel="stylesheet">
 
-	
+    <link href="../styles/bootstrap.css" rel="stylesheet">
 
-	<footer class="hashcode-footer mdl-mini-footer">
-	    <div class="mdl-mini-footer__left-section">
-		   <p class="mdl-typography--font-light">
-		   
-              © 2017 Nathnael
-			  
-			  <a href="../index.html">  
-			      Go to homepage
-			  </a>
-			  
-			  <a href="../projects.html">  
-			      Explore projects
-			  </a>
-			  
-			  <a href="../blog.html">  
-			      Read blogs
-			  </a>
-			  
-			  <a href="https://github.com/natialemu">  
-			      Jump to Github
-			  </a>
-			  
-			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">  
-			      View LinkedIn
-			  </a>
-              
-		   </p
-		</div>
-	
-	</footer>
-	   
-   
-   </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
 
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+    <script src="../scripts/handlebars-v4.0.5.js"></script>    <!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>    <!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>    <!-- textillate library -->
+
+    <title> Home </title>
+</head>
+
+<body>
+
+<!-- This is the header of the webiste -->
+<div class="maia-header" id="maia-header" role="banner">
+    <div class="maia-aux">
+        <h1 class="portfolio-text">
+            Welcome to my
+
+            Portfolio
+
+        </h1>
+    </div>
+</div>
 
 
+<!-- Navigation -->
+
+<div class="maia-nav" id="maia-nav-x" rold="navigation">
+    <div class="maia-aux">
+        <ul>
+            <li>
+                <a href="../index.html"> Home </a></li>
+            <li>
+                <a href="../projects.html"> Portfolio </a>
+            </li>
+            <li>
+                <a href="../blog.html" class="otherNavLinks"> Blog </a>
+            </li>
+
+            <li>
+                <a href="#" class="otherNavLinks"> Resume </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+
+    <div>
+        <div class="blogPageLeftSide" id="alertappLeftSide"></div>
+        <div class="content-header--story"
+             style="background-image: url(../images/alertapp-main-left.png); width: 65%; left: 35%;"></div>
+
+
+    </div>
+
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+            <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
+
+                <h1 style="font-weight:500;" class="content-title content-title--story">
+                    Building a reccomendation system
+                </h1>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Introduction
+                <h3>
+
+
+                <p class="paragraphFontStyle">In this blog, I will try to explain how to build a movie recommendation
+                    system that makes use of a combination of content based filtering and collaborative-based
+                    filtering. </p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Data collection and processing
+                <h3>
+
+
+                <p class="paragraphFontStyle"> Data used for this project was primarily collected by GroupLens research
+                    from the Movielens website. The dataset consists of information on IMDB movies, their ratings, and
+                    the users who rated the movies. This information was enough to create a machine learning model that
+                    learns users’ preferences as well features for each movie. There were two groups of datasets used
+                    for this dataset: a large dataset and a small dataset. For computational reasons, the large dataset
+                    was split into two separate groups with each one being split by a 7:10 ratio to be used for training
+                    and the remaining one fourth of the dataset used for testing split into test and development set by
+                    a 1:2 ratio.</p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Model selection and Feature selection
+                <h3>
+
+                <p class="paragraphFontStyle">A feature vector, X, for movie of dimension n represents how much of the
+                    movie belongs to the nth genre. For example, if we’re creating a feature vector of size 3, first
+                    entry might provide information about how comedic the movie was, the second might provide
+                    information about how romantic the movie is and so forth. This feature vector, X, along with the
+                    users’ preference of genere, Theta, will be learned by the algorithm simultaneously. Before delving
+                    deep into how the model for this system works, let’s look at what Content-based filtering and
+                    collaborative based filtering are. </p>
+
+
+                <div class="listItemFonts">
+                    <ul class="">
+                        <li class="paragraphFontStyle "><strong> Content-based filtering: </strong>The assumption we’re
+                            making here when using this approach is that we know about the set of features of the movie.
+                            That is, we know how comedic, romantic, action or horror a movie is. Based on these
+                            features, our goal is to predict how a user would rate a movie by learning a user’s interest
+                            in a genre. The following image illustrates the problem formulation:
+                        </li>
+                        <!-- image --> <img
+                            src="../images/fifthReccurence.png"/>
+                        <p>Our goal is then to minimize the above objective function using gradient decent.</p>
+                        <li class="paragraphFontStyle "><strong> Collaborative filtering: </strong>Unlike the
+                            content-based filtering approach, we do not know what the features of the movies are. What
+                            we have instead is how much each user loves a certain genre of a movie. We’re going to use
+                            that information to learn the feature vector and predict user ratings of movies. The users
+                            are collaborating to get better movie ratings for everyone else. It’s this sense of
+                            collaboration that gives it the name collaborative filtering. The following image
+                            illustrates the problem formulation:
+                        </li>
+                        <!-- image --> <img
+                            src="../images/fifthReccurence.png"/>
+
+                    </ul>
+                </div>
+
+                <p class="paragraphFontStyle">The model for this project uses a combination of both content-based
+                    filtering and collaborative filtering. Instead of learning only the features or just the parameters,
+                    our model learns both at the same time. What the model does is initialize the feature vector and the
+                    parameters with some initial guess, then we can use our initial guesses to gradually learn the
+                    features and parameters. The following is the objective function that’s optimized: </p>
+
+                <!-- image --> <img
+                    src="../images/fifthReccurence.png"/>
+                <p class="paragraphFontStyle"> The last two terms are just regularization terms. </p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Making a recommendation
+                <h3>
+
+
+                <p class="paragraphFontStyle"> Making a recommendation involves comparing movies using the predicted
+                    feature vector. We’ll need to compute the dot product of the feature vectors to determine the
+                    similarity between the vectors. We can reduce the recommendation part of the problem as follows:
+                    “Given a set S of top rated and recently watched movies by user U, find a collection of movies that
+                    ranked by their average similarity to the movies in set S”. Once we get this collection of movies,
+                    the top ranked movies will be recommended to the user. </p>
+
+                <h3 style="font-weight:500;" class="blog-subtitles">
+                    Wrap up
+                <h3>
+
+                <p class="paragraphFontStyle">Building a recommendation system is not a hard problem to understand. I
+                    hope I was able to explain how to create a recommender system with clarity. </p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+        <p class="mdl-typography--font-light">
+
+            © 2017 Nathnael
+
+            <a href="../index.html">
+                Go to homepage
+            </a>
+
+            <a href="../projects.html">
+                Explore projects
+            </a>
+
+            <a href="../blog.html">
+                Read blogs
+            </a>
+
+            <a href="https://github.com/natialemu">
+                Jump to Github
+            </a>
+
+            <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+                View LinkedIn
+            </a>
+
+        </p>
+    </div>
+
+</footer>
+
+
+</body>
 
 
 </html>

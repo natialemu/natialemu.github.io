@@ -72,7 +72,7 @@
 		   
 		   <div class="content-title__description content-title__description--confined">
 		        <p>
-				Go through of some of my works
+				Go through of some of my works. All codes are available on GitHub
 				
 				</p>
 		   </div>
@@ -240,7 +240,11 @@
 								   {{ProjectSubtitle1}}
 								 </h3>
 								<p class="paragraphFontStyle" style="padding-left:{{Paragraph2LeftMargin}}">{{paragraph2}} </p>
+
 								<image style="padding-left:{{Paragraph2LeftMargin}}"  src="images/{{ModalSubImage2}}" />
+								<h3 style = "font-weight:500;" class = "blog-subtitles">
+									{{ProjectSubtitle2}}
+								</h3>
 								
 								<p class="paragraphFontStyle" style="padding-left:{{Paragraph3LeftMargin}}">{{paragraph3}} </p>
 								<image style="padding-left:{{Paragraph3LeftMargin}}" src="images/{{ModalSubImage3}}" />
@@ -975,38 +979,30 @@
              var projectOthersData6 = {
                  gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
                  ProjectSubtitle0: "Overview",
-                 ProjectModalLeftSide: "#01579B",
-                 MainModalImage: "ngordnet-final-main.png",
-                 ProjectTileImage:"ngordnet-tile.png",
+                 ProjectModalLeftSide: "#263238",
+                 MainModalImage: "lakeshore-market-right2.png",
+                 ProjectTileImage:"lakeshore-market-tile.png",
                  ProjectTileTitle:"Lakeshore marketplace",
                  ProjectTileDescription:"A RESTful web service API for e-commerce on-campus",
                  projectImage:"something",
-                 ProjectTitle: "Ngord net",
-                 paragraph1: "Ngordnet is a program that explores how the volume of printed works in English has changed over time, as well as the structure of the is-a relationships of words in English.",
-                 paragraph2: "Key things this program investigates:",
-                 paragraph3: "1.	The relative popularity of words over time.",
-                 Paragraph3LeftMargin: "40px",
-                 paragraph4: "2.	The relative popularity of categories of words over time.",
-                 Paragraph4LeftMargin: "40px",
-                 paragraph5: "3.	The hypnoyms (see below) of a given word.",
-                 Paragraph5LeftMargin: "40px",
-                 paragraph6: "4.	The length of words.",
-                 Paragraph6LeftMargin: "40px",
-                 paragraph7: "5.	Zipf's law",
-                 Paragraph7LeftMargin: "40px",
-                 ProjectSubtitle6: "WordNet",
-                 paragraph8: "The WordNet class allows for rapid queries after reading input files and storing them in the ADT. WordNet is a semantic lexicon for the English language that is used extensively by computational linguists and cognitive scientists; for example, it was a key component in IBM's Watson. WordNet groups words into sets of synonyms called synsets and describes semantic relationships between them. One such relationship is the is-a relationship, which connects a hyponym (more specific synset) to a hypernym (more general synset). For example, 'change' is a hypernym of 'demotion', since 'demotion' is-a (type of) 'change'. 'change' is in turn a hyponym of 'action', since 'change' is-a (type of) 'action'. A visual depiction of some hyponym relationships in English is given below:",
-                 ModalSubImage8: "wordnetsysnets.png",
-                 paragraph9: "Synsets consist of one or more words in English that all have the same meaning. For example, one synset is 'jump, parachuting', which represents the act of descending to the ground with a parachute. 'jump, parachuting' is a hyponym of 'descent', since 'jump, parachuting' is-a 'descent'.",
-                 paragraph10: "Words in English may belong to multiple synsets. This is just another way of saying words may have multiple meanings. For example, the word jump also belongs to the synset ‘‘jump, leap’, which represents the more figurative notion of jumping (e.g. a jump in attendance). The hypernym of the synset ‘jump, leap’ is ‘increase’, since ‘jump, leap’ is-an ‘increase’. Of course, there are other ways to ‘increase’ something, for example, through ‘augmentation,’ and thus it is no surprise that we have an arrow pointing downwards from ‘increase’ to ‘augmentation’ in the diagram above.",
-                 paragraph11: "Synsets may include not just words, but also what are known as collocations. You can think of these as single words that occur next to each other so often that they are considered a single word, e.g. nasal_decongestant. To avoid ambiguity, we will represent the constitutent words of collocations as being separated with an underscore _ instead of the usual convention in English of separating them with spaces. For simplicity, we will refer to collocations as simply 'words' throughout this document.",
-                 paragraph12: "A synset may be a hyponym of multiple synsets. For example, 'actifed' is a hyponym of both 'antihistamine' and 'nasal_decongestant', since 'actifed' is both of these things. The relationship is represented by a graph",
-                 paragraph13: "There are two data files that you used to create the wordnet digraph. The files are in CSV format: each line contains a sequence of fields, separated by commas. The file synsets.txt consists of synsets in WordNet. The first field is the synset id (an integer), the second field is the synonym set (or synset), and the third field is its dictionary definition (or gloss). ",
-                 paragraph14: "The file hyponyms.txt (and other smaller files with hyponym in the name) contains the hyponym relationships: The first field is a synset id; subsequent fields are the id numbers of the synset's direct hyponyms.",
-                 paragraph15: "After analyzing the NGram dataset, the program provides a visualized answer to questions such as the relative popularity of words over time, the relative popularity of categories of words, the hyponyms of a given word, and the length of words.",
-                 paragraph16: "The following plot shows shows the relative popularity of the words cake and pie from the period 1900 to 1930:",
-                 ModalSubImage16: "ngordnetCakePieChart.png",
-                 paragraph17: "The program also provides a visualization to Zipf’s law. Zipf’s law states that the frequency of words in English is inversely proportional to the rank. This means the most common word appears twice as often as the 2nd most popular word, 3 times as often as the 3rd most popular, and so forth.",
+                 ProjectTitle: "Lakeshore Market",
+                 paragraph1: "Lakeshore marketplace is a system that provides e-commerce related web service APIs exclusively for students of Loyola University Chicago’s lake shore campus. It lets students buy anything that is up for sale by other students by providing services like other e-commerce sites except that the features here are tailored specifically to this niche.",
+                 ProjectSubtitle1: "Design",
+				 paragraph2: "At a higher level, the project was designed in 3 separate layers with high emphasis placed on decoupling and coherence of the system. This is mainly achieved by modularizing our code and using various principles such as dependency inversion, open-closed principle and single responsibility principles. Various design patterns have also been used to represent repeated design elements. The three layers used in the design of the program are the service layer, domain layer, and data access layer. The service layer is a structure built using Java and CXF running on Apache’s tomcat server. The domain layer is written in java and uses ReactiveX Java to manage asynchronous tasks and uses spring to manage dependency injection. This makes testing easier and minimizes code modifications when adding new features. The data access layer uses hibernate to persist objects into a MySQL database server. At various stages in the design process, we were iteratively modifying our designs. ",
+                 ProjectSubtitle2: "Testing and Iterative Design",
+				 paragraph3: "The program was built incrementally following a test-driven approach. It was built in several phases which started by implementing the domain, data access layers, and the database corresponding to a few of the key features of the program followed by implementing the service layer and incrementally adding new features and making design changes along the way. ",
+                 Paragraph3LeftMargin: "",
+
+                 Paragraph4LeftMargin: "",
+                 paragraph5: "",
+                 Paragraph5LeftMargin: "",
+                 paragraph6: "",
+                 Paragraph6LeftMargin: "",
+                 paragraph7: "",
+                 Paragraph7LeftMargin: "",
+                 ProjectSubtitle6: "",
+                 paragraph8: "",
+                 ModalSubImage8: "",
                  appStatus:"Python Application",
                  projectDescription: "Machine Learning program that plays 2048",
                  projectName: "2048 Player",

@@ -605,9 +605,9 @@
 	   };
 
 	   var blogData3 = {
-	       BlogTileColor:"#004D40",
-		   BlogLink: "knapsack.html",
-		   BlogTileTitle:"Common theme of subset problems",
+	       BlogTileColor:"#424242",
+		   BlogLink: "reccomendation-system.html",
+		   BlogTileTitle:"Building a Reccomendation System",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -655,19 +655,18 @@
 
 
 	   //populate the blog tile within the homepage
-	   var blog_html = blog_modal_template(blogData3);
-
+	   var blog_html = blog_modal_template(blogData4);
 	   $("#blogContent").append(blog_html);
 
-	   blog_html = blog_modal_template(blogData4);
+	   blog_html = blog_modal_template(blogData3);
 	   $("#blogContent").append(blog_html);
-
-	   blog_html = blog_modal_template(blogData2);
-	   $("#blogContent").append(blog_html);
-
-
 
 	   blog_html = blog_modal_template(blogData1);
+	   $("#blogContent").append(blog_html);
+
+
+
+	   blog_html = blog_modal_template(blogData2);
 	   $("#blogContent").append(blog_html);
 
 

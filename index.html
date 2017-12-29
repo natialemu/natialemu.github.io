@@ -8,23 +8,36 @@
        <link href="styles/maia.experimental.css" rel="stylesheet">
 
 	   <link href="styles/portfolio.css" rel="stylesheet">
-
-	   <link href="styles/bootstrap.css" rel="stylesheet">
-
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+	   <link href="styles/bootstrap.min.css" rel="stylesheet">
+	   <link href="styles/mdb.min.css" rel="stylesheet">
 
-       </script>
 
-       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+	   <script
+			   src="scripts/jquery-3.2.1.min.js"></script>
+
+	   <script src="scripts/popper.min.js"></script>
+	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
 	   <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
-	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-	   <script src="scripts/jquery.lettering.js"></script>	<!-- lettering library -->
-	   <script src="scripts/jquery.textillate.js"></script>	<!-- textillate library -->
 
 
        <title> Home </title>
@@ -70,8 +83,8 @@
 
 	       <div class="maia-aux">
 		       <div class="homepage-banner-text center-text">
-			       <h1> Thank you for visiting my website </h1>
-				   <h2>
+			       <h1 class="animated fadeIn mb-4"> Thank you for visiting my website </h1>
+				   <h2 class="animated fadeIn mb-3">
 				        Check out more of my work on GitHub
 
 				   </h2>
@@ -88,7 +101,7 @@
 
 		   <a href = "https://github.com/natialemu" >
 
-		   <div class="down-divider down-divider-border">
+		   <div class="down-divider down-divider-border" style="margin-top: 9%;">
 
 
 
@@ -116,14 +129,14 @@
 
                             <div class="image-aside__align">
 
-							   <h2 class="image-aside__title">
+							   <h2 class="image-aside__title animated fadeIn mb-3">
 								   {{BlogTileTitle}}
 								 </h2>
 
 
 
 							   <div class="image-aside__text">
-							       <p>
+							       <p class="animated fadeIn text-muted">
 								        {{BlogTileDescription}}
 								   </p>
 
@@ -159,7 +172,7 @@
 
 	   <!-- Blog section -->
 	   <div class="page-row--split-blocks page-row-blog centeredText">
-	       <h2 class="content-title">
+	       <h2 class="content-title animated fadeIn mb-4">
 		       Blog related samples
 		   </h2>
 
@@ -196,7 +209,7 @@
 
 
 	   <div class="page-row--split-blocks project-title centeredText">
-	       <h2 class="content-title">
+	       <h2 class="content-title animated fadeIn mb-4">
 		       Projects
 		   </h2>
 
@@ -213,7 +226,7 @@
 
 							 <div class="caption-panel__content">
 							       <a data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-								        <h3 class="image-aside__title">
+								        <h3 class="image-aside__title animated fadeIn mb-3">
 
 										   {{ProjectTileTitle}}
 
@@ -221,13 +234,13 @@
 
 								   </a>
 
-								   <p class="caption-panel__text">
+								   <p class="caption-panel__text animated fadeIn text-muted">
 								     {{ProjectTileDescription}}
 
 								   </p>
 
 								   <div class="caption-panel__links">
-								        <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
+								        <a id="{{ProjectTileId}}"  data-ga-label="Learn more" data-ga-value="1" >
 										   <span>
 										       Learn more
 											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
@@ -284,110 +297,58 @@
 	<!-- Modal for project description when any project tile is clicked -->
    <script id="modal-template" type="text/x-handlebars-template">
 
-	<div id="projectModal" class="modal fade" role="dialog">
+	   <div class="modal fade" id="{{projectModalID}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		   <div class="modal-dialog lg" role="document">
+			   <!--Content-->
+			   <div class="modal-content">
+				   <!--Header-->
+				   <div class="modal-header">
+					   <p class="heading lead">{{ProjectTitle}}</p>
 
-	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;overflow:auto">
+					   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						   <span aria-hidden="true">&times;</span>
+					   </button>
+				   </div>
 
-	     <div class="modal-content" style="width:100%;height:100%;overflow:auto;">
+				   <!--Body-->
+				   <div class="modal-body">
+					   <div class="text-center">
 
-		    <div class="modal-body">
+							   <img style="margin-bottom:3%; max-width: 60% !important;" src="images/{{ProjectTileImage}}" class="img-fluid img-thumbnail z-depth-1"/>
 
-			    <div class="page-body">
-				    <button class="modal__close-btn" data-modal-close>
-					   <svg class="svg-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                           <path d="M0 0h24v24H0z" fill="none"/>
-                       </svg>
-					</button>
-				</div>
+						   <p>{{paragraph1}}</p>
+						   <p>{{paragraph2}}</p>
 
-				<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+					   </div>
+				   </div>
 
-
-
-					<div>
-					    <div class="blogPageLeftSide" style="background-color:{{ProjectModalLeftSide}};"> </div>
-					    <div class="content-header--story" style="background-image: url(images/{{MainModalImage}}); width: 65%; left: 35%;"> </div>
-
-
-
-					</div>
-					<div class="content-container content-row story-page story-page--restricted story-page--bottom">
-					     <div class="grid">
-						    <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-
-							     <h1 style="font-weight: 500" class="content-title content-title--story modal-title">
-								   {{ProjectTitle}}
-								 </h1>
-
-								 </br>
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle0}}
-								 </h3>
-
-
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph1LeftMargin}}">{{paragraph1}} </p>
-								<image style="padding-left:{{Paragraph1LeftMargin}}" src="images/{{ModalSubImage1}}" />
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph2LeftMargin}}">{{paragraph2}} </p>
-								<image style="padding-left:{{Paragraph2LeftMargin}}"  src="images/{{ModalSubImage2}}" />
-
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph3LeftMargin}}">{{paragraph3}} </p>
-								<image style="padding-left:{{Paragraph3LeftMargin}}" src="images/{{ModalSubImage3}}" />
-
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph4LeftMargin}}">{{paragraph4}} </p>
-								<image style="padding-left:{{Paragraph4LeftMargin}}"  src="images/{{ModalSubImage4}}" />
-
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph5LeftMargin}}">{{paragraph5}} </p>
-								<image style="padding-left:{{Paragraph5LeftMargin}}" src="images/{{ModalSubImage5}}" />
-
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle4}}
-								 </h3>
-
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph6LeftMargin}}">{{paragraph6}} </p>
-								<image style="padding-left:{{Paragraph6LeftMargin}}"  src="images/{{ModalSubImage6}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph7LeftMargin}}">{{paragraph7}} </p>
-								<image style="padding-left:{{Paragraph7LeftMargin}}"  src="images/{{ModalSubImage7}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph8LeftMargin}}">{{paragraph8}} </p>
-								<image style="padding-left:{{Paragraph8LeftMargin}}"  src="images/{{ModalSubImage8}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph9LeftMargin}}">{{paragraph9}} </p>
-								<image style="padding-left:{{Paragraph9LeftMargin}}"  src="images/{{ModalSubImage9}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph10LeftMargin}}">{{paragraph10}} </p>
-								<image style="padding-left:{{Paragraph10LeftMargin}}"  src="images/{{ModalSubImage10}}" />
-
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph11LeftMargin}}">{{paragraph11}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph12LeftMargin}}">{{paragraph12}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph13LeftMargin}}">{{paragraph13}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph14LeftMargin}}">{{paragraph14}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph15LeftMargin}}">{{paragraph15}} </p>
-
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph16LeftMargin}}">{{paragraph16}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph17LeftMargin}}">{{paragraph17}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph18LeftMargin}}">{{paragraph18}} </p>
-
-                                <h3 style = "font-weight:500;" class = "blog-subtitles">
-                                    {{ProjectSubtitle18}}
-                                </h3>
-
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph19LeftMargin}}">{{paragraph19}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph20LeftMargin}}">{{paragraph20}} </p>
-							</div>
-						 </div>
-					</div>
-				</div>
-
-		    </div>
-
-	    </div>
-
+				   <!--Footer-->
+				   <div class="modal-footer justify-content-center">
+					   <a type="button" class="btn btn-primary-modal modal_buttons">View code on GitHub<i class="fa fa-diamond ml-1"></i></a>
+					   <a type="button" class="btn btn-outline-secondary-modal waves-effect modal_buttons" data-dismiss="modal">View Doc</a>
+				   </div>
+			   </div>
+			   <!--/.Content-->
+		   </div>
 	   </div>
-	</div>
+
+	   <!-- Modal -->
+
+
+
 
 
 	</script>
-	<div id="modalContent"> </div>
 
-	</div> <!-- / container -->
+
+
+
+
+
+	<div id="modalContent">
+
+	</div>
+
 
 
 	<!-- Script for launching project modal -->
@@ -397,8 +358,8 @@
 		 var source = $("#blog-modal-template").html();
 	     var blog_modal_template = Handlebars.compile(source);
 
-		 var source = $("#project-modal-template").html();
-	     var project_modal_template = Handlebars.compile(source);
+		 var source_project = $("#project-modal-template").html();
+	     var project_modal_template = Handlebars.compile(source_project);
 
 
 		 var source1 = $("#modal-template").html();
@@ -453,7 +414,8 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "GitLet",
 		   ProjectTileId: "project1",
-		   imageID: "image1"
+		   imageID: "image1",
+             projectModalID:"modal1"
 	   };
 
 	   var projectData2 = {
@@ -465,7 +427,6 @@
 		   ProjectTileTitle:"Continental Divide",
 		   ProjectTileDescription:"A program that determines the continental divide of landmasses",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. For example, in Africa, the continental divide splits the continent in three parts, without assuming flow of water into lakes:",
 		   paragraph2: "1.	Land with water flow to the Indian ocean",
 		   Paragraph2LeftMargin:"50px",
@@ -482,7 +443,8 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Continental Divide",
 		   ProjectTileId: "project2",
-		   imageID: "image1"
+		   imageID: "image1",
+           projectModalID:"modal2"
 	   };
 
 	   var projectData3 = {
@@ -494,7 +456,6 @@
 		   ProjectTileTitle:"Facility Manager",
 		   ProjectTileDescription:"A software that handles the use, maintenance and management of facilities",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"It is a program that supports the management of buildings,"
 		   +" their constant use, and maintenance support when needed. It is "
 		   +" separated into three main modules:",
@@ -525,7 +486,8 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Facility Management System",
 		   ProjectTileId: "project3",
-		   imageID: "image1"
+		   imageID: "image1",
+           projectModalID:"modal3"
 	   };
 	   var projectData4 = {
 	       gitHubLink:"https://github.com/natialemu/javascript-parser",
@@ -536,7 +498,6 @@
 		   ProjectTileTitle:"JS Parser",
 		   ProjectTileDescription:"A parser and interpreter for a mimified version of javascript",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The program builds an abstract syntax tree for different constructs in Javascript as well as the dynamic language semantics such as assignments, variables, conditionals and loops as part of  the evaluator. It also has support for constructs such as structure creation, field creation, assignment to an existing field in a structure, and addition of a new field to a structure. The language supports named state, where a mutable store or memory maps named variables to storage cells where values can be stored. If there is a failure, the whole program terminates immediately with that first failure. ",
 		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures. This was based on the following grammar:",
 		   ModalSubImage2: "Grammar.png",
@@ -553,7 +514,8 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "JavaScript Parser and Interpreter",
 		   ProjectTileId: "project4",
-		   imageID: "image1"
+		   imageID: "image1",
+           projectModalID:"modal4"
 	   };
 
 	   var blogData1 = {
@@ -566,7 +528,6 @@
 		   ProjectTileTitle:"Social Network Analysis",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
 		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
 		   paragraph2AndHalf:"",
@@ -590,7 +551,6 @@
 		   ProjectTileTitle:"Social Network Analysis",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
 		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
 		   paragraph2AndHalf:"",
@@ -614,7 +574,6 @@
 		   ProjectTileTitle:"Social Network Analysis",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
 		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
 		   paragraph2AndHalf:"",
@@ -638,7 +597,6 @@
 		   ProjectTileTitle:"Alert app: How to keep up with events on campus",
 		   ProjectTileDescription:"Some project description will go here. this is just a test. this is more test",
 	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
 	       paragraph1:"The game 2048 is implemented in Python. The goal of this program is to create a system that learns how to play the game 2041 from the user. One approach, in terms of implementation, is to set up a system such that the computer learns from its own decisions, and how those affected the outcome without the need for data input. The approach used in this program, however, involved using existing data to inform the decisions of the computers. One way data was collected for the program was by playing the game on a regular basis and recording the combination of key presses and the outcome during each game.",
 		   paragraph2:"The program uses perceptron and KNN in order to learn how to play the game from the user. There are four keys used to determine the direction of the game: W, S, A, D which are the classes the algorithm predicts by using each cell on the board as a feature. Click here to learn more about the program",
 		   paragraph2AndHalf:"",
@@ -695,65 +653,67 @@
 	      var html1 = modal_template(projectData1);
 
 		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
+		  $("#modal1").modal("show");
 
-		  $(".modal__close-btn").click(function(){
-
-		       $("#projectModal").modal("hide");
-
-
-	      });
+//		  $(".modal__close-btn").click(function(){
+//
+//		       $("#projectModal").modal("hide");
+//
+//
+//	      });
 
 
 	   });
-
-
+//
+//
 	   $("#project2").click(function(){
-	      var html1 = modal_template(projectData2);
+//	      var html1 = modal_template(projectData2);
+//
+//		  $("#modalContent").html(html1);
+//		  $("#projectModal").modal("show");
+//
+//		  $(".modal__close-btn").click(function(){
+//
+//		       $("#projectModal").modal("hide");
+//
+//
+//	      });
+           var html1 = modal_template(projectData2);
 
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-
-		  $(".modal__close-btn").click(function(){
-
-		       $("#projectModal").modal("hide");
-
-
-	      });
+           $("#modalContent").html(html1);
+           $("#modal2").modal("show");
 
 
 	   });
-
-
+//
+//
 	   $("#project3").click(function(){
-	      var html1 = modal_template(projectData3);
+//	      var html1 = modal_template(projectData3);
+//
+//		  $("#modalContent").html(html1);
+//		  $("#projectModal").modal("show");
+//
+//		  $(".modal__close-btn").click(function(){
+//
+//		       $("#projectModal").modal("hide");
+//
+//
+//	      });
+           var html1 = modal_template(projectData3);
 
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-
-		  $(".modal__close-btn").click(function(){
-
-		       $("#projectModal").modal("hide");
-
-
-	      });
+           $("#modalContent").html(html1);
+           $("#modal3").modal("show");
 
 
 	   });
 
 
 	   $("#project4").click(function(){
-	      var html1 = modal_template(projectData4);
+           var html1 = modal_template(projectData4);
 
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
+           $("#modalContent").html(html1);
+           $("#modal4").modal("show");
 
-		  $(".modal__close-btn").click(function(){
-
-		       $("#projectModal").modal("hide");
-
-
-	      });
 
 
 	   });
@@ -805,6 +765,9 @@
 
 
    </body>
+
+   <script src="scripts/mdb.min.js"></script>
+
 
 
 

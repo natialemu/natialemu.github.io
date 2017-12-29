@@ -111,7 +111,7 @@ body * {
 }
 
 #portfolio-banner{
-	background-image: url("../images/6066.jpg");
+	background-image: url("../images/homepage-header-1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 2px 4px rgba(0,0,0,0.15);
@@ -1200,4 +1200,8 @@ button{
 
 #reccomendationLeftSide{
     background-color: #424242;
+}
+
+.modal_buttons{
+    background-color: #007bff !important;
 }

@@ -82,12 +82,16 @@
 	   <div class="maia-stage" id="portfolio-banner">
 
 	       <div class="maia-aux">
-		       <div class="homepage-banner-text center-text">
-			       <h1 class="animated fadeIn mb-4"> Thank you for visiting my website </h1>
-				   <h2 class="animated fadeIn mb-3">
+		       <div class="homepage-banner-text center-text ">
+			       <h1 class="animated fadeIn mb-4"> NATHNAEL ALEMU </h1>
+				   <h3 class="animated fadeIn mb-3">
+					   Software Engineer &nbsp; | &nbsp;  Physicist &nbsp; | &nbsp; Machine Learning Enthusiast
+
+				   </h3>
+				   <h4 class="animated fadeIn mb-3">
 				        Check out more of my work on GitHub
 
-				   </h2>
+				   </h4>
 
 			   </div>
 
@@ -101,7 +105,7 @@
 
 		   <a href = "https://github.com/natialemu" >
 
-		   <div class="down-divider down-divider-border" style="margin-top: 9%;">
+		   <div class="down-divider down-divider-border" style="margin-top: 4%;">
 
 
 
@@ -170,45 +174,13 @@
                 </script>
 
 
-	   <!-- Blog section -->
-	   <div class="page-row--split-blocks page-row-blog centeredText">
-	       <h2 class="content-title animated fadeIn mb-4">
-		       Blog related samples
-		   </h2>
-
-	   </div>
-
-	   <div class="page-row page-row--medium page-row--grid">
-	       <div class="content-container">
-		       <div class="grid grid--equal" id="blogContent">
-
-
-
-
-
-
-
-			   </div>
-
-		   </div>
-
-
-		   <div class="center content-footer mobile--hide">
-		       <a href="blog.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">
-			       Explore more topics
-			   </a>
-
-		   </div>
-
-
-	   </div>
 
 
 	   <!-- Model for project description -->
 
 
 
-	   <div class="page-row--split-blocks project-title centeredText">
+	   <div class="page-row--split-blocks project-title centeredText" style="background-color: rgb(240,240,240); padding-top: 5%;">
 	       <h2 class="content-title animated fadeIn mb-4">
 		       Projects
 		   </h2>
@@ -265,7 +237,7 @@
 
 
 	   <!-- Projects title -->
-	   <div class="page-row page-row--split-blocks page-row-project">
+	   <div class="page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240);">
 
 
 		   <!-- Project cards -->
@@ -289,6 +261,40 @@
 		   </div>
 
 	</div>
+
+
+	   <!-- Blog section -->
+	   <div class="page-row--split-blocks page-row-blog centeredText">
+		   <h2 class="content-title animated fadeIn mb-4">
+			   Blog related samples
+		   </h2>
+
+	   </div>
+
+	   <div class="page-row page-row--medium page-row--grid">
+		   <div class="content-container">
+			   <div class="grid grid--equal" id="blogContent">
+
+
+
+
+
+
+
+			   </div>
+
+		   </div>
+
+
+		   <div class="center content-footer mobile--hide">
+			   <a href="blog.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">
+				   Explore more topics
+			   </a>
+
+		   </div>
+
+
+	   </div>
 
 
 
@@ -448,45 +454,37 @@
 	   };
 
 	   var projectData3 = {
-	       gitHubLink:"https://github.com/natialemu/FacilityManagementSystem",
-		   MainModalImage: "fms-main.png",
-		   ProjectSubtitle0:"Overview",
-		   ProjectModalLeftSide: "#004D40",
-		   ProjectTileImage:"facility-managment-tile-3.png",
-		   ProjectTileTitle:"Facility Manager",
-		   ProjectTileDescription:"A software that handles the use, maintenance and management of facilities",
-	       projectImage:"something",
-	       paragraph1:"It is a program that supports the management of buildings,"
-		   +" their constant use, and maintenance support when needed. It is "
-		   +" separated into three main modules:",
-		   paragraph2: "1.	The facility module: This module is responsible for storing all"
-		   +" required information about a facility such as its capacity, "
-		   +"operating budget, location. It is also responsible for adding a new facility to be managed, for removing a facility from being "
-		   +"managed, for getting general information about the facility such as the number of occupants, the capacity of the facility and their current statuses.",
-	       ModalSubImage2: "FMS_facility_module_UML.jpg",
-		   Paragraph2LeftMargin: "35px",
-		   paragraph3: "2.	The facility maintenance module: This is responsible for managing the maintenance of a facility such as scheduling a facility "
-		   +"maintenance, placing a maintenance order, calculating the cost of maintenance in accordance with the operating budget of the "
-		   +"facility, checking maintenance status, listing maintenance requests, calculating downtime of a facility and others.",
-		   ModalSubImage3: "FMS_facilityMaintenance_module_UML.png",
-		   Paragraph3LeftMargin: "35px",
-		   paragraph4:"3.	The facility use module: This module is responsible for reserving a facility, assessing the cost of using the facility and maintaining it. It also assigns and de-assigns a facility for use, tracks the use of a facility by users, adds/removes users to the facility, manages cost of using the facility in accordance with facility’s operating budget.",
-		   ModalSubImage4: "FMS_facilityUse_module_UML.png",
-		   Paragraph4LeftMargin: "35px",
-		   paragraph5: "4.	The facility inspection module: this is responsible for managing inspection of the facility and keeping track of the history the facility’s inspection.",
-		   ModalSubImage5:"FMS_facilityInspection_module_UML.png",
-		   Paragraph5LeftMargin: "35px",
-		   ProjectSubtitle4: "Design",
-		   paragraph6: "The program is divided into the three principal layers: the view, model, and Data Access layers. It is designed in accordance with good design principles and utilizes Spring for DI in order to decouple the system, increase coherence and make testing convenient.",
-		   paragraph7:"The program was designed as a generic facility management system and is not meant to be used for just one specific facility. So it can be used by any facility that ranges anywhere from just a single unit to a vast compound or even more. The purpose of the facility being managed is also irrelevant for the program. This is mainly achieved by using the composite design pattern. Inspectors and staff members are implemented with the use of the visitor design pattern",
-		   ModalSubImage7: "FMS_officeBuildingVisitor_module_UML.png",
-		   paragraph8: "Most of the work done was focused on implementing the domain layer with very little emphasis placed on the view. Future versions of the app will involve a Graphical User interface for better interaction with the system as well as using hibernate and a proper DMS for data persistence.",
-		   paragraph9:"An additional module that is responsible for managing services provided by the facility is in the works. It will be responsible for managing the services such as adding/removing the service, determining who can use or is eligible to use the service, the cost of the service and more. ",
-		   appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       ProjectTitle: "Facility Management System",
-		   ProjectTileId: "project3",
-		   imageID: "image1",
+           gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+           ProjectSubtitle0: "Overview",
+           ProjectModalLeftSide: "#263238",
+           MainModalImage: "lakeshore-market-right2.png",
+           ProjectTileImage:"lakeshore-market-tile.png",
+           ProjectTileTitle:"Lakeshore marketplace",
+           ProjectTileDescription:"A RESTful web service API for e-commerce on-campus",
+           projectImage:"something",
+           ProjectTitle: "Lakeshore Market",
+           paragraph1: "Lakeshore marketplace is a system that provides e-commerce related web service APIs exclusively for students of Loyola University Chicago’s lake shore campus. It lets students buy anything that is up for sale by other students by providing services like other e-commerce sites except that the features here are tailored specifically to this niche.",
+           ProjectSubtitle1: "Design",
+           paragraph2: "At a higher level, the project was designed in 3 separate layers with high emphasis placed on decoupling and coherence of the system. This is mainly achieved by modularizing our code and using various principles such as dependency inversion, open-closed principle and single responsibility principles. Various design patterns have also been used to represent repeated design elements. The three layers used in the design of the program are the service layer, domain layer, and data access layer. The service layer is a structure built using Java and CXF running on Apache’s tomcat server. The domain layer is written in java and uses ReactiveX Java to manage asynchronous tasks and uses spring to manage dependency injection. This makes testing easier and minimizes code modifications when adding new features. The data access layer uses hibernate to persist objects into a MySQL database server. At various stages in the design process, we were iteratively modifying our designs. ",
+           ProjectSubtitle2: "Testing and Iterative Design",
+           paragraph3: "The program was built incrementally following a test-driven approach. It was built in several phases which started by implementing the domain, data access layers, and the database corresponding to a few of the key features of the program followed by implementing the service layer and incrementally adding new features and making design changes along the way. ",
+           Paragraph3LeftMargin: "",
+
+           Paragraph4LeftMargin: "",
+           paragraph5: "",
+           Paragraph5LeftMargin: "",
+           paragraph6: "",
+           Paragraph6LeftMargin: "",
+           paragraph7: "",
+           Paragraph7LeftMargin: "",
+           ProjectSubtitle6: "",
+           paragraph8: "",
+           ModalSubImage8: "",
+           appStatus:"Python Application",
+           projectDescription: "Machine Learning program that plays 2048",
+           projectName: "2048 Player",
+           ProjectTileId: "project3",
+           imageID: "image1",
            projectModalID:"modal3"
 	   };
 	   var projectData4 = {
@@ -629,13 +627,13 @@
 
 
 	   //populate the project tiles within the homepage
-	   var html = project_modal_template(projectData1);
+	   var html = project_modal_template(projectData3);
 
 	   $("#content").append(html);
 	   html = project_modal_template(projectData2);
 	   $("#content").append(html);
 
-	   html =project_modal_template(projectData3);
+	   html =project_modal_template(projectData1);
 	   $("#content").append(html);
 
 

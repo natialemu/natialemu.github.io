@@ -6,23 +6,30 @@
        <link href="styles/maia.experimental.css" rel="stylesheet">
 	   
 	   <link href="styles/portfolio.css" rel="stylesheet">
-	   
+
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 	   <link href="styles/bootstrap.css" rel="stylesheet">
-       
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+	   <link href="styles/bootstrap.min.css" rel="stylesheet">
+	   <link href="styles/mdb.min.css" rel="stylesheet">
+
+
+	   <script
+			   src="scripts/jquery-3.2.1.min.js"></script>
+
+	   <script src="scripts/popper.min.js"></script>
+	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 	   
 	   
-	   
-       </script>
-   
+
        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 	   
 	   <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
-	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-	   <script src="scripts/jquery.lettering.js"></script>	<!-- lettering library -->
-	   <script src="scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
        <title> Projects </title>
    </head>
    
@@ -128,17 +135,17 @@
 					
 			    </script>
 		
-		<div class="page-row--split-blocks android-section">
+		<div class="page-row--split-blocks android-section text-center" style="background-color: rgb(240,240,240);">
 		
 		  <h2 class="content-subtitle">
-		       Android
+		       Android apps
 		   </h2>
 		
 		
 		</div>
 	   
 	   <!-- Projects title -->
-	   <div class="page-row page-row--split-blocks page-row-project">
+	   <div class="page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240);">
 	       
 		   
 		   <!-- Project cards -->
@@ -163,7 +170,7 @@
 	
 	<div class="page-row--split-blocks page-row-blog otherApps">
 	       <h2 class="content-subtitle">
-		       Other
+		       Other projects
 		   </h2>
 		   
 		   
@@ -191,122 +198,57 @@
 	   
 	   
 	</div>
-	
-	<script id="modal-template" type="text/x-handlebars-template">
-	
-	<div id="projectModal" class="modal fade" role="dialog">
-	
-	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;overflow:auto;">
-	  
-	     <div class="modal-content" style="width:100%;height:100%;overflow:auto;">
-		 
-		    <div class="modal-body">
-			
-			    <div class="page-body">
-				    <button class="modal__close-btn" data-modal-close>
-					   <svg class="svg-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                           <path d="M0 0h24v24H0z" fill="none"/>
-                       </svg>
-					</button>
-				</div>
-				
-				<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
-				
-				    <div class="blogPageLeftSide" style="background-color:{{ProjectModalLeftSide}};"> </div>
-					    <div class="content-header--story" style="background-image: url(images/{{MainModalImage}}); width: 65%; left: 35%;"> </div>
-						
-					
-					
-					</div>
-					
-					<div class="content-container content-row story-page story-page--restricted story-page--bottom">
-					     <div class="grid">
-						    <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-							    <h1 style="font-weight: 500" class="content-title content-title--story modal-title">
-								   {{ProjectTitle}}
-								 </h1>
-								 
-								 </br>
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle0}}
-								 </h3>
-								 
-								
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph1LeftMargin}}">{{paragraph1}} </p>
-								<image style="padding-left:{{Paragraph1LeftMargin}}" src="images/{{ModalSubImage1}}" />
-								
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle1}}
-								 </h3>
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph2LeftMargin}}">{{paragraph2}} </p>
 
-								<image style="padding-left:{{Paragraph2LeftMargin}}"  src="images/{{ModalSubImage2}}" />
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-									{{ProjectSubtitle2}}
-								</h3>
-								
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph3LeftMargin}}">{{paragraph3}} </p>
-								<image style="padding-left:{{Paragraph3LeftMargin}}" src="images/{{ModalSubImage3}}" />
-								
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph4LeftMargin}}">{{paragraph4}} </p>
-								<image style="padding-left:{{Paragraph4LeftMargin}}"  src="images/{{ModalSubImage4}}" />
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle3}}
-								 </h3>
-								
-								<p class="paragraphFontStyle" style="padding-left:{{Paragraph5LeftMargin}}">{{paragraph5}} </p>
-								<image style="padding-left:{{Paragraph5LeftMargin}}" src="images/{{ModalSubImage5}}" />
-								
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-								   {{ProjectSubtitle4}}
-								 </h3>
-								
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph6LeftMargin}}">{{paragraph6}} </p>
-								<image style="padding-left:{{Paragraph6LeftMargin}}"  src="images/{{ModalSubImage6}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph7LeftMargin}}">{{paragraph7}} </p>
-								<image style="padding-left:{{Paragraph7LeftMargin}}"  src="images/{{ModalSubImage7}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph8LeftMargin}}">{{paragraph8}} </p>
-								<image style="padding-left:{{Paragraph8LeftMargin}}"  src="images/{{ModalSubImage8}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph9LeftMargin}}">{{paragraph9}} </p>
-								<image style="padding-left:{{Paragraph9LeftMargin}}"  src="images/{{ModalSubImage9}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph10LeftMargin}}">{{paragraph10}} </p>
-								<image style="padding-left:{{Paragraph10LeftMargin}}"  src="images/{{ModalSubImage10}}" />
-								
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph11LeftMargin}}">{{paragraph11}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph12LeftMargin}}">{{paragraph12}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph13LeftMargin}}">{{paragraph13}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph14LeftMargin}}">{{paragraph14}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph15LeftMargin}}">{{paragraph15}} </p>
-								
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph16LeftMargin}}">{{paragraph16}} </p>
-								<image style="padding-left:{{Paragraph16LeftMargin}}" src="images/{{ModalSubImage16}}" />
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph17LeftMargin}}">{{paragraph17}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph18LeftMargin}}">{{paragraph18}} </p>
-								<h3 style = "font-weight:500;" class = "blog-subtitles">
-									{{ProjectSubtitle18}}
-								</h3>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph19LeftMargin}}">{{paragraph19}} </p>
-								<p class="paragraphFontStyle" style="margin-left:{{Paragraph20LeftMargin}}">{{paragraph20}} </p>
-							
-							</div>
-						 </div>
-					</div>
-				</div>
-				
-		    </div>
-			
-	    </div>
-		
-	   </div>
-	</div>
-	    
-	  
-	</script>
+	   <!-- Modal for project description when any project tile is clicked -->
+	   <script id="modal-template" type="text/x-handlebars-template">
+
+		   <div class="modal fade" id="{{projectModalID}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			   <div class="modal-dialog lg" role="document">
+				   <!--Content-->
+				   <div class="modal-content">
+					   <!--Header-->
+					   <div class="modal-header">
+						   <p class="heading lead">{{ProjectTitle}}</p>
+
+						   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							   <span aria-hidden="true">&times;</span>
+						   </button>
+					   </div>
+
+					   <!--Body-->
+					   <div class="modal-body">
+						   <div class="text-center">
+
+							   <img style="margin-bottom:3%; max-width: 60% !important;" src="images/{{ProjectTileImage}}" class="img-fluid img-thumbnail z-depth-1"/>
+
+							   <p>{{paragraph1}}</p>
+							   <p>{{paragraph2}}</p>
+
+						   </div>
+					   </div>
+
+					   <!--Footer-->
+					   <div class="modal-footer justify-content-center">
+						   <a type="button" class="btn btn-primary-modal modal_buttons" href="{{gitHubLink}}">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>
+						   <a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" d>Swagger documentation</a>
+						   <a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>
+
+					   </div>
+				   </div>
+				   <!--/.Content-->
+			   </div>
+		   </div>
+
+		   <!-- Modal -->
+
+
+
+
+
+	   </script>
 	<div id="modalContent"> </div>
 	
-	</div> <!-- / container -->
-	
+
 	
 	
 	
@@ -322,9 +264,34 @@
 		 
 		 var source1 = $("#modal-template").html();
 	     var modal_template = Handlebars.compile(source1);
+
+
+	     /*
+	      $.getJSON('http://localhost:8080/COMP433_-_Project_4/services/bookstore/order/' + $(this).attr('id') + '?' + getAuthParams(), function (product) {
+	              for(int i =0; i < product.length; i++){
+
+	              var productDate = {
+	                  productCost: product[i].productCost;
+
+
+	               };
+
+	                  var html = project_modal_template(productData);
+
+	  					 $("#content").append(html);
+	              }
+
+	      })'
+
+	      #(#registraion).click(function(){
+
+
+	      })
+
+	     */
 		 
 		 var projectData1 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/black-hole",
 		   ProjectModalLeftSide: "#4A148C",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"blackhole-tile-2.png",
@@ -334,7 +301,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Blackhole",
 	       paragraph1:"Blackhole is a two-player strategy game that implements a computer player using two algorithms: Monte-carlo and min-max. Each player starts with 10 tiles numbered 1 through 10. The number on the tiles represent both their values and the order in which they must be placed onto a triangular board. The board has 21 spaces so one space remains uncovered. Once all the tiles have been placed, the tiles that surround the empty space are sucked into the black hole. The objective of the game is to have fewer points sucked into the black hole than then other player.",
-		   paragraph2: "Here is a screenshot of a game in progress: ",
+		   paragraph2: "",
 		   ModalSubImage2: "blackhole-midgame.png",
 		   paragraph3: "The app uses two algorithms to create the computer player of the game. The first algorithm is the monte-carlo algorithm which relies on repeated random moves to obtain the right move to make. The other algorithm is the minmax algorithm which is used for minimizing the possible loss for the worst-case scenario.",
 		   paragraph4: "Although using minmax for the entire duration of the game will create the best computer player, this will consume an unreasonable amount of time. As a result, the approach used in this game is to use the monte-carlo approach until a certain depth is reach. Once that depth is reached, the minmax algorithm will be used to find the optimal move to make for the computer.",
@@ -344,11 +311,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project1",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+			 projectModalID:"modal1"
+
+         };
 	   
 	   var projectData2 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/ContinentalDivide",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#1565C0",
 		   MainModalImage: "continental-divide-final-main.png",
@@ -357,8 +326,8 @@
 		   ProjectTileDescription:"A program that determines the continental divide of landmasses",
 	       projectImage:"something",
 	       ProjectTitle: "Continental Divide",
-	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. For example, in Africa, the continental divide splits the continent in three parts, without assuming flow of water into lakes:",
-		   paragraph2: "1.	Land with water flow to the Indian ocean",
+	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. ",
+		   paragraph2: "",
 		   Paragraph2LeftMargin:"50px",
 		   paragraph3: "2.	Land with water flow to the Atlantic ocean",
 		   Paragraph3LeftMargin: "50px",
@@ -373,11 +342,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project2",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal2"
+
+       };
 	   
 	   var projectData3 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/WordLadder",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#FF6D00",
 		   MainModalImage: "wordladder-final-main.png",
@@ -397,10 +368,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project3",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal3"
+
+
+       };
 	   var projectData4 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/puzzle-8",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"puzzle8-tile.png",
 		   ProjectModalLeftSide: "#283593",
@@ -425,11 +399,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project4",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal4"
+
+       };
 	   
 	   var projectData5 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/TouringMusician",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"touring-musician-tile.png",
 		   ProjectTileTitle:"Touring musician",
@@ -439,7 +415,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Turing Musician",
 	       paragraph1: "Touring musician is an android app that represents a user with a map and let them add gig locations to the map and figure out a path through the various gigs.",
-		   paragraph2: "The UI of the app looks like as follows:",
+		   paragraph2: "",
 		   ModalSubImage2: "touring-musician-tile.png",
 		   paragraph3: "There are three implementations of the problem represented as modes in the app. ",
 		   paragraph4: "The third mode is one way of approximating the travelling salesman problem. Whenever a gig is added on the map, the smallest total path length is visualized on the map.",
@@ -449,11 +425,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project5",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal5"
+
+       };
 	   
 	   var projectData6 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/scarnes-dice",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"scarnes-dice-tile.png",
 		   ProjectModalLeftSide: "#4E342E",
@@ -463,7 +441,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Scarne's dice",
 	       paragraph1: "Scarnes dice is a turn-based dice game where players score points by rolling a die then if they roll at least one 1, they score no points and will lose their turn; if they roll both 1s, then they will lose all their previous points and lose their turn; if they roll a double, then they have to roll again. The winner is the first person that reaches 100 points.",
-		   paragraph2: "For example, if a player starts their turn and rolls 3 and 5, they can choose to either ‘hold’ and end their turn, in which case they can add 8 to their score, or reroll and potentially score more points.",
+		   paragraph22: "For example, if a player starts their turn and rolls 3 and 5, they can choose to either ‘hold’ and end their turn, in which case they can add 8 to their score, or reroll and potentially score more points.",
 		   paragraph3: "Let’s say they decide to roll again, and they get a 3 and 3. They now have to roll again end can’t end their turn at this tim. They will add 6 points to their existing score to have a total of 14 points so far. ",
 		   paragraph4: "They decide to roll again but get a 1 and a 4. Getting only a single 1 will force the player to give up their turn. However, the player’s prior points will not be removed and will stay at 14. However, if the player instead had rolled two 1s, then not only would the player give up their turn but the player would also lose all prior points. The total point of the player would then be 0.",
 		   paragraph5: "The game in progress looks as follows:",
@@ -473,10 +451,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project6",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal6"
+
+       };
 	   var projectData7 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/anagram-game",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"anagram-tile.png",
 		   ProjectModalLeftSide: "#455A64",
@@ -486,7 +466,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Yet another game involving anagrams",
 	       paragraph1: "This is a game involving anagrams which are words formed by rearranging the letters of another word. The game will provide the user with a word from the dictionary. The user then tries to create as many words as possible that contain all the letters of the given word plus one additional letter. Note that adding the extra letter at the beginning of the end without reordering the other letters is not valid. For example, if the game picks the word ‘ore’ as a starter, the user might guess ‘rose’ or ‘zero’ but not ‘sore’. The user can also give up and see the words that they did not guess.",
-		   paragraph2: "The game will only propose words that have at least 5 solutions. Here is the game in progress:",
+		   paragraph22: "The game will only propose words that have at least 5 solutions. Here is the game in progress:",
 		   ModalSubImage2: "anagram-midgame.png",
 		   paragraph3: "The game will also provide a solution that closely resembles the user’s effort:",
 		   ModalSubImage3: "",
@@ -496,10 +476,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project7",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal7"
+
+       };
 	   var projectData8 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/BSTGuesser",
 		   ProjectTileImage:"bst-guesser-tile.png",
 		   MainModalImage: "bst-guesser-final-main.png",
 		   ProjectModalLeftSide: "#F57F17",
@@ -518,10 +500,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project8",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal8"
+
+       };
 	   var projectData9 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/jumping-cubes",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#BF360C",
 		   ProjectTileImage:"jumping-cube-tile.png",
@@ -551,10 +535,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project9",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal9"
+
+       };
 	   var projectData10 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/AlertApp",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"alertapp-tile-1.png",
 		   ProjectModalLeftSide: "#4E342E",
@@ -564,7 +550,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Alert App",
 	       paragraph1: "AlertApp is a cross-platform app written using react native through which various student organizations or individuals can send out alerts for events to students who register for an account using their LUC email address. The app is not only limited to student organizations and students. Campus safety or the university can issue out warnings or notify students of dangerous weather conditions. As such, the app serves as a unified event management system for events ranging from social events, academic-related events or safety-related concerns.",
-		   paragraph2: "The app was built using React Native. At a high-level, our goal was to deliver a functional app with a well-designed user experience. At a slightly lower level the goal was to architect the app in such a way as to maximize its scalability. This was achieved by using a handful of third party libraries along with React Native and good software design using a high level of abstraction to drive the application state management. The primary third party libraries used were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga and Reselect. The client-side application architecture is diagramed as follows:",
+		   paragraph2: "The app was built using React Native. At a high-level, our goal was to deliver a functional app with a well-designed user experience. At a slightly lower level the goal was to architect the app in such a way as to maximize its scalability. This was achieved by using a handful of third party libraries along with React Native and good software design using a high level of abstraction to drive the application state management. The primary third party libraries used were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga and Reselect.",
 		   ModalSubImage2: "alertapp-design.png",
 		   paragraph3: "The application has two distinct layers. The business logic layer and the view layer. The view layer is a react.js style hierarchical component structure. The business logic layer encapsulates the store tree, entity definitions, and selectors. The data itself is based on a first order field abstraction that has a key, category, subcategory, and type at the minimum. The type property of a field is used to determine what type formatter to use for displaying the data. For example a time/unix type will convert a unix timestamp to a human readable date. A collection of fields is defined as an entity which can have either a parent or child entry. The entity definitions are used to normalize the data into an object graph.",
 		   ProjectSubtitle2: "Testing and iterative design",
@@ -573,8 +559,10 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "project10",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modal10"
+
+       };
 	   
 	   
 	   
@@ -621,170 +609,144 @@
 	       OnClickHandler for the project tiles
 	   */
 	   $("#project1").click(function(){
-	      var html1 = modal_template(projectData1);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+//	      var html1 = modal_template(projectData1);
+//
+//		  $("#modalContent").html(html1);
+//		  $("#projectModal").modal("show");
+//
+//		  $(".modal__close-btn").click(function(){
+//
+//		       $("#projectModal").modal("hide");
+//
+//
+//	      });
+
+           var html1 = modal_template(projectData1);
+
+           $("#modalContent").html(html1);
+           $("#modal1").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   
 	   $("#project2").click(function(){
-	      var html1 = modal_template(projectData2);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+
+
+           var html1 = modal_template(projectData2);
+
+           $("#modalContent").html(html1);
+           $("#modal2").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   
 	   $("#project3").click(function(){
-	      var html1 = modal_template(projectData3);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData3);
+
+           $("#modalContent").html(html1);
+           $("#modal3").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   
 	   $("#project4").click(function(){
-	      var html1 = modal_template(projectData4);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData4);
+
+           $("#modalContent").html(html1);
+           $("#modal4").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project5").click(function(){
-	      var html1 = modal_template(projectData5);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData5);
+
+           $("#modalContent").html(html1);
+           $("#modal5").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project6").click(function(){
-	      var html1 = modal_template(projectData6);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData6);
+
+           $("#modalContent").html(html1);
+           $("#modal6").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project7").click(function(){
-	      var html1 = modal_template(projectData7);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData7);
+
+           $("#modalContent").html(html1);
+           $("#modal7").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project8").click(function(){
-	      var html1 = modal_template(projectData8);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData8);
+
+           $("#modalContent").html(html1);
+           $("#modal8").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project9").click(function(){
-	      var html1 = modal_template(projectData9);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData9);
+
+           $("#modalContent").html(html1);
+           $("#modal9").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#project10").click(function(){
-	      var html1 = modal_template(projectData10);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectData10);
+
+           $("#modalContent").html(html1);
+           $("#modal10").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   var projectOthersData1 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/GitLet",
 		   ProjectSubtitle0: "Overview",
 		   MainModalImage: "gitlet-main-left.png",
 		   ProjectModalLeftSide: "#1A237E",
@@ -833,11 +795,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "othersProject1",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modalOther1"
+
+       };
 	   
 	   var projectOthersData2 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/javascript-parser",
 		   ProjectSubtitle0:"Overview",
 		   ProjectTileImage:"jsparser-tile-4.png",
 		   MainModalImage: "jsparser-main-left.png",
@@ -847,7 +811,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "JavaScript parser",
 	       paragraph1:"The program builds an abstract syntax tree for different constructs in Javascript as well as the dynamic language semantics such as assignments, variables, conditionals and loops as part of  the evaluator. It also has support for constructs such as structure creation, field creation, assignment to an existing field in a structure, and addition of a new field to a structure. The language supports named state, where a mutable store or memory maps named variables to storage cells where values can be stored. If there is a failure, the whole program terminates immediately with that first failure. ",
-		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures. This was based on the following grammar:",
+		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures.",
 		   ModalSubImage2: "Grammar.png",
 		   paragraph3: "The un-parser converts an abstract syntax tree back to concrete syntax following some uniform rules. Format of if and while statements is as follows:",
 		   ModalSubImage5: "ifGrammar.png",
@@ -862,11 +826,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "othersProject2",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modalOther2"
+
+       };
 	   
 	   var projectOthersData3 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/FacilityManagementSystem",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#004D40",
 		   MainModalImage: "fms-main.png",
@@ -876,8 +842,8 @@
 	       ProjectTitle: "Facility Managment System",
 	       paragraph1:"It is a program that supports the management of buildings,"
 		   +" their constant use, and maintenance support when needed. It is "
-		   +" separated into three main modules:",
-		   paragraph2: "1.	The facility module: This module is responsible for storing all"
+		   +" separated into three main modules: Facility module, Facitily Use module, Facility Maintenance module, and Facility inspection module",
+		   paragraph22: "1.	The facility module: This module is responsible for storing all"
 		   +" required information about a facility such as its capacity, "
 		   +"operating budget, location. It is also responsible for adding a new facility to be managed, for removing a facility from being "
 		   +"managed, for getting general information about the facility such as the number of occupants, the capacity of the facility and their current statuses.",
@@ -904,11 +870,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "othersProject3",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modalOther3"
+
+       };
 	   
 	   var projectOthersData4 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/2048-player",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#FBC02D",
 		   ProjectTileImage:"2048-player-tile.png",
@@ -934,11 +902,13 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "othersProject4",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modalOther4"
+
+       };
 	   
 	   var projectOthersData5 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/ngordnet",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#01579B",
 		   MainModalImage: "ngordnet-final-main.png",
@@ -948,7 +918,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Ngord net",
 		   paragraph1: "Ngordnet is a program that explores how the volume of printed works in English has changed over time, as well as the structure of the is-a relationships of words in English.",
-	       paragraph2: "Key things this program investigates:",
+	       paragraph22: "Key things this program investigates:",
 		   paragraph3: "1.	The relative popularity of words over time.",
 		   Paragraph3LeftMargin: "40px",
 		   paragraph4: "2.	The relative popularity of categories of words over time.",
@@ -971,16 +941,18 @@
 		   paragraph15: "After analyzing the NGram dataset, the program provides a visualized answer to questions such as the relative popularity of words over time, the relative popularity of categories of words, the hyponyms of a given word, and the length of words.",
 		   paragraph16: "The following plot shows shows the relative popularity of the words cake and pie from the period 1900 to 1930:",
 		   ModalSubImage16: "ngordnetCakePieChart.png",
-		   paragraph17: "The program also provides a visualization to Zipf’s law. Zipf’s law states that the frequency of words in English is inversely proportional to the rank. This means the most common word appears twice as often as the 2nd most popular word, 3 times as often as the 3rd most popular, and so forth.",
+		   paragraph2: "The program also provides a visualization to Zipf’s law. Zipf’s law states that the frequency of words in English is inversely proportional to the rank. This means the most common word appears twice as often as the 2nd most popular word, 3 times as often as the 3rd most popular, and so forth.",
 		   appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   ProjectTileId: "othersProject5",
-		   imageID: "image1"
-	   };
+		   imageID: "image1",
+           projectModalID:"modalOther5"
+
+       };
 
              var projectOthersData6 = {
-                 gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+                 gitHubLink:"https://github.com/natialemu/lakeshore-marketplace",
                  ProjectSubtitle0: "Overview",
                  ProjectModalLeftSide: "#263238",
                  MainModalImage: "lakeshore-market-right2.png",
@@ -1010,7 +982,9 @@
                  projectDescription: "Machine Learning program that plays 2048",
                  projectName: "2048 Player",
                  ProjectTileId: "othersProject6",
-                 imageID: "image1"
+                 imageID: "image1",
+                 projectModalID:"modalOther6"
+
              };
 	   
 	   
@@ -1033,7 +1007,7 @@
 	   html = project_modal_template(projectOthersData5);
 	   $("#content1").append(html);
              html = project_modal_template(projectOthersData6);
-             //$("#content1").append(html);
+             $("#content1").append(html);
 
 	   
 	  
@@ -1045,81 +1019,58 @@
 	   */
 	   
 	   $("#othersProject1").click(function(){
-	      var html1 = modal_template(projectOthersData1);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+
+               var html1 = modal_template(projectOthersData1);
+
+               $("#modalContent").html(html1);
+               $("#modalOther1").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
+
+
+
 		  
 		  
 	   });
 	   
 	   $("#othersProject2").click(function(){
-	      var html1 = modal_template(projectOthersData2);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectOthersData2);
+
+           $("#modalContent").html(html1);
+           $("#modalOther2").modal("show");
 		  
 		  
 	   });
 	   
 	   $("#othersProject3").click(function(){
-	      var html1 = modal_template(projectOthersData3);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectOthersData3);
+
+           $("#modalContent").html(html1);
+           $("#modalOther3").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#othersProject4").click(function(){
-	      var html1 = modal_template(projectOthersData4);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectOthersData4);
+
+           $("#modalContent").html(html1);
+           $("#modalOther4").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   $("#othersProject5").click(function(){
-	      var html1 = modal_template(projectOthersData5);
-		  
-		  $("#modalContent").html(html1);
-		  $("#projectModal").modal("show");
-		  
-		  $(".modal__close-btn").click(function(){
-		  
-		       $("#projectModal").modal("hide");
-		  
-		 
-	      });
+           var html1 = modal_template(projectOthersData5);
+
+           $("#modalContent").html(html1);
+           $("#modalOther5").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -1128,14 +1079,10 @@
                  var html1 = modal_template(projectOthersData6);
 
                  $("#modalContent").html(html1);
-                 $("#projectModal").modal("show");
+                 $("#modalOther6").modal("show");
 
-                 $(".modal__close-btn").click(function(){
-
-                     $("#projectModal").modal("hide");
-
-
-                 });
+                 $("#documentationButton").css('display','block');
+                 $("#clientButton").css('display','block');
 
              });
 	   
@@ -1192,6 +1139,8 @@
 	   
    
    </body>
+   <script src="scripts/mdb.min.js"></script>
+
 
 
 

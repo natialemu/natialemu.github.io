@@ -6,7 +6,10 @@
        <link href="styles/maia.experimental.css" rel="stylesheet">
 	   
 	   <link href="styles/portfolio.css" rel="stylesheet">
-	   
+
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 	   <link href="styles/bootstrap.css" rel="stylesheet">
 
 	   <link href="styles/bootstrap.min.css" rel="stylesheet">
@@ -226,8 +229,10 @@
 
 					   <!--Footer-->
 					   <div class="modal-footer justify-content-center">
-						   <a type="button" class="btn btn-primary-modal modal_buttons">View code on GitHub<i class="fa fa-diamond ml-1"></i></a>
-						   <a type="button" class="btn btn-outline-secondary-modal waves-effect modal_buttons" data-dismiss="modal">View Doc</a>
+						   <a type="button" class="btn btn-primary-modal modal_buttons" href="{{gitHubLink}}">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>
+						   <a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" d>Swagger documentation</a>
+						   <a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>
+
 					   </div>
 				   </div>
 				   <!--/.Content-->
@@ -286,7 +291,7 @@
 	     */
 		 
 		 var projectData1 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/black-hole",
 		   ProjectModalLeftSide: "#4A148C",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"blackhole-tile-2.png",
@@ -296,7 +301,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Blackhole",
 	       paragraph1:"Blackhole is a two-player strategy game that implements a computer player using two algorithms: Monte-carlo and min-max. Each player starts with 10 tiles numbered 1 through 10. The number on the tiles represent both their values and the order in which they must be placed onto a triangular board. The board has 21 spaces so one space remains uncovered. Once all the tiles have been placed, the tiles that surround the empty space are sucked into the black hole. The objective of the game is to have fewer points sucked into the black hole than then other player.",
-		   paragraph2: "Here is a screenshot of a game in progress: ",
+		   paragraph2: "",
 		   ModalSubImage2: "blackhole-midgame.png",
 		   paragraph3: "The app uses two algorithms to create the computer player of the game. The first algorithm is the monte-carlo algorithm which relies on repeated random moves to obtain the right move to make. The other algorithm is the minmax algorithm which is used for minimizing the possible loss for the worst-case scenario.",
 		   paragraph4: "Although using minmax for the entire duration of the game will create the best computer player, this will consume an unreasonable amount of time. As a result, the approach used in this game is to use the monte-carlo approach until a certain depth is reach. Once that depth is reached, the minmax algorithm will be used to find the optimal move to make for the computer.",
@@ -312,7 +317,7 @@
          };
 	   
 	   var projectData2 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/ContinentalDivide",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#1565C0",
 		   MainModalImage: "continental-divide-final-main.png",
@@ -321,8 +326,8 @@
 		   ProjectTileDescription:"A program that determines the continental divide of landmasses",
 	       projectImage:"something",
 	       ProjectTitle: "Continental Divide",
-	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. For example, in Africa, the continental divide splits the continent in three parts, without assuming flow of water into lakes:",
-		   paragraph2: "1.	Land with water flow to the Indian ocean",
+	       paragraph1:"Continental Divide is an android puzzle application that determines and maps the continental divide of a continental landmass. A continental divide is a geographical term for the boundary which divides a continent into parts where each part leads to a different body of water. A clever way to think about a continental divide is to imagine rain pouring down on an entire continent. The water in each of the various parts made by the divide would flow to a different body of water. The application also handles situations where a part of a landmass will have water flow into a lake. ",
+		   paragraph2: "",
 		   Paragraph2LeftMargin:"50px",
 		   paragraph3: "2.	Land with water flow to the Atlantic ocean",
 		   Paragraph3LeftMargin: "50px",
@@ -343,7 +348,7 @@
        };
 	   
 	   var projectData3 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/WordLadder",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#FF6D00",
 		   MainModalImage: "wordladder-final-main.png",
@@ -369,7 +374,7 @@
 
        };
 	   var projectData4 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/puzzle-8",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"puzzle8-tile.png",
 		   ProjectModalLeftSide: "#283593",
@@ -400,7 +405,7 @@
        };
 	   
 	   var projectData5 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/TouringMusician",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"touring-musician-tile.png",
 		   ProjectTileTitle:"Touring musician",
@@ -410,7 +415,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Turing Musician",
 	       paragraph1: "Touring musician is an android app that represents a user with a map and let them add gig locations to the map and figure out a path through the various gigs.",
-		   paragraph2: "The UI of the app looks like as follows:",
+		   paragraph2: "",
 		   ModalSubImage2: "touring-musician-tile.png",
 		   paragraph3: "There are three implementations of the problem represented as modes in the app. ",
 		   paragraph4: "The third mode is one way of approximating the travelling salesman problem. Whenever a gig is added on the map, the smallest total path length is visualized on the map.",
@@ -426,7 +431,7 @@
        };
 	   
 	   var projectData6 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/scarnes-dice",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"scarnes-dice-tile.png",
 		   ProjectModalLeftSide: "#4E342E",
@@ -436,7 +441,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Scarne's dice",
 	       paragraph1: "Scarnes dice is a turn-based dice game where players score points by rolling a die then if they roll at least one 1, they score no points and will lose their turn; if they roll both 1s, then they will lose all their previous points and lose their turn; if they roll a double, then they have to roll again. The winner is the first person that reaches 100 points.",
-		   paragraph2: "For example, if a player starts their turn and rolls 3 and 5, they can choose to either ‘hold’ and end their turn, in which case they can add 8 to their score, or reroll and potentially score more points.",
+		   paragraph22: "For example, if a player starts their turn and rolls 3 and 5, they can choose to either ‘hold’ and end their turn, in which case they can add 8 to their score, or reroll and potentially score more points.",
 		   paragraph3: "Let’s say they decide to roll again, and they get a 3 and 3. They now have to roll again end can’t end their turn at this tim. They will add 6 points to their existing score to have a total of 14 points so far. ",
 		   paragraph4: "They decide to roll again but get a 1 and a 4. Getting only a single 1 will force the player to give up their turn. However, the player’s prior points will not be removed and will stay at 14. However, if the player instead had rolled two 1s, then not only would the player give up their turn but the player would also lose all prior points. The total point of the player would then be 0.",
 		   paragraph5: "The game in progress looks as follows:",
@@ -451,7 +456,7 @@
 
        };
 	   var projectData7 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/anagram-game",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"anagram-tile.png",
 		   ProjectModalLeftSide: "#455A64",
@@ -461,7 +466,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Yet another game involving anagrams",
 	       paragraph1: "This is a game involving anagrams which are words formed by rearranging the letters of another word. The game will provide the user with a word from the dictionary. The user then tries to create as many words as possible that contain all the letters of the given word plus one additional letter. Note that adding the extra letter at the beginning of the end without reordering the other letters is not valid. For example, if the game picks the word ‘ore’ as a starter, the user might guess ‘rose’ or ‘zero’ but not ‘sore’. The user can also give up and see the words that they did not guess.",
-		   paragraph2: "The game will only propose words that have at least 5 solutions. Here is the game in progress:",
+		   paragraph22: "The game will only propose words that have at least 5 solutions. Here is the game in progress:",
 		   ModalSubImage2: "anagram-midgame.png",
 		   paragraph3: "The game will also provide a solution that closely resembles the user’s effort:",
 		   ModalSubImage3: "",
@@ -476,7 +481,7 @@
 
        };
 	   var projectData8 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/BSTGuesser",
 		   ProjectTileImage:"bst-guesser-tile.png",
 		   MainModalImage: "bst-guesser-final-main.png",
 		   ProjectModalLeftSide: "#F57F17",
@@ -500,7 +505,7 @@
 
        };
 	   var projectData9 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/jumping-cubes",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#BF360C",
 		   ProjectTileImage:"jumping-cube-tile.png",
@@ -535,7 +540,7 @@
 
        };
 	   var projectData10 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/AlertApp",
 		   ProjectSubtitle0: "Overview",
 		   ProjectTileImage:"alertapp-tile-1.png",
 		   ProjectModalLeftSide: "#4E342E",
@@ -545,7 +550,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Alert App",
 	       paragraph1: "AlertApp is a cross-platform app written using react native through which various student organizations or individuals can send out alerts for events to students who register for an account using their LUC email address. The app is not only limited to student organizations and students. Campus safety or the university can issue out warnings or notify students of dangerous weather conditions. As such, the app serves as a unified event management system for events ranging from social events, academic-related events or safety-related concerns.",
-		   paragraph2: "The app was built using React Native. At a high-level, our goal was to deliver a functional app with a well-designed user experience. At a slightly lower level the goal was to architect the app in such a way as to maximize its scalability. This was achieved by using a handful of third party libraries along with React Native and good software design using a high level of abstraction to drive the application state management. The primary third party libraries used were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga and Reselect. The client-side application architecture is diagramed as follows:",
+		   paragraph2: "The app was built using React Native. At a high-level, our goal was to deliver a functional app with a well-designed user experience. At a slightly lower level the goal was to architect the app in such a way as to maximize its scalability. This was achieved by using a handful of third party libraries along with React Native and good software design using a high level of abstraction to drive the application state management. The primary third party libraries used were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga and Reselect.",
 		   ModalSubImage2: "alertapp-design.png",
 		   paragraph3: "The application has two distinct layers. The business logic layer and the view layer. The view layer is a react.js style hierarchical component structure. The business logic layer encapsulates the store tree, entity definitions, and selectors. The data itself is based on a first order field abstraction that has a key, category, subcategory, and type at the minimum. The type property of a field is used to determine what type formatter to use for displaying the data. For example a time/unix type will convert a unix timestamp to a human readable date. A collection of fields is defined as an entity which can have either a parent or child entry. The entity definitions are used to normalize the data into an object graph.",
 		   ProjectSubtitle2: "Testing and iterative design",
@@ -620,6 +625,9 @@
 
            $("#modalContent").html(html1);
            $("#modal1").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -632,6 +640,9 @@
 
            $("#modalContent").html(html1);
            $("#modal2").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -642,6 +653,9 @@
 
            $("#modalContent").html(html1);
            $("#modal3").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -652,6 +666,9 @@
 
            $("#modalContent").html(html1);
            $("#modal4").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -661,6 +678,9 @@
 
            $("#modalContent").html(html1);
            $("#modal5").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -670,6 +690,9 @@
 
            $("#modalContent").html(html1);
            $("#modal6").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -679,6 +702,9 @@
 
            $("#modalContent").html(html1);
            $("#modal7").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -688,6 +714,9 @@
 
            $("#modalContent").html(html1);
            $("#modal8").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -697,6 +726,9 @@
 
            $("#modalContent").html(html1);
            $("#modal9").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -706,12 +738,15 @@
 
            $("#modalContent").html(html1);
            $("#modal10").modal("show");
+
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
 	   
 	   var projectOthersData1 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/GitLet",
 		   ProjectSubtitle0: "Overview",
 		   MainModalImage: "gitlet-main-left.png",
 		   ProjectModalLeftSide: "#1A237E",
@@ -766,7 +801,7 @@
        };
 	   
 	   var projectOthersData2 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/javascript-parser",
 		   ProjectSubtitle0:"Overview",
 		   ProjectTileImage:"jsparser-tile-4.png",
 		   MainModalImage: "jsparser-main-left.png",
@@ -776,7 +811,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "JavaScript parser",
 	       paragraph1:"The program builds an abstract syntax tree for different constructs in Javascript as well as the dynamic language semantics such as assignments, variables, conditionals and loops as part of  the evaluator. It also has support for constructs such as structure creation, field creation, assignment to an existing field in a structure, and addition of a new field to a structure. The language supports named state, where a mutable store or memory maps named variables to storage cells where values can be stored. If there is a failure, the whole program terminates immediately with that first failure. ",
-		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures. This was based on the following grammar:",
+		   paragraph2: "The first part of the project involved performing lexical and syntactic analysis to write the front end of the interpreter which are the parser and un-parser. This is followed by adding support for dynamic language semantics and the appropriate data structures.",
 		   ModalSubImage2: "Grammar.png",
 		   paragraph3: "The un-parser converts an abstract syntax tree back to concrete syntax following some uniform rules. Format of if and while statements is as follows:",
 		   ModalSubImage5: "ifGrammar.png",
@@ -797,7 +832,7 @@
        };
 	   
 	   var projectOthersData3 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/FacilityManagementSystem",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#004D40",
 		   MainModalImage: "fms-main.png",
@@ -807,8 +842,8 @@
 	       ProjectTitle: "Facility Managment System",
 	       paragraph1:"It is a program that supports the management of buildings,"
 		   +" their constant use, and maintenance support when needed. It is "
-		   +" separated into three main modules:",
-		   paragraph2: "1.	The facility module: This module is responsible for storing all"
+		   +" separated into three main modules: Facility module, Facitily Use module, Facility Maintenance module, and Facility inspection module",
+		   paragraph22: "1.	The facility module: This module is responsible for storing all"
 		   +" required information about a facility such as its capacity, "
 		   +"operating budget, location. It is also responsible for adding a new facility to be managed, for removing a facility from being "
 		   +"managed, for getting general information about the facility such as the number of occupants, the capacity of the facility and their current statuses.",
@@ -841,7 +876,7 @@
        };
 	   
 	   var projectOthersData4 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/2048-player",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#FBC02D",
 		   ProjectTileImage:"2048-player-tile.png",
@@ -873,7 +908,7 @@
        };
 	   
 	   var projectOthersData5 = {
-	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+	       gitHubLink:"https://github.com/natialemu/ngordnet",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#01579B",
 		   MainModalImage: "ngordnet-final-main.png",
@@ -883,7 +918,7 @@
 	       projectImage:"something",
 	       ProjectTitle: "Ngord net",
 		   paragraph1: "Ngordnet is a program that explores how the volume of printed works in English has changed over time, as well as the structure of the is-a relationships of words in English.",
-	       paragraph2: "Key things this program investigates:",
+	       paragraph22: "Key things this program investigates:",
 		   paragraph3: "1.	The relative popularity of words over time.",
 		   Paragraph3LeftMargin: "40px",
 		   paragraph4: "2.	The relative popularity of categories of words over time.",
@@ -906,7 +941,7 @@
 		   paragraph15: "After analyzing the NGram dataset, the program provides a visualized answer to questions such as the relative popularity of words over time, the relative popularity of categories of words, the hyponyms of a given word, and the length of words.",
 		   paragraph16: "The following plot shows shows the relative popularity of the words cake and pie from the period 1900 to 1930:",
 		   ModalSubImage16: "ngordnetCakePieChart.png",
-		   paragraph17: "The program also provides a visualization to Zipf’s law. Zipf’s law states that the frequency of words in English is inversely proportional to the rank. This means the most common word appears twice as often as the 2nd most popular word, 3 times as often as the 3rd most popular, and so forth.",
+		   paragraph2: "The program also provides a visualization to Zipf’s law. Zipf’s law states that the frequency of words in English is inversely proportional to the rank. This means the most common word appears twice as often as the 2nd most popular word, 3 times as often as the 3rd most popular, and so forth.",
 		   appStatus:"Python Application",
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
@@ -917,7 +952,7 @@
        };
 
              var projectOthersData6 = {
-                 gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
+                 gitHubLink:"https://github.com/natialemu/lakeshore-marketplace",
                  ProjectSubtitle0: "Overview",
                  ProjectModalLeftSide: "#263238",
                  MainModalImage: "lakeshore-market-right2.png",
@@ -989,6 +1024,8 @@
 
                $("#modalContent").html(html1);
                $("#modalOther1").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 
 
 
@@ -1010,6 +1047,8 @@
 
            $("#modalContent").html(html1);
            $("#modalOther3").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -1019,6 +1058,8 @@
 
            $("#modalContent").html(html1);
            $("#modalOther4").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -1028,6 +1069,8 @@
 
            $("#modalContent").html(html1);
            $("#modalOther5").modal("show");
+           $("#documentationButton").css('display','none');
+           $("#clientButton").css('display','none');
 		  
 		  
 	   });
@@ -1037,6 +1080,9 @@
 
                  $("#modalContent").html(html1);
                  $("#modalOther6").modal("show");
+
+                 $("#documentationButton").css('display','block');
+                 $("#clientButton").css('display','block');
 
              });
 	   

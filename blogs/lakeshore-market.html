@@ -10,7 +10,18 @@
 
     <link href="../styles/bootstrap.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="../styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/mdb.min.css" rel="stylesheet">
+
+
+    <script
+            src="../scripts/jquery-3.2.1.min.js"></script>
+
+    <script src="../scripts/popper.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext"
@@ -18,11 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
-    <script src="../scripts/handlebars-v4.0.5.js"></script>    <!-- handlebar library -->
-    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-    <script src="../scripts/jquery.lettering.js"></script>    <!-- lettering library -->
-    <script src="../scripts/jquery.textillate.js"></script>    <!-- textillate library -->
-    <title>Lakeshore Marketplace</title>
+
 </head>
 <body>
 
@@ -74,155 +81,207 @@
     <div class="content-container content-row story-page story-page--restricted story-page--bottom">
         <div class="grid">
             <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-                <h1 style="font-weight:500;" class="content-title content-title--story">
+                <h1 style="font-weight:500;" class="content-title content-title--story animated fadeIn mb-4">
                     Lakeshore Market: E-commerce on-campus
                 </h1>
 
-                <h3 style="font-weight:500;" class="blog-subtitles">
+                <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
                     Introduction
                     <h3>
 
-                        <p class="paragraphFontStyle"> Lakeshore marketplace is a system that provides e-commerce
-                            related web service APIs exclusively for students of Loyola University Chicago’s lake shore
-                            campus. It lets students buy anything that is up for sale by other students by providing
-                            services like other e-commerce sites except that the features here are tailored specifically
-                            to this niche. </p>
+                        <p class="paragraphFontStyle"> Lakeshore-market is a RESTful web service that provides students
+                            at a university with e-commerce functionalities. It lets students buy anything that is up
+                            for sale by other students. It is basically amazon tailored specifically to Loyola’s
+                            niche. </p>
 
-                        <h3 style="font-weight:500;" class="blog-subtitles">
+                        <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
                             Motivation
                             <h3>
 
-                                <p class="paragraphFontStyle"> At the moment, when students want to engage in the
-                                    buying/selling process involving things such as used books, room items and others,
-                                    students usually post it on a Facebook page which can go wrong in many ways. For
-                                    example, students who need the product might not see the post around the time it is
-                                    posted on Facebook. There is also no way for students to search for advertised
-                                    products on the Facebook page. Facebook was meant to be used for a lot of things but
-                                    e-commerce was not one of them. This project aims to solve these issues and others
-                                    associated with the current way students engage in buying/selling of products
-                                    on-campus. </p>
+                                <p class="paragraphFontStyle"> There are certain items that students feel like putting
+                                    up for sale for other students to buy. Some students might like to sell a book they
+                                    no longer need or other items from their room they won’t use. Whatever the reason
+                                    may be, the current way students are able to engage in such type of activities is
+                                    through posts on Facebook page known as Loyola Buy/sell. There are a lot of things
+                                    that make this method quite inconvenient. For example, let’s assume there is a post
+                                    asking if anyone is interested in buying a theology book. After about a week or so,
+                                    a student might go to the page but may not find the old post even if the student
+                                    would have been interested in the theology book. There is also no way for students
+                                    to filter or search for posts that contain a product of interest on the Facebook
+                                    page. The goal of this project is to solve these issues and provide functionalities
+                                    that will make e-commerce among students on campus a lot more convenient than it
+                                    currently is. </p>
 
 
-                                <p class="paragraphFontStyle"> So, after initially working on a project that was
-                                    supposed to be a regular e-commerce system whose functionalities are exposed through
-                                    RESTful web APIs, I spoke with my professor about the possibility of pivoting the
-                                    project in a direction that fits within the context of an on-campus marketplace, and
-                                    he ended up being very supportive of the idea. </p>
-
-
-                                <h3 style="font-weight:500;" class="blog-subtitles">
-                                    How does it work?
+                                <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
+                                    Higher level description of the project
                                     <h3>
 
-                                        <p class="paragraphFontStyle"> When someone wants to sell some new or used
-                                            product, they will sign up for an account and then add the product they want
-                                            to sell. From a buyer’s perspective, the user has the option to search for a
-                                            specific product, or they can simply pick from a filtered list of products
-                                            based on popularity or how recently the products were added. </p>
+                                        <p class="paragraphFontStyle"> Both sellers and buys will need to have an
+                                            existing account which is active to use the services provided. When students
+                                            want to sell a new or used product, they will sign up for an account and
+                                            then add the product to their inventory. They can also choose to modify an
+                                            existing product in their inventory. From a buyer’s perspective, the user
+                                            has the option to filter or search for available products via multiple
+                                            parameters. Once buyers have selected the appropriate products, they can
+                                            place an order. Everything from managing transactions, validating and
+                                            assembling order content, and validating payment is handled by the server as
+                                            soon as the user places an order. The web service also provides
+                                            functionalities for managing accounts of both Sellers and buyers. </p>
 
-                                        <p class="paragraphFontStyle"> Users will select a default payment method upon
-                                            registration. Payment validation and processing is handled with the use of
-                                            Braintree’s APIs. Once an order has been verified and ordered, the seller
-                                            will be notified of the order and will also be provided with delivery
-                                            location services by using Google’s Map API. Since this is specifically made
-                                            for students that live on or near Loyola University’s lakeshore campus,
-                                            delivery is usually just a matter of travelling from one point on campus to
-                                            another. </p>
+                                        <p class="paragraphFontStyle"> By using the API endpoints, the client can
+                                            integrate ways for the user to view most popular or trending products,
+                                            highest rated products and/or recently added products by sellers. The The
+                                            exclusivity of the service to only a specific school makes it easier for
+                                            students to discover things they’re more likely to find appealing by
+                                            filtering products by ratings, popularity, or date. Once an order has been
+                                            placed, the seller will be notified of the order and will also be provided
+                                            with delivery location services by using Google’s Map API. A sample
+                                            lakeshore client has been deigned and implemented that utilizes the
+                                            lakeshore market web service APIs to provide an e-commerce service to
+                                            exclusively Loyola University Chicago students. </p>
+
+                                        <img src="../images/lakeshore-market-client-index.png">
+                                        <img src="../images/lakeshore-market-client-account.png">
+                                        <img src="../images/lakeshore-market-client-login.png">
 
 
-                                        <h3 style="font-weight:500;" class="blog-subtitles">
-                                            How can it be used?
+                                        <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
+                                            Development stages
                                             <h3>
 
-                                                <p class="paragraphFontStyle"> All the necessary functionalities are
-                                                    offered as REST web service APIs. Another person will be working on
-                                                    designing and creating a view that utilizes the services provided in
-                                                    the Lakeshore marketplace APIs.</p>
+                                                <p class="paragraphFontStyle"> The project was designed in four main
+                                                    phases. We started off by first going through various use cases: the
+                                                    buying experience, the seller/buyer registration. We identified key
+                                                    vocabularies to start off the design of our domain layer. We wanted
+                                                    to start our design with the most essential features but leave room
+                                                    for extensions such as review system management, recommendation
+                                                    systems and providing sales history and statistics. We continued to
+                                                    work on the design with maintainability and extensibility in mind.
+                                                    Once we had a stable domain layer design, we started working on an
+                                                    ER Schema for our database based on the domain layer design we set
+                                                    up. We then moved on to the second phase of our development
+                                                    process.</p>
+
+                                                <p class="paragraphFontStyle"> The second phase involved designing and
+                                                    implementing the service layer of the system. We had to walk through
+                                                    the uses cases in detail again to identify the key endpoints we
+                                                    needed to expose and to identify the right type and number of
+                                                    representation and request classes to incorporate into our service
+                                                    layer design. We wanted to make sure that our project was at Level 2
+                                                    of The Richardson Maturity model at the end of this phase.</p>
+
+                                                <p class="paragraphFontStyle"> In the third phase of the project, we
+                                                    implemented HAETOAS which involved thinking of all possible next
+                                                    steps the client could take after making a request. In the final
+                                                    phase the project, we designed and implement a web client that
+                                                    utilizes the REST web service.</p>
 
 
-                                                <h3 style="font-weight:500;" class="blog-subtitles">
-                                                    Design
+                                                <h3 style="font-weight:500;"
+                                                    class="blog-subtitles animated fadeIn mb-3">
+                                                    Endpoints
                                                     <h3>
 
-                                                        <p class="paragraphFontStyle"> At a higher level, the project
-                                                            was designed in 3 separate layers with high emphasis placed
-                                                            on decoupling and coherence of the system. This is mainly
-                                                            achieved by modularizing our code and using various
-                                                            principles such as dependency inversion, open-closed
-                                                            principle and single responsibility principles. Various
-                                                            design patterns have also been used to represent repeated
-                                                            design elements. The three layers used in the design of the
-                                                            program are the service layer, domain layer, and data access
-                                                            layer. The service layer is a structure built using Java and
-                                                            CXF running on Apache’s tomcat server. The domain layer is
-                                                            written in java and uses ReactiveX Java to manage
-                                                            asynchronous tasks and uses spring to manage dependency
-                                                            injection. This makes testing easier and minimizes code
-                                                            modifications when adding new features. The data access
-                                                            layer uses hibernate to persist objects into a MySQL
-                                                            database server. At various stages in the design process, we
-                                                            were iteratively modifying our designs. </p>
+                                                        <img src="../images/swagger-account-apis.png">
 
 
-                                                        <p class="paragraphFontStyle">The program is currently under
-                                                            development and we are currently working on developing the
-                                                            following modules: </p>
+                                                        <p class="paragraphFontStyle">Lakeshore-market provides
+                                                            functionalities for the following:</p>
 
 
                                                         <div class="listItemFonts">
                                                             <ol class="">
-                                                                <li class="paragraphFontStyle "><strong>Review
-                                                                    System:</strong>strong> this will manage any ratings
-                                                                    and/or reviews that a product receives from a user
+                                                                <li class="paragraphFontStyle "><strong>Account
+                                                                    management:</strong> Lakeshore market provides APIs
+                                                                    for creating an account, modifying any part of the
+                                                                    account, retrieving an account, or deactivating an
+                                                                    account.
                                                                 </li>
 
 
-                                                                <li class="paragraphFontStyle "><strong> User
-                                                                    subscriptions: </strong>this will allow uses to
-                                                                    subscribe so that when a seller uploads a new
-                                                                    product or a certain product category is uploaded,
-                                                                    the user gets an email notification
-                                                                </li>
                                                                 <li class="paragraphFontStyle "><strong> Product
-                                                                    recommendations: </strong> product recommendation
-                                                                    features will be integrated based on user’s recent
-                                                                    purchases and ratings of products
+                                                                    management</strong> includes endpoints for searching
+                                                                    for products by using various parameters, retrieving
+                                                                    most recent and most popular products, allowing
+                                                                    seller to add, update, retrieve and delete products
+                                                                    to/from their inventory. It also provides
+                                                                    functionality for filtering products based on
+                                                                    multiple parameters such as cost range, product
+                                                                    type, seller and rating.
+                                                                </li>
+                                                                <li class="paragraphFontStyle "><strong> Order
+                                                                    management </strong>this includes endpoints for
+                                                                    placing an order, cancelling an order, checking the
+                                                                    status of an order, retrieving an order detail, and
+                                                                    retrieving an order confirmation.
+                                                                </li>
+                                                                <li class="paragraphFontStyle "><strong> Delivery
+                                                                    management </strong>Lakeshore-market lets the seller
+                                                                    manage delivery. However, there are endpoints that
+                                                                    allow the seller to provide delivery status
+                                                                    information on an order, and also provides API
+                                                                    endpoints that allow the buyer to track the status
+                                                                    of a delivery. The client web app also integrates
+                                                                    Google maps API to provide location services for
+                                                                    delivery using the profile information of the seller
+                                                                    and the buyer.
+                                                                </li>
+                                                                <li class="paragraphFontStyle "><strong> Transaction
+                                                                    Management</strong> The API
+                                                                    endpoints for managing transactions are currently
+                                                                    under implementation. We are working on endpoints
+                                                                    that will allow buyers to view transaction history,
+                                                                    and integrate Braintree’s API to manage payment.
+                                                                </li>
+                                                                <li class="paragraphFontStyle "><strong> Statistics
+                                                                    management </strong>This module, which is currently
+                                                                    under design stage, will provide history and
+                                                                    statistics of sales to both customers and buyers.
                                                                 </li>
 
                                                             </ol>
                                                         </div>
 
-                                                        <p class="paragraphFontStyle"> We’re also currently working on
-                                                            making our APIs robust with proper error and exception
-                                                            handling, enhanced security features such as support for an
-                                                            API key, implementation of SSL, as well as OAuth
-                                                            implementation.</p>
 
-                                                        <h3 style="font-weight:500;" class="blog-subtitles">
-                                                            Testing and Iterative Design
+                                                        <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
+                                                            What's next?
+
                                                             <h3>
 
 
-                                                                <p class="paragraphFontStyle"> The program was built
-                                                                    incrementally following a test-driven approach. It
-                                                                    was built in several phases which started by
-                                                                    implementing the domain, data access layers, and the
-                                                                    database corresponding to a few of the key features
-                                                                    of the program followed by implementing the service
-                                                                    layer and incrementally adding new features and
-                                                                    making design changes along the way. </p>
+                                                                <p class="paragraphFontStyle"> The next immediate step
+                                                                    for the project will be deploying the application on
+                                                                    AWS. Once this is complete, Braintree API
+                                                                    integration to manage transactions will be
+                                                                    implemented followed by rigorous error-checking and
+                                                                    exception handling and addition of new features such
+                                                                    as product recommendations, managing user
+                                                                    subscriptions to sellers, handling ratings and
+                                                                    reviews, and providing history and statistics on
+                                                                    sales to both buyers and sellers.</p>
 
-                                                                <h3 style="font-weight:500;" class="blog-subtitles">
-                                                                    Wrap up
+                                                                <h3 style="font-weight:500;" class="blog-subtitles animated fadeIn mb-3">
+                                                                    Links
                                                                     <h3>
 
                                                                         <p class="paragraphFontStyle">
-                                                                            Lakeshore market represents a convenient way for
-                                                                            students to engage in e-commerce on campus. It is
-                                                                            a big step forward from the current way students buy
-                                                                            and sell items which is through a Facebook page. The
-                                                                            project is currently under development with the API
-                                                                            end points currently being implemented.
+                                                                            For the project's GitHub link, click <a
+                                                                                href="https://github.com/natialemu/lakeshore-marketplace.git">
+                                                                            here </a>
+                                                                        </p>
+
+                                                                        <p class="paragraphFontStyle">
+                                                                            For the documentation of currently working
+                                                                            and available endpoints on Swagger, click <a
+                                                                                href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1">
+                                                                            here </a>
+                                                                        </p>
+
+                                                                        <p class="paragraphFontStyle">
+                                                                            For the client web app's GitHub link, click
+                                                                            <a href="https://github.com/natialemu/lakeshore-market-client.git">
+                                                                                here </a>
                                                                         </p>
 
 
@@ -258,13 +317,14 @@
                 View LinkedIn
             </a>
 
-        </p
+        </p>
     </div>
 
 </footer>
 
 
 </body>
+<script src="../scripts/mdb.min.js"></script>
 
 
 </html>

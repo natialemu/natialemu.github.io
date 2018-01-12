@@ -21,7 +21,7 @@
 
 	   <script src="scripts/popper.min.js"></script>
 	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-	   
+
 	   
 
        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -39,9 +39,7 @@
        <div class="maia-header" id="maia-header" role="banner">
 	       <div class="maia-aux">
 		      <h1 class="portfolio-text"> 
-                  Welcome to my
-				  
-				  Portfolio
+                  Nathnael Alemu
 			      
 			  </h1>
 		   </div>
@@ -62,6 +60,10 @@
 				 <li>
 				     <a href="blog.html" class="otherNavLinks"> Blog </a>
 				 </li>
+
+				  <li>
+					  <a href="#" class="otherNavLinks"> Resources </a>
+				  </li>
 				 
 				 <li>
 				     <a href="#" class="otherNavLinks"> Resume </a>
@@ -73,18 +75,45 @@
 	   
 	   
         <div class="content-header content-row content-row--header content-container1">
-	       <h1 class="portfolio-title">
+	       <h1 class="portfolio-title animated fadeIn mb-4">
 		       Portfolio
 		   </h1>
 		   
-		   <div class="content-title__description content-title__description--confined">
-		        <p>
-				Go through of some of my works. All codes are available on GitHub
-				
-				</p>
-		   </div>
-		   
 		</div>
+
+	   <div class="page-row page-row--split-blocks page-row-project" style="background-color: #FFFFFF; padding-bottom: 0 !important; padding-top: 0 !important;">
+
+
+		   <!-- Project cards -->
+		   <div class="content-container content-row content-row--short">
+
+
+			   <div class="col-md-6" style="max-width: 100% !important; flex: 0 0 100% !important;">
+				   <div class="tab" role="tablist">
+					   <!-- Nav tabs -->
+					   <ul class="nav nav-tabs" role="tablist" style="width: 100%;">
+						   <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> All projects </a></li>
+						   <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> Android </a></li>
+
+						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects </a></li>
+
+					   </ul>
+
+
+				   </div>
+
+			   </div>
+		   </div>
+
+
+	   </div>
+
+	   <!-- tabbed layout -->
+	   <!--<div class="container">-->
+		   <!--<div class="row" style="width: 100%;">-->
+			  <!---->
+		   <!--</div>-->
+	   <!--</div>-->
 		
 		
 		<script id="project-modal-template" type="text/x-handlebars-template">
@@ -134,70 +163,99 @@
 					</div>
 					
 			    </script>
+
+
+
 		
-		<div class="page-row--split-blocks android-section text-center" style="background-color: rgb(240,240,240);">
-		
-		  <h2 class="content-subtitle">
-		       Android apps
-		   </h2>
-		
-		
-		</div>
-	   
-	   <!-- Projects title -->
-	   <div class="page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240);">
-	       
-		   
-		   <!-- Project cards -->
-		   <div class="content-container content-row content-row--short">
-		        <div class="grid" id="content">	
-					
-					
-					
-					
-			
-		   
-		   </div>
-	   
-	   </div>
-	   
-	   
-	</div>
+
 	
 	
 	
 	
 	
-	<div class="page-row--split-blocks page-row-blog otherApps">
-	       <h2 class="content-subtitle">
-		       Other projects
-		   </h2>
-		   
-		   
-	   
-	   </div>
+	<!--<div class="otherProjectsid page-row&#45;&#45;split-blocks page-row-blog otherApps" style="display: block;">-->
+	       <!--<h2 class="content-subtitle">-->
+		       <!--Projects-->
+		   <!--</h2>-->
+		   <!---->
+		   <!---->
+	   <!---->
+	   <!--</div>-->
 
 	   <!-- Projects title -->
-	   <div class="page-row page-row--split-blocks page-row-project">
-	       
-		   
+	   <div  class="otherProjectsid page-row page-row--split-blocks page-row-project" style="display: block;">
+
+
 		   <!-- Project cards -->
 		   <div class="content-container content-row content-row--short">
 		        <div class="grid" id="content1">
-				
-				    	
-					
-					
-					
-					
-					
-		   
+
+
+
+
+
+
+
+
 		   </div>
-	   
+
 	   </div>
-	   
-	   
+
+
 	</div>
+
+
+
+
+       <!--<div  class="androidAppsId page-row&#45;&#45;split-blocks android-section text-center" style="background-color: rgb(240,240,240); display: block;">-->
+
+           <!--<h2 class="content-subtitle">-->
+               <!--Android-->
+           <!--</h2>-->
+
+
+       <!--</div>-->
+
+       <!-- Projects title -->
+       <div class="androidAppsId page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240); display: block;">
+
+
+           <!-- Project cards -->
+           <div  class="content-container content-row content-row--short" >
+               <div class="grid" id="content">
+
+
+
+
+
+
+               </div>
+
+           </div>
+
+
+       </div>
+
+
+       <!-- Projects title -->
+       <div class="activeProjectsID page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240); display: none;">
+
+
+           <!-- Project cards -->
+           <div  class="content-container content-row content-row--short" >
+               <div class="grid" id="contentActive">
+
+
+
+
+
+
+               </div>
+
+           </div>
+
+
+       </div>
 
 	   <!-- Modal for project description when any project tile is clicked -->
 	   <script id="modal-template" type="text/x-handlebars-template">
@@ -229,10 +287,90 @@
 
 					   <!--Footer-->
 					   <div class="modal-footer justify-content-center">
-						   <a type="button" class="btn btn-primary-modal modal_buttons" href="{{gitHubLink}}">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>
-						   <a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" d>Swagger documentation</a>
-						   <a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>
+						   <!--<a type="button" class="btn btn-primary-modal modal_buttons" href="{{gitHubLink}}">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>-->
+						   <!--<a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" d>Swagger documentation</a>-->
+						   <!--<a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>-->
 
+						   <div  id="documentationButton"  class="wpb_row vc_row-fluid vc_row standard_section " style=" display: none; padding-top: 0; padding-bottom: 0; min-height: 60px;">
+							   <div class="row-bg-wrap">
+								   <div class="row-bg   " style="">
+
+								   </div>
+							   </div>
+							   <div class="col span_12  center">
+
+								   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+									   <div class="vc_column-inner">
+
+										   <div class="wpb_wrapper">
+
+											   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" >
+												   <span>Swagger Doc</span>
+											   </a>
+
+										   </div>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+						   </div>
+
+						   <div id="fws_5a4e810e326fb-3"  class="wpb_row vc_row-fluid vc_row standard_section " style="padding-top: 0; padding-bottom: 0; min-height: 60px;">
+							   <div class="row-bg-wrap">
+								   <div class="row-bg   " style="">
+
+								   </div>
+							   </div>
+							   <div class="col span_12  center">
+
+								   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+									   <div class="vc_column-inner">
+
+										   <div class="wpb_wrapper">
+
+											   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="{{gitHubLink}}" >
+												   <span>View code</span>
+											   </a>
+
+										   </div>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+						   </div>
+
+						   <div  id="clientButton"  class="wpb_row vc_row-fluid vc_row standard_section " style=" display: none; padding-top: 0; padding-bottom: 0; min-height: 60px;">
+							   <div class="row-bg-wrap">
+								   <div class="row-bg   " style="">
+
+								   </div>
+							   </div>
+							   <div class="col span_12  center">
+
+								   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+									   <div class="vc_column-inner">
+
+										   <div class="wpb_wrapper">
+
+											   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="https://github.com/natialemu/lakeshore-market-client" >
+												   <span>View client </span>
+											   </a>
+
+										   </div>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+						   </div>
 					   </div>
 				   </div>
 				   <!--/.Content-->
@@ -1009,6 +1147,10 @@
              html = project_modal_template(projectOthersData6);
              $("#content1").append(html);
 
+
+             var activeProjectContent = $("#contentActive");
+             activeProjectContent.append(html);
+
 	   
 	  
 	   
@@ -1085,7 +1227,163 @@
                  $("#clientButton").css('display','block');
 
              });
-	   
+
+
+
+             function addBorder(element){
+                 element.css('border-bottom','4px solid rgba(20,20,20,0.9)');
+
+             }
+
+             function removeBorder(element){
+
+                 element.css('border-bottom','0');
+
+
+             }
+
+
+             var allAppsLinkElement = $("#allAppsLink");
+             var androidAppsLinkElement = $("#androidAppsLink");
+             var activeProjectLinkElement = $("#activeProjectsLink");
+
+
+             /**
+              * Hovering and clicking all projects link
+              */
+             allAppsLinkElement.hover(function () {
+                 addBorder(allAppsLinkElement);
+
+             },function () {
+                 var selectedLink = allAppsLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+                     removeBorder(allAppsLinkElement);
+
+                 }
+
+
+
+             });
+             allAppsLinkElement.click(function () {
+				// $(".otherProjectsid").css('display','none');
+
+                addBorder(allAppsLinkElement);
+                removeBorder(androidAppsLinkElement);
+                removeBorder(activeProjectLinkElement);
+
+                $(".activeProjectsID").hide();
+
+
+                var otherProjects = $(".otherProjectsid");
+                 otherProjects.fadeOut(0.5);
+                 otherProjects.fadeIn(700,function () {
+                     $(".otherProjectsid").show(700,"linear");
+
+                 });
+                 //$(".otherProjectsid").slideDown();
+                 //$(".otherProjectsid").animate({display: "block"});
+
+
+                 //$(".androidAppsId").css('display','none');
+                 var androidApps = $(".androidAppsId");
+                 androidApps.fadeOut(0.5);
+                 androidApps.fadeIn(700,function () {
+                     $(".androidAppsId").show(700,"linear");
+
+                 });
+
+//                 $(".androidAppsId").hide(0.5);
+//
+//                 $(".androidAppsId").show(500,"linear");
+                 //$(".androidAppsId").slideDown();
+                 //$(".androidAppsId").animate({display: "block"});
+
+
+
+
+
+
+
+             });
+
+             /**
+              * Hovering and clicking android apps link
+              */
+             androidAppsLinkElement.hover(function () {
+                 addBorder(androidAppsLinkElement);
+
+             },function () {
+                 var selectedLink = androidAppsLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+
+                     removeBorder(androidAppsLinkElement);
+                 }
+
+
+             });
+             androidAppsLinkElement.click(function () {
+//
+
+                 addBorder(androidAppsLinkElement);
+                 removeBorder(allAppsLinkElement);
+                 removeBorder(activeProjectLinkElement);
+
+
+                 $(".otherProjectsid").hide(500,"linear");
+                 $(".activeProjectsID").hide(500,"linear");
+
+
+                 //$(".androidAppsId").css('display','none');
+                 var androidApps =$(".androidAppsId");
+                 androidApps.fadeOut(0.5);
+                    androidApps.fadeIn(700,function () {
+                     $(".androidAppsId").show(700,"linear");
+
+                 });
+
+
+
+             });
+
+
+             /**
+              * Hovering and clicking active projects link
+              */
+             activeProjectLinkElement.hover(function () {
+                 addBorder(activeProjectLinkElement);
+
+             },function () {
+                 var selectedLink = activeProjectLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+
+                     removeBorder(activeProjectLinkElement);
+                 }
+
+             });
+             activeProjectLinkElement.click(function () {
+//
+
+                 addBorder(activeProjectLinkElement);
+                 removeBorder(allAppsLinkElement);
+                 removeBorder(androidAppsLinkElement);
+
+
+                 $(".androidAppsId").hide(500,"linear");
+                 $(".otherProjectsid").hide(500,"linear");
+
+
+
+                 //$(".androidAppsId").css('display','none');
+                 var activeProjects =$(".activeProjectsID");
+                 activeProjects.fadeOut(0.5);
+                 activeProjects.fadeIn(700,function () {
+                     activeProjects.show(700,"linear");
+
+                 });
+
+
+
+             });
 	   
 	   
 	   
@@ -1132,7 +1430,7 @@
 			      View LinkedIn
 			  </a>
               
-		   </p
+		   </p>
 		</div>
 	
 	</footer>

@@ -7,23 +7,30 @@
 	   <link href="styles/maia.experimental.css" rel="stylesheet">
 	   
 	   <link href="styles/portfolio.css" rel="stylesheet">
-	   
+
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 	   <link href="styles/bootstrap.css" rel="stylesheet">
-       
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+	   <link href="styles/bootstrap.min.css" rel="stylesheet">
+	   <link href="styles/mdb.min.css" rel="stylesheet">
+	   <link href="styles/blog-style.css" rel="stylesheet">
+
+
+	   <script
+			   src="scripts/jquery-3.2.1.min.js"></script>
+
+	   <script src="scripts/popper.min.js"></script>
+	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 	   
-	   
-	   
-       </script>
-   
+
        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
 	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 	   
 	   <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
-	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-	   <script src="scripts/jquery.lettering.js"></script>	<!-- lettering library -->
-	   <script src="scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
        <title> Blog </title>
    </head>
    
@@ -33,14 +40,13 @@
        <div class="maia-header" id="maia-header" role="banner">
 	       <div class="maia-aux">
 		      <h1 class="portfolio-text"> 
-                  Welcome to my
-				  
-				  Portfolio
+                  Nathnael Alemu
 			      
 			  </h1>
 		   </div>
 	   </div>
-	   
+
+
 	   
 	   <!-- Navigation -->
 	   
@@ -56,6 +62,9 @@
 				 <li class="activepage">
 				     Blog
 				 </li>
+                  <li>
+                      <a href="#" class="otherNavLinks"> Resources </a>
+                  </li>
 				 
 				 <li>
 				     <a href="#" class="otherNavLinks"> Resume </a>
@@ -64,64 +73,133 @@
 			  </ul>
 		   </div>
 	   </div>
+
+       <script id="blog-modal-template" type="text/x-handlebars-template">
+
+           <div  class="site-content image-aside" style="display: flex; padding-left:0 !important;" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
+
+
+               <div class="blog_left_side" style="background-color:{{BlogTileColor}}">
+
+
+
+
+               </div>
+
+
+
+               <div class="blog_right_side">
+
+                   <div class="content-area">
+
+                       <main class="site-main" role="main">
+                           <article id="post-601" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+                               <header class="entry-header">
+                                   <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+                                   <div class="entry-date">
+                                       {{BlogDate}}			</div><!-- .entry-date -->
+                               </header><!-- .entry-header -->
+
+                               <div class="entry-summary">
+                                   <p>{{BlogSampleParagraph}}
+                                       <a href="{{BlogLink}}" class="more-link">
+                                           Read more
+                                           <!-- add a vector here-->
+                                           <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+                                               <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+                                               </path>
+
+                                           </svg>
+
+
+                                       </a>
+                                   </p>
+                               </div><!-- .entry-summary -->
+
+                               <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+                               </footer><!-- .entry-footer -->
+
+                           </article><!-- #post-## -->
+
+
+
+                       </main><!-- #main -->
+
+                   </div>
+
+
+
+               </div>
+
+
+           </div>
+
+       </script>
+
+       <script id="blog-modal-template-noImage" type="text/x-handlebars-template">
+
+           <div id="content-blog" class="site-content">
+               <div id="primary" class="content-area">
+
+                   <main id="main" class="site-main" role="main">
+                       <article id="post-60" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+                           <header class="entry-header">
+                               <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+                               <div class="entry-date">
+                                   {{BlogDate}}			</div><!-- .entry-date -->
+                           </header><!-- .entry-header -->
+
+                           <div class="entry-summary">
+                               <p>{{BlogSampleParagraph}}
+                                   <a href="{{BlogLink}}" class="more-link">
+                                       Read more
+                                       <!-- add a vector here-->
+                                       <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+                                           <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+                                           </path>
+
+                                       </svg>
+
+
+                                   </a>
+                               </p>
+                           </div><!-- .entry-summary -->
+
+                           <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+                           </footer><!-- .entry-footer -->
+
+                       </article><!-- #post-## -->
+
+
+
+                   </main><!-- #main -->
+
+               </div>
+
+           </div>
+
+       </script>
 	   
 	   
-	   <script id="blog-modal-template" type="text/x-handlebars-template">
-	                <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
-					     
-						 
-						<div class="blog_left_side" style="background-color:{{BlogTileColor}}">
-						
-						
-						
-						</div>
-						
-						
-						     
-						<div class="blog_right_side">	
 
-                            <div class="image-aside__align">	
-							 
-							   <h2 class="image-aside__title">
-								   {{BlogTileTitle}}
-								 </h2>
-
-							
-							 
-							   <div class="image-aside__text">
-							       <p>
-								        {{BlogTileDescription}}
-								   </p>
-								 
-								 
-							 
-							   </div>
-							 
-							   <a id="{{BlogTileId}}" href="blogs/{{BlogLink}}" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-									 
-									 </path>
-									 
-								  </svg>
-	
-	
-								 </a>
-							 
-							   </span>
-							</div>
-						 
-						</div>
-						
-					  
-					  </div>
-					  
-				   </div>
-
-                </script>			
 	   
 
 	   
@@ -133,7 +211,10 @@
 		   </h2>
 	   
 	   </div>
-	   
+
+
+
+
 	   <div class="page-row page-row--medium page-row--grid">
 	       <div class="content-container">
 		       <div class="grid grid--equal" id="blogContent">
@@ -148,64 +229,6 @@
 		   
 	   
 	   </div>
-	   
-	   
-	   
-	   
-	   
-	   
-	   
-	   <!-- Modal for project description when any project tile is clicked -->
-   <script id="modal-template" type="text/x-handlebars-template">
-	
-	<div id="projectModal" class="modal fade" role="dialog">
-	
-	  <div class="modal-dialog"  style="width:100%;height:100%;margin:0 auto;overflow:auto;padding:0px;">
-	  
-	     <div class="modal-content" style="width:100%;height:100%;overflow:auto;padding:0px;">
-		 
-		    <div class="modal-body">
-			
-			    <div class="page-body">
-				    <button class="modal__close-btn" data-modal-close>
-					   <svg class="svg-icon" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                           <path d="M0 0h24v24H0z" fill="none"/>
-                       </svg>
-					</button>
-				</div>
-				
-				<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
-				    <div class="content-header--story" style="background-image: url(images/{{MainModalImage}})" > </div>
-					<div class="content-container content-row story-page story-page--restricted story-page--bottom">
-					     <div class="grid">
-						    <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
-							    <h1 class="content-title content-title--story">
-								   {{ProjectTitle}}
-								</h1>
-								
-								<p>{{paragraph1}} </p>
-								<p>{{paragraph2}} </p>
-								<p>{{paragraph3}} </p>
-								<p>{{paragraph4}} </p>
-								<p>{{paragraph5}} </p>
-							</div>
-						 </div>
-					</div>
-				</div>
-				
-		    </div>
-			
-	    </div>
-		
-	   </div>
-	</div>
-	    
-	  
-	</script>
-	<div id="modalContent"> </div>
-	
-	</div> <!-- / container -->
 	
 	
 	
@@ -218,8 +241,8 @@
 		 
 		 
 		 
-		 var source1 = $("#modal-template").html();
-	     var modal_template = Handlebars.compile(source1);
+		 var source_no_picture = $("#blog-modal-template-noImage").html();
+	     var blog_without_picture_modal_template = Handlebars.compile(source_no_picture);
 		 
 		 
 	   var blogData1 = {
@@ -243,7 +266,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog1",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "October 7, 2017",
+           BlogSampleParagraph: "Most people get instant headlines of both domestic and global news from Twitter. In doing so, certain trends or hashtags take over the social media platform. But why does this happen? What factors contribute to the rise and fall of a hashtag? What is the trajectory of a trend on twitter look like? and how long do these trends last? These are the main questions addressed in this research."
 	   };
 	   
 	   var blogData2 = {
@@ -267,13 +292,15 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog2",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "September 31, 2017",
+           BlogSampleParagraph: "Unit testing asynchronous tasks can be inconvenient, tedious, or even difficult to people without any or little prior knowledge of Multi-threaded programming. However, there are multiple good tools and frameworks out there that abstract all or most of the technical details and provide simple interfaces for testing asynchronous events."
 	   };
 	   
 	   var blogData3 = {
 	       BlogTileColor:"#004D40",
 		   BlogLink: "knapsack.html",
-		   BlogTileTitle:"Common theme of subset problems",
+		   BlogTileTitle:"Permutations and combinations: Knapsack problem",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -291,13 +318,15 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog3",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "October 2, 2017",
+           BlogSampleParagraph: "Permutations and combinations are at the core of most problems in Computer Science, and understanding how and when to apply the two ideas to a broader set of problems is essential. This blog doesn't provide explanations about permutations and combinations and how they apply to a variety of problems. Instead, it focuses on a specific type of subset problems - problems that resemble the famous 'knapsack problem'. "
 	   };
 	   
 	   var blogData4 = {
 	       BlogTileColor:"#4E342E",
 		   BlogLink:"alertapp.html",
-		   BlogTileTitle:"Alert app: How to keep up with events on campus",
+		   BlogTileTitle:"Alert app: a way to keep up with events on-campus",
 		   BlogTileDescription:"",
 	       gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
 		   ProjectTileImage:"7135.jpg",
@@ -315,7 +344,11 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog4",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "September 13, 2017",
+           BlogSampleParagraph: "AlertApp is a cross-platform app written using react native\n" +
+           "                            through which various student organizations or individuals can send out alerts for events to\n" +
+           "                            students who register for an account using their Loyola University Chicago(LUC) email address."
 	   };
 	   
 	   var blogData5 = {
@@ -339,7 +372,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog5",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "March 8, 2017",
+           BlogSampleParagraph: "The  Digital learning and Media Center (DLMC) is responsible for supporting students and faculty with digital media productions. It supports students and faculty in making videos(iMovie, final cut), posters, podcasts, website projects etc. Since its opening, the DLMC, has helped students an faculty complete over 1700 projects with the number of projects its supports …"
 	   };
 	   
 	   var blogData6 = {
@@ -363,7 +398,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       projectName: "2048 Player",
 		   BlogTileId: "blog6",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "October 27, 2017",
+           BlogSampleParagraph: "Recommendation systems have become an integral products in most\n" +
+           "                            industries. It provides a way for companies to better interact with their clients by pushing\n" +
+           "                            personalized content to their clients, especially now that machine learning is being used to\n" +
+           "                            better predict user's preferences."
 	   };
 
              var blogData7 = {
@@ -387,7 +427,12 @@
                  projectDescription: "Machine Learning program that plays 2048",
                  projectName: "2048 Player",
                  BlogTileId: "blog7",
-                 imageID: "image1"
+                 imageID: "image1",
+                 BlogDate: "November 28, 2017",
+                 BlogSampleParagraph: "There are plenty of products that students on-campus think of\n" +
+                 "                            selling, but a significant number of students do not either because they don't know how or\n" +
+                 "                            because they think their ads on sites such as amazon or ebay won't catch the right attention. It's as\n" +
+                 "                            if their product - book or another item - ..."
              };
 	   
 	   
@@ -399,15 +444,19 @@
 	   
 	   
 	   //populate the blog tile within the homepage
-	   var blog_html = blog_modal_template(blogData1);
-	   
-	   $("#blogContent").append(blog_html);
+	   var blog_html = blog_modal_template(blogData7);
 
-	   blog_html = blog_modal_template(blogData7);
+
+	   
 	   $("#blogContent").append(blog_html);
 
 	   blog_html = blog_modal_template(blogData6);
 	   $("#blogContent").append(blog_html);
+
+
+	   blog_html = blog_modal_template(blogData1);
+	   $("#blogContent").append(blog_html);
+
 
 	   blog_html = blog_modal_template(blogData3);
 	   $("#blogContent").append(blog_html);
@@ -419,25 +468,8 @@
 	   blog_html = blog_modal_template(blogData4);
 	   $("#blogContent").append(blog_html);
 	   
-	   blog_html = blog_modal_template(blogData5);
-	   $("#blogContent").append(blog_html);
-	   
-
-
-
-	   
-	   
-	   
-	  
-	   
-	   
-	   
-	   
-	   
-	  
-	   
-	   
-	   
+//	   blog_html = blog_modal_template(blogData5);
+//	   $("#blogContent").append(blog_html);
 	   
 	   
 	   
@@ -476,13 +508,16 @@
 			      View LinkedIn
 			  </a>
               
-		   </p
+		   </p>
 		</div>
 	
 	</footer>
 	   
    
    </body>
+
+   <script src="scripts/mdb.min.js"></script>
+
 
 
 

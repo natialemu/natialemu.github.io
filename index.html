@@ -13,6 +13,8 @@
 
 	   <link href="styles/bootstrap.min.css" rel="stylesheet">
 	   <link href="styles/mdb.min.css" rel="stylesheet">
+	   <link href="styles/blog-style.css" rel="stylesheet">
+
 
 
 	   <script
@@ -49,10 +51,7 @@
        <div class="maia-header" id="maia-header" role="banner">
 	       <div class="maia-aux">
 		      <h1 class="portfolio-text">
-                  Welcome to my
-
-				  Portfolio
-
+                  Welcome
 			  </h1>
 		   </div>
 	   </div>
@@ -70,6 +69,10 @@
 				 <li>
 				     <a href="blog.html" class="otherNavLinks"> Blog </a>
 				 </li>
+
+				  <li>
+					  <a href="#" class="otherNavLinks"> Resources </a>
+				  </li>
 
 				 <li>
 				     <a href="#" class="otherNavLinks"> Resume </a>
@@ -116,62 +119,129 @@
 
 	   </div>
 
-	            <script id="blog-modal-template" type="text/x-handlebars-template">
-	                <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
+	   <script id="blog-modal-template" type="text/x-handlebars-template">
+
+		   <div  class="site-content image-aside" style="display: flex; padding-left:0 !important;" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
 
 
-						<div class="blog_left_side" style="background-color:{{BlogTileColor}}">
-
-
-
-						</div>
+			   <div class="blog_left_side" style="background-color:{{BlogTileColor}}">
 
 
 
-						<div class="blog_right_side">
 
-                            <div class="image-aside__align">
-
-							   <h2 class="image-aside__title animated fadeIn mb-3">
-								   {{BlogTileTitle}}
-								 </h2>
+			   </div>
 
 
 
-							   <div class="image-aside__text">
-							       <p class="animated fadeIn text-muted">
-								        {{BlogTileDescription}}
+			   <div class="blog_right_side">
+
+				   <div class="content-area">
+
+					   <main class="site-main" role="main">
+						   <article id="post-601" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+							   <header class="entry-header">
+								   <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+								   <div class="entry-date">
+									   {{BlogDate}}			</div><!-- .entry-date -->
+							   </header><!-- .entry-header -->
+
+							   <div class="entry-summary">
+								   <p>{{BlogSampleParagraph}}
+									   <a href="{{BlogLink}}" class="more-link">
+										   Read more
+										   <!-- add a vector here-->
+										   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+											   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+											   </path>
+
+										   </svg>
+
+
+									   </a>
 								   </p>
+							   </div><!-- .entry-summary -->
+
+							   <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+							   </footer><!-- .entry-footer -->
+
+						   </article><!-- #post-## -->
 
 
 
-							   </div>
-
-							   <a id="{{BlogTileId}}" href="blogs/{{BlogLink}}" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-
-									 </path>
-
-								  </svg>
-
-
-								 </a>
-
-							   </span>
-							</div>
-
-						</div>
-
-
-					  </div>
+					   </main><!-- #main -->
 
 				   </div>
 
-                </script>
+
+
+			   </div>
+
+
+		   </div>
+
+	   </script>
+
+	   <script id="blog-modal-template-noImage" type="text/x-handlebars-template">
+
+		   <div id="content-blog" class="site-content">
+			   <div id="primary" class="content-area">
+
+				   <main id="main" class="site-main" role="main">
+					   <article id="post-60" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+						   <header class="entry-header">
+							   <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+							   <div class="entry-date">
+								   {{BlogDate}}			</div><!-- .entry-date -->
+						   </header><!-- .entry-header -->
+
+						   <div class="entry-summary">
+							   <p>{{BlogSampleParagraph}}
+								   <a href="{{BlogLink}}" class="more-link">
+									   Read more
+									   <!-- add a vector here-->
+									   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+										   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+										   </path>
+
+									   </svg>
+
+
+								   </a>
+							   </p>
+						   </div><!-- .entry-summary -->
+
+						   <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+						   </footer><!-- .entry-footer -->
+
+					   </article><!-- #post-## -->
+
+
+
+				   </main><!-- #main -->
+
+			   </div>
+
+		   </div>
+
+	   </script>
 
 
 
@@ -241,7 +311,7 @@
 
 
 		   <!-- Project cards -->
-		   <div class="content-container content-row content-row--short">
+		   <div class="content-container content-row content-row--short" style="margin-bottom: 60px;">
 		        <div class="grid grid--equal" id="content">
 
 
@@ -253,11 +323,38 @@
 
 	   </div>
 
-	   <div class="center content-footer mobile--hide">
-		       <a href="projects.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">
-			       Explore more projects
-			   </a>
+		   <!-- More projects button -->
+	   <!--<div class="center content-footer mobile&#45;&#45;hide">-->
+		       <!--<a href="projects.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">-->
+			       <!--Explore more projects-->
+			   <!--</a>-->
 
+		   <!--</div>-->
+		   <div id="fws_5a4e810e326fb"  class="wpb_row vc_row-fluid vc_row standard_section " style="padding-top: 0; padding-bottom: 0; min-height: 60px;">
+			   <div class="row-bg-wrap">
+				   <div class="row-bg   " style="">
+
+				   </div>
+			   </div>
+			   <div class="col span_12  center">
+
+				   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+					   <div class="vc_column-inner">
+
+						   <div class="wpb_wrapper">
+
+							   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="projects.html" >
+								   <span>Explore more projects</span>
+							   </a>
+
+						   </div>
+
+					   </div>
+
+				   </div>
+
+			   </div>
 		   </div>
 
 	</div>
@@ -266,13 +363,13 @@
 	   <!-- Blog section -->
 	   <div class="page-row--split-blocks page-row-blog centeredText">
 		   <h2 class="content-title animated fadeIn mb-4">
-			   Blog related samples
+			   Blog
 		   </h2>
 
 	   </div>
 
 	   <div class="page-row page-row--medium page-row--grid">
-		   <div class="content-container">
+		   <div class="content-container" style="margin-bottom: 60px;">
 			   <div class="grid grid--equal" id="blogContent">
 
 
@@ -286,11 +383,38 @@
 		   </div>
 
 
-		   <div class="center content-footer mobile--hide">
-			   <a href="blog.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">
-				   Explore more topics
-			   </a>
+		   <!-- more blogs link-->
+		   <!--<div class="center content-footer mobile&#45;&#45;hide">-->
+			   <!--<a href="blog.html" class="related-content__link" data-ga-action="job spotlight_Select" data-ga-label="See All Fields of Work">-->
+				   <!--Explore more topics-->
+			   <!--</a>-->
 
+		   <!--</div>-->
+		   <div id="fws_5a4e810e326fb-2"  class="wpb_row vc_row-fluid vc_row standard_section " style="padding-top: 0; padding-bottom: 0; min-height: 60px;">
+			   <div class="row-bg-wrap">
+				   <div class="row-bg   " style="">
+
+				   </div>
+			   </div>
+			   <div class="col span_12  center">
+
+				   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+					   <div class="vc_column-inner">
+
+						   <div class="wpb_wrapper">
+
+							   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important;" target="_blank" href="blog.html" >
+								   <span>Read more topics</span>
+							   </a>
+
+						   </div>
+
+					   </div>
+
+				   </div>
+
+			   </div>
 		   </div>
 
 
@@ -330,9 +454,91 @@
 
 				   <!--Footer-->
 				   <div class="modal-footer justify-content-center">
-					   <a type="button" href="{{gitHubLink}}" class="btn btn-primary-modal modal_buttons">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>
-					   <a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >Swagger documentation</a>
-					   <a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>
+
+
+					   <div  id="documentationButton"  class="wpb_row vc_row-fluid vc_row standard_section " style=" display: none; padding-top: 0; padding-bottom: 0; min-height: 60px;">
+						   <div class="row-bg-wrap">
+							   <div class="row-bg   " style="">
+
+							   </div>
+						   </div>
+						   <div class="col span_12  center">
+
+							   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+								   <div class="vc_column-inner">
+
+									   <div class="wpb_wrapper">
+
+										   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" >
+											   <span>Swagger Doc</span>
+										   </a>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+
+						   </div>
+					   </div>
+
+					   <div id="fws_5a4e810e326fb-3"  class="wpb_row vc_row-fluid vc_row standard_section " style="padding-top: 0; padding-bottom: 0; min-height: 60px;">
+						   <div class="row-bg-wrap">
+							   <div class="row-bg   " style="">
+
+							   </div>
+						   </div>
+						   <div class="col span_12  center">
+
+							   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+								   <div class="vc_column-inner">
+
+									   <div class="wpb_wrapper">
+
+										   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="{{gitHubLink}}" >
+											   <span>View code</span>
+										   </a>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+
+						   </div>
+					   </div>
+
+					   <div  id="clientButton"  class="wpb_row vc_row-fluid vc_row standard_section " style=" display: none; padding-top: 0; padding-bottom: 0; min-height: 60px;">
+						   <div class="row-bg-wrap">
+							   <div class="row-bg   " style="">
+
+							   </div>
+						   </div>
+						   <div class="col span_12  center">
+
+							   <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding boomapps_vccolumn instance-4">
+
+								   <div class="vc_column-inner">
+
+									   <div class="wpb_wrapper">
+
+										   <a class="nectar-button large see-through-2 " style="visibility: visible; color: rgb(0, 0, 0); border-color: rgba(0, 0, 0, 0.75); background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.25) !important;" target="_blank" href="https://github.com/natialemu/lakeshore-market-client" >
+											   <span>View client </span>
+										   </a>
+
+									   </div>
+
+								   </div>
+
+							   </div>
+
+						   </div>
+					   </div>
+					   <!--<a type="button" href="{{gitHubLink}}" class="btn btn-primary-modal modal_buttons">View code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i> </a>-->
+					   <!--<a id="documentationButton" style="display: none;" type="button" href="https://swaggerhub.com/apis/ljohnson24/LakeShore_MarketPlace_API/0.0.1" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >Swagger documentation</a>-->
+					   <!--<a id="clientButton" style="display: none;" type="button" href="https://github.com/natialemu/lakeshore-market-client" class="btn btn-outline-secondary-modal waves-effect modal_buttons" >View client code on GitHub <i class="fa fa-github ml-1" aria-hidden="true"></i></a>-->
 
 				   </div>
 			   </div>
@@ -372,6 +578,9 @@
 
 		 var source1 = $("#modal-template").html();
 	     var modal_template = Handlebars.compile(source1);
+
+	     var source_no_picture = $("#blog-modal-template-noImage").html();
+	     var blog_without_picture_modal_template = Handlebars.compile(source_no_picture);
 
 		 var projectData1 = {
 	       gitHubLink:"https://github.com/natialemu/GitLet",
@@ -538,7 +747,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Lifecycle of a hashtag",
 		   BlogTileId: "blog1",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "November 28, 2017",
+           BlogSampleParagraph: "Most people get instant headlines of both domestic and global news from Twitter. In doing so, certain trends or hashtags take over the social media platform. But why does this happen? What factors contribute to the rise and fall of a hashtag? What is the trajectory of a trend on twitter look like? and how long do these trends last? These are the main questions addressed in this research."
 	   };
 
 	   var blogData2 = {
@@ -561,7 +772,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Testing Observables and Subscribers in RxJava",
 		   BlogTileId: "blog2",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "September 31, 2017",
+           BlogSampleParagraph: "Unit testing asynchronous tasks can be inconvenient, tedious, or even difficult to people without any or little prior knowledge of Multi-threaded programming. However, there are multiple good tools and frameworks out there that abstract all or most of the technical details and provide simple interfaces for testing asynchronous events."
 	   };
 
 	   var blogData3 = {
@@ -584,7 +797,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Knapsack problem is much more than just stealing gold",
 		   BlogTileId: "blog3",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "October 27, 2017",
+           BlogSampleParagraph: "Recommendation systems have become an integral products in most\n" +
+           "                            industries. It provides a way for companies to better interact with their clients by pushing\n" +
+           "                            personalized content to their clients, especially now that machine learning is being used to\n" +
+           "                            better predict user's preferences."
 	   };
 
 	   var blogData4 = {
@@ -607,7 +825,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Alert App",
 		   BlogTileId: "blog4",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "November 28, 2017",
+           BlogSampleParagraph: "There are plenty of products that students on-campus think of\n" +
+           "                            selling, but a significant number of students do not either because they don't know how or\n" +
+           "                            because they think their ads on sites such as amazon or ebay won't catch the right attention. It's as\n" +
+           "                            if their product - book or another item - ..."
 	   };
 
 
@@ -618,10 +841,6 @@
 
 	   blog_html = blog_modal_template(blogData3);
 	   $("#blogContent").append(blog_html);
-
-	   blog_html = blog_modal_template(blogData1);
-	   $("#blogContent").append(blog_html);
-
 
 
 	   blog_html = blog_modal_template(blogData2);
@@ -727,6 +946,53 @@
 
 	   });
 
+	   startTimer();
+	   // changing background
+
+			 x = -1;
+
+
+			 function displayNextLargeImage() {
+			     x = (x === largeScreenSizeImages.length - 1) ? 0 : x+1;
+                 $("#portfolio-banner").animate({opacity:1},500,function () {
+                     $("#portfolio-banner").animate({opacity:0.96},300,function (){
+                         var homepage_header = $('#portfolio-banner');
+                         homepage_header.css('background','linear-gradient(\n' +
+                             '            rgba(0, 0, 0, 0.40),\n' +
+                             '            rgba(0, 0, 0, 0.40)\n' +
+                             '    ),url('+largeScreenSizeImages[x]+')');
+                         homepage_header.css('background-repeat','no-repeat');
+                         homepage_header.css('background-size','cover');
+
+                         homepage_header.animate({opacity:1},400);
+
+                     });
+
+
+                 });
+
+
+             }
+
+//             function displayNextSmallImage() {
+//                 x = (x === smallScreenSizeImages.length - 1) ? 0 : x+1;
+//                 $("#portfolio-banner").css('background-image','url('+smallScreenSizeImages[x]+')');
+//
+//             }
+
+             function startTimer(){
+			     setInterval(displayNextLargeImage,4000);
+			 }
+
+			 var largeScreenSizeImages = [];
+             var smallScreenSizeImages = [];
+
+             smallScreenSizeImages[0] = "images/homepage-header-trappist-4.jpg";
+             smallScreenSizeImages[1] = "images/homepage-header-trappist-2.jpg";
+
+             largeScreenSizeImages[0] = "images/homepage-header-trappist-1.jpg";
+             largeScreenSizeImages[1] = "images/homepage-header-mars-1.jpg";
+             largeScreenSizeImages[2] = "images/homepage-header-earth.jpg";
 
 
 

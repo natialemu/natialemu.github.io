@@ -13,6 +13,8 @@
 
 	   <link href="styles/bootstrap.min.css" rel="stylesheet">
 	   <link href="styles/mdb.min.css" rel="stylesheet">
+	   <link href="styles/blog-style.css" rel="stylesheet">
+
 
 
 	   <script
@@ -68,6 +70,10 @@
 				     <a href="blog.html" class="otherNavLinks"> Blog </a>
 				 </li>
 
+				  <li>
+					  <a href="#" class="otherNavLinks"> Resources </a>
+				  </li>
+
 				 <li>
 				     <a href="#" class="otherNavLinks"> Resume </a>
 				 </li>
@@ -113,62 +119,129 @@
 
 	   </div>
 
-	            <script id="blog-modal-template" type="text/x-handlebars-template">
-	                <div class="grid__item blog__item desk--one-half story-panel-red">
-				      <div href="blogs/knapsack.html" class="story-panel image-aside" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
+	   <script id="blog-modal-template" type="text/x-handlebars-template">
+
+		   <div  class="site-content image-aside" style="display: flex; padding-left:0 !important;" data-model-link="true" data-ga-action="small square_Select" data-ga-label="Knapsack-problem" data-ga-value="5">
 
 
-						<div class="blog_left_side" style="background-color:{{BlogTileColor}}">
-
-
-
-						</div>
+			   <div class="blog_left_side" style="background-color:{{BlogTileColor}}">
 
 
 
-						<div class="blog_right_side">
 
-                            <div class="image-aside__align">
-
-							   <h2 class="image-aside__title animated fadeIn mb-3">
-								   {{BlogTileTitle}}
-								 </h2>
+			   </div>
 
 
 
-							   <div class="image-aside__text">
-							       <p class="animated fadeIn text-muted">
-								        {{BlogTileDescription}}
+			   <div class="blog_right_side">
+
+				   <div class="content-area">
+
+					   <main class="site-main" role="main">
+						   <article id="post-601" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+							   <header class="entry-header">
+								   <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+								   <div class="entry-date">
+									   {{BlogDate}}			</div><!-- .entry-date -->
+							   </header><!-- .entry-header -->
+
+							   <div class="entry-summary">
+								   <p>{{BlogSampleParagraph}}
+									   <a href="{{BlogLink}}" class="more-link">
+										   Read more
+										   <!-- add a vector here-->
+										   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+											   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+											   </path>
+
+										   </svg>
+
+
+									   </a>
 								   </p>
+							   </div><!-- .entry-summary -->
+
+							   <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+							   </footer><!-- .entry-footer -->
+
+						   </article><!-- #post-## -->
 
 
 
-							   </div>
-
-							   <a id="{{BlogTileId}}" href="blogs/{{BlogLink}}" class="image-aside__link">
-							     Read more
-								 <!-- add a vector here-->
-								 <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
-								     <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
-
-									 </path>
-
-								  </svg>
-
-
-								 </a>
-
-							   </span>
-							</div>
-
-						</div>
-
-
-					  </div>
+					   </main><!-- #main -->
 
 				   </div>
 
-                </script>
+
+
+			   </div>
+
+
+		   </div>
+
+	   </script>
+
+	   <script id="blog-modal-template-noImage" type="text/x-handlebars-template">
+
+		   <div id="content-blog" class="site-content">
+			   <div id="primary" class="content-area">
+
+				   <main id="main" class="site-main" role="main">
+					   <article id="post-60" class="post-60 post type-post status-publish format-standard hentry category-uncategorized">
+
+
+						   <header class="entry-header">
+							   <h3 class="entry-title"><a href="https://degenablog.wordpress.com/2017/03/08/digital-media-production-project-support/" rel="bookmark">{{BlogTileTitle}}</a></h3>
+							   <div class="entry-date">
+								   {{BlogDate}}			</div><!-- .entry-date -->
+						   </header><!-- .entry-header -->
+
+						   <div class="entry-summary">
+							   <p>{{BlogSampleParagraph}}
+								   <a href="{{BlogLink}}" class="more-link">
+									   Read more
+									   <!-- add a vector here-->
+									   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon">
+										   <path d="M20.5,3.5c-4.7-4.7-12.3-4.7-17,0s-4.7,12.3,0,17s12.3,4.7,17,0S25.2,8.2,20.5,3.5z M10.4,18.9l5.6-5.6H4.2v-2.7l11.9,0l-5.6-5.6l1.8-1.8l7.9,7.9l0.8,0.8l-1.3,1.3l-7.4,7.4L10.4,18.9z">
+
+										   </path>
+
+									   </svg>
+
+
+								   </a>
+							   </p>
+						   </div><!-- .entry-summary -->
+
+						   <footer class="entry-footer clear">
+
+						   <span class="left">
+
+						<a href=""><i class="fa fa-link" style="color: grey;"></i></a>
+
+						   </span>
+						   </footer><!-- .entry-footer -->
+
+					   </article><!-- #post-## -->
+
+
+
+				   </main><!-- #main -->
+
+			   </div>
+
+		   </div>
+
+	   </script>
 
 
 
@@ -290,7 +363,7 @@
 	   <!-- Blog section -->
 	   <div class="page-row--split-blocks page-row-blog centeredText">
 		   <h2 class="content-title animated fadeIn mb-4">
-			   Blog related samples
+			   Blog
 		   </h2>
 
 	   </div>
@@ -506,6 +579,9 @@
 		 var source1 = $("#modal-template").html();
 	     var modal_template = Handlebars.compile(source1);
 
+	     var source_no_picture = $("#blog-modal-template-noImage").html();
+	     var blog_without_picture_modal_template = Handlebars.compile(source_no_picture);
+
 		 var projectData1 = {
 	       gitHubLink:"https://github.com/natialemu/GitLet",
 		   MainModalImage: "gitlet-main-left.png",
@@ -671,7 +747,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Lifecycle of a hashtag",
 		   BlogTileId: "blog1",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "November 28, 2017",
+           BlogSampleParagraph: "Most people get instant headlines of both domestic and global news from Twitter. In doing so, certain trends or hashtags take over the social media platform. But why does this happen? What factors contribute to the rise and fall of a hashtag? What is the trajectory of a trend on twitter look like? and how long do these trends last? These are the main questions addressed in this research."
 	   };
 
 	   var blogData2 = {
@@ -694,7 +772,9 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Testing Observables and Subscribers in RxJava",
 		   BlogTileId: "blog2",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "September 31, 2017",
+           BlogSampleParagraph: "Unit testing asynchronous tasks can be inconvenient, tedious, or even difficult to people without any or little prior knowledge of Multi-threaded programming. However, there are multiple good tools and frameworks out there that abstract all or most of the technical details and provide simple interfaces for testing asynchronous events."
 	   };
 
 	   var blogData3 = {
@@ -717,7 +797,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Knapsack problem is much more than just stealing gold",
 		   BlogTileId: "blog3",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "October 27, 2017",
+           BlogSampleParagraph: "Recommendation systems have become an integral products in most\n" +
+           "                            industries. It provides a way for companies to better interact with their clients by pushing\n" +
+           "                            personalized content to their clients, especially now that machine learning is being used to\n" +
+           "                            better predict user's preferences."
 	   };
 
 	   var blogData4 = {
@@ -740,7 +825,12 @@
 	       projectDescription: "Machine Learning program that plays 2048",
 	       ProjectTitle: "Alert App",
 		   BlogTileId: "blog4",
-		   imageID: "image1"
+		   imageID: "image1",
+           BlogDate: "November 28, 2017",
+           BlogSampleParagraph: "There are plenty of products that students on-campus think of\n" +
+           "                            selling, but a significant number of students do not either because they don't know how or\n" +
+           "                            because they think their ads on sites such as amazon or ebay won't catch the right attention. It's as\n" +
+           "                            if their product - book or another item - ..."
 	   };
 
 
@@ -751,10 +841,6 @@
 
 	   blog_html = blog_modal_template(blogData3);
 	   $("#blogContent").append(blog_html);
-
-	   blog_html = blog_modal_template(blogData1);
-	   $("#blogContent").append(blog_html);
-
 
 
 	   blog_html = blog_modal_template(blogData2);
@@ -885,7 +971,7 @@
 
                  });
 
-				 
+
              }
 
 //             function displayNextSmallImage() {

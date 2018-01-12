@@ -736,7 +736,7 @@ body a {
     background-position: center;
     background-size: cover;
     border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    box-shadow: 1px 0 16px rgba(0,0,0,0.17);
     font-weight: 400;
     padding-bottom: 1px;
     position: relative;

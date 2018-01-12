@@ -103,7 +103,7 @@ body * {
 
 @media (max-width: 900px){
 #portfolio-banner {
-    background-image: url("../images/homepage-header-earth-digital-1.png") !important;
+    background-image: url("../images/homepage-header-trappist-4.jpg") !important;
     transform: scaleX(-1);
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);

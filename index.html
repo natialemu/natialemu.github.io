@@ -860,6 +860,53 @@
 
 	   });
 
+	   startTimer();
+	   // changing background
+
+			 x = -1;
+
+
+			 function displayNextLargeImage() {
+			     x = (x === largeScreenSizeImages.length - 1) ? 0 : x+1;
+                 $("#portfolio-banner").animate({opacity:1},500,function () {
+                     $("#portfolio-banner").animate({opacity:0.96},300,function (){
+                         var homepage_header = $('#portfolio-banner');
+                         homepage_header.css('background','linear-gradient(\n' +
+                             '            rgba(0, 0, 0, 0.40),\n' +
+                             '            rgba(0, 0, 0, 0.40)\n' +
+                             '    ),url('+largeScreenSizeImages[x]+')');
+                         homepage_header.css('background-repeat','no-repeat');
+                         homepage_header.css('background-size','cover');
+
+                         homepage_header.animate({opacity:1},400);
+
+                     });
+
+
+                 });
+
+				 
+             }
+
+//             function displayNextSmallImage() {
+//                 x = (x === smallScreenSizeImages.length - 1) ? 0 : x+1;
+//                 $("#portfolio-banner").css('background-image','url('+smallScreenSizeImages[x]+')');
+//
+//             }
+
+             function startTimer(){
+			     setInterval(displayNextLargeImage,4000);
+			 }
+
+			 var largeScreenSizeImages = [];
+             var smallScreenSizeImages = [];
+
+             smallScreenSizeImages[0] = "images/homepage-header-trappist-4.jpg";
+             smallScreenSizeImages[1] = "images/homepage-header-trappist-2.jpg";
+
+             largeScreenSizeImages[0] = "images/homepage-header-trappist-1.jpg";
+             largeScreenSizeImages[1] = "images/homepage-header-mars-1.jpg";
+             largeScreenSizeImages[2] = "images/homepage-header-earth.jpg";
 
 
 

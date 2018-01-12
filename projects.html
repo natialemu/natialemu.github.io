@@ -167,47 +167,20 @@
 
 
 		
-		<div  class="androidAppsId page-row--split-blocks android-section text-center" style="background-color: rgb(240,240,240); display: block;">
-		
-		  <h2 class="content-subtitle">
-		       Android apps
-		   </h2>
-		
-		
-		</div>
-	   
-	   <!-- Projects title -->
-	   <div class="androidAppsId page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240); display: block;">
 
-
-		   <!-- Project cards -->
-		   <div  class="content-container content-row content-row--short" >
-		        <div class="grid" id="content">
-
-
-
-
-
-
-		   </div>
-
-	   </div>
-
-
-	</div>
 	
 	
 	
 	
 	
-	<div class="otherProjectsid page-row--split-blocks page-row-blog otherApps" style="display: block;">
-	       <h2 class="content-subtitle">
-		       Other projects
-		   </h2>
-		   
-		   
-	   
-	   </div>
+	<!--<div class="otherProjectsid page-row&#45;&#45;split-blocks page-row-blog otherApps" style="display: block;">-->
+	       <!--<h2 class="content-subtitle">-->
+		       <!--Projects-->
+		   <!--</h2>-->
+		   <!---->
+		   <!---->
+	   <!---->
+	   <!--</div>-->
 
 	   <!-- Projects title -->
 	   <div  class="otherProjectsid page-row page-row--split-blocks page-row-project" style="display: block;">
@@ -230,6 +203,59 @@
 
 
 	</div>
+
+
+
+
+       <!--<div  class="androidAppsId page-row&#45;&#45;split-blocks android-section text-center" style="background-color: rgb(240,240,240); display: block;">-->
+
+           <!--<h2 class="content-subtitle">-->
+               <!--Android-->
+           <!--</h2>-->
+
+
+       <!--</div>-->
+
+       <!-- Projects title -->
+       <div class="androidAppsId page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240); display: block;">
+
+
+           <!-- Project cards -->
+           <div  class="content-container content-row content-row--short" >
+               <div class="grid" id="content">
+
+
+
+
+
+
+               </div>
+
+           </div>
+
+
+       </div>
+
+
+       <!-- Projects title -->
+       <div class="activeProjectsID page-row page-row--split-blocks page-row-project" style="background-color: rgb(240,240,240); display: none;">
+
+
+           <!-- Project cards -->
+           <div  class="content-container content-row content-row--short" >
+               <div class="grid" id="contentActive">
+
+
+
+
+
+
+               </div>
+
+           </div>
+
+
+       </div>
 
 	   <!-- Modal for project description when any project tile is clicked -->
 	   <script id="modal-template" type="text/x-handlebars-template">
@@ -1121,6 +1147,10 @@
              html = project_modal_template(projectOthersData6);
              $("#content1").append(html);
 
+
+             var activeProjectContent = $("#contentActive");
+             activeProjectContent.append(html);
+
 	   
 	  
 	   
@@ -1200,11 +1230,53 @@
 
 
 
+             function addBorder(element){
+                 element.css('border-bottom','4px solid rgba(20,20,20,0.9)');
 
-             $("#allAppsLink").click(function () {
+             }
+
+             function removeBorder(element){
+
+                 element.css('border-bottom','0');
+
+
+             }
+
+
+             var allAppsLinkElement = $("#allAppsLink");
+             var androidAppsLinkElement = $("#androidAppsLink");
+             var activeProjectLinkElement = $("#activeProjectsLink");
+
+
+             /**
+              * Hovering and clicking all projects link
+              */
+             allAppsLinkElement.hover(function () {
+                 addBorder(allAppsLinkElement);
+
+             },function () {
+                 var selectedLink = allAppsLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+                     removeBorder(allAppsLinkElement);
+
+                 }
+
+
+
+             });
+             allAppsLinkElement.click(function () {
 				// $(".otherProjectsid").css('display','none');
-                 $(".otherProjectsid").fadeOut(0.5);
-                 $(".otherProjectsid").fadeIn(700,function () {
+
+                addBorder(allAppsLinkElement);
+                removeBorder(androidAppsLinkElement);
+                removeBorder(activeProjectLinkElement);
+
+                $(".activeProjectsID").hide();
+
+
+                var otherProjects = $(".otherProjectsid");
+                 otherProjects.fadeOut(0.5);
+                 otherProjects.fadeIn(700,function () {
                      $(".otherProjectsid").show(700,"linear");
 
                  });
@@ -1213,8 +1285,9 @@
 
 
                  //$(".androidAppsId").css('display','none');
-                 $(".androidAppsId").fadeOut(0.5);
-                 $(".androidAppsId").fadeIn(700,function () {
+                 var androidApps = $(".androidAppsId");
+                 androidApps.fadeOut(0.5);
+                 androidApps.fadeIn(700,function () {
                      $(".androidAppsId").show(700,"linear");
 
                  });
@@ -1232,12 +1305,81 @@
 
 
              });
-             $("#androidAppsLink").click(function () {
+
+             /**
+              * Hovering and clicking android apps link
+              */
+             androidAppsLinkElement.hover(function () {
+                 addBorder(androidAppsLinkElement);
+
+             },function () {
+                 var selectedLink = androidAppsLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+
+                     removeBorder(androidAppsLinkElement);
+                 }
+
+
+             });
+             androidAppsLinkElement.click(function () {
+//
+
+                 addBorder(androidAppsLinkElement);
+                 removeBorder(allAppsLinkElement);
+                 removeBorder(activeProjectLinkElement);
+
+
                  $(".otherProjectsid").hide(500,"linear");
-                 //$(".otherProjectsid").css('display','none');
-                 //$(".androidAppsId").css('display','block');
-                 $(".androidAppsId").hide();
-                 $(".androidAppsId").show(500,"linear");
+                 $(".activeProjectsID").hide(500,"linear");
+
+
+                 //$(".androidAppsId").css('display','none');
+                 var androidApps =$(".androidAppsId");
+                 androidApps.fadeOut(0.5);
+                    androidApps.fadeIn(700,function () {
+                     $(".androidAppsId").show(700,"linear");
+
+                 });
+
+
+
+             });
+
+
+             /**
+              * Hovering and clicking active projects link
+              */
+             activeProjectLinkElement.hover(function () {
+                 addBorder(activeProjectLinkElement);
+
+             },function () {
+                 var selectedLink = activeProjectLinkElement.find(":selected").text();
+                 if(selectedLink === "false"){
+
+                     removeBorder(activeProjectLinkElement);
+                 }
+
+             });
+             activeProjectLinkElement.click(function () {
+//
+
+                 addBorder(activeProjectLinkElement);
+                 removeBorder(allAppsLinkElement);
+                 removeBorder(androidAppsLinkElement);
+
+
+                 $(".androidAppsId").hide(500,"linear");
+                 $(".otherProjectsid").hide(500,"linear");
+
+
+
+                 //$(".androidAppsId").css('display','none');
+                 var activeProjects =$(".activeProjectsID");
+                 activeProjects.fadeOut(0.5);
+                 activeProjects.fadeIn(700,function () {
+                     activeProjects.show(700,"linear");
+
+                 });
 
 
 

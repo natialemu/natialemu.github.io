@@ -22,6 +22,7 @@
 	   <script src="scripts/popper.min.js"></script>
 	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 
+	   <script src="scripts/projects/active-project-scripts.js"></script>
 	   
 
        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -95,7 +96,7 @@
 						   <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> All projects </a></li>
 						   <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> Android </a></li>
 
-						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects </a></li>
+						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects/research</a></li>
 
 					   </ul>
 
@@ -701,6 +702,40 @@
            projectModalID:"modal10"
 
        };
+
+             var personalWebsiteProject = {
+                 gitHubLink:"#",
+                 ProjectTileImage:"personal-webiste-image.png",
+                 ProjectTileTitle:"Personal website",
+                 ProjectTileDescription:"A material-design based personal website",
+                 paragraph1: "I am currently working on the Resources page of the website. It will provide useful resources I have used in the past or currently use for a path towards building a strong computer science and problem solving foundations and also resources geared " +
+                 "towards enhancing skills in specific areas such as Android application development, machine learning, web development and others.  ",
+                 ProjectTileId: "personalWebsiteProject",
+                 imageID: "personalWebsiteProjectImage",
+                 projectModalID:"personalWebsiteProjectModal"
+             };
+
+             var supernovaeDetection = {
+                 gitHubLink:"#",
+                 ProjectTileImage:"blackholes-research.jpg",
+                 ProjectTileTitle:"Supernovae classification",
+                 ProjectTileDescription:"a photometric classification of core collapse supernovae ",
+                 paragraph1: "",
+                 ProjectTileId: "supernovaeDetection",
+                 imageID: "supernovaeDetectionImage",
+                 projectModalID:"supernovaeDetectionImage"
+             };
+
+             var trendLifecycle = {
+                 gitHubLink:"#",
+                 ProjectTileImage:"social-networks.jpg",
+                 ProjectTileTitle:"Twitter Trends Analysis",
+                 ProjectTileDescription:"Analysis of the lifecycle of trends on twitter",
+                 paragraph1: "  ",
+                 ProjectTileId: "trendLifecycle",
+                 imageID: "trendLifecycle",
+                 projectModalID:"trendLifecycle"
+             };
 	   
 	   
 	   
@@ -1150,6 +1185,14 @@
 
              var activeProjectContent = $("#contentActive");
              activeProjectContent.append(html);
+
+             html = project_modal_template(supernovaeDetection);
+             activeProjectContent.append(html);
+             html = project_modal_template(trendLifecycle);
+             activeProjectContent.append(html);
+             html = project_modal_template(personalWebsiteProject);
+             activeProjectContent.append(html);
+
 
 	   
 	  

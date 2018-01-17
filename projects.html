@@ -1298,8 +1298,8 @@
                  addBorder(allAppsLinkElement);
 
              },function () {
-                 var selectedLink = allAppsLinkElement.find(":selected").text();
-                 if(selectedLink === "false"){
+                 var selectedLink = allAppsLinkElement.attr("aria-selected");
+                 if(selectedLink === "false" || typeof selectedLink === "undefined"){
                      removeBorder(allAppsLinkElement);
 
                  }
@@ -1308,16 +1308,16 @@
 
              });
              allAppsLinkElement.click(function () {
-				// $(".otherProjectsid").css('display','none');
+                 // $(".otherProjectsid").css('display','none');
 
-                addBorder(allAppsLinkElement);
-                removeBorder(androidAppsLinkElement);
-                removeBorder(activeProjectLinkElement);
+                 addBorder(allAppsLinkElement);
+                 removeBorder(androidAppsLinkElement);
+                 removeBorder(activeProjectLinkElement);
 
-                $(".activeProjectsID").hide();
+                 $(".activeProjectsID").hide();
 
 
-                var otherProjects = $(".otherProjectsid");
+                 var otherProjects = $(".otherProjectsid");
                  otherProjects.fadeOut(0.5);
                  otherProjects.fadeIn(700,function () {
                      $(".otherProjectsid").show(700,"linear");
@@ -1356,8 +1356,9 @@
                  addBorder(androidAppsLinkElement);
 
              },function () {
-                 var selectedLink = androidAppsLinkElement.find(":selected").text();
-                 if(selectedLink === "false"){
+                 var selectedLink = androidAppsLinkElement.attr("aria-selected");
+                 console.log(selectedLink);
+                 if(selectedLink === "false" || typeof selectedLink === "undefined"){
 
                      removeBorder(androidAppsLinkElement);
                  }
@@ -1379,7 +1380,7 @@
                  //$(".androidAppsId").css('display','none');
                  var androidApps =$(".androidAppsId");
                  androidApps.fadeOut(0.5);
-                    androidApps.fadeIn(700,function () {
+                 androidApps.fadeIn(700,function () {
                      $(".androidAppsId").show(700,"linear");
 
                  });
@@ -1396,8 +1397,8 @@
                  addBorder(activeProjectLinkElement);
 
              },function () {
-                 var selectedLink = activeProjectLinkElement.find(":selected").text();
-                 if(selectedLink === "false"){
+                 var selectedLink = activeProjectLinkElement.attr("aria-selected");
+                 if(selectedLink === "false" || typeof selectedLink === "undefined"){
 
                      removeBorder(activeProjectLinkElement);
                  }

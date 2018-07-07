@@ -512,114 +512,11 @@
 
 
        };
+
+
+
+
 	   var projectData4 = {
-	       gitHubLink:"https://github.com/natialemu/puzzle-8",
-		   ProjectSubtitle0: "Overview",
-		   ProjectTileImage:"puzzle8-tile.png",
-		   ProjectModalLeftSide: "#283593",
-		   MainModalImage: "puzzle8-main-full-1.png",
-		   ProjectTileTitle:"Puzzle8",
-		   ProjectTileDescription:" Recreate a numerical sequence or an image",
-	       projectImage:"something",
-	       ProjectTitle: "Puzzle8",
-	       paragraph1: "Puzzle8 is a game that is played with a square grid of tiles which has one tile removed to create an empty space. Although usually the tiles are usually numbered and the goal would be to create the right order, this app uses pictures taken by the user’s camera. ",
-		   paragraph2: "The goal is to slide the tiles around to form the original image or to recreate a numerical sequence. Each tile can slide either horizontally or vertically into the empty space in order to reorder the tiles.",
-		   paragraph4: "A solution to the game is achieved by the A* algorithm with the use of a priority queue. Each board state will be ordered within the priority based on its “Manhattan priority”. Its Manhattan priority is the sum of the distances(both vertical and horizontal distances) from the blocks to their goal positions, plus the number of moves made so far to get to the state.",
-		   paragraph5: "For example, with a starting configuration of:",
-		   ModalSubImage5: "initialConfigurationPuzzle8.png",
-		   paragraph3:"Here is a screenshot of the game in progress:",
-		   ModalSubImage3: "puzzle8-progress-1.png",
-		   paragraph6: "And the desired target of: ",
-		   ModalSubImage6: "desiredConfigurationPuzzle8.png",
-		   paragraph7: "The Manhattan distances for each blocks, which will simply be the number of steps from the blocks current position to its correction position will be : ",
-		   ModalSubImage7: "manhattanDistancesPuzzle8.png",
-		   paragraph8: "The Manhattan priority will then be 10 (sum of the second row) + number of moves so far.",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "project4",
-		   imageID: "image1",
-           projectModalID:"modal4"
-
-       };
-	   
-	   var projectData5 = {
-	       gitHubLink:"https://github.com/natialemu/TouringMusician",
-		   ProjectSubtitle0: "Overview",
-		   ProjectTileImage:"touring-musician-tile.png",
-		   ProjectTileTitle:"Touring musician",
-		   ProjectModalLeftSide: "#827717",
-		   MainModalImage: "touring-musician-final-main.png",
-		   ProjectTileDescription:"A travelling salesman problem through gigs",
-	       projectImage:"something",
-	       ProjectTitle: "Turing Musician",
-	       paragraph1: "Touring musician is an android app that represents a user with a map and let them add gig locations to the map and figure out a path through the various gigs.",
-		   paragraph2: "",
-		   ModalSubImage2: "touring-musician-tile.png",
-		   paragraph3: "There are three implementations of the problem represented as modes in the app. ",
-		   paragraph4: "The third mode is one way of approximating the travelling salesman problem. Whenever a gig is added on the map, the smallest total path length is visualized on the map.",
-		   ModalSubImage4: "touring-musician-allmodes.png",
-		   ModalSubImage3: "touring-musician-modes.png",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "project5",
-		   imageID: "image1",
-           projectModalID:"modal5"
-
-       };
-	   
-	   var projectData6 = {
-	       gitHubLink:"https://github.com/natialemu/scarnes-dice",
-		   ProjectSubtitle0: "Overview",
-		   ProjectTileImage:"scarnes-dice-tile.png",
-		   ProjectModalLeftSide: "#4E342E",
-		   MainModalImage: "scarnes-dice-main.png",
-		   ProjectTileTitle:"Scarne's dice",
-		   ProjectTileDescription:"An android multi-player turn-based dice game",
-	       projectImage:"something",
-	       ProjectTitle: "Scarne's dice",
-	       paragraph1: "Scarnes dice is a turn-based dice game where players score points by rolling a die then if they roll at least one 1, they score no points and will lose their turn; if they roll both 1s, then they will lose all their previous points and lose their turn; if they roll a double, then they have to roll again. The winner is the first person that reaches 100 points.",
-		   paragraph22: "For example, if a player starts their turn and rolls 3 and 5, they can choose to either ‘hold’ and end their turn, in which case they can add 8 to their score, or reroll and potentially score more points.",
-		   paragraph3: "Let’s say they decide to roll again, and they get a 3 and 3. They now have to roll again end can’t end their turn at this tim. They will add 6 points to their existing score to have a total of 14 points so far. ",
-		   paragraph4: "They decide to roll again but get a 1 and a 4. Getting only a single 1 will force the player to give up their turn. However, the player’s prior points will not be removed and will stay at 14. However, if the player instead had rolled two 1s, then not only would the player give up their turn but the player would also lose all prior points. The total point of the player would then be 0.",
-		   paragraph5: "The game in progress looks as follows:",
-		   ModalSubImage5: "scarnes-dice-midgame.png",
-		   paragraph6: "Comprehensive unit tests were required to make sure all edge cases were considered when transitioning between players, awarding points and managing and enforcing the options that players had.",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "project6",
-		   imageID: "image1",
-           projectModalID:"modal6"
-
-       };
-	   var projectData7 = {
-	       gitHubLink:"https://github.com/natialemu/anagram-game",
-		   ProjectSubtitle0: "Overview",
-		   ProjectTileImage:"anagram-tile.png",
-		   ProjectModalLeftSide: "#455A64",
-		   MainModalImage: "anagram-final-main.png",
-		   ProjectTileTitle:"Anagram",
-		   ProjectTileDescription:"Yet another game which involves anagrams",
-	       projectImage:"something",
-	       ProjectTitle: "Yet another game involving anagrams",
-	       paragraph1: "This is a game involving anagrams which are words formed by rearranging the letters of another word. The game will provide the user with a word from the dictionary. The user then tries to create as many words as possible that contain all the letters of the given word plus one additional letter. Note that adding the extra letter at the beginning of the end without reordering the other letters is not valid. For example, if the game picks the word ‘ore’ as a starter, the user might guess ‘rose’ or ‘zero’ but not ‘sore’. The user can also give up and see the words that they did not guess.",
-		   paragraph22: "The game will only propose words that have at least 5 solutions. Here is the game in progress:",
-		   ModalSubImage2: "anagram-midgame.png",
-		   paragraph3: "The game will also provide a solution that closely resembles the user’s effort:",
-		   ModalSubImage3: "",
-		   paragraph4: "To maximize time efficiency, words that are anagrams are mapped to the same key where the key is the anagram that is sorted in ascending order of character. Inserting letter to the original word to check if a valid solution exists is also optimized by using binary search to find the right insertion location. ",
-		   paragraph5: "Test driven development approach was used when creating the game. A more difficult version of the game involving two words where the user can add one letter to a pair of words to form two new valid words is in the works.",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "project7",
-		   imageID: "image1",
-           projectModalID:"modal7"
-
-       };
-	   var projectData8 = {
 	       gitHubLink:"https://github.com/natialemu/BSTGuesser",
 		   ProjectTileImage:"bst-guesser-tile.png",
 		   MainModalImage: "bst-guesser-final-main.png",
@@ -643,7 +540,7 @@
            projectModalID:"modal8"
 
        };
-	   var projectData9 = {
+	   var projectData5 = {
 	       gitHubLink:"https://github.com/natialemu/jumping-cubes",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#BF360C",
@@ -678,30 +575,7 @@
            projectModalID:"modal9"
 
        };
-	   var projectData10 = {
-	       gitHubLink:"https://github.com/natialemu/AlertApp",
-		   ProjectSubtitle0: "Overview",
-		   ProjectTileImage:"alertapp-tile-1.png",
-		   ProjectModalLeftSide: "#4E342E",
-		   MainModalImage:"alertapp-main-left.png",
-		   ProjectTileTitle:"Alert app",
-		   ProjectTileDescription:"Cross-platform app for event management on campus",
-	       projectImage:"something",
-	       ProjectTitle: "Alert App",
-	       paragraph1: "AlertApp is a cross-platform app written using react native through which various student organizations or individuals can send out alerts for events to students who register for an account using their LUC email address. The app is not only limited to student organizations and students. Campus safety or the university can issue out warnings or notify students of dangerous weather conditions. As such, the app serves as a unified event management system for events ranging from social events, academic-related events or safety-related concerns.",
-		   paragraph2: "The app was built using React Native. At a high-level, our goal was to deliver a functional app with a well-designed user experience. At a slightly lower level the goal was to architect the app in such a way as to maximize its scalability. This was achieved by using a handful of third party libraries along with React Native and good software design using a high level of abstraction to drive the application state management. The primary third party libraries used were Immutable, Normalizr, React-native-router-flux, React-redux, Redux, Redux-persist, Redux-saga and Reselect.",
-		   ModalSubImage2: "alertapp-design.png",
-		   paragraph3: "The application has two distinct layers. The business logic layer and the view layer. The view layer is a react.js style hierarchical component structure. The business logic layer encapsulates the store tree, entity definitions, and selectors. The data itself is based on a first order field abstraction that has a key, category, subcategory, and type at the minimum. The type property of a field is used to determine what type formatter to use for displaying the data. For example a time/unix type will convert a unix timestamp to a human readable date. A collection of fields is defined as an entity which can have either a parent or child entry. The entity definitions are used to normalize the data into an object graph.",
-		   ProjectSubtitle2: "Testing and iterative design",
-		   paragraph4: "The application was built in two phases: business layer phase, and view layer phase. The business layer phase involved setting up the factories to drive instantiating the business layer of the application. The view layer phase involved designing the user interface, and developing said interface. The business layer is designed to be entirely separate from the view layer. As a result it can have its own comprehensive unit test suite. Very limited unit tests were written for the project because we focused on application functionality. Our development process was extremely agile because we had to be testing and exploring new technologies. As a result not a lot of time was left for writing the unit tests. If continuing this application to a production ready-state writing the unit tests would be the next step.",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "project10",
-		   imageID: "image1",
-           projectModalID:"modal10"
 
-       };
 
              var personalWebsiteProject = {
                  gitHubLink:"#",
@@ -715,11 +589,11 @@
                  projectModalID:"personalWebsiteProjectModal"
              };
 
-             var supernovaeDetection = {
+             var quasarSpectrumAnalysis = {
                  gitHubLink:"#",
                  ProjectTileImage:"blackholes-research.jpg",
-                 ProjectTileTitle:"Supernovae classification",
-                 ProjectTileDescription:"a photometric classification of core collapse supernovae ",
+                 ProjectTileTitle:"Quasar spectrum analysis",
+                 ProjectTileDescription:"an estimation of the light spectrum of quasars ",
                  paragraph1: "",
                  ProjectTileId: "supernovaeDetection",
                  imageID: "supernovaeDetectionImage",
@@ -735,6 +609,17 @@
                  ProjectTileId: "trendLifecycle",
                  imageID: "trendLifecycle",
                  projectModalID:"trendLifecycle"
+             };
+
+             var taskManager = {
+                 gitHubLink:"#",
+                 ProjectTileImage:"social-networks.jpg",
+                 ProjectTileTitle:"Task Manager",
+                 ProjectTileDescription:"A task management android app",
+                 paragraph1: "  ",
+                 ProjectTileId: "taskManager",
+                 imageID: "taskManager",
+                 projectModalID:"taskManager"
              };
 	   
 	   
@@ -761,18 +646,7 @@
 	   
 	   html = project_modal_template(projectData5);
 	   $("#content").append(html);
-	   
-	   html = project_modal_template(projectData6);
-	   $("#content").append(html);
-	   
-	   html = project_modal_template(projectData7);
-	   $("#content").append(html);
-	   html = project_modal_template(projectData8);
-	   $("#content").append(html);
-	   html = project_modal_template(projectData9);
-	   $("#content").append(html);
-	   html = project_modal_template(projectData10);
-	   $("#content").append(html);
+
 	   
 	   
 	  
@@ -858,65 +732,7 @@
 		  
 	   });
 	   
-	   $("#project6").click(function(){
-           var html1 = modal_template(projectData6);
 
-           $("#modalContent").html(html1);
-           $("#modal6").modal("show");
-
-           $("#documentationButton").css('display','none');
-           $("#clientButton").css('display','none');
-		  
-		  
-	   });
-	   
-	   $("#project7").click(function(){
-           var html1 = modal_template(projectData7);
-
-           $("#modalContent").html(html1);
-           $("#modal7").modal("show");
-
-           $("#documentationButton").css('display','none');
-           $("#clientButton").css('display','none');
-		  
-		  
-	   });
-	   
-	   $("#project8").click(function(){
-           var html1 = modal_template(projectData8);
-
-           $("#modalContent").html(html1);
-           $("#modal8").modal("show");
-
-           $("#documentationButton").css('display','none');
-           $("#clientButton").css('display','none');
-		  
-		  
-	   });
-	   
-	   $("#project9").click(function(){
-           var html1 = modal_template(projectData9);
-
-           $("#modalContent").html(html1);
-           $("#modal9").modal("show");
-
-           $("#documentationButton").css('display','none');
-           $("#clientButton").css('display','none');
-		  
-		  
-	   });
-	   
-	   $("#project10").click(function(){
-           var html1 = modal_template(projectData10);
-
-           $("#modalContent").html(html1);
-           $("#modal10").modal("show");
-
-           $("#documentationButton").css('display','none');
-           $("#clientButton").css('display','none');
-		  
-		  
-	   });
 	   
 	   var projectOthersData1 = {
 	       gitHubLink:"https://github.com/natialemu/GitLet",
@@ -1048,39 +864,9 @@
 
        };
 	   
-	   var projectOthersData4 = {
-	       gitHubLink:"https://github.com/natialemu/2048-player",
-		   ProjectSubtitle0: "Overview",
-		   ProjectModalLeftSide: "#FBC02D",
-		   ProjectTileImage:"2048-player-tile.png",
-		   ProjectTileTitle:"2048 Player",
-		   MainModalImage: "2048player-final-main.png",
-		   ProjectTileDescription:"A learning algorithm that learns to play the game 2048",
-	       projectImage:"something",
-	       ProjectTitle: "2048 Player",
-	       paragraph1: "The goal of the program is to “teach” the computer to play the game 2048. There are two main approaches in terms of implementation. One approach is to use existing data to inform the decisions the computer makes. A dataset was constructed for the computer to use to make predictions of the best sets of moves necessary to score as highly as possible in 2048.",
-		   paragraph2: "2048 is a game based on a 4x4 grid in which tiles may lie. The user must shift the tiles up, down, left, or right in an attempt to merge like adjacent tiles. After every move, a new tile spawns on the board. The goal is to prevent the board from becoming full.",
-		   paragraph3: "The data collection was done by accumulating data of the moves made by a human user. This was done by playing the game for a couple of weeks. After a key is pressed by the user, the pressed key is recorded, as well as the current state of the board.  ",
-		   paragraph4: "In order to obtain the best results, it was necessary to make the data as varied as possible. This was naturally hard to achieve due to the fact that a human player usually plays with a very specific pattern which means that a narrow set of scenarios would be considered. To resolve this issue,  a system of randomized games was also set up in addition to the regular full games. This is achieved by resetting the game with a random set of tiles in random locations to force data for different scenarios to be represented in the data set.",
-		   ProjectSubtitle3: "Model selection",
-		   paragraph5: "The state of each tile on the board served as features and the goal was to perform a multinomial classification in order to predict the key that needed to be pressed in order to progress to the following state. Two machine learning algorithms were implemented to achieve this: Perceptron and K Nearest Neighbors.",
-		   paragraph6: "A random simulation of the game was used as a baseline for the rest of the prediction algorithms. The average score of a random simulation of the game was 1104 with a maximum score of 3048, after 100 iterations.",
-		   ProjectSubtitle5: "Perceptron",
-		   paragraph7: "The first class prediction algorithm implemented is the perceptron algorithm. This algorithm uses a set of weights that it adjusts based on the data set to best separate the classes. This algorithm has a drawback for this specific program. One minor drawback of perceptron for this specific situation was the fact that it only tells us which class was the most likey but does not tell us anything about the likelihood of the other classes. This can cause the computer to be stuck in situations where the predicted move is one that the computer cannot make because due to the placement of the tiles. In situations like that, a random move is selected. This surely contributed to the lower accuracy of the algorithm. The average score of a perceptron based computer player is 1330 with the maximum score being 3184 after 100 simulations.",
-		   ProjectSubtitle6: "KNN",
-		   paragraph8: "The other class prediction algorithm implemented was the k-nearest neighbors classifier. This classifier predicts classes by comparing the features to prior features from the data set, and choosing the most frequent class in the set of k-nearest neighbors. The benefit of using k-nearest to make multinomial classification such as this one is it provides probabilities for all classes. This way, in situations where the class with the highest probability is an impossible move, the next most probable move will be used. This should give strong results in the analysis. The average score of a KNN based computer player is 2211 with a maximum score is 6184 after 100 simulations.",
-		   paragraph9: "Here is a visual comparison of the two algorithms:",
-		   ModalSubImage9: "2048player-score-comparision.png",
-	       appStatus:"Python Application",
-	       projectDescription: "Machine Learning program that plays 2048",
-	       projectName: "2048 Player",
-		   ProjectTileId: "othersProject4",
-		   imageID: "image1",
-           projectModalID:"modalOther4"
 
-       };
 	   
-	   var projectOthersData5 = {
+	   var projectOthersData4 = {
 	       gitHubLink:"https://github.com/natialemu/ngordnet",
 		   ProjectSubtitle0: "Overview",
 		   ProjectModalLeftSide: "#01579B",
@@ -1124,7 +910,7 @@
 
        };
 
-             var projectOthersData6 = {
+             var projectOthersData5 = {
                  gitHubLink:"https://github.com/natialemu/lakeshore-marketplace",
                  ProjectSubtitle0: "Overview",
                  ProjectModalLeftSide: "#263238",
@@ -1179,18 +965,19 @@
 	   
 	   html = project_modal_template(projectOthersData5);
 	   $("#content1").append(html);
-             html = project_modal_template(projectOthersData6);
-             $("#content1").append(html);
+
 
 
              var activeProjectContent = $("#contentActive");
              activeProjectContent.append(html);
 
-             html = project_modal_template(supernovaeDetection);
+             html = project_modal_template(quasarSpectrumAnalysis);
              activeProjectContent.append(html);
              html = project_modal_template(trendLifecycle);
              activeProjectContent.append(html);
              html = project_modal_template(personalWebsiteProject);
+             activeProjectContent.append(html);
+             html = project_modal_template(taskManager);
              activeProjectContent.append(html);
 
 

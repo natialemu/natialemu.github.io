@@ -84,57 +84,150 @@
 					   Introduction
 					   <h3>
 
-						   <p class="paragraphFontStyle"> Most people get instant headlines from Twitter. In doing so, certain trends or hashtags take over the social media platform. But why does this happen? What factors contribute to the rise and fall of a hashtag? What is the trajectory of a trend on twitter look like? and how long do these trends last? These are the main questions addressed in this research. I try to analyze the reasons why topics trend on twitter, the rate at which a hashtag trends by considering factors such as users’ interests, users’ connections/relationships, trending information provided by the social media platform. The theme of the project is not only to study the effect of these factors on a hashtag’s lifecycle but also determine when, if any, in the life-cycle of a hashtag their effect is pronounced and also how they affect the hashtag’s lifecycle.  </p>
+						   <p class="paragraphFontStyle"> One key part int the  regular machine learning algorithms is feature selection. In an attempt to come up with a well-rounded model,
+							   we study the domain of our problem and come up with features that we think affect the problem. If we have too few features, then our model will fail to capture
+							   the underlying pattern within our datasets simply bc it doesnt have enough information about the datasets. this is called under fitting. On the contrary, if we have too many
+							   features, some of which might just be features of peculiar training examples, then our model will over generalize on even the outliers of our dataset and fail to capture
+							   the underlying pattern within our dataset. this is called over-fitting. It is also not just about the number of features we have but also how good each feature is in helping us
+							   differentiate among training examples. So, feature selection is a key step in the process of building a great ML model.  </p>
 
-						   <p class="paragraphFontStyle">The end-goal of the research is to determine the likelihood that a hashtag would take off and become popular, the rate at which a hashtag will rise and also the rate at which it’s popularity will fall. The entire project is divided into two parts: the rise of a hashtag and the decline of a hashtag. </p>
+						   <p class="paragraphFontStyle">Let's use an example to see what dimentionality reduction is. Given a NASA dataset on celestial objects, let's assume that we're trying to build a ML model that classifies a datapoint
+							   as an exo-planet, a star or some other object. For each data point, we have identified a set of 100 features. Here is a few of the questions we want to answer about the features
+							   that we have selected: </p>
+
+						   <div class="listItemFonts">
+							   <ol class="">
+								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we've currently selected in order of their importance in helping us distinguish among our datasets?
+								   </li>
 
 
-						   <h3 style="font-weight:500;" class="blog-subtitles"> Data collection and processing
+								   <li class="paragraphFontStyle "><strong> 2. </strong>
+									   If the answer to the first question is No, then can we come up with a set of other 100 features that we can rank based on their importance,using the 100 features that we came up with?
+								   </li>
+
+
+							   </ol>
+						   </div>
+
+						   <p class="paragraphFontStyle">If we can do either one of the two things, then we can see how important each of the features are in helping us bring out the variance among our datasets. We can then remove the features that we think
+							   dont capture the overall characterstics of our dataset. We can also better visualize our datasets in 2D or 3D by only using the top 2 or 3 features. This process of reducing the dimentions of our feature space by selecting only
+							   the most important features is called Dimentionality Reduction. Let's get a bit more technical and see how Dimentionality Reduction really works. </p>
+
+						   <p class="paragraphFontStyle">Assuming that we've initially come up with a set of 100 features, then we are operating in a 100 dimentional feature space. So in order to accurately describe
+							   each of our training examples, we will need 100 coordinates, and an additional coordinate for the label of that example (but we dont care about the labels at this point). So in this
+							   100 dimensional space, our basis vectors the ones in the direction of the 100 features that we have selected.
+						   </p>
+
+
+						   <p class="paragraphFontStyle">So let's ask the two questions above again, this time with answers.
+						   </p>
+
+						   <div class="listItemFonts">
+							   <ol class="">
+								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we currently selected in order of their importance in helping us distinguish among our datasets? Maybe, but I dont know any way of doing that
+								   </li>
+
+
+								   <li class="paragraphFontStyle "><strong> 2. </strong>
+									   Can we come up with a set of other 100 features that we can rank based on their importance, using the 100 features that we came up with? YES!!
+
+								   </li>
+
+								   <li class="paragraphFontStyle "><strong>  </strong>
+
+									   We can rephrase this question so that we're using linear algebra terms: can we come up with other 100 basis vectors for our feature space that we can rank?
+
+								   </li>
+
+
+							   </ol>
+						   </div>
+
+						   <p class="paragraphFontStyle">
+							   key idea(Matrices are Transformations). We can think of the Covariance matrix as a transformation that brings out the variances within our data. In other words, we have transformed
+							   our feature space in such as way that the variances within our data points are the key focus here.
+
+
+						   </p>
+
+						   <p class="paragraphFontStyle">
+							   Remember that we're looking for other 100 basis vectors for our feature space that we can rank. if we can find 100 basis vectors
+							   that are preserved during the Covariance transformation, that could be a start. Well, eigen vectors are preserved throughout a transformation so
+							   the eigenvectors of our covariance matrix should be good. But the next quesiton is can we rank them? the eigenvalues of these eigen vectors can tell us
+							   how good each of these vectors are in bringing out the variance within our datasets.
+
+
+						   </p>
+
+						   <p class="paragraphFontStyle">
+
+							   The key thing here is the Covariance transformation. The eigenvectors only have meaning if the tranformation makes sense. Depending on what type of transformation we're using, we come up
+							   with different types of dimentionality reduction algorithms. If we use a Covariance Matrix, the algorithm is called PCA(principle component analysis). Since the transformation only cares about
+							   the variance within the datasets without considering the label of the datasets, this is considered as an unsupervisted algorithm. if we use a different transformation that takes the labels of the
+							   datasets into consideration, such as a Suffix Matrix, then the algorithm is called LDA (Linear Discriminant analysis) [different from the classifier]. LDA will work better if the distribution of the features per class
+							   is a gaussian with the mean of each class distinguishable. If there are more variances within the data than the mean of the classes, PCA will perform better.
+
+
+						   </p>
+
+
+
+						   <h3 style="font-weight:500;" class="blog-subtitles"> Implementing PCA
 							   <h3>
 
-								   <p class="paragraphFontStyle"> All data being used for the research is collected with the use of Twitter’s REST and Stream APIs. The collected datasets have location and time constraints to ensure consistency. Currently, the data is collected only for the Illinois region. The following are the type of datasets retrieved through Twitter’s APIs:</p>
 
+								   <p class="paragraphFontStyle">
+
+									   We can generalize the steps of Dimentionality Reduction using PCA into just a few steps:
+
+
+								   </p>
 								   <div class="listItemFonts">
 									   <ol class="">
-										   <li class="paragraphFontStyle "><strong>User Information: </strong> Users and information about users such as their profile were collected using Twitter’s Rest API, specifically the GET User/show endpoint. Since the Twitter API does not provide an API for retrieving a list of users, random IDs were generated and a user object was retrieved using their API.
+										   <li class="paragraphFontStyle ">
+											   <strong>1. </strong>
+											   Construct the Covariance matrix from your dataset
 										   </li>
 
 
-										   <li class="paragraphFontStyle "><strong> Tweet Information: </strong>
-											   Tweets were collected using the Twitter’s Stream API instead of their REST API. This was to ensure that we collected a comprehensive set of tweets instead of just taking a sample of tweets. A stream of tweets was collected for the Illinois region for the users collected through their REST API
+										   <li class="paragraphFontStyle "><strong> 2. </strong>
+											   find the Eigen-pairs (Eigen values and Eigen vectors) of the Covariance Matrix
+
 										   </li>
-										   <li class="paragraphFontStyle "><strong> Trends
-											    </strong>The aim was to make the trends consistent with the tweet information we have. So, after collecting a day’s worth of tweet’s, trending hashtags were collected through Twitter’s REST API, specifically the GET trends/location and GET trends/places endpoints.  Once the top trending hashtags were retrieved by the end of the day, one hashtag is picked so that its lifecycle can be analyzed.
+
+										   <li class="paragraphFontStyle "><strong> 3.  </strong>
+											   Select the top k EigenVectors
+
+
 										   </li>
+
+										   <li class="paragraphFontStyle "><strong> 4.  </strong>
+											   Project your feature matrix X onto the k dimensional space
+
+
+										   </li>
+
+										   <li class="paragraphFontStyle "><strong> 5.  </strong>
+											   use the new k dimensional feature matrix in your algorithm instead of X
+
+
+										   </li>
+
 
 									   </ol>
 								   </div>
 
-
-								   <p class="paragraphFontStyle"> Once all the required data is collected and parsed, a social graph is created to represent the relationship among user objects. The source of the selected hashtag is also determined by going through collected tweets and analyzing the time of the tweets. </p>
-
-								   <h3 style="font-weight:500;" class="blog-subtitles">
-									   Current State of the project and moving forward
-									   <h3>
-
-								   <p class="paragraphFontStyle"> How fast a hashtag is rising or falling is determined by analyzing the rate of usage of the hashtag within a 24-hour period. Once the source of the hashtag is determined, the analysis involves observing the path of the trending hashtag through the graph. We analyze and study each involved user with respect to the state of the hashtag at that point by analyzing the following:</p>
-										   <div class="listItemFonts">
-											   <ol class="">
-												   <li class="paragraphFontStyle ">
-													   How <strong>“important”</strong> a user is and how many “important” connections the user has at the current state of the hashtag. Importance is defined a combination of a user’s demonstrated interest in the hashtag, which is determined through analysis of user’s tweets and profile and connections, and also how well connected that user is to other similar users. This will help determine what features of a user determine how a hashtag flows and also user’s relationship to the rate of the rise or fall of a hashtag.
-												   </li>
+								   <p class="paragraphFontStyle">
 
 
-												   <li class="paragraphFontStyle ">
-													   What’s <strong>trending </strong>at that point? The goal is to analyze how trending information influences people’s use of a hashtag and the rate of a hashtag’s rise or decline at various points along the lifecycle of a hashtag..
-												   </li>
-												   <li class="paragraphFontStyle ">
-													   How many times does the average user <strong>reuse the same hashtag</strong>. This will be analyzed in conjunction with the importance of a user. If you’re connected to a user who is considered important but that user has already used the hashtag, that user may not contribute much to the fast rise of the hashtag. So, knowing how many times a user is likely to use a hashtag will help determine the path and rate of the hashtag’s rise/fall.
-												   </li>
+									   When implementing LDA, the only step that changes is step 1. Instead of constructing a Covariance Matrix, construct a suffix matrix.
 
-											   </ol>
-										   </div>
-										   <strong> The page will be updated as the research progresses. </strong>
+
+								   </p>
+
+
+
+
 
 
 			   </div>

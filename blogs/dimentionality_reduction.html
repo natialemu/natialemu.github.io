@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	   
+       <link href="../styles/maia.experimental.css" rel="stylesheet">
+	   
+	   <link href="../styles/portfolio.css" rel="stylesheet">
+	   
+	   <link href="../styles/bootstrap.css" rel="stylesheet">
+       
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+	   
+	   
+	   
+
+   
+       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+	   
+	   <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+	   <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+	   <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+	   <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+	
+	   
+       <title> Home </title>
+   </head>
+
+   <body>
+
+   <!-- This is the header of the webiste -->
+   <div class="maia-header" id="maia-header" role="banner">
+	   <div class="maia-aux">
+		   <h1 class="portfolio-text">
+			   Welcome to my
+
+			   Portfolio
+
+		   </h1>
+	   </div>
+   </div>
+
+
+   <!-- Navigation -->
+
+   <div class="maia-nav" id="maia-nav-x" rold="navigation">
+	   <div class="maia-aux">
+		   <ul>
+			   <li>
+				   <a href="../index.html"> Home </a></li>
+			   <li>
+				   <a href="../projects.html"> Portfolio </a>
+			   </li>
+			   <li>
+				   <a href="../blog.html" class="otherNavLinks"> Blog </a>
+			   </li>
+		   </ul>
+	   </div>
+   </div>
+
+   <div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+
+	   <div>
+		   <div class="blogPageLeftSide" id="hashtagLifecycleLeftSide"></div>
+		   <div class="content-header--story"
+				style="background-image: url(../images/hashtag-lifecycle1.png); width: 65%; left: 35%;"></div>
+
+
+	   </div>
+
+
+	   <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+		   <div class="grid">
+			   <div class="grid__item desk--eight-twelfths push--desk--four-twelfths">
+				   <h1 style="font-weight:500;" class="content-title content-title--story">
+					   Dimensionality reduction
+				   </h1>
+
+				   <h3 style="font-weight:500;" class="blog-subtitles">
+					   Introduction
+					   <h3>
+
+						   <p class="paragraphFontStyle"> One key part int the  regular machine learning algorithms is feature selection. In an attempt to come up with a well-rounded model,
+							   we study the domain of our problem and come up with features that we think affect the problem. If we have too few features, then our model will fail to capture
+							   the underlying pattern within our datasets simply bc it doesnt have enough information about the datasets. this is called under fitting. On the contrary, if we have too many
+							   features, some of which might just be features of peculiar training examples, then our model will over generalize on even the outliers of our dataset and fail to capture
+							   the underlying pattern within our dataset. this is called over-fitting. It is also not just about the number of features we have but also how good each feature is in helping us
+							   differentiate among training examples. So, feature selection is a key step in the process of building a great ML model.  </p>
+
+						   <p class="paragraphFontStyle">Let's use an example to see what dimentionality reduction is. Given a NASA dataset on celestial objects, let's assume that we're trying to build a ML model that classifies a datapoint
+							   as an exo-planet, a star or some other object. For each data point, we have identified a set of 100 features. Here is a few of the questions we want to answer about the features
+							   that we have selected: </p>
+
+						   <div class="listItemFonts">
+							   <ol class="">
+								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we've currently selected in order of their importance in helping us distinguish among our datasets?
+								   </li>
+
+
+								   <li class="paragraphFontStyle "><strong> 2. </strong>
+									   If the answer to the first question is No, then can we come up with a set of other 100 features that we can rank based on their importance,using the 100 features that we came up with?
+								   </li>
+
+
+							   </ol>
+						   </div>
+
+						   <p class="paragraphFontStyle">If we can do either one of the two things, then we can see how important each of the features are in helping us bring out the variance among our datasets. We can then remove the features that we think
+							   dont capture the overall characterstics of our dataset. We can also better visualize our datasets in 2D or 3D by only using the top 2 or 3 features. This process of reducing the dimentions of our feature space by selecting only
+							   the most important features is called Dimentionality Reduction. Let's get a bit more technical and see how Dimentionality Reduction really works. </p>
+
+						   <p class="paragraphFontStyle">Assuming that we've initially come up with a set of 100 features, then we are operating in a 100 dimentional feature space. So in order to accurately describe
+							   each of our training examples, we will need 100 coordinates, and an additional coordinate for the label of that example (but we dont care about the labels at this point). So in this
+							   100 dimensional space, our basis vectors the ones in the direction of the 100 features that we have selected.
+						   </p>
+
+
+						   <p class="paragraphFontStyle">So let's ask the two questions above again, this time with answers.
+						   </p>
+
+						   <div class="listItemFonts">
+							   <ol class="">
+								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we currently selected in order of their importance in helping us distinguish among our datasets? Maybe, but I dont know any way of doing that
+								   </li>
+
+
+								   <li class="paragraphFontStyle "><strong> 2. </strong>
+									   Can we come up with a set of other 100 features that we can rank based on their importance, using the 100 features that we came up with? YES!!
+
+								   </li>
+
+								   <li class="paragraphFontStyle "><strong>  </strong>
+
+									   We can rephrase this question so that we're using linear algebra terms: can we come up with other 100 basis vectors for our feature space that we can rank?
+
+								   </li>
+
+
+							   </ol>
+						   </div>
+
+						   <p class="paragraphFontStyle">
+							   key idea(Matrices are Transformations). We can think of the Covariance matrix as a transformation that brings out the variances within our data. In other words, we have transformed
+							   our feature space in such as way that the variances within our data points are the key focus here.
+
+
+						   </p>
+
+						   <p class="paragraphFontStyle">
+							   Remember that we're looking for other 100 basis vectors for our feature space that we can rank. if we can find 100 basis vectors
+							   that are preserved during the Covariance transformation, that could be a start. Well, eigen vectors are preserved throughout a transformation so
+							   the eigenvectors of our covariance matrix should be good. But the next quesiton is can we rank them? the eigenvalues of these eigen vectors can tell us
+							   how good each of these vectors are in bringing out the variance within our datasets.
+
+
+						   </p>
+
+						   <p class="paragraphFontStyle">
+
+							   The key thing here is the Covariance transformation. The eigenvectors only have meaning if the tranformation makes sense. Depending on what type of transformation we're using, we come up
+							   with different types of dimentionality reduction algorithms. If we use a Covariance Matrix, the algorithm is called PCA(principle component analysis). Since the transformation only cares about
+							   the variance within the datasets without considering the label of the datasets, this is considered as an unsupervisted algorithm. if we use a different transformation that takes the labels of the
+							   datasets into consideration, such as a Suffix Matrix, then the algorithm is called LDA (Linear Discriminant analysis) [different from the classifier]. LDA will work better if the distribution of the features per class
+							   is a gaussian with the mean of each class distinguishable. If there are more variances within the data than the mean of the classes, PCA will perform better.
+
+
+						   </p>
+
+
+
+						   <h3 style="font-weight:500;" class="blog-subtitles"> Implementing PCA
+							   <h3>
+
+
+								   <p class="paragraphFontStyle">
+
+									   We can generalize the steps of Dimentionality Reduction using PCA into just a few steps:
+
+
+								   </p>
+								   <div class="listItemFonts">
+									   <ol class="">
+										   <li class="paragraphFontStyle ">
+											   <strong>1. </strong>
+											   Construct the Covariance matrix from your dataset
+										   </li>
+
+
+										   <li class="paragraphFontStyle "><strong> 2. </strong>
+											   find the Eigen-pairs (Eigen values and Eigen vectors) of the Covariance Matrix
+
+										   </li>
+
+										   <li class="paragraphFontStyle "><strong> 3.  </strong>
+											   Select the top k EigenVectors
+
+
+										   </li>
+
+										   <li class="paragraphFontStyle "><strong> 4.  </strong>
+											   Project your feature matrix X onto the k dimensional space
+
+
+										   </li>
+
+										   <li class="paragraphFontStyle "><strong> 5.  </strong>
+											   use the new k dimensional feature matrix in your algorithm instead of X
+
+
+										   </li>
+
+
+									   </ol>
+								   </div>
+
+								   <p class="paragraphFontStyle">
+
+
+									   When implementing LDA, the only step that changes is step 1. Instead of constructing a Covariance Matrix, construct a suffix matrix.
+
+
+								   </p>
+
+
+
+
+
+
+			   </div>
+		   </div>
+	   </div>
+   </div>
+
+
+   <footer class="hashcode-footer mdl-mini-footer">
+	   <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+			   © 2017 Nathnael
+
+			   <a href="../index.html">
+				   Go to homepage
+			   </a>
+
+			   <a href="../projects.html">
+				   Explore projects
+			   </a>
+
+			   <a href="../blog.html">
+				   Read blogs
+			   </a>
+
+			   <a href="https://github.com/natialemu">
+				   Jump to Github
+			   </a>
+
+			   <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+				   View LinkedIn
+			   </a>
+
+		   </p>
+	   </div>
+
+   </footer>
+
+
+   </body>
+
+
+
+
+
+
+</html>

@@ -413,7 +413,7 @@
 
             var blogData7 = {
                 BlogTileColor:"#33691E",
-                BlogLink:"kd_lowess.html",
+                BlogLink:"kd_trees_lowess.html",
                 BlogTileTitle:"Optimizing Locally weighted linear regression with KD-trees",
                 BlogTileDescription:"",
                 gitHubLink:"https://github.com/natialemu/Machine-Learning/tree/master/2048%20Player",
@@ -475,19 +475,8 @@
 
 
             //populate the blog tile within the homepage
-            var blog_html = blog_modal_template(blogData8);
+            var blog_html = blog_modal_template(blogData6);
 
-
-
-            $("#blogContent").append(blog_html);
-
-            blog_html = blog_modal_template(blogData7);
-            $("#blogContent").append(blog_html);
-
-            blog_html = blog_modal_template(blogData6);
-            $("#blogContent").append(blog_html);
-
-            blog_html = blog_modal_template(blogData5);
             $("#blogContent").append(blog_html);
 
             blog_html = blog_modal_template(blogData4);
@@ -501,6 +490,15 @@
             $("#blogContent").append(blog_html);
 
             blog_html = blog_modal_template(blogData1);
+            $("#blogContent").append(blog_html);
+
+            blog_html = blog_modal_template(blogData7);
+            $("#blogContent").append(blog_html);
+
+            blog_html = blog_modal_template(blogData8);
+            $("#blogContent").append(blog_html);
+
+            blog_html = blog_modal_template(blogData5);
             $("#blogContent").append(blog_html);
 
 
@@ -520,7 +518,7 @@
         <div class="mdl-mini-footer__left-section">
             <p class="mdl-typography--font-light">
 
-                © 2017 Nathnael
+                © 2018 Nathnael
 
                 <a href="index.html">
                     Go to homepage

@@ -1,145 +1,146 @@
 <!DOCTYPE html>
 <html class="nathnael portfolio">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link href="styles/maia.experimental.css" rel="stylesheet">
 
-    <link href="styles/portfolio.css" rel="stylesheet">
+   <head>
+       <meta charset="utf-8">
+       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+       <link href="styles/maia.experimental.css" rel="stylesheet">
+	   
+	   <link href="styles/portfolio.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <link href="styles/bootstrap.css" rel="stylesheet">
-
-    <link href="styles/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/mdb.min.css" rel="stylesheet">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <script
-            src="scripts/jquery-3.2.1.min.js"></script>
+	   <link href="styles/bootstrap.css" rel="stylesheet">
 
-    <script src="scripts/popper.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
-
-    <script src="scripts/projects/active-project-scripts.js"></script>
+	   <link href="styles/bootstrap.min.css" rel="stylesheet">
+	   <link href="styles/mdb.min.css" rel="stylesheet">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+	   <script
+			   src="scripts/jquery-3.2.1.min.js"></script>
 
-    <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+	   <script src="scripts/popper.min.js"></script>
+	   <script src="scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
 
-    <title> Projects </title>
-</head>
+	   <script src="scripts/projects/active-project-scripts.js"></script>
+	   
 
-<body>
+       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+	   <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+	   
+	   <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
 
-<!-- This is the header of the webiste -->
-<div class="maia-header" id="maia-header" role="banner">
-    <div class="maia-aux">
-        <h1 class="portfolio-text">
-            Nathnael Alemu
+       <title> Projects </title>
+   </head>
+   
+   <body>
+   
+       <!-- This is the header of the webiste -->
+       <div class="maia-header" id="maia-header" role="banner">
+	       <div class="maia-aux">
+		      <h1 class="portfolio-text"> 
+                  Nathnael Alemu
+			      
+			  </h1>
+		   </div>
+	   </div>
+	   
+	   
+	   <!-- Navigation -->
+	   
+	   <div class="maia-nav" id="maia-nav-x" rold="navigation">
+	       <div class="maia-aux">
+		      <ul>
+			     <li> 
+				     <a href="index.html" class="otherNavLinks"> Home </a> 
+				 </li>
+				 <li>
+				     <a class="activepage"> Projects </a>
+				 </li>
+				 <li>
+				     <a href="blog.html" class="otherNavLinks"> Notes </a>
+				 </li>
 
-        </h1>
-    </div>
-</div>
+				  <li>
+					  <a href="#" class="otherNavLinks"> Resources </a>
+				  </li>
 
+			  </ul>
+		   </div>
+	   </div>
+	   
+	   
+	   
+        <div class="content-header content-row content-row--header content-container1">
+	       <h1 class="portfolio-title animated fadeIn mb-4">
+		       Projects
+		   </h1>
+		   
+		</div>
 
-<!-- Navigation -->
-
-<div class="maia-nav" id="maia-nav-x" rold="navigation">
-    <div class="maia-aux">
-        <ul>
-            <li>
-                <a href="index.html" class="otherNavLinks"> Home </a>
-            </li>
-            <li>
-                <a class="activepage"> Projects </a>
-            </li>
-            <li>
-                <a href="blog.html" class="otherNavLinks"> Notes </a>
-            </li>
-
-            <li>
-                <a href="#" class="otherNavLinks"> Resources </a>
-            </li>
-
-        </ul>
-    </div>
-</div>
-
-
-
-<div class="content-header content-row content-row--header content-container1">
-    <h1 class="portfolio-title animated fadeIn mb-4">
-        Projects
-    </h1>
-
-</div>
-
-<div class="page-row page-row--split-blocks page-row-project" style="background-color: #FFFFFF; padding-bottom: 0 !important; padding-top: 0 !important;">
-
-
-    <!-- Project cards -->
-    <div class="content-container content-row content-row--short">
-
-
-        <div class="col-md-6" style="max-width: 100% !important; flex: 0 0 100% !important;">
-            <div class="tab" role="tablist">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist" style="width: 100%;">
-                    <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> All projects </a></li>
-                    <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> Android </a></li>
-
-                    <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects/research</a></li>
-
-                </ul>
+	   <div class="page-row page-row--split-blocks page-row-project" style="background-color: #FFFFFF; padding-bottom: 0 !important; padding-top: 0 !important;">
 
 
-            </div>
-
-        </div>
-    </div>
+		   <!-- Project cards -->
+		   <div class="content-container content-row content-row--short">
 
 
-</div>
+			   <div class="col-md-6" style="max-width: 100% !important; flex: 0 0 100% !important;">
+				   <div class="tab" role="tablist">
+					   <!-- Nav tabs -->
+					   <ul class="nav nav-tabs" role="tablist" style="width: 100%;">
+						   <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> All projects </a></li>
+						   <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> Android </a></li>
 
-<!-- tabbed layout -->
-<!--<div class="container">-->
-<!--<div class="row" style="width: 100%;">-->
-<!---->
-<!--</div>-->
-<!--</div>-->
+						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects/research</a></li>
+
+					   </ul>
 
 
-<script id="project-modal-template" type="text/x-handlebars-template">
-    <div class="grid__item project__item desk--one--quarter tablet--one-half">
-        <div class="caption-panel caption-panel--home">
-            <a class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-                <div class="caption-panel__image" style="background-color: #a3a3c2;background-image: url(images/{{ProjectTileImage}});">
+				   </div>
 
-                </div>
-            </a>
+			   </div>
+		   </div>
 
-            <div class="caption-panel__content">
-                <a data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
-                    <h3 class="image-aside__title">
 
-                        {{ProjectTileTitle}}
+	   </div>
 
-                    </h3>
-
-                </a>
-
-                <p class="caption-panel__text">
-                    {{ProjectTileDescription}}
-
-                </p>
-
-                <div class="caption-panel__links">
-                    <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
+	   <!-- tabbed layout -->
+	   <!--<div class="container">-->
+		   <!--<div class="row" style="width: 100%;">-->
+			  <!---->
+		   <!--</div>-->
+	   <!--</div>-->
+		
+		
+		<script id="project-modal-template" type="text/x-handlebars-template">
+	            <div class="grid__item project__item desk--one--quarter tablet--one-half">
+					    <div class="caption-panel caption-panel--home">
+						     <a class="caption-panel__image-wrapper" data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
+							      <div class="caption-panel__image" style="background-color: #a3a3c2;background-image: url(images/{{ProjectTileImage}});">
+								  
+								  </div>
+							 </a>
+							 
+							 <div class="caption-panel__content">
+							       <a data-ga-action="project description 1_Select" data-ga-label="personal, portfolio" data-ga-value="1">
+								        <h3 class="image-aside__title">
+										
+										   {{ProjectTileTitle}}
+										
+										</h3>
+								   
+								   </a>
+								   
+								   <p class="caption-panel__text">
+								     {{ProjectTileDescription}}
+								   
+								   </p>
+								   
+								   <div class="caption-panel__links">
+								        <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
 										   <span>
 										       Learn more
 											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">
@@ -1191,81 +1192,82 @@
         activeProjectLinkElement.click(function () {
 //
 
-            addBorder(activeProjectLinkElement);
-            removeBorder(allAppsLinkElement);
-            removeBorder(androidAppsLinkElement);
+                 addBorder(activeProjectLinkElement);
+                 removeBorder(allAppsLinkElement);
+                 removeBorder(androidAppsLinkElement);
 
 
-            $(".androidAppsId").hide(500,"linear");
-            $(".otherProjectsid").hide(500,"linear");
-
-
-
-            //$(".androidAppsId").css('display','none');
-            var activeProjects =$(".activeProjectsID");
-            activeProjects.fadeOut(0.5);
-            activeProjects.fadeIn(700,function () {
-                activeProjects.show(700,"linear");
-
-            });
+                 $(".androidAppsId").hide(500,"linear");
+                 $(".otherProjectsid").hide(500,"linear");
 
 
 
-        });
+                 //$(".androidAppsId").css('display','none');
+                 var activeProjects =$(".activeProjectsID");
+                 activeProjects.fadeOut(0.5);
+                 activeProjects.fadeIn(700,function () {
+                     activeProjects.show(700,"linear");
+
+                 });
 
 
 
+             });
+	   
+	   
+	   
+	   
+	   
+	   
+	    
+		 
+		 });
+	</script>
+	
+	
+	   
+	   
+	   
+	   
+	   
+	
+	
+	<!-- footer -->
+	<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+		   
+              © 2018 Nathnael
+			  
+			  <a href="index.html">  
+			      Go to homepage
+			  </a>
+			  
+			  <a href="projects.html">  
+			      Explore projects
+			  </a>
+			  
+			  <a href="blog.html">  
+			      Read blogs
+			  </a>
+			  
+			  <a href="https://github.com/natialemu">  
+			      Jump to Github
+			  </a>
+			  
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">  
+			      View LinkedIn
+			  </a>
+              
+		   </p>
+		</div>
+	
+	</footer>
+	   
+   
+   </body>
+   <script src="scripts/mdb.min.js"></script>
 
-
-
-
-
-    });
-</script>
-
-
-
-
-
-
-
-
-
-<!-- footer -->
-<footer class="hashcode-footer mdl-mini-footer">
-    <div class="mdl-mini-footer__left-section">
-        <p class="mdl-typography--font-light">
-
-            © 2017 Nathnael
-
-            <a href="index.html">
-                Go to homepage
-            </a>
-
-            <a href="projects.html">
-                Explore projects
-            </a>
-
-            <a href="blog.html">
-                Read blogs
-            </a>
-
-            <a href="https://github.com/natialemu">
-                Jump to Github
-            </a>
-
-            <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
-                View LinkedIn
-            </a>
-
-        </p>
-    </div>
-
-</footer>
-
-
-</body>
-<script src="scripts/mdb.min.js"></script>
 
 
 

@@ -84,38 +84,38 @@
 					   Introduction
 					   <h3>
 
-						   <p class="paragraphFontStyle"> One key part int the  regular machine learning algorithms is feature selection. In an attempt to come up with a well-rounded model,
+						   <p class="paragraphFontStyle"> One key part of  regular machine learning algorithms is feature selection. In an attempt to come up with a well-rounded model,
 							   we study the domain of our problem and come up with features that we think affect the problem. If we have too few features, then our model will fail to capture
-							   the underlying pattern within our datasets simply bc it doesnt have enough information about the datasets. this is called under fitting. On the contrary, if we have too many
+							   the underlying pattern within our dataset simply bc it does not have enough information about the dataset. This is called under-fitting. On the contrary, if we have too many
 							   features, some of which might just be features of peculiar training examples, then our model will over generalize on even the outliers of our dataset and fail to capture
 							   the underlying pattern within our dataset. this is called over-fitting. It is also not just about the number of features we have but also how good each feature is in helping us
 							   differentiate among training examples. So, feature selection is a key step in the process of building a great ML model.  </p>
 
-						   <p class="paragraphFontStyle">Let's use an example to see what dimentionality reduction is. Given a NASA dataset on celestial objects, let's assume that we're trying to build a ML model that classifies a datapoint
+						   <p class="paragraphFontStyle">Let's use an example to see what dimensionality reduction is. Given a NASA dataset on celestial objects, let's assume that we're trying to build an ML model that classifies a datapoint
 							   as an exo-planet, a star or some other object. For each data point, we have identified a set of 100 features. Here is a few of the questions we want to answer about the features
 							   that we have selected: </p>
 
 						   <div class="listItemFonts">
 							   <ol class="">
-								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we've currently selected in order of their importance in helping us distinguish among our datasets?
+								   <li class="paragraphFontStyle "> Is there is a way of ranking the features that we've currently selected in order of their importance in helping us distinguish our dataset?
 								   </li>
 
 
-								   <li class="paragraphFontStyle "><strong> 2. </strong>
-									   If the answer to the first question is No, then can we come up with a set of other 100 features that we can rank based on their importance,using the 100 features that we came up with?
+								   <li class="paragraphFontStyle ">
+									   If the answer to the first question is No, then can we come up with a set of other 100 features that we can rank based on their importance by only using the 100 features that we came up with at the beginning?
 								   </li>
 
 
 							   </ol>
 						   </div>
 
-						   <p class="paragraphFontStyle">If we can do either one of the two things, then we can see how important each of the features are in helping us bring out the variance among our datasets. We can then remove the features that we think
-							   dont capture the overall characterstics of our dataset. We can also better visualize our datasets in 2D or 3D by only using the top 2 or 3 features. This process of reducing the dimentions of our feature space by selecting only
-							   the most important features is called Dimentionality Reduction. Let's get a bit more technical and see how Dimentionality Reduction really works. </p>
+						   <p class="paragraphFontStyle">If we can do either one of the two things, then we can see how important each of the features are in helping us bring out the variance among our dataset. We can then remove the features that we think
+							   don't capture the overall characterstics of our dataset. We can also better visualize our dataset in 2D or 3D by only using the top 2 or 3 features. This process of reducing the dimension of our feature space by selecting only
+							   the most important features is called Dimensionality Reduction. Let's get a bit more technical and see how Dimensionality Reduction really works. </p>
 
-						   <p class="paragraphFontStyle">Assuming that we've initially come up with a set of 100 features, then we are operating in a 100 dimentional feature space. So in order to accurately describe
-							   each of our training examples, we will need 100 coordinates, and an additional coordinate for the label of that example (but we dont care about the labels at this point). So in this
-							   100 dimensional space, our basis vectors the ones in the direction of the 100 features that we have selected.
+						   <p class="paragraphFontStyle">Assuming that we've initially come up with a set of 100 features, then we are operating in a 100 dimensional feature space. So in order to accurately describe
+							   each of our training examples, we will need 100 coordinates, and an additional coordinate for the label of that example (but we don't care about the labels at this point). So in this
+							   100 dimensional space, our basis vectors are the ones in the direction of the 100 features that we have selected.
 						   </p>
 
 
@@ -124,18 +124,18 @@
 
 						   <div class="listItemFonts">
 							   <ol class="">
-								   <li class="paragraphFontStyle "><strong>1. </strong> Is there is a way of ranking the features that we currently selected in order of their importance in helping us distinguish among our datasets? Maybe, but I dont know any way of doing that
+								   <li class="paragraphFontStyle "> Is there is a way of ranking the features that we've currently selected in order of their importance in helping us distinguish among our datasets? Maybe, but I dont know any way of doing that
 								   </li>
 
 
-								   <li class="paragraphFontStyle "><strong> 2. </strong>
+								   <li class="paragraphFontStyle ">
 									   Can we come up with a set of other 100 features that we can rank based on their importance, using the 100 features that we came up with? YES!!
 
 								   </li>
 
-								   <li class="paragraphFontStyle "><strong>  </strong>
+								   <li class="paragraphFontStyle ">
 
-									   We can rephrase this question so that we're using linear algebra terms: can we come up with other 100 basis vectors for our feature space that we can rank?
+									   We can rephrase the second question so that we're using linear algebra lingo: can we come up with other 100 basis vectors for our feature space that we can rank?
 
 								   </li>
 
@@ -152,9 +152,9 @@
 
 						   <p class="paragraphFontStyle">
 							   Remember that we're looking for other 100 basis vectors for our feature space that we can rank. if we can find 100 basis vectors
-							   that are preserved during the Covariance transformation, that could be a start. Well, eigen vectors are preserved throughout a transformation so
-							   the eigenvectors of our covariance matrix should be good. But the next quesiton is can we rank them? the eigenvalues of these eigen vectors can tell us
-							   how good each of these vectors are in bringing out the variance within our datasets.
+							   that are preserved during the Covariance transformation, that could be a start. Since Eigenvectors are preserved throughout a transformation so
+							   the Eigenvectors of our covariance matrix should be good. But the next question is can we rank them? the eigenvalues of these Eigenvectors can tell us
+							   how good each of these vectors are in bringing out the variance within our dataset.
 
 
 						   </p>
@@ -162,9 +162,9 @@
 						   <p class="paragraphFontStyle">
 
 							   The key thing here is the Covariance transformation. The eigenvectors only have meaning if the tranformation makes sense. Depending on what type of transformation we're using, we come up
-							   with different types of dimentionality reduction algorithms. If we use a Covariance Matrix, the algorithm is called PCA(principle component analysis). Since the transformation only cares about
-							   the variance within the datasets without considering the label of the datasets, this is considered as an unsupervisted algorithm. if we use a different transformation that takes the labels of the
-							   datasets into consideration, such as a Suffix Matrix, then the algorithm is called LDA (Linear Discriminant analysis) [different from the classifier]. LDA will work better if the distribution of the features per class
+							   with different types of dimensionality reduction algorithms. If we use a Covariance Matrix, the algorithm is called PCA(principle component analysis). Since the transformation only cares about
+							   the variance within the datasets without considering the label of the datasets, this is considered as an unsupervised algorithm. If we use a different transformation that takes the labels of the
+							   dataset into consideration, such as a Suffix Matrix, then the algorithm is called LDA (Linear Discriminant analysis) [different from the classifier]. LDA will work better if the distribution of the features per class
 							   is a gaussian with the mean of each class distinguishable. If there are more variances within the data than the mean of the classes, PCA will perform better.
 
 
@@ -185,29 +185,28 @@
 								   <div class="listItemFonts">
 									   <ol class="">
 										   <li class="paragraphFontStyle ">
-											   <strong>1. </strong>
 											   Construct the Covariance matrix from your dataset
 										   </li>
 
 
-										   <li class="paragraphFontStyle "><strong> 2. </strong>
+										   <li class="paragraphFontStyle ">
 											   find the Eigen-pairs (Eigen values and Eigen vectors) of the Covariance Matrix
 
 										   </li>
 
-										   <li class="paragraphFontStyle "><strong> 3.  </strong>
+										   <li class="paragraphFontStyle ">
 											   Select the top k EigenVectors
 
 
 										   </li>
 
-										   <li class="paragraphFontStyle "><strong> 4.  </strong>
+										   <li class="paragraphFontStyle ">
 											   Project your feature matrix X onto the k dimensional space
 
 
 										   </li>
 
-										   <li class="paragraphFontStyle "><strong> 5.  </strong>
+										   <li class="paragraphFontStyle ">
 											   use the new k dimensional feature matrix in your algorithm instead of X
 
 

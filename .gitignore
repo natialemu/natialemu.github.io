@@ -1,55 +1,60 @@
-### Mac ###
-.DS_Store
+# Created by .ignore support plugin (hsz.mobi)
+# Compiled class file
+*.class
+*.classpath
+*.project
+WebContent/META-INF/MANIFEST.MF
 
-### Git ###
-*.orig
+# Log file
+*.log
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# BlueJ files
+*.ctxt
 
-### Eclipse ###
-.classpath
-.project
-.checkstyle
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+#Eclise IDE things
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
 .settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
 *.launch
 
-### NetBeans ###
-nb-configuration.xml
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-
-### Maven ###
-work/
-target/
-classes/
-
-### Spring ###
-*.pid
-*.springBeans
-
-### Sigar ###
-native/
-
-### Ephemeral files ###
-src/main/resources/git.properties
-log/
-logs/
-
-### GWT ###
-*/.gwt
-*/src/main/webapp/WEB-INF/classes/
-
-### Vault ###
-.vault_token
-.vault-token
-
-### Jrebel ###
-rebel*.xml
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*

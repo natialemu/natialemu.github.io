@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html class="nathnael portfolio">
    <head>
+
+		<link href="styles/mdb.min.css" rel="stylesheet">
+		
        <meta charset="utf-8">
        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
        <link href="styles/maia.experimental.css" rel="stylesheet">
@@ -13,7 +16,9 @@
 	   <link href="styles/bootstrap.css" rel="stylesheet">
 
 	   <link href="styles/bootstrap.min.css" rel="stylesheet">
-	   <link href="styles/mdb.min.css" rel="stylesheet">
+
+
+	   <link rel="stylesheet" href="styles/gs.min.css">
 
 
 	   <script
@@ -30,13 +35,14 @@
 	   <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 	   
 	   <script src="scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+	   
 
        <title> Projects </title>
    </head>
    
    <body>
    
-       <!-- This is the header of the webiste -->
+       <!-- This is the header of the webiste
        <div class="maia-header" id="maia-header" role="banner">
 	       <div class="maia-aux">
 		      <h1 class="portfolio-text"> 
@@ -47,19 +53,19 @@
 	   </div>
 	   
 	   
-	   <!-- Navigation -->
+	   <!Navigation -->
 	   
-	   <div class="maia-nav" id="maia-nav-x" rold="navigation">
+	   <!-- <div class="maia-nav" id="maia-nav-x" rold="navigation">
 	       <div class="maia-aux">
 		      <ul>
 			     <li> 
 				     <a href="index.html" class="otherNavLinks"> Home </a> 
 				 </li>
 				 <li>
-				     <a class="activepage"> Projects </a>
+				     <a class="activepage"> Notes </a>
 				 </li>
 				 <li>
-				     <a href="blog.html" class="otherNavLinks"> Notes </a>
+				     <a href="notes.html" class="otherNavLinks"> TODO </a>
 				 </li>
 
 				  <li>
@@ -68,13 +74,72 @@
 
 			  </ul>
 		   </div>
-	   </div>
+	   </div> --> 
 	   
+	               <!-- progress indicator-->
+				<div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">nati.io</span>
+										</div>
+									</a>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="index.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="notes.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="resources.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+				</header>
 	   
 	   
         <div class="content-header content-row content-row--header content-container1">
 	       <h1 class="portfolio-title animated fadeIn mb-4">
-		       Projects
+		       Notes
 		   </h1>
 		   
 		</div>
@@ -90,10 +155,10 @@
 				   <div class="tab" role="tablist">
 					   <!-- Nav tabs -->
 					   <ul class="nav nav-tabs" role="tablist" style="width: 100%;">
-						   <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> All projects </a></li>
-						   <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> Android </a></li>
+						   <li role="presentation" class="active"><a  id="allAppsLink" aria-controls="all apps" role="tab" data-toggle="tab"><i class="fa fa-globe" aria-hidden="true"></i> Algorithms </a></li>
+						   <li role="presentation"><a  aria-controls="android apps" id="androidAppsLink" role="tab" data-toggle="tab"><i class="fa fa-android" aria-hidden="true"></i> System Design </a></li>
 
-						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Active projects/research</a></li>
+						   <li role="presentation"><a  aria-controls="active projects" id="activeProjectsLink" role="tab" data-toggle="tab"><i class="fa fa-industry" aria-hidden="true"></i> Application Design</a></li>
 
 					   </ul>
 
@@ -105,13 +170,6 @@
 
 
 	   </div>
-
-	   <!-- tabbed layout -->
-	   <!--<div class="container">-->
-		   <!--<div class="row" style="width: 100%;">-->
-			  <!---->
-		   <!--</div>-->
-	   <!--</div>-->
 		
 		
 		<script id="project-modal-template" type="text/x-handlebars-template">
@@ -128,18 +186,20 @@
 								        <h3 class="image-aside__title">
 										
 										   {{ProjectTileTitle}}
+										   <!--Map this to Note title-->
 										
 										</h3>
 								   
 								   </a>
 								   
 								   <p class="caption-panel__text">
-								     {{ProjectTileDescription}}
+									 {{ProjectTileDescription}}
+									 <!-- Note description-->
 								   
 								   </p>
 								   
 								   <div class="caption-panel__links">
-								        <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" >
+								        <a id="{{ProjectTileId}}" data-ga-action="project description 1_Select" data-ga-label="Learn more" data-ga-value="1" href="blogs/{{NoteLink}}" >
 										   <span>
 										       Learn more
 											   <svg viewBox="-2 -2 30 30" class="svg-icon link-icon link-icon-project-color">

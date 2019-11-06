@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Linked structures</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: blue;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Clennita Justice</p>
+                            <p class="head-shot-short-desc">Sr. Program Manager, Product Strategy</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Traversing linked structures
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> 
+                                                        A Linked structure refers to a structure that has some sort of recursive relationship
+                                                         among its components (or nodes) as either a linearly linked structure, a tree structure or 
+                                                         a graph structure.
+                                                </p>
+
+                                                <img src="../images/linked_list.png" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                        In the above linear linked structure, an node is linked to a another node of the same type and so on. 
+                                                        Linked structures can also be non-linear(trees or graphs):
+
+
+                                                </p>
+
+                                                <img src="../images/trees.png" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                 
+                                                        Sometimes this relationship might not be obvious. In a game of chess for 
+                                                        example, you can model the relationship between different states of a board 
+                                                        as a linked structure. the same thing can be applied to the different states 
+                                                        of a rubics cube. Every move made to transition the rubics cube from state 
+                                                        A to state B links the two states. 
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> 
+                                                        So linked structures can manifest themselves in a number of ways in real life. 
+                                                        So being able to traverse and manipulate these structures is important. There are 
+                                                        generally two ways of traversing linked structures:
+                                                </p>
+
+                                                <blockquote>
+                                                        <ol>
+                                                            <li>
+                                                                    Level order or Breadth first traversal
+                                                            </li>
+                                                            <li>
+                                                                    Depth first traversal                                
+                                                            </li>
+                                                            
+                                                            
+                                                        </ol>
+                                                </blockquote>
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        Being able to perform these two operations on any linked structure will 
+                                                        open up a new set of ways to approach problems that involve linked structures.
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        So what does it mean to traverse a linked structure breadth first? it means 
+                                                        to visit each node in the order in which they are placed in the structure relative 
+                                                        to a starting point.
+                                                </p>
+
+                                                <img src="../images/linked_structure_bfs_order_2.png" style=" width: 40%;"/>
+
+                                     
+
+                                                <p class="paragraphFontStyle"> 
+                                                        For the above picture, if we start traversing the structure at node 49, then 
+                                                        performing a breadth-first search on that structure means visiting the nodes 
+                                                        in this order:  '49', then the next two nodes to visit should be either '41' or 
+                                                        '79' followed by node '46' at the end.
+
+                                                </p>
+
+
+
+                                                <img src="../images/linked_structure_bfs_order.png" style=" width: 50%;"/>
+
+
+
+                                                <p class="paragraphFontStyle">   
+                                                        If we start traversing the above structure at node '1' on the top left side, then one(highlight this) 
+                                                        potential order could be 1, 2, 4, 7, 5, 6, 7. 
+    
+                                                </p>
+
+                                                <img src="../images/linked_structure_bfs_order_3.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                    
+                                                        The order of BFS traversal for linearly linked stucture is straight forward. 
+                                                        For the structure above, the order would be 'A', 'B', 'C', then 'D'.
+
+
+    
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        A lot of other problems and algorithms on linked structures can be reduced to these two basic operations. 
+    
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        The general idea is the same. Before going 'deep' into the structure away from the starting, 
+                                                        explore all nodes near the structure first. Traversing a graph breadth first can mean 
+                                                        different things depending on what the structure represents. For example: 
+    
+                                                </p>
+
+                                                <blockquote>
+                                                        <ol>
+                                                            <li>
+                                                                    If the structure represents a network of roads where the nodes represent 
+                                                                    intersections, then traversing this breadth first could mean finding the 
+                                                                    shrotest path between any two intersections.
+                                                            </li>
+                                                            <li>
+                                                                    If the structure represents a social network where nodes represent 
+                                                                    ppl and relationships are established based on 'friendship', one 
+                                                                    insight we can get by traversing this type of graph breadth first is 
+                                                                    to provide friend and/or follower reccomendations.                        
+                                                            </li>
+                                                            <li>
+                                                                    If the structure represents different states of a board game, and 
+                                                                    relationships are established based on moves made to transition the 
+                                                                    board from one state to another, traversing this structure can help 
+                                                                    answer questions such as the quickest way to get to 'win' or get to 
+                                                                    some state.                       
+                                                            </li>
+                                                            
+                                                            
+                                                            
+                                                        </ol>
+                                                </blockquote>
+
+
+
+
+
+                                                <p class="paragraphFontStyle">  
+                                                        General implementation of Breadth first search traversals involve using data structures 
+                                                        that provide operations that prioritize nodes closest to a starting node. For example, 
+                                                        in most cases a queue data structure can be used to keep track of the order of nodes. 
+                                                        In other situations, a priority queue can be used to prioritize nodes 'closest' to the 
+                                                        starting point. Regardless of the choice of data structure, the general algorithm is the same:
+    
+                                                </p>
+
+                                                <img src="../images/bfs_algorithm.png" style=" width: 50%;"/>
+
+
+                                                <p class="paragraphFontStyle">  
+                                                        The second way of traversing linked structure is depth first search. In this case, the 
+                                                        algorithm goes deep into the structure farther away from the source to first explore the 
+                                                        farthest set of nodes and then subsequently moves closer to the source. This is the opposite 
+                                                        of traversing a linked structure depth first. 
+    
+                                                </p>
+
+                                                <img src="../images/linked_structure_bfs_order_2.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                        if we start performing a depth first traversal on above structure at node '1' on node 49, then 
+                                                        the algorithm would go deep and explore node '46' first before backtracking  visiting nodes '41'
+                                                         and '79' and eventually making its way back to the source.
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                        When performing a depth first traversal of a structure, by the time the algorithm is on it's way back and is at node 'x', 
+                                                        for example, it must have explored all the nodes farthest from 'x'. This is helpful in situations where we might need to 
+                                                        combine or add up information the algorithm has gathered about all the nodes it's visited so far as it back tracks.
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        A number of problems and algorithms can be reduced to either a breadth first or 
+                                                        depth first traveral of a linked structure. Algorithms and problems such as:
+                                                </p>
+
+                                                <blockquote>
+                                                        <ol>
+                                                            <li>
+                                                                    Shortest path algorithms for weighted and unweighted graphs
+                                                            </li>
+                                                            <li>
+                                                                    Algorithms for determining connectivity (Connected components) in 
+                                                                    directed and undirected graphs                      
+                                                            </li>
+                                                            <li>
+                                                                    Various tree problems such as checking if a Binary tree is a BST                  
+                                                            </li>
+
+                                                            <li>
+                                                                    Subset problems                 
+                                                            </li>
+
+
+                                                            <li>
+                                                                    Recursion and backtracking problems.                
+                                                            </li>
+                                                            
+                                                            
+                                                            
+                                                        </ol>
+                                                </blockquote>
+
+
+
+
+
+
+                                                <p class="paragraphFontStyle">  
+                                                
+                                                    At the end of the day, to implement the above algorithms or to solve a wide variety 
+                                                    of problems, it becomes a pre-requisite to traverse the linked structure representing 
+                                                    the problem either depth first or breadth first.
+                                                </p>
+                                               
+                                     
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="shortest_paths.html">Shortest path algorithms</a>
+                                                    </h4>
+                                                    <p class="related-content__content">Y
+                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                    </p>
+                                                </div>
+                                            </div>
+    
+                                            <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="decision_making.html">Recusion and backracking</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+
+                                                           <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://www.cs.princeton.edu/courses/archive/fall13/cos226/lectures/41UndirectedGraphs-2x2.pdf">More on graphs</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2019 Study space
+
+			  <a href="index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://github.com/natialemu">
+			      Jump to Github
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

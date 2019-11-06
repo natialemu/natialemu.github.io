@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+
+    <link href="../styles/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles/mdb.min.css" rel="stylesheet">
+    <link href="../styles/resource-style.css" rel="stylesheet">
+
+    <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script
+            src="../scripts/jquery-3.2.1.min.js"></script>
+
+    <script src="../scripts/popper.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/resource-scripts.js"></script>
+    <script src="../scripts/resource_scripts_sd.js"></script>
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+    <title>Application Design</title>
+</head>
+<body class="resource-body">
+
+	   
+	               <!-- progress indicator-->
+                <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Home
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+                    </nav>
+                    
+
+                    <!-- sub nav bar-->
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                             <a href="../resources.html"  role="menuitem"  >
+                                                    General
+                                             </a>
+                                        </li>
+    
+                                        <li class="gc-header-dt__nav-list-item">
+                                            <a href="problem-solving.html"   role="menuitem"  >
+                                                Problem solving
+                                            </a>
+                                        </li>
+                                        <li class="gc-header-dt__nav-list-item">
+                                            <a href="system-design.html" aria-label="Selected Link: Teams" role="menuitem" >
+                                                System design
+                                            </a>
+                                        </li>
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="#" class="active" aria-label="Selected Link: Teams" role="menuitem" >
+                                                    Application design
+                                                </a>
+                                        </li>
+    
+                                 
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
+	
+	
+                </header>
+
+
+        <div class="page-row intro-resources">
+            <div content-container>
+                    <h2 class="content-subtitle">Becoming a Googler in three steps</h2>         
+                    <div class="grid content-row application-step__background">
+
+                        <!-- step 1-->
+                        <div class="grid__item_resource grid__item--application-step-item grid__equal desk--one-third tablet--one-third">
+                            <div class="application-step__dots">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+
+                            </div>
+
+                            <div class="application-step ">
+                                    <div class="application-step__number">1</div>        
+                                    <div class="application-step__content">
+                                            <h3 class="application-step__title">Apply</h3>
+                                            <div class="application-step__description">
+                                              Found a great role? Check out these tips before you apply.
+                                            </div>
+                                          </div>                                                           
+                            </div>
+
+                        </div>
+
+                       <!-- step 2-->
+                        <div class="grid__item_resource grid__item--application-step-item grid__equal desk--one-third tablet--one-third">
+                                <div class="application-step__dots">
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                          <span class="dot"></span>
+                        </div>
+                                <div class="application-step ">
+                        <div class="application-step__number">2</div>
+                        <div class="application-step__content">
+                          <h3 class="application-step__title">Interview</h3>
+                          <div class="application-step__description">
+                            We interview differently. Here are some pointers to help you prepare.
+                          </div>
+                        </div>
+                      </div>
+                              </div>
+    
+                              <!-- Step 3-->
+                              <div class="grid__item_resource grid__item--application-step-item grid__equal desk--one-third tablet--one-third">
+                                    <div class="application-step ">
+                            <div class="application-step__number">3</div>
+                            <div class="application-step__content">
+                              <h3 class="application-step__title">Interview</h3>
+                              <div class="application-step__description">
+                                We interview differently. Here are some pointers to help you prepare.
+                              </div>
+                            </div>
+                          </div>
+                                  </div>
+
+                    </div>       
+            </div>
+
+        </div>
+
+                    
+        <script id="sd-learning-modal-template" type="text/x-handlebars-template">
+          <div class="mdc-layout-grid__cell content-box-cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-3-desktop-hd mdc-layout-grid__cell--align-middle">
+               <a href="{{SystemDesignLearningLink}}" id="homepage-card-archive-2018">
+                   <div class="content-box previous-box">
+                       <div class="content-box-inner">
+                           <h2 class="headline-2">
+                               {{SystemDesignLearningTitle}}
+                           </h2>
+                           <p class="body-1">
+                                {{SystemDesignLearningDescription}}
+                           </p>
+                       </div>
+
+                   </div>
+
+               </a>
+           </div>
+        </script>
+
+
+
+        <div class="page-row page-row--faq" style="background-color: rgb(240,240,240);">
+            <div class="content-container content-container--no-mobile">
+                    <h2 class="content-subtitle" tabindex="0" aria-label="Frequently Asked Questions: 11 Questions">Learn</h2>
+
+            </div>
+
+        </div>
+
+
+           <!-- section for cards-->
+           <section id="resourceCards" class="landing-page-section rules kickstart-rules" style="background-color: rgb(240,240,240);"> 
+               <div class="mdc-layout-grid">
+                   <div class="mdc-layout-grid__inner" id="systemDesignLearningContent">
+
+                
+                   </div>
+
+               </div>
+
+           </section>
+
+
+
+
+        <script id="sd-resource-modal-template" type="text/x-handlebars-template">
+          <div class="mdc-layout-grid__cell content-box-cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-3-desktop-hd mdc-layout-grid__cell--align-middle">
+               <a href="{{SystemDesignLink}}" id="homepage-card-archive-2018">
+                   <div class="content-box previous-box">
+                       <div class="content-box-inner">
+                           <h2 class="headline-2">
+                               {{SystemDesignTitle}}
+                           </h2>
+                           <p class="body-1">
+                                {{SystemDesignDescription}}
+                           </p>
+                       </div>
+
+                   </div>
+
+               </a>
+           </div>
+        </script>
+
+           <div class="page-row page-row--faq">
+                <div class="content-container content-container--no-mobile">
+                        <h2 class="content-subtitle" tabindex="0" aria-label="Frequently Asked Questions: 11 Questions">Practice</h2>
+    
+                </div>
+    
+            </div>
+
+
+    
+           <section id="resourceCards" class="landing-page-section rules kickstart-rules"> 
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner" id="systemDesignPracticeContent">
+ 
+ 
+                    </div>
+ 
+                </div>
+ 
+            </section>
+
+
+        <!-- Script for launching project modal -->
+    <!-- <script type="text/javascript">
+       $(function(){
+
+        /*      
+      * ---------------------
+      */
+
+
+
+     var sd_learning_source = $("#sd-learning-modal-template").html();
+     var sd_learning_modal_template = Handlebars.compile(sd_learning_source);
+
+    /**
+     * System Design practice
+     */
+
+    var grokkingSystemDesignLearning = {
+        SystemDesignLearningTitle:"Grokking the system design interview",
+        SystemDesignLearningDescription: "Learn system design skills",
+        SystemDesignLearningLink: "https://www.educative.io/courses/grokking-the-system-design-interview"
+     };
+
+      /**
+      * Append SD learn content to page
+      */
+
+     
+     var sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
+     $("#systemDesignLearningContent").append(sdLearnHtml);
+     
+       /**
+      * Append PS practice content to page
+      */
+
+        });
+    </script> -->
+
+                
+
+
+
+
+<!--Footer -->
+
+    <footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2019 Study space
+
+			  <a href="index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://github.com/natialemu">
+			      Jump to Github
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+</body>
+
+<script src="scripts/mdb.min.js"></script>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Command pattern</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: blue;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Clennita Justice</p>
+                            <p class="head-shot-short-desc">Sr. Program Manager, Product Strategy</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Command design pattern
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> Design patterns describe simple and elegant solutions to common 
+                                                    problems in object-oriented software design. One common design pattern is the Command pattern. 
+                                                    It's mostly used when you want to execute a set of behaviors on a common object.
+                                                    </p>
+
+                                                <p class="paragraphFontStyle"> Few terms associated with the Command pattern
+                                                </p>
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    The behaviors(commands) encapsulated as objects
+                                                            </li>
+                                                            <li>
+                                                                    The object that initiates the execution of the commands(client)
+                                                            </li>
+                                                            <li>
+                                                                    The object that's on the receiving end of the commands(the receiver)
+                                                            </li>
+                                                        </ul>
+                                                </blockquote>
+
+                                                <p class="paragraphFontStyle"> Few examples of command pattern
+                                                </p>
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    The relationship between a remote control & a TV.  We have a set of commands 
+                                                                    (Turn on, off, increase volume and so forth) 
+                                                                    that are applied on the TV(the receiver) by the remote(client).
+                                                            </li>
+                                                            <li>
+                                                                    Apply a set of commands (save, edit, copy, paste) that are applied 
+                                                                    on some document(reciever) by pressing some icon(client).
+                                                            </li>
+                                                        </ul>
+                                                </blockquote>
+
+                                                <img src="../images/command_pattern.png" style=" width: 50%;"/>
+
+                                     
+
+
+                                                <p class="paragraphFontStyle">
+                                                        So the goal is to create an object, the command object, that encapsulates 
+                                                        the implementation of the desired behavior, and have the user invoke the 
+                                                        behavior only from the command object. The encapsulation is made possible by 
+                                                        exposing just one method 'execute()' that subsequently causes some actions 
+                                                        to be invoked on the receiver. 
+                                                </p>
+
+                                      
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        The command pattern also allows the requestor of the action to be decoupled 
+                                                        from the object that carries out this action. It's very helpful in situations 
+                                                        where there could be a number of ways to invoke an operation. For ex, you can 
+                                                        execute any of the above commands above on a text document by a clicking a menu, 
+                                                        an icon or even via a keyboard shortcut. 
+
+                                                </p>
+
+
+                                     
+                                                <p class="paragraphFontStyle">  
+                                                        Another usecase of the command pattern is in situations when you might 
+                                                        want to execute a set of commands synchronously on an object. If one 
+                                                        command fails during this process, you can choose to immediately undo 
+                                                        the executed commands. 
+
+                                                </p>
+                                               
+                                                <p class="paragraphFontStyle"> 
+                                                    Let's imagine the following scenrio. If you have a 
+                                                    microservice and one of the endpoints will create some complex object 'A'. 
+                                                    However, in order to create that object, the following things are required:</p>
+
+                                                    <blockquote>
+                                                            <ol>
+                                                                <li>
+                                                                        it has to call 5 other micro services to create parts of the object.(m1, m2, m3, m4, m5)
+                                                                </li>
+                                                                <li>
+                                                                        Let's assume calls to m3 depend on the response from m2.
+                                                                </li>
+
+                                                                <li>
+                                                                        In order to consider the whole object as  created & saved, every part of the object 
+                                                                        will need to be saved by each micro service.
+                                                                </li>
+                                                            </ol>
+                                                    </blockquote>
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        One of the design patterns that we can use here is the command design pattern. 
+                                                        For this particular case, we can define a set of 5 commands, each responsible for 
+                                                        sending a request to each microervice to save a part of the object. we have to define 
+                                                        the order in which we want the orders to get executed. Each command behavior is acting
+                                                         on the object we want to build. if any of the commands fail to execute, we can undo 
+                                                         the commands that already executed. in other words, we don't want only a few parts 
+                                                         of the object created and saved while other parts were unsuccessful. 
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> 
+                                                        Commands  can also be composed into Macro commands. This combines the 
+                                                        Command pattern with the Composite pattern. More links to the composite pattern
+                                                </p>
+
+                                                <img src="../images/composite_command_pattern.png" style=" width: 50%;"/>
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+  
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                            <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                <div class="grid">
+                                        <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                            <div class="related-content__item">
+                                                <h4 class="related-content__title">
+                                                    <a  class="relatedContentLink" href="https://www.oodesign.com/command-pattern.html">More on Command pattern</a>
+                                                </h4>
+                                                <p class="related-content__content">Y
+                                                    constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                    sdfdslfjsdlfksdfsdklfjds 
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--item 2-->
+                                        <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="https://www.oodesign.com/composite-pattern.html">Composite design pattern</a>
+                                                    </h4>
+                                                    <p class="related-content__content">Y
+                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2019 Study space
+
+			  <a href="index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://github.com/natialemu">
+			      Jump to Github
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

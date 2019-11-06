@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Decision making</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: blue;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Clennita Justice</p>
+                            <p class="head-shot-short-desc">Sr. Program Manager, Product Strategy</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Decision making in computer science
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> Computer Science is mostly about making decisions. 
+                                                        The focus here, however, will be on a particular problem solving approach in which 
+                                                        we have the option of taking a number of decisions at a time. Each set of 
+                                                        decisions will lead to a particular outcome. One goal might
+                                                        be to analyse which combination of decisions leads to the desired outcome. </p>
+
+                                                <p class="paragraphFontStyle"> For exmaple: There are 4 queens and a 4x4 chess board, 
+                                                    The goal is to place the 4 queens on the board such that the queens do not attack each other. There are 
+                                                     a number of ways this can happen, so let's find all of them.
+                                                </p>
+
+                                                <img src="../images/4-queen.png" style=" width: 30%;"/>
+
+                                     
+
+
+                                                <p class="paragraphFontStyle"> For this problem, the first decision is to place the first queen somewhere on the empty chess board - Let's call this decision d1. There are a number
+                                                        of options here(The queen can be placed on any one of the 16 cells on the board). Now, given the first decision is made, There are now 15 choices for
+                                                        placing the second queen. 2 more successive decisions will need to be made to have all the four queens on the board. At this point, we can 
+                                                        start to evaluate if the set of decisions we made led us to the intended outcome - do the 4 queens placed on the board attack each other. If not,
+                                                        we can undo our last decision, d4, and place the 4th queen somewhere else on the board and see if it's the right outcome and so on. </p>
+
+                                      
+
+
+                                                <p class="paragraphFontStyle"> A few terms to keep in mind here</p>
+
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                                Every decision made is on a particular state of the configuration(i.e the state of the board).
+                                                        </li>
+                                                        <li>
+                                                                State transitions happen as we decide where to place a queen. (Image of two different board in two different states)
+                                                        </li>
+                                                        <li>
+                                                                Each set of decision leads to a final state of the configuration.
+                                                        </li>
+                                                    </ul>
+                                                </blockquote>
+                                     
+                                                <p class="paragraphFontStyle"> Recursion and Backtracking allow us to translate this exhaustive problem solving 
+                                                    strategy into code. Everytime we make a recursive call on a given configuration(A board and the remaining queens), 
+                                                    we're about to make a decision on that board such as placing the remaining queen on any available cell on the board. 
+                                                    Consequently, every time we backtrack, we have to undo the decision we made so that we can explore other options. </p>
+                                               
+                                                <p class="paragraphFontStyle"> Look at the following code</p>
+
+                                                <blockquote>
+                                                    <div class="code_snippet">
+                                                        <img src="../images/n-queen-snippet.png"/>
+
+                                                    </div>
+                                                </blockquote>
+
+
+                                                <p class="paragraphFontStyle"> There are a number of ways to optimize such type of decision making problems. One of potential technique is called constraint programming. 
+                                                        In constraint programming, the idea is to narrow down the number of decisions we make on the next state of a configuration based on what we know about the current 
+                                                        state of a configuration.
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> For example, if we place the first queen on the top left corner of the chess board, we should avoid placing the next queen on any of 
+                                                    the crossed out cells shown below since that will lead to the two queens attacking each other.
+                                                </p>
+
+
+                                                <blockquote>      
+                                                    <img src="../images/top-left-queen.png" style="width: 30%;"/>        
+                                                 </blockquote>
+
+
+                                                 <p class="paragraphFontStyle"> 
+                                                     Sometimes, throughout the algorithm, we might encounter a configuration in a state we have seen before
+                                                      and we might find ourselves about to make the same set of decisions on that configuration. To optimize such situations,
+                                                      we can save the result of making a decision on a particular state of a configuration, so that the next time we encounter 
+                                                      the same state, we would know the solution without having to do additional work.
+                                                 </p>
+
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+                        <!-- <div class="related-content__item related-content__item--compact">
+                                <h3 class="related-content__title">Note 1</h3>
+                                <p class="related-content__content related-content__content--always-open">Blah blah blah short description of note 1</p>
+                                <a href="#" class="related-content__link">See More</a>
+                        </div> -->
+                        <!-- <div class="related-content__item related-content__item--compact">
+                                <h3 class="related-content__title">Note 2</h3>
+                                <p class="related-content__content related-content__content--always-open">Lorem ipsum blah blah descirption fo note 2 lorem ipsum shit</p>
+                                <a href="#" class="related-content__link" >See More</a>
+                        </div> -->
+
+
+
+
+    
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                            <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                <div class="grid">
+                                        <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                            <div class="related-content__item">
+                                                <h4 class="related-content__title">
+                                                    <a  class="relatedContentLink" href="https://developers.google.com/optimization/cp">Constraint Optimization</a>
+                                                </h4>
+                                                <p class="related-content__content">Y
+                                                    constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                    sdfdslfjsdlfksdfsdklfjds 
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!--item 2-->
+                                        <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="https://developers.google.com/optimization/cp">Constraint Optimization</a>
+                                                    </h4>
+                                                    <p class="related-content__content">Y
+                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                       
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2019 Study space
+
+			  <a href="index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://github.com/natialemu">
+			      Jump to Github
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

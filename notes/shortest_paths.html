@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Shortest Paths</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: blue;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Clennita Justice</p>
+                            <p class="head-shot-short-desc">Sr. Program Manager, Product Strategy</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Finding shortest path in a graph
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> Graphs are used to express non-hierarchically related items.
+                                                     Graphs can represent networks such as pipelines & roads, processes such as Markov chains or
+                                                      some sort of partial ordering such as makefiles. 
+                                                </p>
+
+                                                <img src="../images/edge_relationship.png" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> One thing we may want to do with graphs is 
+                                                        to find the shortest path between vertices in the graph based on the relationship represented 
+                                                        by the graph. Here's a psuedocode of an algorithm that finds the shortest path in a graph:
+
+
+                                                </p>
+
+                                                <img src="../images/shortest_path_algo.png" style=" width: 40%;"/>
+
+
+                                                <p class="paragraphFontStyle"> So the goal is to traverse each vertex of the graph in order of 'closeness' to the 
+                                                        source. the 'fringe' above needs to be a data structure that supports operations for finding these vertices. 
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> In an unweighted graph, our define 'closeness' as how many levels away a vertex 'v' 
+                                                        is from the source. so on the first iteration, we put all vertices that are an edge away from the source into 
+                                                        the collection. In the next iterations, we should expect to first get  vertices. So really, the collection we 
+                                                        want is one that supports a first in first out kind of operation aka a queue. this algorithm is called BFS.
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        Here's code for implementing BFS:
+                                                </p>
+
+                                                <img src="../images/bfs_code.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> Now if the graph is a weighted graph, it is not enough to define 'closeness' 
+                                                    as just the number of edges a vertex sits from the source. This is because each edge has a weight. 
+                                                </p>
+
+                                                <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
+
+
+                                                <p class="paragraphFontStyle"> Instead it's 
+                                                        the sum of weights along the path that leads to a vertex 'v' from the source. as the algorithm goes on, we might 
+                                                        find more paths to vertex 'v', a path whose sum of weights is different. the 'fringe' data structure above needs 
+                                                        to be one that supports operations for determining the vertex with the smallest sum of weights along currently discovered path.
+                                                         this is to say as the algorithm progresses, the value for 'closeness' of a vertex to the source might change as the algorithm 
+                                                         finds more paths, but regardless, the fringe needs to be able to return the vertex with the smallest weight. 
+                                                         The ideal data structure for this is a priority queue where the priority of the elements in the priority queue is 
+                                                         determined based on how close they are to the source so far.
+                                            </p>
+
+                                                <img src="../images/dijkstra_code.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> With both algorithms, not only do you get paths, but the paths are also guaranteed 
+                                                    to be the shortest. So in addition to determining connectivity between nodes, you also get the shortest 
+                                                    distance between nodes. 
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> The instrinsic characterstic of these two algorithms,
+                                                        which is the fact that they explore all nodes closest to them first before progressing 
+                                                        to explore further can sometimes be a problem in areas such as navigation. 
+                                                </p>
+
+                
+
+                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from san franciso to new york
+    
+                                                </p>
+                                               
+                                                <img src="../images/san_fran_nyc.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle">  
+                                                        If you use Dijkstra to find the shortest path, it will first explore places 
+                                                        closest to san fransico even those that are on the pacific ocean even though that is clearly not the right path to take. 
+    
+                                                 </p>
+
+                                                    <p class="paragraphFontStyle">  
+                                                            To address this, we can make a minor change to how we define "closeness". 
+                                                            Instead of just defining closeness as the sum of weights along a path from the source, 
+                                                            we add a third variable, a heuristic, to that value in order to guid the algorithm. 
+                                                            This heuristic can be the straight line distance from the current vertex 'v' to the destination. 
+                                                            Because of this added variable to our definition of closeness, vertices further to the left of 
+                                                            san francisco will not appear to be as close to the source as they actually are. 
+                                                            The algorithm will tend to explore more towords the right. This variation of Dijkstra's algorithm 
+                                                            is called the A* algorithm. 
+                                                    </p>
+
+                                                    <img src="../images/a_star_code.png" style=" width: 50%;"/>
+                                     
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+                       
+
+
+
+
+                    
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of Consistent Hashing</a>
+                                                    </h4>
+                                                    <p class="related-content__content">Y
+                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                    </p>
+                                                </div>
+                                            </div>
+    
+                                            <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                             <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2019 Study space
+
+			  <a href="index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://github.com/natialemu">
+			      Jump to Github
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

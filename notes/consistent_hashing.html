@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Consistent Hashing</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</a>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+					</nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: blue;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Clennita Justice</p>
+                            <p class="head-shot-short-desc">Sr. Program Manager, Product Strategy</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Consistent Hashing
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> A HashTable or a dictionary is a data structure that supports
+                                                    operations for inserting, searching and removing any key, k. If implemented correctly,
+                                                    all the operations should take O(1) time.  
+                                                </p>
+
+                                                <img src="../images/hashtable_adt.png" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> Given a key, a Hash table maps that key to a particular 'bucket' - 
+                                                    the mapping is done by a 'hash function'. A hash function, h(k), maps a key onto a universe U. 
+                                                    A good hash function has the following properties:
+                                                </p>
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    is deterministic
+                                                            </li>
+                                                            <li>
+                                                                    is fast                                                             </li>
+                                                            <li>
+                                                                    Does not hash similar keys to the same bucket. see collision
+                                                            </li>
+                                                            <li>
+                                                                    The hash function should behave like a random function - spreading the keys uniformly across each bucket. see 'Universal Hashing'                                    
+                                                            </li>
+                                                        </ul>
+                                                </blockquote>
+
+                                                <img src="../images/hashing_basic.png" style=" width: 40%;"/>
+
+                                     
+
+
+                                                <p class="paragraphFontStyle"> Now what if the bucket size changes? For some reason, we may want to add more buckets
+                                                     or reduce the number of buckets. In other words, our universe, U, is changing. Whenever that happens, we have to
+                                                      recompute the hash of each key in order to map each key to a new bucket. This has practical implications in 
+                                                      distributed caching, for example. We may want to map 'k' keys to 'n' distributed caches. However, when scaling 
+                                                      up the caches and increasing the number of nodes, we face the issue of having to recompute the hash of every key 
+                                                      which can be costly. One solution is to use consistent hashing. </p>
+
+                                      
+
+
+                                                <p class="paragraphFontStyle"> So to re-iterate, Given 'k' keys,  we want to map these keys to 'n' nodes. 
+                                                    However, we want to minimize the number of keys that need to be re-mapped to a new node.
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> The main idea with consistent hashing is to introduce a third space. 
+                                                        Instead of mapping a key 'k' selected from some Universe on to our universe of nodes, we map both
+                                                         the key and the node onto a third universe. In other words, if we have some hash function h(x), 
+                                                         each key can be mapped to h(x)mod(Ub). However, instead of doing that, let's map both keys and nodes 
+                                                         to some buckets in a third Universe. 
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> Once we've mapped a key to a bucket the third universe, we can find 
+                                                        a bucket to the right of the current bucket that contains a node. To help better help visualize this concept,
+                                                        let's map both the keys and nodes to a 32 bit space and let's wrap it around so that it is cyclic. 
+                                                        The cells in the circle represent buckets in the third universe.
+                                                </p>
+
+                                                <img src="../images/consistent_hashing.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> Next, we hash each node to a bucket in the 32 bit space. Now that we've mapped the nodes, 
+                                                        next step is to map the keys to a node. to do that we hash a key to some bucket in the 32 bit space, and then move
+                                                         clockwise direction until we find a bucket with a node.
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  if a node 'a' goes down, then all the keys in node 'a' 
+                                                        will be re-mapped to the next node in the 32 bit space. So no need to re-map every key. 
+                                                        Simillarly if a new node is added,  some of the keys that used to be mapped to the next node 
+                                                        in the 32 bit space will need to be re-mapped. This helps optimize load balancing among caches. 
+                                                        Depending on the distribution of the keys, more optimizations to even out the load balancing by 
+                                                        introducing what are known as 'virtual replicas' on the third universe. More info here: 
+    
+                                                </p>
+                                               
+                                     
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of Consistent Hashing</a>
+                                                    </h4>
+                                                    <p class="related-content__content">Y
+                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                    </p>
+                                                </div>
+                                            </div>
+    
+                                            <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+
+                                                           <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec08.pdf">Universal Hash functions</a>
+                                                        </h4>
+                                                        <p class="related-content__content">Y
+                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
+                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                        </p>
+                                                    </div>
+                                                </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+        <p class="mdl-typography--font-light">
+
+            © 2019 Nathnael
+
+            <a href="../index.html">
+                Go to homepage
+            </a>
+
+            <a href="../projects.html">
+                Explore projects
+            </a>
+
+            <a href="../blog.html">
+                Read blogs
+            </a>
+
+            <a href="https://github.com/natialemu">
+                Jump to Github
+            </a>
+
+            <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+                View LinkedIn
+            </a>
+
+        </p>
+    </div>
+
+</footer>
+
+
+</body>
+
+
+</html>

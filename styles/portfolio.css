@@ -2661,14 +2661,16 @@ a:link {
 }
 
 .relatedContentLink {
-    color: #414141 !important;
+    color: #424242 !important;
     font-size: 17px;
+    font-weight: 400;
     text-decoration: none !important;
-    transition: color 0.1s !important;
+    transition: color 0.6s !important;
     transition-timing-function: ease-in-out !important;
 }
 .relatedContentLink:hover {
     color: #000 !important;
+    font-weight: 500 !important;
 }
 *, *:before, *:after {
     box-sizing: border-box;

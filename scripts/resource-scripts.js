@@ -9,21 +9,21 @@ $(function(){
      */
     var leetCode = {
         ProblemSolvingTitle:"Leet code",
-        ProblemSolvingDescription: "practice data structures and algorithms",
+        ProblemSolvingDescription: "Practice data structures and algorithm by solving problems on Leet code",
         ProblemSolvingLink: "https://leetcode.com/"
      };
 
 
      var codeJam = {
         ProblemSolvingTitle:"Google code jam",
-        ProblemSolvingDescription: "participate in annual code jam competitions",
+        ProblemSolvingDescription: "Participate in Google's annual code jam competitions",
         ProblemSolvingLink: "https://codingcompetitions.withgoogle.com/codejam"
      };
 
 
      var kattis = {
         ProblemSolvingTitle:"Kattis",
-        ProblemSolvingDescription: "a platform to practice problem solving skills",
+        ProblemSolvingDescription: "Kattis is a platform to practice problem solving skills",
         ProblemSolvingLink: "https://open.kattis.com/"
      };
       /**
@@ -71,7 +71,7 @@ $(function(){
 
      var designAndAnalysisOfAlgorithms = {
         ProblemSolvingLearningTitle:"Design and analysis of algorithms",
-        ProblemSolvingLearningDescription: "design and analysis of efficient algorithms",
+        ProblemSolvingLearningDescription: "Design and analysis of efficient algorithms",
         ProblemSolvingLearningLink: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/"
      }
 
@@ -83,7 +83,7 @@ $(function(){
 
      var modernApplicationsOfAlgorithms = {
         ProblemSolvingLearningTitle:"Modern applications of algorithms",
-        ProblemSolvingLearningDescription: "focus on algorithms that are at the core of most modern tools",
+        ProblemSolvingLearningDescription: "This course focuses on algorithms that are at the core of most modern tools",
         ProblemSolvingLearningLink: "https://web.stanford.edu/class/cs168/"
      }
 

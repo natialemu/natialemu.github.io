@@ -138,7 +138,7 @@ $(function(){
      */
 
     var grokkingSystemDesignLearning = {
-        SystemDesignLearningTitle:"Grokking the system design interview",
+        SystemDesignLearningTitle:"Grokking the system design",
         SystemDesignLearningDescription: "Learn system design skills",
         SystemDesignLearningLink: "https://www.educative.io/courses/grokking-the-system-design-interview"
      };
@@ -160,6 +160,12 @@ $(function(){
         SystemDesignLearningDescription: "Learn foundations of database systems",
         SystemDesignLearningLink: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-033-computer-system-engineering-spring-2018"
      };
+
+     var serverLessArchitecture = {
+        SystemDesignLearningTitle:"Introduction to serverless computing",
+        SystemDesignLearningDescription: "Learn the basics of AWS's serverless architecture",
+        SystemDesignLearningLink: "https://www.coursera.org/lecture/aws-fundamentals-building-serverless-applications/introduction-to-serverless-computing-with-aws-lambda-part-1-Zy2lR"
+     };
       /**
       * Append SD learn content to page
       */
@@ -176,7 +182,11 @@ $(function(){
      
      sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
      $("#systemDesignLearningContent").append(sdLearnHtml);
+
+     sdLearnHtml = sd_learning_modal_template(serverLessArchitecture);
+     $("#systemDesignLearningContent").append(sdLearnHtml);
        /**
+        * 
       * Append PS practice content to page
       */
 

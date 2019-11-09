@@ -56,7 +56,7 @@ $(function(){
         ProblemSolvingLearningLink: "https://leetcode.com/"
      };
 
-     var mitIntroToAlgorithms = {
+     var dataStructures = {
         ProblemSolvingLearningTitle:"Data structures",
         ProblemSolvingLearningDescription: "Analyse the efficiency of a variety of techniques for structuring data",
         ProblemSolvingLearningLink: "https://inst.eecs.berkeley.edu/~cs61b/fa18/"
@@ -87,12 +87,13 @@ $(function(){
         ProblemSolvingLearningLink: "https://web.stanford.edu/class/cs168/"
      }
 
-     var learnHtml = learning_modal_template(mitIntroToAlgorithms);
+     var learnHtml = learning_modal_template(discreteMath);
      $("#problemSolvingLearningContent").append(learnHtml);
 
-     
+     learnHtml = learning_modal_template(dataStructures);
+     $("#problemSolvingLearningContent").append(learnHtml);
 
-     learnHtml = learning_modal_template(discreteMath);
+     learnHtml = learning_modal_template(mitIntroToAlgorithms);
      $("#problemSolvingLearningContent").append(learnHtml);
 
      learnHtml = learning_modal_template(designAndAnalysisOfAlgorithms);

@@ -25,7 +25,7 @@
     <script src="../scripts/popper.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
     <script src="../scripts/resource-scripts.js"></script>
-    <script src="../scripts/resource_scripts_sd.js"></script>
+    <script src="../scripts/resource_scripts_ad.js"></script>
 
 
 
@@ -149,7 +149,7 @@
 
         <div class="page-row intro-resources">
             <div content-container>
-                    <h2 class="content-subtitle">Becoming a Googler in three steps</h2>         
+                    <h2 class="content-subtitle">Build strong object-oriented design skills</h2>         
                     <div class="grid content-row application-step__background">
 
                         <!-- step 1-->
@@ -175,9 +175,11 @@
                             <div class="application-step ">
                                     <div class="application-step__number">1</div>        
                                     <div class="application-step__content">
-                                            <h3 class="application-step__title">Apply</h3>
+                                            <h3 class="application-step__title">Learn</h3>
                                             <div class="application-step__description">
-                                              Found a great role? Check out these tips before you apply.
+                                              Start by learning the fundemental principles of 
+                                              object-oriented design followed by good design principles,
+                                              patterns, and frameworks
                                             </div>
                                           </div>                                                           
                             </div>
@@ -205,9 +207,10 @@
                                 <div class="application-step ">
                         <div class="application-step__number">2</div>
                         <div class="application-step__content">
-                          <h3 class="application-step__title">Interview</h3>
+                          <h3 class="application-step__title">Practice</h3>
                           <div class="application-step__description">
-                            We interview differently. Here are some pointers to help you prepare.
+                            Practice makes perfect. Practice designing simple applications 
+                            and eventually progress to more involved ones 
                           </div>
                         </div>
                       </div>
@@ -218,9 +221,12 @@
                                     <div class="application-step ">
                             <div class="application-step__number">3</div>
                             <div class="application-step__content">
-                              <h3 class="application-step__title">Interview</h3>
+                              <h3 class="application-step__title">Repetition</h3>
                               <div class="application-step__description">
-                                We interview differently. Here are some pointers to help you prepare.
+                                Repetition is key when learning anything new, but the goal 
+                                here isn't to blindly memorize topics. Instead, the goal is to 
+                                make sure the new design approaches learned are preserved in long-term 
+                                memory
                               </div>
                             </div>
                           </div>
@@ -232,16 +238,16 @@
         </div>
 
                     
-        <script id="sd-learning-modal-template" type="text/x-handlebars-template">
+        <script id="ad-learning-modal-template" type="text/x-handlebars-template">
           <div class="mdc-layout-grid__cell content-box-cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-3-desktop-hd mdc-layout-grid__cell--align-middle">
-               <a href="{{SystemDesignLearningLink}}" id="homepage-card-archive-2018">
+               <a href="{{AppDesignLearningLink}}" id="homepage-card-archive-2018">
                    <div class="content-box previous-box">
                        <div class="content-box-inner">
                            <h2 class="headline-2">
-                               {{SystemDesignLearningTitle}}
+                               {{AppDesignLearningTitle}}
                            </h2>
                            <p class="body-1">
-                                {{SystemDesignLearningDescription}}
+                                {{AppDesignLearningDescription}}
                            </p>
                        </div>
 
@@ -268,7 +274,7 @@
            <!-- section for cards-->
            <section id="resourceCards" class="landing-page-section rules kickstart-rules" style="background-color: rgb(240,240,240);"> 
                <div class="mdc-layout-grid">
-                   <div class="mdc-layout-grid__inner" id="systemDesignLearningContent">
+                   <div class="mdc-layout-grid__inner" id="appDesignLearningContent">
 
                 
                    </div>
@@ -280,16 +286,16 @@
 
 
 
-        <script id="sd-resource-modal-template" type="text/x-handlebars-template">
+        <script id="ad-resource-modal-template" type="text/x-handlebars-template">
           <div class="mdc-layout-grid__cell content-box-cell mdc-layout-grid__cell--span-2-phone mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-3-desktop-hd mdc-layout-grid__cell--align-middle">
-               <a href="{{SystemDesignLink}}" id="homepage-card-archive-2018">
+               <a href="{{AppDesignLink}}" id="homepage-card-archive-2018">
                    <div class="content-box previous-box">
                        <div class="content-box-inner">
                            <h2 class="headline-2">
-                               {{SystemDesignTitle}}
+                               {{AppDesignTitle}}
                            </h2>
                            <p class="body-1">
-                                {{SystemDesignDescription}}
+                                {{AppDesignDescription}}
                            </p>
                        </div>
 
@@ -313,7 +319,7 @@
     
            <section id="resourceCards" class="landing-page-section rules kickstart-rules"> 
                 <div class="mdc-layout-grid">
-                    <div class="mdc-layout-grid__inner" id="systemDesignPracticeContent">
+                    <div class="mdc-layout-grid__inner" id="appDesignPracticeContent">
  
  
                     </div>
@@ -321,48 +327,6 @@
                 </div>
  
             </section>
-
-
-        <!-- Script for launching project modal -->
-    <!-- <script type="text/javascript">
-       $(function(){
-
-        /*      
-      * ---------------------
-      */
-
-
-
-     var sd_learning_source = $("#sd-learning-modal-template").html();
-     var sd_learning_modal_template = Handlebars.compile(sd_learning_source);
-
-    /**
-     * System Design practice
-     */
-
-    var grokkingSystemDesignLearning = {
-        SystemDesignLearningTitle:"Grokking the system design interview",
-        SystemDesignLearningDescription: "Learn system design skills",
-        SystemDesignLearningLink: "https://www.educative.io/courses/grokking-the-system-design-interview"
-     };
-
-      /**
-      * Append SD learn content to page
-      */
-
-     
-     var sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
-     $("#systemDesignLearningContent").append(sdLearnHtml);
-     
-       /**
-      * Append PS practice content to page
-      */
-
-        });
-    </script> -->
-
-                
-
 
 
 
@@ -374,15 +338,15 @@
 
               © 2019 Study space
 
-			  <a href="index.html">
+			  <a href="../index.html">
 			      Go to homepage
 			  </a>
 
-			  <a href="notes.html">
+			  <a href="../notes.html">
 			      Read notes
 			  </a>
 
-			  <a href="resources.html">
+			  <a href="../resources.html">
 			      Browse through resources
 			  </a>
 

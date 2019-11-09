@@ -5,7 +5,7 @@ $(function(){
 
 
     /**
-     * System Design learning
+     * System Design practice
      */
     var graphQLSearchIndexing = {
         SystemDesignTitle:"GraphQL search indexing",
@@ -134,7 +134,7 @@ $(function(){
      var sd_learning_modal_template = Handlebars.compile(sd_learning_source);
 
     /**
-     * System Design practice
+     * System Design learning
      */
 
     var grokkingSystemDesignLearning = {
@@ -165,16 +165,16 @@ $(function(){
       */
 
      
-     var sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
+     var sdLearnHtml = sd_learning_modal_template(distributedSystems);
      $("#systemDesignLearningContent").append(sdLearnHtml);
 
      sdLearnHtml = sd_learning_modal_template(operatingSystems);
      $("#systemDesignLearningContent").append(sdLearnHtml);
 
-     sdLearnHtml = sd_learning_modal_template(distributedSystems);
+     sdLearnHtml = sd_learning_modal_template(databaseSystems);
      $("#systemDesignLearningContent").append(sdLearnHtml);
      
-     sdLearnHtml = sd_learning_modal_template(databaseSystems);
+     sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
      $("#systemDesignLearningContent").append(sdLearnHtml);
        /**
       * Append PS practice content to page

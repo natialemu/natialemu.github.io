@@ -79,6 +79,12 @@ $(function(){
         SystemDesignDescription: "Practice system design skills",
         SystemDesignLink: "https://www.youtube.com/watch?v=PE4gwstWhmc&list=PL-vqXrn5DveI73EwM8tpgjkqGvrnPR7hN&index=2&t=0s"
      };
+    
+     var serverless = {
+        SystemDesignTitle:"What is serverless",
+        SystemDesignDescription: "One perspective on serverless architecture",
+        SystemDesignLink: "https://medium.com/swlh/what-is-serverless-the-2020-edition-5a2f21581fe5"
+     }
 
 
     /**
@@ -119,6 +125,9 @@ $(function(){
 
      sdPracticeHtml = sd_resource_modal_template(scalingDropbox);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(scalingDropbox);
+     $("#systemDesignPracticeContent").append(serverless);
 
 
 

@@ -1910,7 +1910,6 @@ a:link {
 #suggestApproach {
     background-color: rgb(240,240,240);
 }
-
 @media (max-width: 539px) {
     .landing-page-section.rules {
         padding-bottom: 2.75rem;
@@ -2671,6 +2670,9 @@ a:link {
 .relatedContentLink:hover {
     color: #000 !important;
     font-weight: 500 !important;
+}
+.sectionDesc {
+    margin: 0 20% 0 20%;
 }
 *, *:before, *:after {
     box-sizing: border-box;

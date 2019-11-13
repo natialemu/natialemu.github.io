@@ -122,11 +122,40 @@
 
                                                 <p class="paragraphFontStyle"> Computer Science is mostly about making decisions. 
                                                         The focus here, however, will be on a particular problem solving approach in which 
-                                                        we have the option of taking a number of decisions at a time. Each set of 
-                                                        decisions will lead to a particular outcome. One goal might
-                                                        be to analyse which combination of decisions leads to the desired outcome. </p>
+                                                        we have the option of taking a number of decisions at a time, and each set of 
+                                                        decisions will lead to a particular outcome. At the end, the goal might
+                                                        be to analyse which combination of decisions leads to a desired outcome. </p>
 
-                                                <p class="paragraphFontStyle"> For exmaple: There are 4 queens and a 4x4 chess board, 
+
+                                                        <p class="paragraphFontStyle"> Decision making problems can manifest itself in a number of ways. For example:
+                                                         </p>
+
+
+                                                         <blockquote>
+                                                                <ul>
+                                                                    <li>
+                                                                            Given a 4*4 chess board, decide where to put 4 queens on the board so that none of the queens
+                                                                            attack each other.
+                                                                    </li>
+                                                                    <li>
+                                                                            Given an expression, such as "2*3+1", find all possible values the expression evalues to. This involves
+                                                                            deciding how to parenthesize the expression.
+                                                                    </li>
+                                                                    <li>
+                                                                            Find all subsets of a given set. Finding a subset means deciding weather or not to put each element of
+                                                                            the original set into the subset.
+                                                                    </li>
+
+                                                                    <li>
+                                                                            Traversing graphs, trees, lists.
+                                                                    </li>
+                                                                </ul>
+                                                            </blockquote>
+                                                 
+
+                                                    
+
+                                                <p class="paragraphFontStyle"> Let's dive a bit more into the first example. So, there are 4 queens and a 4x4 chess board, 
                                                     The goal is to place the 4 queens on the board such that the queens do not attack each other. There are 
                                                      a number of ways this can happen, so let's find all of them.
                                                 </p>
@@ -137,10 +166,10 @@
 
 
                                                 <p class="paragraphFontStyle"> For this problem, the first decision is to place the first queen somewhere on the empty chess board - Let's call this decision d1. There are a number
-                                                        of options here(The queen can be placed on any one of the 16 cells on the board). Now, given the first decision is made, There are now 15 choices for
+                                                        of options for placing the first queen(The queen can be placed on any one of the 16 cells on the board). Now, given the first decision is made, There are now 15 choices for
                                                         placing the second queen. 2 more successive decisions will need to be made to have all the four queens on the board. At this point, we can 
-                                                        start to evaluate if the set of decisions we made led us to the intended outcome - do the 4 queens placed on the board attack each other. If not,
-                                                        we can undo our last decision, d4, and place the 4th queen somewhere else on the board and see if it's the right outcome and so on. </p>
+                                                        start to evaluate if the set of decisions made led to the intended outcome - do the 4 queens placed on the board attack each other. If not,
+                                                        one approach would be to undo the last decision, d4, and place the 4th queen somewhere else on the board and see if it's the right outcome and so on. </p>
 
                                       
 
@@ -150,21 +179,23 @@
                                                 <blockquote>
                                                     <ul>
                                                         <li>
-                                                                Every decision made is on a particular state of the configuration(i.e the state of the board).
+                                                                Every decision made is on a particular state of a configuration(i.e the state of the board & the number of unplaced queens).
                                                         </li>
                                                         <li>
-                                                                State transitions happen as we decide where to place a queen. (Image of two different board in two different states)
+                                                                Every decision leads to a state transition. When a queen is placed on the board, the configuration is in a different state. 
+                                                                This means, the number of unplaced queens chanages, and the board has one less free cell.
                                                         </li>
                                                         <li>
-                                                                Each set of decision leads to a final state of the configuration.
+                                                                Each set of  4 decisions leads to a final state of the board.
                                                         </li>
                                                     </ul>
                                                 </blockquote>
                                      
                                                 <p class="paragraphFontStyle"> Recursion and Backtracking allow us to translate this exhaustive problem solving 
-                                                    strategy into code. Everytime we make a recursive call on a given configuration(A board and the remaining queens), 
-                                                    we're about to make a decision on that board such as placing the remaining queen on any available cell on the board. 
-                                                    Consequently, every time we backtrack, we have to undo the decision we made so that we can explore other options. </p>
+                                                    strategy into code. Everytime a recursive call is made on a given configuration(A board and the remaining queens), 
+                                                    a decision is about to be made on that board. This merely means placing one of the remaining queens on any available cell on the board. 
+                                                    Then, we recurse again on the new state of the board until we no longer have any queens to place. Once he base case of the recursion is reached, 
+                                                    every time the algorithm backtracks, it's undoing a decision and restoring the board to its previous state. it can then explore other options. </p>
                                                
                                                 <p class="paragraphFontStyle"> Look at the following code</p>
 
@@ -176,12 +207,12 @@
                                                 </blockquote>
 
 
-                                                <p class="paragraphFontStyle"> There are a number of ways to optimize such type of decision making problems. One of potential technique is called constraint programming. 
-                                                        In constraint programming, the idea is to narrow down the number of decisions we make on the next state of a configuration based on what we know about the current 
+                                                <p class="paragraphFontStyle"> There are a number of ways to optimize such type of decision making problems. One potential technique is called constraint programming. 
+                                                        In constraint programming, the idea is to narrow down the number of decisions made on the next state of a configuration based on what is known about the current 
                                                         state of a configuration.
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> For example, if we place the first queen on the top left corner of the chess board, we should avoid placing the next queen on any of 
+                                                <p class="paragraphFontStyle"> For example, if the first queen is placed on the top left corner of the chess board, the algorithm should avoid placing the next queen on any of 
                                                     the crossed out cells shown below since that will lead to the two queens attacking each other.
                                                 </p>
 
@@ -192,10 +223,11 @@
 
 
                                                  <p class="paragraphFontStyle"> 
-                                                     Sometimes, throughout the algorithm, we might encounter a configuration in a state we have seen before
-                                                      and we might find ourselves about to make the same set of decisions on that configuration. To optimize such situations,
-                                                      we can save the result of making a decision on a particular state of a configuration, so that the next time we encounter 
-                                                      the same state, we would know the solution without having to do additional work.
+                                                     Sometimes, as the algorithm is running, it will encounter a configuration in a state it has already seen before,
+                                                      and it might be about to make the same set of decisions on that configuration. However, doing so would be redundant.
+                                                      So, to optimize such situations, it would be better save the result of making a decision on a particular state of a configuration, 
+                                                      so that the next time the algorithm encounters the same state, it would know the solution to making a decision on that particular state 
+                                                      without having to do additional work to compute the solution.
                                                  </p>
 
                                                 

@@ -121,29 +121,29 @@
         
 
                                                 <p class="paragraphFontStyle"> A HashTable or a dictionary is a data structure that supports
-                                                    operations for inserting, searching and removing any key, k. If implemented correctly,
+                                                    operations for inserting, searching and removing any key. If implemented correctly,
                                                     all the operations should take O(1) time.  
                                                 </p>
 
                                                 <img src="../images/hashtable_adt.png" style=" width: 60%;"/>
 
-                                                <p class="paragraphFontStyle"> Given a key, a Hash table maps that key to a particular 'bucket' - 
-                                                    the mapping is done by a 'hash function'. A hash function, h(k), maps a key onto a universe U. 
-                                                    A good hash function has the following properties:
+                                                <p class="paragraphFontStyle"> Given a key, a Hash table maps that key to a particular 'bucket', and 
+                                                    the mapping is done by a 'hash function'. A hash function, h(k), maps a key onto a universe U out of which
+                                                    the bucket is chosen. A good hash function has the following properties:
                                                 </p>
 
                                                 <blockquote>
                                                         <ul>
                                                             <li>
-                                                                    is deterministic
+                                                                   It is deterministic. This means it should always hash some key 'k' to the same bucket
                                                             </li>
                                                             <li>
-                                                                    is fast                                                             </li>
+                                                                    It is fast                                                             </li>
                                                             <li>
-                                                                    Does not hash similar keys to the same bucket. see collision
+                                                                    It does not hash similar keys to the same bucket (handles collision quite well)
                                                             </li>
                                                             <li>
-                                                                    The hash function should behave like a random function - spreading the keys uniformly across each bucket. see 'Universal Hashing'                                    
+                                                                    The hash function should behave like a random function. This means it should spread the keys uniformly across each bucket                                   
                                                             </li>
                                                         </ul>
                                                 </blockquote>
@@ -153,46 +153,45 @@
                                      
 
 
-                                                <p class="paragraphFontStyle"> Now what if the bucket size changes? For some reason, we may want to add more buckets
-                                                     or reduce the number of buckets. In other words, our universe, U, is changing. Whenever that happens, we have to
-                                                      recompute the hash of each key in order to map each key to a new bucket. This has practical implications in 
-                                                      distributed caching, for example. We may want to map 'k' keys to 'n' distributed caches. However, when scaling 
-                                                      up the caches and increasing the number of nodes, we face the issue of having to recompute the hash of every key 
-                                                      which can be costly. One solution is to use consistent hashing. </p>
+                                                <p class="paragraphFontStyle"> Now what if the bucket size changes? A situation may arise where we might have to add more buckets
+                                                     or reduce the number of buckets. In other words, the size of the universe the buckets are being selected from is changing. 
+                                                     Whenever that happens, The hash function needs to generate a new hash for each key in order to map each key to a new bucket. 
+                                                     This situtation has practical usecases particulary in distributed caching. For example, We may want to map 'k' keys to 'n' distributed caches. 
+                                                     However, when scaling up the caches or when removing a node, we face the issue of having to recompute the hash of every key, and that can
+                                                     be costly. This is where consistent hashing offers a better approach. </p>
 
                                       
 
 
-                                                <p class="paragraphFontStyle"> So to re-iterate, Given 'k' keys,  we want to map these keys to 'n' nodes. 
-                                                    However, we want to minimize the number of keys that need to be re-mapped to a new node.
+                                                <p class="paragraphFontStyle"> So to re-iterate, when adding more nodes or removing a nodes from the cache cluster, and 
+                                                    assuming there are 'k' keys, the goal is to minimize the number of keys that need to be re-mapped.
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> The main idea with consistent hashing is to introduce a third space. 
-                                                        Instead of mapping a key 'k' selected from some Universe on to our universe of nodes, we map both
-                                                         the key and the node onto a third universe. In other words, if we have some hash function h(x), 
-                                                         each key can be mapped to h(x)mod(Ub). However, instead of doing that, let's map both keys and nodes 
-                                                         to some buckets in a third Universe. 
+                                                <p class="paragraphFontStyle"> The main idea behind consistent hashing is to introduce a third space. 
+                                                        What a regular hash function does is map a key 'k' selected from some Universe to a universe of nodes.
+                                                        Instead, the hash function maps both the key and the node to a bucket in the third universe. 
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> Once we've mapped a key to a bucket the third universe, we can find 
-                                                        a bucket to the right of the current bucket that contains a node. To help better help visualize this concept,
-                                                        let's map both the keys and nodes to a 32 bit space and let's wrap it around so that it is cyclic. 
-                                                        The cells in the circle represent buckets in the third universe.
+                                                <p class="paragraphFontStyle"> Once each key and node is mapped to a bucket in the third universe, the goal would be to find a bucket
+                                                    in the third universe that has a node to map the key. In other words, hash the key 'k' to the third universe, then find a bucket closest to the key's bucket
+                                                    that contains a node. To better help visualize this concept, imagine both the keys and nodes are mapped to a 32 bit space. Then wrap the 32 bit space around so that 
+                                                    it is cyclic. The cells in the circle represent buckets in the third universe.
                                                 </p>
 
                                                 <img src="../images/consistent_hashing.png" style=" width: 50%;"/>
 
-                                                <p class="paragraphFontStyle"> Next, we hash each node to a bucket in the 32 bit space. Now that we've mapped the nodes, 
-                                                        next step is to map the keys to a node. to do that we hash a key to some bucket in the 32 bit space, and then move
-                                                         clockwise direction until we find a bucket with a node.
+                                                <p class="paragraphFontStyle"> Next, as showed in the image above, each node is mapped to a bucket in the 32 bit space. 
+                                                    Now that the nodes are mapped, next step is to map the keys to a node. To do that, a key gets mapped to some bucket in the 32 bit space, 
+                                                    and then move in clockwise direction starting from the bucket the key just got hashed to until a bucket with a node is found. So the key will be mapped
+                                                    to that bucket.
                                                 </p>
 
-                                                <p class="paragraphFontStyle">  if a node 'a' goes down, then all the keys in node 'a' 
+                                                <p class="paragraphFontStyle">  Now, if node 's3' above goes down, then all the keys in node 's3' 
                                                         will be re-mapped to the next node in the 32 bit space. So no need to re-map every key. 
-                                                        Simillarly if a new node is added,  some of the keys that used to be mapped to the next node 
-                                                        in the 32 bit space will need to be re-mapped. This helps optimize load balancing among caches. 
-                                                        Depending on the distribution of the keys, more optimizations to even out the load balancing by 
-                                                        introducing what are known as 'virtual replicas' on the third universe. More info here: 
+                                                        Simillarly if a new node is added and mapped to a bucket between nodes 's0' & 's2', then only keys that are mapped
+                                                        to buckets between 's0' & the new node will need to be re-mapped. This helps optimize load balancing among caches. 
+                                                        Depending on the distribution of the keys, more optimizations can be made to even out the load balancing by 
+                                                        introducing what are known as 'virtual replicas' on the third universe.
     
                                                 </p>
                                                
@@ -222,7 +221,7 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                 <div class="related-content__item">
                                                     <h4 class="related-content__title">
-                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of Consistent Hashing</a>
+                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of consistent hashing</a>
                                                     </h4>
                                                     <p class="related-content__content">
                                                         Explore different implementations of consistent hashing algorithm 
@@ -234,7 +233,7 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                     <div class="related-content__item">
                                                         <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual replicas in consistent hashing</a>
                                                         </h4>
                                                         <p class="related-content__content">
                                                             How adding virtual replicas help smooth out load balancing
@@ -247,7 +246,7 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                     <div class="related-content__item">
                                                         <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec08.pdf">Universal Hash functions</a>
+                                                            <a  class="relatedContentLink" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec08.pdf">Universal hash functions</a>
                                                         </h4>
                                                         <p class="related-content__content">
                                                             Theoretical exploration of universal hash functions

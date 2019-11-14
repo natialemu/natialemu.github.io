@@ -125,30 +125,30 @@
                                                     It's mostly used when you want to execute a set of behaviors on a common object.
                                                     </p>
 
-                                                <p class="paragraphFontStyle"> Few terms associated with the Command pattern
+                                                <p class="paragraphFontStyle"> Few terms associated with the Command pattern that are used in this note:
                                                 </p>
 
                                                 <blockquote>
                                                         <ul>
                                                             <li>
-                                                                    The behaviors(commands) encapsulated as objects
+                                                                    The behaviors(commands) are encapsulated as objects
                                                             </li>
                                                             <li>
-                                                                    The object that initiates the execution of the commands(client)
+                                                                    The object that initiates the execution of the commands is called the client
                                                             </li>
                                                             <li>
-                                                                    The object that's on the receiving end of the commands(the receiver)
+                                                                    The object that the commands are acting on is called the receiver
                                                             </li>
                                                         </ul>
                                                 </blockquote>
 
-                                                <p class="paragraphFontStyle"> Few examples of command pattern
+                                                <p class="paragraphFontStyle"> Here are a few examples of how the command pattern could potentially be applied:
                                                 </p>
 
                                                 <blockquote>
                                                         <ul>
                                                             <li>
-                                                                    The relationship between a remote control & a TV.  We have a set of commands 
+                                                                    The relationship between a remote control & a TV.  There are a set of commands
                                                                     (Turn on, off, increase volume and so forth) 
                                                                     that are applied on the TV(the receiver) by the remote(client).
                                                             </li>
@@ -159,18 +159,26 @@
                                                         </ul>
                                                 </blockquote>
 
-                                                <img src="../images/command_pattern.png" style=" width: 50%;"/>
-
+                                                
                                      
 
 
                                                 <p class="paragraphFontStyle">
-                                                        So the goal is to create an object, the command object, that encapsulates 
-                                                        the implementation of the desired behavior, and have the user invoke the 
-                                                        behavior only from the command object. The encapsulation is made possible by 
-                                                        exposing just one method 'execute()' that subsequently causes some actions 
+                                                        Regardless of the situation, the goal is to create an object, the command object, 
+                                                        that encapsulates the implementation of the desired behavior, and then have the user invoke the 
+                                                        behavior only from the command object. This encapsulates the implementation of the behavior.
+                                                        The encapsulation is made possible by exposing just one method, usually named 'execute()'. 
+                                                        The execution of the 'execute()' method  subsequently causes some actions 
                                                         to be invoked on the receiver. 
                                                 </p>
+
+                                                <p class="paragraphFontStyle">
+                                                        The sequence of events and the relationship between the objects is best represented in the 
+                                                        uml diagram below
+                                                </p>
+
+                                                <img src="../images/command_pattern_uml.png" style=" width: 50%;"/>
+
 
                                       
 

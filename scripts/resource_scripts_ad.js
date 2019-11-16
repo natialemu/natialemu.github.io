@@ -7,15 +7,10 @@ $(function(){
     /**
      * System Design learning
      */
-    var grokkingDesign = {
-        AppDesignTitle:"Grokking object-oriented design",
-        AppDesignDescription: "Practice object oriented design using several case studies",
-        AppDesignLink: "https://www.educative.io/courses/grokking-the-object-oriented-design-interview"
-     };
 
      var grokkingPattern = {
         AppDesignTitle:"Software design patterns",
-        AppDesignDescription: "Observe how  some of the most common design are applied",
+        AppDesignDescription: "Observe how  some of the most common design patterns are applied",
         AppDesignLink: "https://www.educative.io/courses/software-design-patterns-best-practices"
      };
 
@@ -40,10 +35,8 @@ $(function(){
     /**
       * Append PS learn content to page
       */
-     var adPracticeHtml = ad_resource_modal_template(grokkingDesign);
-     $("#appDesignPracticeContent").append(adPracticeHtml);
 
-     adPracticeHtml = ad_resource_modal_template(grokkingPattern);
+     var adPracticeHtml = ad_resource_modal_template(grokkingPattern);
      $("#appDesignPracticeContent").append(adPracticeHtml);
     
      adPracticeHtml = ad_resource_modal_template(hackerrankOOP);
@@ -89,7 +82,7 @@ $(function(){
 
      var serviceOrientedArchitecture = {
         AppDesignLearningTitle:"Introduction to service-oriented architecture",
-        AppDesignLearningDescription: "Explore two forms of SOA, Rest & WS",
+        AppDesignLearningDescription: "Explore two forms of service oriented architecture: Rest & WS",
         AppDesignLearningLink: "https://www.coursera.org/lecture/service-oriented-architecture/4-1-1-introduction-to-service-oriented-architecture-kEZue"
      };
 

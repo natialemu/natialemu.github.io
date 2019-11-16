@@ -71,13 +71,13 @@ $(function(){
 
      var designAndAnalysisOfAlgorithms = {
         ProblemSolvingLearningTitle:"Design and analysis of algorithms",
-        ProblemSolvingLearningDescription: "Design and analysis of efficient algorithms",
+        ProblemSolvingLearningDescription: "Learn to design and analysis of algorithms",
         ProblemSolvingLearningLink: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/"
      }
 
      var advancedAlgorithms = {
         ProblemSolvingLearningTitle:"Advanced algorithms",
-        ProblemSolvingLearningDescription: "Advanced topics in algorithms design",
+        ProblemSolvingLearningDescription: "Covers advanced topics in algorithms design",
         ProblemSolvingLearningLink: "http://www.infocobuild.com/education/audio-video-courses/computer-science/cs224-fall2014-harvard.html"
      }
 

@@ -122,14 +122,15 @@
 
                                                 <p class="paragraphFontStyle"> 
                                                         A Linked structure refers to a structure that has some sort of recursive relationship
-                                                         among its components (or nodes) as either a linearly linked structure, a tree structure or 
+                                                         among its components (commonly refered to as nodes). These structures can come in the form
+                                                         of a linearly linked structure, a tree structure or 
                                                          a graph structure.
                                                 </p>
 
                                                 <img src="../images/linked_list.png" style=" width: 60%;"/>
 
                                                 <p class="paragraphFontStyle"> 
-                                                        In the above linear linked structure, an node is linked to a another node of the same type and so on. 
+                                                        In the above linear linked structure, a node is linked to a another node of the same type and so on. 
                                                         Linked structures can also be non-linear(trees or graphs):
 
 
@@ -139,16 +140,16 @@
 
                                                 <p class="paragraphFontStyle"> 
                                                  
-                                                        Sometimes this relationship might not be obvious. In a game of chess for 
-                                                        example, you can model the relationship between different states of a board 
-                                                        as a linked structure. the same thing can be applied to the different states 
-                                                        of a rubics cube. Every move made to transition the rubics cube from state 
-                                                        A to state B links the two states. 
+                                                        Sometimes the relationship between nodes in a linked structure will not be explicit and obvious. 
+                                                        In a game of chess for example, you can model the relationship between different states of a board 
+                                                        as a linked structure. A simillar relashionship can be established to the different states 
+                                                        of a rubics cube. Each state of a board or rubics cube will act as a node, and every
+                                                        move made to transition the rubics cube from state A to state B links the two states. 
                                                 </p>
 
                                                 <p class="paragraphFontStyle"> 
-                                                        So linked structures can manifest themselves in a number of ways in real life. 
-                                                        So being able to traverse and manipulate these structures is important. There are 
+                                                        Linked structures can manifest themselves in a number of problems in real life. 
+                                                        As a result, being able to traverse and manipulate these structures is important. There are 
                                                         generally two ways of traversing linked structures:
                                                 </p>
 
@@ -167,14 +168,14 @@
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        Being able to perform these two operations on any linked structure will 
-                                                        open up a new set of ways to approach problems that involve linked structures.
+                                                        The ability to perform these two operations on any linked structure will 
+                                                        open up a new set of problem solving techniques that involve linked structures.
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        So what does it mean to traverse a linked structure breadth first? it means 
+                                                        So, what does it mean to traverse a linked structure breadth first? It means 
                                                         to visit each node in the order in which they are placed in the structure relative 
                                                         to a starting point.
                                                 </p>
@@ -184,9 +185,9 @@
                                      
 
                                                 <p class="paragraphFontStyle"> 
-                                                        For the above picture, if we start traversing the structure at node 49, then 
-                                                        performing a breadth-first search on that structure means visiting the nodes 
-                                                        in this order:  '49', then the next two nodes to visit should be either '41' or 
+                                                        For the above picture, if the traversal starts at node 49, then 
+                                                        then the order in which the nodes will be visited will look something like
+                                                        this:  '49' is visited first, then the next two nodes visited will be either '41' or 
                                                         '79' followed by node '46' at the end.
 
                                                 </p>
@@ -198,7 +199,7 @@
 
 
                                                 <p class="paragraphFontStyle">   
-                                                        If we start traversing the above structure at node '1' on the top left side, then one(highlight this) 
+                                                        If the traversal for above structure starts at node '1' on the top left side, then one
                                                         potential order could be 1, 2, 4, 7, 5, 6, 7. 
     
                                                 </p>
@@ -207,20 +208,18 @@
 
                                                 <p class="paragraphFontStyle"> 
                                                     
-                                                        The order of BFS traversal for linearly linked stucture is straight forward. 
-                                                        For the structure above, the order would be 'A', 'B', 'C', then 'D'.
+                                                        The order of a breadth-first traversal of a linearly linked stucture is straight forward. 
+                                                        For the structure above, the order would be 'A', 'B', 'C', then 'D' if the traversal starts
+                                                        at node 'A'.
 
 
     
                                                 </p>
 
-                                                <p class="paragraphFontStyle">  
-                                                        A lot of other problems and algorithms on linked structures can be reduced to these two basic operations. 
     
-                                                </p>
-
                                                 <p class="paragraphFontStyle">  
-                                                        The general idea is the same. Before going 'deep' into the structure away from the starting, 
+                                                        Most problems and algorithms on linked structures can be reduced to these two basic traversal operations.
+                                                        The general idea is the same. Before going 'deep' into the structure or away from the starting node, 
                                                         explore all nodes near the structure first. Traversing a graph breadth first can mean 
                                                         different things depending on what the structure represents. For example: 
     
@@ -235,16 +234,16 @@
                                                             </li>
                                                             <li>
                                                                     If the structure represents a social network where nodes represent 
-                                                                    ppl and relationships are established based on 'friendship', one 
-                                                                    insight we can get by traversing this type of graph breadth first is 
-                                                                    to provide friend and/or follower reccomendations.                        
+                                                                    people and relationships are established based on 'friendship', one 
+                                                                    insight a breadth-first traversal of this graph can provide is 
+                                                                    friend and/or follower reccomendations.                        
                                                             </li>
                                                             <li>
                                                                     If the structure represents different states of a board game, and 
                                                                     relationships are established based on moves made to transition the 
                                                                     board from one state to another, traversing this structure can help 
                                                                     answer questions such as the quickest way to get to 'win' or get to 
-                                                                    some state.                       
+                                                                    some desired state.                       
                                                             </li>
                                                             
                                                             
@@ -257,8 +256,8 @@
 
 
                                                 <p class="paragraphFontStyle">  
-                                                        General implementation of Breadth first search traversals involve using data structures 
-                                                        that provide operations that prioritize nodes closest to a starting node. For example, 
+                                                        General implementations of breadth-first search traversals involve using data structures 
+                                                        whose operations prioritize nodes closest to a starting node. For example, 
                                                         in most cases a queue data structure can be used to keep track of the order of nodes. 
                                                         In other situations, a priority queue can be used to prioritize nodes 'closest' to the 
                                                         starting point. Regardless of the choice of data structure, the general algorithm is the same:
@@ -270,9 +269,9 @@
 
                                                 <p class="paragraphFontStyle">  
                                                         The second way of traversing linked structure is depth first search. In this case, the 
-                                                        algorithm goes deep into the structure farther away from the source to first explore the 
-                                                        farthest set of nodes and then subsequently moves closer to the source. This is the opposite 
-                                                        of traversing a linked structure depth first. 
+                                                        algorithm goes deep into the structure or farther away from the source and explores the 
+                                                        farthest set of nodes first. It will then subsequently moves closer to the source. This is the opposite 
+                                                        of traversing a linked structure breadth-first. 
     
                                                 </p>
 
@@ -280,7 +279,7 @@
 
                                                 <p class="paragraphFontStyle">  
                                                         
-                                                        if we start performing a depth first traversal on above structure at node '1' on node 49, then 
+                                                        If the depth-first traversal on the above structure starts atnode 49, then 
                                                         the algorithm would go deep and explore node '46' first before backtracking  visiting nodes '41'
                                                          and '79' and eventually making its way back to the source.
                                                 </p>
@@ -288,7 +287,7 @@
                                                 <p class="paragraphFontStyle">  
                                                         
                                                         When performing a depth first traversal of a structure, by the time the algorithm is on it's way back and is at node 'x', 
-                                                        for example, it must have explored all the nodes farthest from 'x'. This is helpful in situations where we might need to 
+                                                        for example, it must have explored all the nodes farthest from 'x'. This is helpful in situations where the goal might be to 
                                                         combine or add up information the algorithm has gathered about all the nodes it's visited so far as it back tracks.
                                                 </p>
 

@@ -7,6 +7,14 @@ $(function(){
     /**
      * System Design practice
      */
+
+    var graphQLAtNetflix = {
+      SystemDesignTitle:"GraphQL at Netflix",
+      SystemDesignDescription: "Key takeaways from adopting GraphQL at Netflix",
+      SystemDesignLink: "https://medium.com/netflix-techblog/our-learnings-from-adopting-graphql-f099de39ae5f"
+   };
+
+
     var graphQLSearchIndexing = {
         SystemDesignTitle:"GraphQL search indexing",
         SystemDesignDescription: "GraphQL search indexing",
@@ -17,12 +25,6 @@ $(function(){
         SystemDesignTitle:"DynamoDB",
         SystemDesignDescription: "DynamoDB data modeling",
         SystemDesignLink: "https://medium.com/expedia-group-tech/dynamodb-data-modeling-c4b02729ac08"
-     };
-
-     var graphQLAndKotlin = {
-        SystemDesignTitle:"GraphQL and Kotlin",
-        SystemDesignDescription: "Create GraphQL schemas in Kotlin",
-        SystemDesignLink: "https://medium.com/expedia-group-tech/creating-graphql-schemas-in-kotlin-aaaac0ab0672"
      };
 
 
@@ -43,12 +45,6 @@ $(function(){
         SystemDesignTitle:"Tackling dataset pub-sub",
         SystemDesignDescription: "How a team at Netflix tackled dataset publish subscribe issues",
         SystemDesignLink: "https://medium.com/netflix-techblog/how-netflix-microservices-tackle-dataset-pub-sub-4a068adcc9a"
-     };
-
-     var graphQLAtNetflix = {
-        SystemDesignTitle:"GraphQL at Netflix",
-        SystemDesignDescription: "Key takeaways from adopting GraphQL at Netflix",
-        SystemDesignLink: "https://medium.com/netflix-techblog/our-learnings-from-adopting-graphql-f099de39ae5f"
      };
 
      var scalingDataStorage = {
@@ -90,13 +86,10 @@ $(function(){
     /**
       * Append PS learn content to page
       */
-     var sdPracticeHtml = sd_resource_modal_template(graphQLSearchIndexing);
+     var sdPracticeHtml = sd_resource_modal_template(graphQLAtNetflix);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(dynamoDB);
-     $("#systemDesignPracticeContent").append(sdPracticeHtml);
-
-     sdPracticeHtml = sd_resource_modal_template(graphQLAndKotlin);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(valueOfApi);
@@ -108,7 +101,7 @@ $(function(){
      sdPracticeHtml = sd_resource_modal_template(pubSubAtNetflix);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
-     sdPracticeHtml = sd_resource_modal_template(graphQLAtNetflix);
+     sdPracticeHtml = sd_resource_modal_template(graphQLSearchIndexing);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(scalingDataStorage);

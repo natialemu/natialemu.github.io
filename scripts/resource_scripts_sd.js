@@ -8,13 +8,6 @@ $(function(){
      * System Design practice
      */
 
-    var graphQLAtNetflix = {
-      SystemDesignTitle:"GraphQL at Netflix",
-      SystemDesignDescription: "Key takeaways from adopting GraphQL at Netflix",
-      SystemDesignLink: "https://medium.com/netflix-techblog/our-learnings-from-adopting-graphql-f099de39ae5f"
-   };
-
-
     var graphQLSearchIndexing = {
         SystemDesignTitle:"GraphQL search indexing",
         SystemDesignDescription: "GraphQL search indexing",
@@ -27,19 +20,6 @@ $(function(){
         SystemDesignLink: "https://medium.com/expedia-group-tech/dynamodb-data-modeling-c4b02729ac08"
      };
 
-
-     var valueOfApi = {
-        SystemDesignTitle:"The API spectrum",
-        SystemDesignDescription: "Measure the value of your API",
-        SystemDesignLink: "https://medium.com/expedia-group-tech/knowing-the-value-of-your-api-85d15c5d52ca"
-     };
-
-
-     var kafkaAtLinkedIn = {
-        SystemDesignTitle:"Kafka at LinkedIn",
-        SystemDesignDescription: "How Linkedin uses kafka for 7 trillion messages per day",
-        SystemDesignLink: "https://engineering.linkedin.com/blog/2019/apache-kafka-trillion-messages"
-     };
 
      var pubSubAtNetflix = {
         SystemDesignTitle:"Tackling dataset pub-sub",
@@ -55,7 +35,7 @@ $(function(){
 
      var dataLineageAtNetflix = {
         SystemDesignTitle:"Building and scaling data lineage at Netflix",
-        SystemDesignDescription: "Imrove data infrastructure reliability",
+        SystemDesignDescription: "Building and Scaling Data Lineage at Netflix to Improve Data Infrastructure Reliability, and Efficiency",
         SystemDesignLink: "https://medium.com/netflix-techblog/building-and-scaling-data-lineage-at-netflix-to-improve-data-infrastructure-reliability-and-1a52526a7977"
      };
 
@@ -82,20 +62,51 @@ $(function(){
         SystemDesignLink: "https://medium.com/swlh/what-is-serverless-the-2020-edition-5a2f21581fe5"
      }
 
+     var miGz = {
+      SystemDesignTitle:"MiGz for Compression and Decompression",
+      SystemDesignDescription: "Using MiGz for compression and decompression",
+      SystemDesignLink: "https://engineering.linkedin.com/blog/2019/02/migz-for-compression-and-decompression"
+   }
 
-    /**
-      * Append PS learn content to page
-      */
-     var sdPracticeHtml = sd_resource_modal_template(graphQLAtNetflix);
-     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+   var kafkaIntro = {
+      SystemDesignTitle:"What is Kafka",
+      SystemDesignDescription: "An introduction to the basics of kafka",
+      SystemDesignLink: "https://www.linkedin.com/pulse/what-apache-kafka-michael-skariah/"
+   }
 
-     sdPracticeHtml = sd_resource_modal_template(dynamoDB);
+   var auditingFollowFeed = {
+      SystemDesignTitle:"Auditing Content Features in FollowFeed",
+      SystemDesignDescription: "How Linkedin handles auditing challenges in feed ranking",
+      SystemDesignLink: "https://engineering.linkedin.com/blog/2019/followfeed-features-auditing"
+   }
+
+   var linkedinInfrastructure = {
+      SystemDesignTitle:"Building the next version of our infrastructure",
+      SystemDesignDescription: "How LinkedIn scales their infrastructure",
+      SystemDesignLink: "https://engineering.linkedin.com/blog/2019/building-next-infra"
+   }
+
+   var cacheingAtNetflix = {
+      SystemDesignTitle:"Cacheing at Netflix",
+      SystemDesignDescription: "How LinkedIn scales their infrastructure",
+      SystemDesignLink: "https://www.youtube.com/watch?v=Rzdxgx3RC0Q&list=PL-vqXrn5DveI73EwM8tpgjkqGvrnPR7hN&index=22&t=5s"
+   }
+   var scalingMicroservicesAtNetflix = {
+      SystemDesignTitle:"Microservices at Netflix Scale",
+      SystemDesignDescription: "Principles, Tradeoffs & Lessons Learned when implementing microservices at scale at Linkedin",
+      SystemDesignLink: "https://www.youtube.com/watch?v=57UK46qfBLY&list=PL-vqXrn5DveI73EwM8tpgjkqGvrnPR7hN&index=20&t=10s"
+   }
+   var deceptiveDistributedSystemsProblems = {
+      SystemDesignTitle:"Deceptive problems in Distributed systems",
+      SystemDesignDescription: "Explores challenges and lessons learnt at Linknedin with their system design",
+      SystemDesignLink: "https://www.youtube.com/watch?v=Wa13vonp3og&list=PL-vqXrn5DveI73EwM8tpgjkqGvrnPR7hN&index=17&t=5s"
+   }
+
+
+     var sdPracticeHtml = sd_resource_modal_template(dynamoDB);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(valueOfApi);
-     $("#systemDesignPracticeContent").append(sdPracticeHtml);
-
-     sdPracticeHtml = sd_resource_modal_template(kafkaAtLinkedIn);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(pubSubAtNetflix);
@@ -119,9 +130,29 @@ $(function(){
      sdPracticeHtml = sd_resource_modal_template(scalingDropbox);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
-     sdPracticeHtml = sd_resource_modal_template(scalingDropbox);
-     $("#systemDesignPracticeContent").append(serverless);
+     sdPracticeHtml = sd_resource_modal_template(serverless);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
+     sdPracticeHtml = sd_resource_modal_template(miGz);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(linkedinInfrastructure);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(auditingFollowFeed);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(kafkaIntro);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(deceptiveDistributedSystemsProblems);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(cacheingAtNetflix);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
+
+     sdPracticeHtml = sd_resource_modal_template(scalingMicroservicesAtNetflix);
+     $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
 
 

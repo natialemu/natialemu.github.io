@@ -106,8 +106,6 @@ $(function(){
      var sdPracticeHtml = sd_resource_modal_template(dynamoDB);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
-     sdPracticeHtml = sd_resource_modal_template(valueOfApi);
-     $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
      sdPracticeHtml = sd_resource_modal_template(pubSubAtNetflix);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);

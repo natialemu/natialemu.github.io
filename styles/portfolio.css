@@ -1919,6 +1919,8 @@ a:link {
 .landing-page-section.rules {
     height: auto;
     background-color: #fff;
+    padding-left: 5%!important;
+    padding-right: 5%!important;
 }
 
 .landing-page-section {
@@ -2056,7 +2058,7 @@ a:link {
 }
 .landing-page-section.rules .content-box.previous-box {
     height: 176px;
-    width: 246px;
+    width: 100%;
     justify-content: center;
 }
 @media (max-width: 539px) {
@@ -2142,7 +2144,7 @@ a:link {
 @media (min-width: 1176px) {
     .landing-page-section.rules .content-box.previous-box {
         height: 250px;
-        width: 350px;
+        width: 100%;
     }
 }
 

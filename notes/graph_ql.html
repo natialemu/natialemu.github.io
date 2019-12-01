@@ -107,8 +107,8 @@
                     <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: #ffffff;">
                     </div>
                     <div class="desk--eight-twelfths story-page__head-shot-caption">
-                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Algorithms & distributed systems</p>
-                            <p class="head-shot-short-desc">Hashing, distributed caching</p>          
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">System design</p>
+                            <p class="head-shot-short-desc">APIs, REST</p>          
                     </div>
                 </div>
 
@@ -120,83 +120,208 @@
 
         
 
-                                                <p class="paragraphFontStyle"> A HashTable or a dictionary is a data structure that supports
-                                                    operations for inserting, searching and removing any key. If implemented correctly,
-                                                    all the operations should take O(1) time.  
+                                                <p class="paragraphFontStyle"> REST is one way of manipulating data managed by a remote service. It avoids direct
+                                                     coupling of remote procedures & minimizes the need for domain specific APIs. So, It’s an interesting 
+                                                     architectural style when building a web service. Instead of asking for a particular behavior to be executed, 
+                                                     with REST, you’re asking for a resource using standardized HTTP verbs. In addition, REST manages state 
+                                                     transitions seamlessly analogous to that of how the web handles state transitions. Users navigating the 
+                                                     web don’t have to type in the URI of every web page they visit. Instead, in most cases, transitioning
+                                                     from one page to another is done by clicking on links displayed on a page. State transition occurs in REST
+                                                     in a similar way with a principle known as HATEOS.  
                                                 </p>
 
-                                                <img src="../images/hashtable_adt.png" style=" width: 60%;"/>
+                                                <p class="paragraphFontStyle"> 
+                                                        There are certain situations, however, where designing APIs in such a way is not ideal regardless 
+                                                        of weather or not the web service is a REST service or more of a remote procedure call.
 
-                                                <p class="paragraphFontStyle"> Given a key, a Hash table maps that key to a particular 'bucket', and 
-                                                    the mapping is done by a 'hash function'. A hash function, h(k), maps a key onto a universe U out of which
-                                                    the bucket is chosen. A good hash function has the following properties:
                                                 </p>
+
+                                                <p class="paragraphFontStyle"> 
+                                                        As web services evolve, usually one of two things will happen.The size and complexity of your response 
+                                                        becomes bigger which means the payload of the API's response will get significantly bigger. Clients will have to accept 
+                                                        the entire response even though they may only want a small subset of that information. One solution 
+                                                        to this issue is to break this complex API into more granular ones. However, this adds more work for the clients of the API
+                                                        because clients will need to make multiple API calls to the web services to get all the bits of information they
+                                                          need. They will then have to combine each response in a way that suits them.
+
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> 
+
+                                                        So an unnecessary amount of time might be spent for clients trying to orchestrate multiple API calls
+                                                         and combine the results. In a similar way, it is hard for the developers of the web service to know get a good sense of 
+                                                         how their  clients are using their APIs. Clients might only need roughly 10% of the response from one of your endpoints, however,
+                                                          it’s hard for the server side developer to get an accurate sense of how clients use the response. So with this type of API design, 
+                                                          deprecation of existing fields is extremely difficult and the traditional approach is to resort to versioning APIs.
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+
+ 
+                                                        This is mostly where GraphQL comes in. It was initially developed at facebook and eventually open sourced. It aims to 
+                                                        simplify a lot of the issues mentioned above in developing traditional web services. GraphQL represents an approach to access
+                                                         and query data from one or more sources with convenience for all parties involved. There are a number of GraphQL 
+                                                         components involved to make this happen: 
+                                                </p>
+
+                                                <img src="../images/graphql_flow.png" style=" width: 40%;"/>
 
                                                 <blockquote>
                                                         <ul>
                                                             <li>
-                                                                   It is deterministic. This means it should always hash some key 'k' to the same bucket
+                                                                    The client of the GraphQL API                                                       
                                                             </li>
                                                             <li>
-                                                                    It is fast                                                             </li>
-                                                            <li>
-                                                                    It does not hash similar keys to the same bucket (handles collision quite well)
+                                                                    The GraphQL layer or implementation                                                           
                                                             </li>
                                                             <li>
-                                                                    The hash function should behave like a random function. This means it should spread the keys uniformly across each bucket                                   
+                                                                    The web services that act as source of data for the GraphQL layer
                                                             </li>
                                                         </ul>
                                                 </blockquote>
 
-                                                <img src="../images/hashing_basic.png" style=" width: 40%;"/>
+                                                
 
                                      
 
 
-                                                <p class="paragraphFontStyle"> Now what if the bucket size changes? A situation may arise where we might have to add more buckets
-                                                     or reduce the number of buckets. In other words, the size of the universe the buckets are being selected from is changing. 
-                                                     Whenever that happens, The hash function needs to generate a new hash for each key in order to map each key to a new bucket. 
-                                                     This situtation has practical usecases particulary in distributed caching. For example, We may want to map 'k' keys to 'n' distributed caches. 
-                                                     However, when scaling up the caches or when removing a node, we face the issue of having to recompute the hash of every key, and that can
-                                                     be costly. This is where consistent hashing offers a better approach. </p>
+                                                <p class="paragraphFontStyle">
+                                                        The first thing that is usually designed and implemented is the GraphQL schema. A GraphQL schema can look something like this:    
+                                                </p>
+
+                                                <img src="../images/sample_graphql_schema.png" style=" width: 40%;"/>
+
 
                                       
 
 
-                                                <p class="paragraphFontStyle"> So to re-iterate, when adding more nodes or removing a nodes from the cache cluster, and 
-                                                    assuming there are 'k' keys, the goal is to minimize the number of keys that need to be re-mapped.
+                                                <p class="paragraphFontStyle"> 
+                                                        Both the client and the server are in sync & statically bound to this schema via an API driven approach. This allows both the 
+                                                        client and server to validate their messages to make sure they’re conforming to the schema. The graphQL layer uses this schema 
+                                                        definition to generate what is known as an Object Graph. This just represents the relationships that different resource objects 
+                                                        have based on the defined schema. 
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> The main idea behind consistent hashing is to introduce a third space. 
-                                                        What a regular hash function does is map a key 'k' selected from some Universe to a universe of nodes.
-                                                        Instead, the hash function maps both the key and the node to a bucket in the third universe. 
+                                                <p class="paragraphFontStyle"> 
+                                                        The GraphQL API can interface with different types of services, some of which might use HTTP to communicate with one another and others
+                                                         might use some sort of remote procedure call. So, the source of data for the GraphQL layer can be a number of things. 
+ 
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> Once each key and node is mapped to a bucket in the third universe, the goal would be to find a bucket
-                                                    in the third universe that has a node to map the key. In other words, hash the key 'k' to the third universe, then find a bucket closest to the key's bucket
-                                                    that contains a node. To better help visualize this concept, imagine both the keys and nodes are mapped to a 32 bit space. Then wrap the 32 bit space around so that 
-                                                    it is cyclic. The cells in the circle represent buckets in the third universe.
+                                                <p class="paragraphFontStyle">
+                                                        Once the GraphQL layer and the service are properly set up, the client writes ‘GraphQL queries’ which are subsequently validated 
+                                                        and executed by the GraphQL layer or implementation. These queries are quite similar to JSON so it is easy to quickly start writing 
+                                                        GraphQL queries. The GraphQL implementation then traverses the object graph & sends back a response to the client. 
                                                 </p>
 
-                                                <img src="../images/consistent_hashing.png" style=" width: 50%;"/>
-
-                                                <p class="paragraphFontStyle"> Next, as showed in the image above, each node is mapped to a bucket in the 32 bit space. 
-                                                    Now that the nodes are mapped, next step is to map the keys to a node. To do that, a key gets mapped to some bucket in the 32 bit space, 
-                                                    and then move in clockwise direction starting from the bucket the key just got hashed to until a bucket with a node is found. So the key will be mapped
-                                                    to that bucket.
+                                                <p class="paragraphFontStyle"> 
+                                                        GraphQL queries come in different forms: there are queries that retrieve data, modify data(known as mutations) or 
+                                                        subscribe to certain events(known as subscriptions).  With subscriptions, clients subscribe to an event with a 
+                                                        GraphQL query and receive payloads. These payloads represent the result of running the query against the event.
                                                 </p>
 
-                                                <p class="paragraphFontStyle">  Now, if node 's3' above goes down, then all the keys in node 's3' 
-                                                        will be re-mapped to the next node in the 32 bit space. So no need to re-map every key. 
-                                                        Simillarly if a new node is added and mapped to a bucket between nodes 's0' & 's2', then only keys that are mapped
-                                                        to buckets between 's0' & the new node will need to be re-mapped. This helps optimize load balancing among caches. 
-                                                        Depending on the distribution of the keys, more optimizations can be made to even out the load balancing by 
-                                                        introducing what are known as 'virtual replicas' on the third universe.
+                                                <p class="paragraphFontStyle">  
+                                                        For example, clients might want answers to the following questions
     
                                                 </p>
+
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    Get all hotels in a particular city and corresponding bedding information                                                           
+                                                            </li>
+                                                            <li>
+                                                                    Get hotel information                                                         
+                                                            </li>
+                        
+                                                        </ul>
+                                                </blockquote>
+
+
+                                                <p class="paragraphFontStyle">  
+
+                                                        To answer this questions, traditionally, one would have to either make multiple API calls to and somehow 
+                                                        combine the results. GraphQL makes it easier by letting the client write the query that represents the 
+                                                        above questions. Then the graphQL implementation will traverse the object graph based on the pre-defined 
+                                                        GraphQL schema and provide a response.
+                                                </p>
                                                
-                                     
+
+                                                <p class="paragraphFontStyle">  
+
+                                                        The graphQL query for the first of the two questions might look something like this:
+                                                </p>
+
+                                                <img src="../images/graphQL_query.png" style=" width: 40%;"/>
+
+                                                <p class="paragraphFontStyle">  
+                                                        So clients will need to implement a GraphQL client which is responsible for initiating the execution of the 
+                                                        graphQL query and also handle the result of the graphQL execution. And on the other end, server side implementation 
+                                                        of GraphQL is necessary to ‘tie’ your web service to the schema. There are GraphQL liberaries in a number of languages that 
+                                                        one can use to implement GraphQL on server side.
+                                                </p>
+                                                <!-- <p class="paragraphFontStyle">  
+                                                        Here is an example server-side java implementation of GraphQL using the graphql-java library.                                                  
+                                                </p>
+
+                                                <img src="../images/hashing_basic.png" style=" width: 40%;"/>
+
+                                                <p class="paragraphFontStyle">  
+
+                                                        The GraphQL schema will automatically be created by annotating the fields and behaviors of your Java classes. 
+                                                        The @GraphQLField will create a graphQL field along with its resolver.
+                                                </p> -->
+                                                <p class="paragraphFontStyle">  
+
+                                                        Integrating GraphQL into your stack has quite the list of benefits. In some cases, it can improve the system’s performance by consolidating multiple network calls into one GraphQL call. 
+                                                        The GraphQL layer still has to make a similar number of calls to the backend service. However, in most cases, these set of services are usually in the same cluster or data center, 
+                                                        so network communication among them isn’t as expensive. In addition, for some clients, the size of the payload would significantly be reduced. However, since a GraphQL query is only 
+                                                        as fast as the slowest REST service call, not all clients may feel the performance improvements.
+                                                </p>
+                                                <p class="paragraphFontStyle">  
+                                                        The biggest selling point of GraphQL has to be the convenience and flexibility it offers. The client of a GraphQL API doesn’t have to worry about orchestrating multiple API calls to
+                                                         back-end services or spend time to figure out how to filter, map, and process responses. Similarly, server-side developers gain flexibility in not only how they design their APIs, 
+                                                         but also how they evolve and modify it going forward. They also gain detailed insights as to how clients use their APIs which makes deprecation of fields much easier.
+
+                                                </p>
                                 
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                        It is important not to forget that GraphQL is still an API clients interact with so, it’s important to come up with ways to implement things such as monitoring, proper error handling and 
+                                                        validation, ways of measuring success, logging, circuit breaker techniques for fault tolerance and so forth.
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                       
+                                                        Measuring success rate of calls can be a bit tricky with GraphQL. With traditional APIs, one way to measure success rates is to track the number of 500 or 503 responses and compare that 
+                                                        to the rate of 200 responses. GraphQL, however, represents partial success. It shouldn’t blow up if one part fails so tracking success rate is not as straightforward. GraphQL will return 
+                                                        a 200 even if it didn’t manage to return any data. One way to measure success is to track the number of exceptions per query over a certain time window.
+
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                     
+                                                    
+                                                        Query validation is also another important part of setting up a graphQL API. Deep and complex queries could affect the performance of your service and could potentially even be used with 
+                                                        malicious intent. So it’s important to first reason what depth and complexity of queries mean to the domain your APIs are serving. This will help to set up proper protections such as setting thresholds for 
+                                                        query depth and quantifying query complexity. Just like stored procedures, stored GraphQL operations can be created. These are simply pre-defined and validated queries that are persisted 
+                                                        and can always be used to get data. They’ll be associated with a key and clients can use that key to execute the data without knowing the details of the query.
+
+                                                </p>
+
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                        GraphQL definitely has a lot of benefits. But it is not without a few setbacks. For example, server utilization will usually increase since processing the complex object graph will 
+                                                        require more processing. Also, since GraphQL resolvers(behaviors attached to graphQL types) run as isolated units, there is a potential for duplicate network requests for similar 
+                                                        data to the backend service. GraphQL is also not ideal for use in every situation. It shines best at the edge of a stack. Services at that level are usually responsible for 
+                                                        orchestrating and aggregating multiple API calls to several smaller back-end micro-services. It wouldn’t make much sense to integrate GraphQL to a small micro service with very few 
+                                                        and simple APIs. So it’s always best to analyze the use case prior to implementation since it may not be the best fit. Usually, GraphQL and other APIs such as REST or gRPC  
+                                                        can work hand in hand, and one is not intended to be a replacement for the other.
+                                                </p>
                                                 
 
 
@@ -221,10 +346,10 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                 <div class="related-content__item">
                                                     <h4 class="related-content__title">
-                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of consistent hashing</a>
+                                                        <a  class="relatedContentLink" href="https://productionreadygraphql.com/">Production ready GraphQL</a>
                                                     </h4>
                                                     <p class="related-content__content">
-                                                        Explore different implementations of consistent hashing algorithm 
+                                                        A comprehensive set of advices for using GraphQL in production
                                                     </p>
                                                 </div>
                                             </div>
@@ -233,38 +358,14 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                     <div class="related-content__item">
                                                         <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual replicas in consistent hashing</a>
+                                                            <a  class="relatedContentLink" href="https://www.youtube.com/watch?v=A5-H6MtTvqk&list=PL-vqXrn5DveI73EwM8tpgjkqGvrnPR7hN&index=15&t=26s">GraphQL error handling</a>
                                                         </h4>
                                                         <p class="related-content__content">
-                                                            How adding virtual replicas help smooth out load balancing
+                                                           Explains how to model domain errors in GraphQL schemas
                                                         </p>
                                                     </div>
                                                 </div>
 
-
-                                                           <!--item 2-->
-                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                    <div class="related-content__item">
-                                                        <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/lecture-notes/MIT6_046JS15_lec08.pdf">Universal hash functions</a>
-                                                        </h4>
-                                                        <p class="related-content__content">
-                                                            Theoretical exploration of universal hash functions
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                        <div class="related-content__item">
-                                                            <h4 class="related-content__title">
-                                                                <a  class="relatedContentLink" href="https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1172/lectures/29-EsotericDataStructures/EsotericDataStructures.pdf">Bloom filters</a>
-                                                            </h4>
-                                                            <p class="related-content__content">
-                                                                An efficient data structure for checking if an element is a member of a set
-                                                            </p>
-                                                        </div>
-                                                    </div>
     
                                     </div>
                                 </div>

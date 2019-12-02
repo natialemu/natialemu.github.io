@@ -66,7 +66,7 @@
 											</a>
 									</li>
 									<li class="gc-header-dt__nav-list-item">
-										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+										<a href="../notes.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
 											Notes
 										</a>
 									</li>
@@ -87,7 +87,43 @@
 						
 						</div>
 	
-					</nav>
+                    </nav>
+                    
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                    <a href="#" class="active"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                            Command pattern
+                                                    </a>
+                                        </li>
+                             
+                                
+    
+                                 
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
 	
                 </header>
 
@@ -172,6 +208,15 @@
                                                         to be invoked on the receiver. 
                                                 </p>
 
+                                                <p class="paragraphFontStyle"> 
+                                                        This behavior of the command pattern allows the requestor of the action to be decoupled 
+                                                        from the object that carries out this action. It's very helpful in situations 
+                                                        where there could be a number of ways to invoke an operation. For ex, you can 
+                                                        execute any of the commands on a text document by either clicking a menu, 
+                                                        an icon or even via a keyboard shortcut. 
+
+                                                </p>
+
                                                 <p class="paragraphFontStyle">
                                                         The sequence of events and the relationship between the objects is best represented in the 
                                                         uml diagram below
@@ -179,59 +224,46 @@
 
                                                 <img src="../images/command_pattern_uml.png" style=" width: 50%;"/>
 
-
-                                      
-
-
-                                                <p class="paragraphFontStyle"> 
-                                                        The command pattern also allows the requestor of the action to be decoupled 
-                                                        from the object that carries out this action. It's very helpful in situations 
-                                                        where there could be a number of ways to invoke an operation. For ex, you can 
-                                                        execute any of the above commands above on a text document by a clicking a menu, 
-                                                        an icon or even via a keyboard shortcut. 
-
-                                                </p>
-
-
                                      
                                                 <p class="paragraphFontStyle">  
                                                         Another usecase of the command pattern is in situations when you might 
                                                         want to execute a set of commands synchronously on an object. If one 
-                                                        command fails during this process, you can choose to immediately undo 
+                                                        command fails during this process, you can choose to immediately rollback 
                                                         the executed commands. 
 
                                                 </p>
                                                
                                                 <p class="paragraphFontStyle"> 
-                                                    Let's imagine the following scenrio. If you have a 
-                                                    microservice and one of the endpoints will create some complex object 'A'. 
-                                                    However, in order to create that object, the following things are required:</p>
+                                                    For example, if there is some 
+                                                    microservice with several endpoints, and one of the endpoints will create some complex object 'A'. 
+                                                    However, in order to create that object, the following things need to happen:</p>
 
                                                     <blockquote>
                                                             <ol>
                                                                 <li>
-                                                                        it has to call 5 other micro services to create parts of the object.(m1, m2, m3, m4, m5)
+                                                                        the service has to call 5 other micro services to create parts of the object.(m1, m2, m3, m4, m5)
                                                                 </li>
                                                                 <li>
-                                                                        Let's assume calls to m3 depend on the response from m2.
-                                                                </li>
-
-                                                                <li>
-                                                                        In order to consider the whole object as  created & saved, every part of the object 
-                                                                        will need to be saved by each micro service.
+                                                                        There is a lot of dependency among the service calls. This means the call to service 2 depends on
+                                                                        the response from service 1, for example.
                                                                 </li>
                                                             </ol>
                                                     </blockquote>
 
+                                                    <p class="paragraphFontStyle"> 
+                                                           So during the creation of the object, the command pattern can be used to encapsulate the the process
+                                                           of calling each micro service.
+                                                        </p>
+
 
                                                 <p class="paragraphFontStyle"> 
-                                                        One of the design patterns that we can use here is the command design pattern. 
-                                                        For this particular case, we can define a set of 5 commands, each responsible for 
-                                                        sending a request to each microervice to save a part of the object. we have to define 
-                                                        the order in which we want the orders to get executed. Each command behavior is acting
-                                                         on the object we want to build. if any of the commands fail to execute, we can undo 
-                                                         the commands that already executed. in other words, we don't want only a few parts 
-                                                         of the object created and saved while other parts were unsuccessful. 
+            
+                                                        A set of commands can be defined, each responsible for 
+                                                        sending a request to each microervice & processing the response. The order for the execution of each command 
+                                                        needs to be set based on the dependency of each call. In this case, 
+                                                        the reciever of the command can be an object that encapsulates the response from each call. 
+                                                        Each command will have access to that object prior to the execution of the respective behavior.
+                                                        if any of the commands fail to execute, the commands that have already executed can be rolled back. 
                                                 </p>
 
                                                 <p class="paragraphFontStyle"> 
@@ -314,9 +346,6 @@
 			      Browse through resources
 			  </a>
 
-			  <a href="https://github.com/natialemu">
-			      Jump to Github
-			  </a>
 
 			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
 			      View LinkedIn

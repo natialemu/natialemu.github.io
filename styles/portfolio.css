@@ -1103,7 +1103,7 @@ button{
     background-color:rgb(240,240,240);
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 0;
     position: relative;
 	margin-bottom: 40px;
 }

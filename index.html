@@ -382,12 +382,12 @@
          };
 
 
-		 var commandPattern = {
-			NoteTitle:"Command pattern",
-			NoteDescription: "Benefits and use cases of the command design pattern",
-			NoteTileId: "appDesignNote1",
-			NoteLink: "command_pattern.html",
-			NoteTileImage: "command_pattern_tile1.png"
+		 var traversal = {
+			NoteTitle:"Traversals",
+			NoteDescription: "Traversing linked structures such as linked lists, trees and graphs",
+			NoteTileId: "algoNote2",
+			NoteLink: "linked_structures.html",
+			NoteTileImage: "hashing_tile3.png"
          };
 
 		 var graphQL = {
@@ -405,12 +405,14 @@
 	   html = note_modal_template(consistentHashing);
 	   $("#notecontent").append(html);
 
-	   html =note_modal_template(commandPattern);
-	   $("#notecontent").append(html);
-
 
 	   html = note_modal_template(graphQL);
 	   $("#notecontent").append(html);
+
+	   html =note_modal_template(traversal);
+	   $("#notecontent").append(html);
+
+
 
 	});
 	</script>

@@ -66,7 +66,7 @@
 											</a>
 									</li>
 									<li class="gc-header-dt__nav-list-item">
-										<a href="../notes.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+										<a href="../notes.html" class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
 											Notes
 										</a>
 									</li>
@@ -87,7 +87,47 @@
 						
 						</div>
 	
-					</nav>
+                    </nav>
+                    
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                    <a href="#" class="active"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                            Kafka
+                                                    </a>
+                                        </li>
+                             
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="graph_ql.html"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                        GraphQL
+                                                </a>
+                                        </li>
+
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
+	
 	
                 </header>
 
@@ -346,11 +386,10 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                 <div class="related-content__item">
                                                     <h4 class="related-content__title">
-                                                        <a  class="relatedContentLink" href="http://people.csail.mit.edu/moitra/docs/6854lec3.pdf">Implementations of Consistent Hashing</a>
+                                                        <a  class="relatedContentLink" href="https://kafka.apache.org/23/documentation/streams/architecture">Architecture of Apache Kafka</a>
                                                     </h4>
                                                     <p class="related-content__content">Y
-                                                        constraint optimization. blah blah blah sfhsdlkfasdklfsd
-                                                        sdfdslfjsdlfksdfsdklfjds 
+                                                        Higher level architecture of the kafka infrastructureg
                                                     </p>
                                                 </div>
                                             </div>
@@ -359,11 +398,10 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                     <div class="related-content__item">
                                                         <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                            <a  class="relatedContentLink" href="https://medium.com/@durgaswaroop/a-practical-introduction-to-kafka-storage-internals-d5b544f6925f">Kafka's storage internals</a>
                                                         </h4>
                                                         <p class="related-content__content">Y
-                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
-                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                            Deeper dive into how partitions and topics are implemented
                                                         </p>
                                                     </div>
                                                 </div>
@@ -372,11 +410,10 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                     <div class="related-content__item">
                                                         <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://medium.com/@raksha.p82/consistent-hashing-an-alternative-for-distributed-hashing-problems-64750a4f58b8">Virtual Replicas in Consistent Hashing</a>
+                                                            <a  class="relatedContentLink" href="https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/">Partitioning topics</a>
                                                         </h4>
                                                         <p class="related-content__content">Y
-                                                            constraint optimization. blah blah blah sfhsdlkfasdklfsd
-                                                            sdfdslfjsdlfksdfsdklfjds 
+                                                                An article about how to choose the number of topics/partitions in a Kafka cluster
                                                         </p>
                                                     </div>
                                                 </div>

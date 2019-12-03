@@ -353,7 +353,7 @@
 
 		 var kafka = {
 			NoteTitle:"Kafka",
-			NoteDescription: "coming soon",
+			NoteDescription: "Scaling & configuring Kafka for seamless data flow",
 			NoteTileId: "systemDesignNote3",
 			NoteLink: "#",
 			NoteTileImage: "kafka_tile1.png"
@@ -397,16 +397,15 @@
 	   var html = note_modal_template(consistentHashing);
 	   
 	   $("#systemDesignContent").append(html);
-	   html = note_modal_template(graphQL);
-	   $("#systemDesignContent").append(html);
-	   
 	   html =note_modal_template(kafka);
 	   $("#systemDesignContent").append(html);
 
 
-	   	   //populate the system design part section 
-	   var html = note_modal_template(commandPattern);
+	   	//populate the system design part section 
+	   var html = note_modal_template(graphQL);
 	   
+	   $("#appDesignNotes").append(html);
+	   html = note_modal_template(commandPattern);
 	   $("#appDesignNotes").append(html);
 	   html = note_modal_template(visitorPattern);
 	   $("#appDesignNotes").append(html);

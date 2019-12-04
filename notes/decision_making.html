@@ -161,43 +161,96 @@
 
         
 
-                                                <p class="paragraphFontStyle"> Computer Science is mostly about making decisions. 
-                                                        The focus here, however, will be on a particular problem solving approach in which 
-                                                        we have the option of taking a number of decisions at a time, and each set of 
-                                                        decisions will lead to a particular outcome. At the end, the goal might
-                                                        be to analyse which combination of decisions leads to a desired outcome. </p>
+                                                <p class="paragraphFontStyle"> Imagine playing with a rubics cube.
+                                                        At any point, while trying to solve the cube, we have to decide how to rotate the cube. There are a vast number of ways
+                                                        of rotating the cube at any given point. If we make the correct set of decisions, at the end, the rubics cube will be 
+                                                        in a state we want it to be, and we will have solved the rubics cube.
+                                                     </p>
+
+                                                     <p class="paragraphFontStyle">
+                                                            There are a lot of problems that incorporate this type 
+                                                            problem solving technique in which we're presented with the option of making a set of decisions on a given configuration.
+                                                     </p>
 
 
-                                                        <p class="paragraphFontStyle"> Decision making problems can manifest itself in a number of ways. For example:
+                                                <p class="paragraphFontStyle"> 
+                                                        This note will focus on decision making in how it relates to and is embedded
+                                                        in a lot of problem solving questions. Each decision 
+                                                        is intended to modify the configuration in some way. So, the state of a configuration will continously be changing
+                                                        as long as decisions are applied on it. How the terms "making decisions" and "configuration" are defined
+                                                        depends on the context of the problem. For the rubics cube example above, a particular state of a 'configuration' can be defined 
+                                                        by the color of each cell on each face of a rubics cube at a time. At the end, however, the goal will be 
+                                                        to analyse which combination of decisions led to a desired outcome for the configuration.
+   
+                                                     </p>
+                                                     
+                                                        <p class="paragraphFontStyle"> 
+                                                            Decision making can manifest itself in a number of ways. A game of chess is another example that incorporates this type of
+                                                            problem solving approach. At any point during the game, a player has to place any of the available chess pieces, and
+                                                            each decision modifies the state of the configuration. A 'configuration' in this context can be the number of unplaced chess pieces and also
+                                                            the chess board and the location of chess piece on the board.  So, every time a chess piece is placed on a board, the number of chess pieces on the board
+                                                            is increased and the number of 'unplaced' chess pieces drops. So, there is a change in the state of the board. A much simpler variation of the game is the N-queens
+                                                            problem. Given a 4*4 chess board, decide where to put 4 queens on the board so that none of the queens
+                                                            attack each other.
                                                          </p>
 
 
-                                                         <blockquote>
-                                                                <ul>
-                                                                    <li>
-                                                                            Given a 4*4 chess board, decide where to put 4 queens on the board so that none of the queens
-                                                                            attack each other.
-                                                                    </li>
-                                                                    <li>
-                                                                            Given an expression, such as "2*3+1", find all possible values the expression evalues to. This involves
-                                                                            deciding how to parenthesize the expression.
-                                                                    </li>
-                                                                    <li>
-                                                                            Find all subsets of a given set. Finding a subset means deciding weather or not to put each element of
-                                                                            the original set into the subset.
-                                                                    </li>
+                                                         <p class="paragraphFontStyle"> 
+                                                                 Decision making spans problems much broader than just board games. Here's another situation: "Given an expression, such as "2*3+1", find all possible values the expression evalues to." To solve this,
+                                                                 we have to decide how to parenthesize the expressions. we can parenthesize (2*3) first and then evaluate (6+1) which at the end would result in 7. These two decisions led to an outcome of 7. We can 
+                                                                 also first parenthesize (3+1) and then (2*4) which would lead to 8. Again, the particular set of decisions made, let to a different outcome. Our goal is to find how many diffent outcomes we get by making
+                                                                 sets of decisions. The initial configuration is "2*3+1". After one decision, the configuration may look like "(2*3) + 1" or the simplified version "6+1". After another decision is applied on the configuration, it would look like
+                                                                 "(6+1)" or or just "7".
+                                                        </p>
 
-                                                                    <li>
-                                                                            Traversing graphs, trees, lists.
-                                                                    </li>
-                                                                </ul>
-                                                            </blockquote>
-                                                 
+                                                        <p class="paragraphFontStyle"> 
+                                                                Another example involves finding all subsets of a set. We have the original set which contains all the elements and then there is the subset. The goal here is to decide 
+                                                                weather each element of the original set should go into the subset. For example, let's assume set A contains the following elements {1,2,3,4,5} and the following decisions are
+                                                                made on each element of the set
+                                                       </p>
 
-                                                    
+                                                       <blockquote>
+                                                            <ul>
+                                                                <li>
+                                                                        <strong> Element '1' </strong> goes into the subset
+                                                                </li>
+                                                                <li>
+                                                                        <strong> Element '2' </strong> does not go into the subset
+                                                                </li>
+                                                                <li>
+                                                                        <strong> Element '3' </strong> does not go into the subset
+                                                                </li>
 
-                                                <p class="paragraphFontStyle"> Let's dive a bit more into the first example. So, there are 4 queens and a 4x4 chess board, 
-                                                    The goal is to place the 4 queens on the board such that the queens do not attack each other. There are 
+                                                                <li>
+                                                                        <strong> Element '4' </strong> goes into the subset
+                                                                </li>
+                                                            </ul>
+                                                        </blockquote>
+
+                                                        <p class="paragraphFontStyle"> 
+                                                               Based on the above set of decisions made, the subset that is formed will be {1,4}. Different combination of decisions will lead to a different subsets.
+                                                       </p>
+
+
+                                                       <p class="paragraphFontStyle"> 
+                                                            Traversing linked structures such as graphs, trees and lists also involves making decisions. At any node in a binary tree, we have to decide weather to go to the 
+                                                            left or right depending on the constraints set out by the problem. Let's see this in action by checking if a graph is bipartite graph. A graph is considered a bipartite
+                                                            if it is possible to partition the vertices of the graph into two sets such that every edge in the graph connects a vertex from one set to a vertex from another set.
+                                                            The 'configuration' for this problem will be the graph, and 'making a decision' merely means deciding which of the two sets a vertex goes into. 
+                                                            
+                                                            
+                                                        </p>
+
+                                                        <p class="paragraphFontStyle">
+                                                                So while travesing the graph, for each 
+                                                                vertex, decide weather it goes in one set or another. Then, once a decision is made on every vertex, check every edge to see if the pair of vertices on the ends of each edge are from 
+                                                                different sets. This is of course not the most effecient way to solve this problem and more optimizations can be made(see constraint programming below) to make this algorithm faster. However,
+                                                                the underlying approach is the same.
+                                                        </p>
+
+                                                <p class="paragraphFontStyle"> 
+                                                     Let's dive a bit deeper into the first example. There are 4 queens and a 4x4 chess board, 
+                                                     and the goal is to place the 4 queens on the board such that the queens do not attack each other. There are 
                                                      a number of ways this can happen, so let's find all of them.
                                                 </p>
 
@@ -206,37 +259,23 @@
                                      
 
 
-                                                <p class="paragraphFontStyle"> For this problem, the first decision is to place the first queen somewhere on the empty chess board - Let's call this decision d1. There are a number
-                                                        of options for placing the first queen(The queen can be placed on any one of the 16 cells on the board). Now, given the first decision is made, There are now 15 choices for
-                                                        placing the second queen. 2 more successive decisions will need to be made to have all the four queens on the board. At this point, we can 
-                                                        start to evaluate if the set of decisions made led to the intended outcome - do the 4 queens placed on the board attack each other. If not,
-                                                        one approach would be to undo the last decision, d4, and place the 4th queen somewhere else on the board and see if it's the right outcome and so on. </p>
+                                                <p class="paragraphFontStyle"> The first decision involves placing the first queen somewhere on the chess board - let's call this decision d1. There are sixteen
+                                                        options for where the first queen can be placed on the board. Now, given the first decision is made, there are now 15 choices for
+                                                        placing the second queen. After making 2 more successive decisions, all the four queens will be on the board. At this point, we can 
+                                                        start to evaluate if the set of decisions made led to the intended outcome. This intended outcome is for the 4 queens on the board not to attack each other. If the queens attack each other,
+                                                        we can undo the last decision, d4, and place the 4th queen somewhere else on the board. This would result in a different set of decisions than the one we originally made. 
+                                                        We can continue to do this and enumerate all sets of decisions and only count the ones that lead us to the right configuration state.
+                                                </p>
 
                                       
 
-
-                                                <p class="paragraphFontStyle"> A few terms to keep in mind here</p>
-
-                                                <blockquote>
-                                                    <ul>
-                                                        <li>
-                                                                Every decision made is on a particular state of a configuration(i.e the state of the board & the number of unplaced queens).
-                                                        </li>
-                                                        <li>
-                                                                Every decision leads to a state transition. When a queen is placed on the board, the configuration is in a different state. 
-                                                                This means, the number of unplaced queens chanages, and the board has one less free cell.
-                                                        </li>
-                                                        <li>
-                                                                Each set of  4 decisions leads to a final state of the board.
-                                                        </li>
-                                                    </ul>
-                                                </blockquote>
-                                     
-                                                <p class="paragraphFontStyle"> Recursion and Backtracking allow us to translate this exhaustive problem solving 
-                                                    strategy into code. Everytime a recursive call is made on a given configuration(A board and the remaining queens), 
-                                                    a decision is about to be made on that board. This merely means placing one of the remaining queens on any available cell on the board. 
-                                                    Then, we recurse again on the new state of the board until we no longer have any queens to place. Once he base case of the recursion is reached, 
-                                                    every time the algorithm backtracks, it's undoing a decision and restoring the board to its previous state. it can then explore other options. </p>
+                                                <p class="paragraphFontStyle"> 
+                                                    Recursion and Backtracking allow us to translate this exhaustive problem solving 
+                                                    strategy into code. Everytime a recursive call is made on a given configuration(A board and the remaining queens in this case), 
+                                                    some decision is about to be made on that board. This just means placing one of the remaining queens on any available cell on the board. 
+                                                    Then, we recurse again on the new state of the board until we no longer have any queens to place. Once the base case of the recursion is reached(no unplaced queens left), 
+                                                    the recursion will backtrack and slowly undo decisions and restore the board to its previous states. We can then explore other options by making new recursive calls. 
+                                                </p>
                                                
                                                 <p class="paragraphFontStyle"> Look at the following code</p>
 
@@ -249,12 +288,14 @@
 
 
                                                 <p class="paragraphFontStyle"> There are a number of ways to optimize such type of decision making problems. One potential technique is called constraint programming. 
-                                                        In constraint programming, the idea is to narrow down the number of decisions made on the next state of a configuration based on what is known about the current 
+                                                        In constraint programming, the idea is to narrow down the number of decisions that could be made on the next state of a configuration based on what is known about the current 
                                                         state of a configuration.
                                                 </p>
 
                                                 <p class="paragraphFontStyle"> For example, if the first queen is placed on the top left corner of the chess board, the algorithm should avoid placing the next queen on any of 
-                                                    the crossed out cells shown below since that will lead to the two queens attacking each other.
+                                                    the crossed out cells shown below since that will lead to the two queens attacking each other. In the context of the bipartite graph example above, if a decision is made to 
+                                                    label a vertex into set 'A', for example, then none of its adjacent vertices should be in that set. If that is not possible, that means the graph is not bipartite. If we can go 
+                                                    through all vertices of the graph having kept this constraint, then the graph is bipartite.
                                                 </p>
 
 
@@ -264,11 +305,12 @@
 
 
                                                  <p class="paragraphFontStyle"> 
-                                                     Sometimes, as the algorithm is running, it will encounter a configuration in a state it has already seen before,
-                                                      and it might be about to make the same set of decisions on that configuration. However, doing so would be redundant.
-                                                      So, to optimize such situations, it would be better save the result of making a decision on a particular state of a configuration, 
-                                                      so that the next time the algorithm encounters the same state, it would know the solution to making a decision on that particular state 
-                                                      without having to do additional work to compute the solution.
+                                                      Sometimes, in decision making problems, we will encounter a configuration again in a state we have already decided on.
+                                                       And we might be about to make the same set of decisions on that configuration. However, doing so would be redundant.
+                                                      So, to optimize such situations, it would be better save the result of making a set of decisions on a particular state of a configuration.
+                                                      Then, the next time the algorithm encounters the same state and is about to make the same set of decisions, it would know the the outcome 
+                                                      immeidately without having to do additional work to compute the solution. This technique of optimizing such type of situations is called dynamic
+                                                      programming.
                                                  </p>
 
                                                 

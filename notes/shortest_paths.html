@@ -170,53 +170,70 @@
 
                                                 <img src="../images/edge_relationship.png" style=" width: 60%;"/>
 
-                                                <p class="paragraphFontStyle"> One common operation routinely peformed on graphs is 
-                                                        finding the shortest path between nodes(also known as vertices) in a graph based on the relationship represented 
-                                                        by the graph. Here's a psuedocode of an algorithm that finds the shortest path in a graph:
+                                                <p class="paragraphFontStyle"> A common operation peformed on graphs is 
+                                                        finding the shortest path between vertices in a graph. Depending on the relationship that the edges in the graph
+                                                        represent, the shortest path of a graph can provide meaningful insights. For example, for a graph that represents a network of
+                                                        roads, the edges represent roads that connect intersections. If each edge has a weight that represents the length of each
+                                                        road, then the shortest path in this context refers to the shortest distance to get from one intersection to another. On the other hand,
+                                                        if the weight of each edge represents the time it takes to get from one intersection to an adjacent intersection, then the shortest path in this context will be
+                                                        the quickest path to take to get from one intersection to antoher. 
+                                                        
 
+
+                                                </p>
+
+                                                <p class="paragraphFontStyle">
+                                                        Regardless of what the graph represents, the algorithm for finding the shortest path is the same. Here's a psuedocode of an algorithm that finds the shortest path in any graph:
 
                                                 </p>
 
                                                 <img src="../images/shortest_path_algo.png" style=" width: 60%;"/>
 
 
-                                                <p class="paragraphFontStyle"> So the goal is to traverse each vertex of the graph in order of 'closeness' to the 
-                                                        source. The 'fringe' above needs to be a data structure that supports operations for finding these vertices. 
+                                                <p class="paragraphFontStyle"> The goal is to traverse the graph in order of each vertex's 'closeness' to the 
+                                                        source. The 'fringe' data structure in the picture above needs to support operations for finding the closest of the visited vertices. 
                                                 </p>
 
 
 
-                                                <p class="paragraphFontStyle"> In an unweighted graph,  'closeness' is defined based on how many levels away a vertex 'v' 
-                                                        is from the source. so on the first iteration, every vertex that is an edge away from the source is put into 
-                                                        the collection. In the next iterations, vertices closest to the source are taken out of the collection. 
-                                                        So really, the ideal collection would be one that supports a first in first out kind of operation which is a queue. 
-                                                        This algorithm is called Breadth-first search.
+                                                <p class="paragraphFontStyle"> In an unweighted graph,  'closeness' is just the number of levels a vertex 'v' 
+                                                        is from the source. So when traversing the graph starting from a source, every vertex that is an edge away from the source is put into 
+                                                        the collection above. There is no other vertex closer to the source than these vertices. So it looks like the vertices that are encountered first 
+                                                        while traversing the graph are the closest. So really, the ideal collection would be one that supports a first in first out kind of operation which is a queue. 
+                                                        This algorithm is called Breadth-first search(BFS).
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        Here's code for implementing BFS:
+                                                        Here's code which implements BFS:
                                                 </p>
 
                                                 <img src="../images/bfs_code.png" style=" width: 50%;"/>
 
                                                 <p class="paragraphFontStyle"> Now if the graph is a weighted graph, it is not enough to define 'closeness' 
                                                     as just the number of edges a vertex sits from the source. This is because each edge has a weight that determines how 
-                                                    far a vertex 'v' is from a source.
+                                                    far a vertex is from a source.
                                                 </p>
 
                                                 <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
 
 
                                                 <p class="paragraphFontStyle"> Instead, the 'closesness' is more accurately defined as 
-                                                        the sum of weights along the path that leads to a vertex 'v' from the source. As this algorithm progresses, it might discover
-                                                        more paths to vertex 'v'. There could be a path whose sum of weights is different. So, the 'fringe' data structure defined above needs 
-                                                        to be one that supports operations for efficiently finding the vertex with the smallest sum of weights along currently discovered shortest path.
-                                                        In other words, the value for 'closeness' of a vertex to the source might change as the algorithm 
-                                                        finds more paths. So at any point, the fringe needs to be able to return the vertex with the smallest weight. 
-                                                        The ideal data structure for this is a priority queue where the priority of the elements is 
-                                                         based on how close they are to the source at any point.
+                                                        the sum of weights along the path that leads to a vertex from the source. So in this case, the first set of vertices encountered 
+                                                        will not neccessarily be the closest. There could be vertices farther away from the source whose sum of weights is smaller than vertices that 
+                                                        are closer to the source. So, as we traverse the graph, we might discover
+                                                        new paths to an already visisted vertex, and this path may be  closer to the source. 
+                                                        
+
+                                            </p>
+                                            <p class="paragraphFontStyle">
+                                                    The 'fringe' data structure defined in the psuedocode above needs 
+                                                    to be one that supports operations for efficiently prioritizing vertices with the smallest sum of weights from the source.
+                                                    So at any point, the fringe needs to be able to return the vertex with the smallest weight. 
+                                                    The ideal data structure for this is a priority queue where the priority of the elements is determined
+                                                     based on how close they are to the source at any point. These values may change as new vertices and new paths to already discovered vertices are found, but 
+                                                     regardless, the priority queue will efficiently keep track of the closest vertex. This version of the shortest path algorithm is known as Dijkstra's Algorithm.
                                             </p>
 
                                                 <img src="../images/dijkstra_code.png" style=" width: 50%;"/>
@@ -226,14 +243,14 @@
                                                     distance between nodes. 
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> This instrinsic characterstic of these two algorithms,
-                                                        which is the fact that they explore all nodes closest to them first before progressing 
-                                                        to explore further, can sometimes be a problem in areas such as navigation. 
+                                                <p class="paragraphFontStyle"> However, this instrinsic characterstic of these two algorithms,
+                                                        which is the fact that they explore every closest node first before progressing 
+                                                        to explore farther, can be a detterent in areas such as navigation. 
                                                 </p>
 
                 
 
-                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from san franciso to new york
+                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from San Franciso to New York
     
                                                 </p>
                                                
@@ -241,19 +258,24 @@
 
                                                 <p class="paragraphFontStyle">  
                                                         If you use Dijkstra to find the shortest path, it will first explore places 
-                                                        closest to san fransico even points that are on the pacific ocean despite the fact that is clearly not the right path to take. 
+                                                        closest to San Fransico first. It will even explore points that are on the pacific ocean first
+                                                         despite the fact that is clearly not the right path to take. 
     
                                                  </p>
 
                                                     <p class="paragraphFontStyle">  
-                                                            To address this, we can make a minor change to how we define "closeness". 
+                                                            To address this, we can make a minor change to how "closeness" is defined in Dijkstra. 
                                                             Instead of just defining closeness as the sum of weights along a path from the source, 
-                                                            a third variable, a heuristic, can be added to that value in order to guid the algorithm. 
-                                                            This heuristic can be the straight line distance from the current vertex 'v' to the destination. 
+                                                            a third variable, known as a heuristic, can be added to that value in order to guide the algorithm. 
+                                                            
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            This heuristic can be the straight line distance from the current vertex to the destination. 
                                                             Because of this added variable to the definition of closeness, vertices further to the left of 
-                                                            san francisco will not appear to be as close to the source as they actually are to the algorithm. 
-                                                            The algorithm will tend to explore more towords the right. This variation of Dijkstra's algorithm 
-                                                            is called the A* algorithm. 
+                                                            San Francisco will not appear to be as close to the source. So, this version of the shortest path algorithm 
+                                                            will explore areas more towords the target. This slight variation of Dijkstra's algorithm is called the A* algorithm. 
+
                                                     </p>
 
                                                     <img src="../images/a_star_code.png" style=" width: 50%;"/>
@@ -290,7 +312,7 @@
                                                     <h4 class="related-content__title">
                                                         <a  class="relatedContentLink" href="https://www.youtube.com/watch?v=ySN5Wnu88nE">More on A* search algorithm</a>
                                                     </h4>
-                                                    <p class="related-content__content">Y
+                                                    <p class="related-content__content">
                                                         A short video explaining the A* shortest path algorithm
                                                     </p>
                                                 </div>
@@ -302,7 +324,7 @@
                                                         <h4 class="related-content__title">
                                                             <a  class="relatedContentLink" href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s13/www/lectures/lecture13.pdf">Bellman-ford algorithm</a>
                                                         </h4>
-                                                        <p class="related-content__content">Y
+                                                        <p class="related-content__content">
                                                             An algorithm for finding shortest path in a graph that contains cycles
                                                         </p>
                                                     </div>
@@ -314,7 +336,7 @@
                                                         <h4 class="related-content__title">
                                                             <a  class="relatedContentLink" href="linked_structures.html">Traversing linked structures</a>
                                                         </h4>
-                                                        <p class="related-content__content">Y
+                                                        <p class="related-content__content">
                                                             Different ways of traversing any linked structure such as graphs 
                                                         </p>
                                                     </div>

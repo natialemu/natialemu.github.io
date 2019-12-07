@@ -164,21 +164,19 @@
                                                         Kafka is a distributed and fault tolerant data streaming platform primarily
                                                          used for building realtime data pipelines that transmit data among services. 
                                                          It aims to provide a high throughput, low latency platform for handling 
-                                                         real-time data feeds. It not only allows for the publish and subscription 
-                                                         of data but also for processing of data streams as they occur and also 
-                                                         record storage in a fault tolerant way. There are a number component involved
+                                                         real-time data feeds. There are a number component involved
                                                          in a Kafka-based data pipeline.
                                                 </p>
 
 
                                                 <p class="paragraphFontStyle"> 
                                                     
-                                                        A <strong>partition</strong> is a particular channel through which data is pushed into. 
+                                                        A <strong>partition</strong> is a particular channel through which data is pushed. 
                                                         One or more partitions together form a topic. Applications can subscribe 
-                                                        to topics and then push messages to a particular partition in that topic. 
+                                                        to a topic and then push messages to a particular partition in the topic. 
                                                         Each partition has a unique sequence ID called an ‘offset’ which is 
-                                                        analogous to that of an ‘index’ in an array data structure. A topic 
-                                                        can have 0 or more consumers subscribed to it.
+                                                        analogous to that of an ‘index’ in an array. A topic 
+                                                        can have 0 or more 'consumers' subscribed to it.
                                                 </p>
 
                                                 <img src="../images/kafka_partitions.png" style=" width: 60%;"/>
@@ -187,7 +185,7 @@
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        <strong>Producers</strong> are the sources of data that subscribe and push content to Kafka topics
+                                                        <strong>Producers</strong> are the sources of data that subscribe and push content to Kafka topics.
 
                                                 </p>
 
@@ -196,29 +194,29 @@
                                                 <p class="paragraphFontStyle"> 
                                                     
                                                         <strong>Consumers</strong> are applications that subscribe to topics to consume messages, and <strong>consumer groups</strong> 
-                                                        are logical groupings of consumers which are used to aggregate a set of consumers. Consumers 
+                                                        are logical groupings of consumers which are used to aggregate consumers. Consumers 
                                                         and Consumer groups dictate how messages are consumed in Kafka. Each consumer 
                                                         in a consumer group consumes a message in a way that’s analogous to that of a messaging 
-                                                        queue. So first consumer in the consumer group to get to the message will consume it. Kafka 
-                                                        is responsible for partitioning a topic among the available consumers so that load is evenly 
-                                                        balanced. So if a consumer labelled ‘A’ that belongs to a consumer group ‘CG Z’ consumes a 
-                                                        message ‘M’ from a topic the consumer group is subscribed to, then other consumers in consumer 
+                                                        queue. So the first consumer in the consumer group to get to a message will consume it. By default, it is Kafka's
+                                                        responsibility to partition a topic among the available consumers so that load is evenly 
+                                                        balanced. So, if a consumer labelled ‘A’ that belongs to consumer group ‘CG Z’ consumes a 
+                                                        message ‘M’ from a topic, then other consumers in consumer 
                                                         group ‘CG Z’ can’t consume the message ‘M’ unless there is a different instance of it in the topic.
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        On the other hand, multiple consumer groups subscribed to a topic function as a 
+                                                        On the other hand, the way multiple consumer groups subscribed to a topic consume messages is analogus to that of a 
                                                         publish-subscribe messaging system. This means a message published to a topic is 
                                                         available to all consumer groups subscribed to the topic. So in a way, Kafka combines 
-                                                        two forms of messaging systems: Publish-subscribe & messaging queues.
+                                                        two forms of messaging systems: Publish-subscribe for consumer groups & messaging queues for consumers in a consumer group.
                                                 </p>
 
                                                 <p class="paragraphFontStyle"> 
                                                    
                                                         <strong>Brokers</strong> are just the Kafka servers or nodes. As a distributed commit log,
-                                                         Kafka stores, receives and sends messages on different brokers
+                                                         Kafka stores, receives and sends messages on different brokers.
                                                 </p>
 
                                                 <img src="../images/kafka_producer_consumer.png" style=" width: 60%;"/>
@@ -250,35 +248,33 @@
 
                                                 <p class="paragraphFontStyle">  
                                                         Kafka also doesn’t keep track of what records are read by the consumer. The consumer group offset
-                                                         is modified as it reads messages and the broker doesn’t keep track of that. So to remove a message, 
-                                                         there is usually set amount of time.
+                                                         moves ahead by one as the consumer reads messages. It's not the broker's responsibility to keep track of that. 
+                                                         So to remove a message, there is usually set amount of time.
                                                 </p>
                                                
-                                                <img src="../images/san_fran_nyc.png" style=" width: 50%;"/>
-
                                                 <p class="paragraphFontStyle">  
                                                         
-                                                        When it comes to data replication, messages are replicated across multiple brokers to persevere the data 
-                                                        in case of broker failure. At all times, there is a broker known as the ‘partition leader’ which is responsible 
-                                                        for application writes and reads from/to a partition. It also replicates data to other brokers. This is why 
+                                                        When it comes to data replication, messages are replicated across multiple brokers to preserve data 
+                                                        in case of broker failure. At all times, there is a primary broker known as the ‘partition leader’, and this broker is responsible 
+                                                        for application writes and reads from/to partitions. It also replicates data to other brokers. This is why 
                                                         successfully pushed data is guaranteed to be available. You can tune performance and durability by changing the 
                                                         replication factor depending on the nature of the data. In some cases, performance might be more important than 
-                                                        strong durability guarantees so the replication factor could be lower
+                                                        strong durability guarantees so the replication factor could be lower.
 
                                                  </p>
 
                                                     <p class="paragraphFontStyle">  
-                                                            Metadata about who the leader is stored in a distributed key-value store known as zookeeper. This server 
+                                                            Metadata information about the leader is stored in a distributed key-value store known as zookeeper. This server 
                                                             is extremely fault tolerant. It stores information such as consumer group offset per partition and partition 
                                                             leader information. Producers and consumers get this metadata from the primary broker they’re connected to. 
-                                                            The broker will have to contact zookeeper to get this information.
+                                                            The broker will then have to contact zookeeper to get this information.
 
                                                     </p>
 
                                                     <p class="paragraphFontStyle">  
                                                             
-                                                            So to recap on the flow of data through Kafka, producers append messages or records to a partition in a topic. 
-                                                            Every consumer group subscribed to that topic will have access to that message. However, only one consumer per 
+                                                            So, to recap the flow of data through Kafka, producers append messages or records to a partition in a topic. 
+                                                            Every consumer group subscribed to the topic will have access to that message. However, only one consumer per 
                                                             consumer group will get the message. For example, let’s assume there is an application ‘A’ that pushes change 
                                                             notifications to a topic. There are twelve instances of Application ‘B’ that are ready to consume and process 
                                                             these change notifications. Since each instance is in the same consumer group which represents application ‘B’, 
@@ -290,20 +286,20 @@
                                                     </p>
 
                                                     <p class="paragraphFontStyle">  
-                                                            If data is the lifeblood of any system, Kafka is the circulatory system. So just like a heathy heart and blood 
-                                                            vessels are required for optimal blood flow, it’s important to tune and configure consumers and producers 
+                                                            If data is the lifeblood of any system, Kafka is the circulatory system. So just like healthy blood vessels and a healthy 
+                                                            heart are required for optimal blood flow, it’s important to tune and configure consumers and producers 
                                                             properly to ensure there is proper data flow. So for Kafka to excel, the entire data pipeline(producers, Kafka, consumers) 
                                                             need to coordinate and work seamlessly. Otherwise, we’ll end up with situations where consumers can’t keep up with 
                                                             incoming messages. Consumer lag measures how far behind a consumer is from the most recent offset. Significant consumer 
                                                             lags may even result in data loss of the oldest records in the topic. Some records’s time in the topic might exceed the 
-                                                            retention period so those records might be deleted prior to consumption. So, It’s ideal to have all components working 
-                                                            together so they respond automatically to events such as increased data  flow rate, failure of producers and consumers 
+                                                            retention period so those records might be deleted prior to consumption. So, it’s ideal to have all components working 
+                                                            together so they respond automatically to events such as increased data flow rate, failure of producers and consumers 
                                                             and so forth.
 
                                                     </p>
 
                                                     <p class="paragraphFontStyle">  
-                                                            We have to remember that all consumers in a consumer group work in a load balanced mode. So, if a topic has 6 partitions
+                                                            It is important to remember that all consumers in a consumer group work in a load balanced mode. So, if a topic has 6 partitions
                                                              and 6 consumers per group, each consumer in that group should be assigned a partition. If a consumer goes down, Kafka 
                                                              will perform partition rebalancing to reassign consumers to a partition. Since there are more partitions than consumers, 
                                                              there maybe a consumer that consumes from more than one partition. 
@@ -312,7 +308,7 @@
 
                                                     <p class="paragraphFontStyle">  
                                                             Frequent partition rebalancing could potentially disrupt the proper flow of data through the pipeline. Every time there is 
-                                                            a change in the consumer group, Kafka will rebalance partitions. So to properly scale consumers up or down with minimal 
+                                                            a change in the consumer group, Kafka will rebalance partitions. So, to properly scale consumers up or down with minimal 
                                                             disruption, the consumer can use the Kafka API to assign static partitions and also perform manual load balancing. 
                                                             This is particularly helpful if you set the consumer to autoscale based on the consumer record lag. In most cluster 
                                                             management services such as ECS or Kubernetes, it is possible to use custom metrics set up and exposed by the deployed 
@@ -339,7 +335,7 @@
                                                     <p class="paragraphFontStyle">  
                                                             So it’s important to take into consideration the nature of data flowing through the pipeline, and also analyze resources 
                                                             producers and consumers are using when configuring Kafka components. For example, if you have a consumer that consumes 
-                                                            messages from a Kafka topic and subsequently updates a shared DB, it might be useful to play around and tune consumer 
+                                                            messages from a Kafka topic and subsequently updates a DB shard, it might be useful to play around and tune consumer 
                                                             properties such as ‘maxPolledRecords’ which represents the maximum number of records pulled from the topic and 
                                                             ‘poolSize’ which determines the number of records to process concurrently from the polled records. You can fine 
                                                             tune these two settings in this particular case to have multiple consumer threads concurrently consume messages 

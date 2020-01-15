@@ -36,10 +36,8 @@ $(function(){
       * Append PS learn content to page
       */
 
-     var adPracticeHtml = ad_resource_modal_template(grokkingPattern);
-     $("#appDesignPracticeContent").append(adPracticeHtml);
     
-     adPracticeHtml = ad_resource_modal_template(hackerrankOOP);
+     var adPracticeHtml = ad_resource_modal_template(hackerrankOOP);
      $("#appDesignPracticeContent").append(adPracticeHtml);
 
      adPracticeHtml = ad_resource_modal_template(leetCodeOOP);

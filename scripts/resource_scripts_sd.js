@@ -119,9 +119,6 @@ $(function(){
      sdPracticeHtml = sd_resource_modal_template(dataLineageAtNetflix);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
-     sdPracticeHtml = sd_resource_modal_template(brooklynDataStreaming);
-     $("#systemDesignPracticeContent").append(sdPracticeHtml);
-
      sdPracticeHtml = sd_resource_modal_template(bigTableAtSpotify);
      $("#systemDesignPracticeContent").append(sdPracticeHtml);
 
@@ -210,10 +207,7 @@ $(function(){
 
      sdLearnHtml = sd_learning_modal_template(databaseSystems);
      $("#systemDesignLearningContent").append(sdLearnHtml);
-     
-     sdLearnHtml = sd_learning_modal_template(grokkingSystemDesignLearning);
-     $("#systemDesignLearningContent").append(sdLearnHtml);
-
+   
      sdLearnHtml = sd_learning_modal_template(serverLessArchitecture);
      $("#systemDesignLearningContent").append(sdLearnHtml);
        /**

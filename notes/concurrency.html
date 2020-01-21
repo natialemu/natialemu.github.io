@@ -162,26 +162,25 @@
         
 
                                                 <p class="paragraphFontStyle"> 
-                                                    We go about most of our day to day juggling multiple tasks. For example: While making 
-                                                    breakfast in the morning, if it takes a while, we can maybe stretch in the mean time or 
+                                                    We go about most of our day juggling multiple tasks. For example, We may start our day by making 
+                                                    breakfast, if it takes a while, we could stretch in the mean time or 
                                                     prepare things to read for our commute to work.
                                                      </p>
 
                                                      <p class="paragraphFontStyle">
-                                                            
-                                                            At work, at some point, we may initiate a deployment process for a change we made and 
+                                                        
+                                                            At the office, at some point, we may initiate a deployment process for a change we made and 
                                                             while our application is deploying, we might resort to working on a different task, or 
-                                                            even maybe take a coffee break. And while getting coffee, while the coffee machine is in 
-                                                            the process of making an Latte, we might decide to go and grab some snacks. If we carefully 
-                                                            analyze our day, we can see that we’re quite adept at wisely handling multiple tasks. However, 
-                                                            at a time, we can only do a single thing. We can’t get coffee while we’re in the process of 
+                                                            even maybe take a coffee break. Then while the coffee machine is in the process of making an Latte,
+                                                            we might decide to go and grab some snacks. It is not hard to see that we’re quite adept at wisely 
+                                                            handling multiple tasks. However, at a time, we can only do a single thing. We can’t get coffee while we’re in the process of 
                                                             initiating the deployment process; we can’t stretch while we’re actively cooking breakfast. 
-                                                            We also can’t juggle our way through every type of tasks in such type of manner. Some tasks 
-                                                            will  depend on other tasks. But we synchronize and execute our actions in a such way as to 
+                                                            We also can’t juggle our way through every type of tasks. That is because some tasks 
+                                                            will  depend on other tasks. Regardless, we synchronize and execute our actions in a such way as to 
                                                             optimize our day. These situations are analogous to the concepts of concurrency, and parallelism. 
                                                             Parallelism refers to the ability of a system to execute multiple tasks at the exact same time, 
-                                                            while Concurrency refers to the ability of a system to process multiple tasks independent of one 
-                                                            another. However, these tasks may or may NOT be executed simultaneously. If a system can execute 
+                                                            while concurrency refers to the ability of a system to process multiple tasks independent of one 
+                                                            another. However, concurrent tasks may or may NOT be executed simultaneously. If a system can execute 
                                                             tasks in parallel, then it must be a concurrent system as well. The other way around, however, is 
                                                             not the case.
                                                      </p>
@@ -190,19 +189,20 @@
                                                      <p class="paragraphFontStyle"> 
                                                         
                                                             So these two concepts play a special role in an area such as distributed systems in which a vast 
-                                                            number of resources connected over a network are interacting with one another and executing a vast 
-                                                            set of tasks. In a distributed system a network of nodes and their resources are mimicking a single 
+                                                            number of resources that are connected over a network are interacting with one another and executing a 
+                                                            set of tasks. In a distributed system, a network of nodes and their resources are mimicking a single 
                                                             machine - each component executing its task independently and in parallel. Each component needs to 
                                                             work together in a co-ordinated and synchronized way to optimize for the overall efficiency of the 
-                                                            system. We have to make sure that these systems are juggling the tasks they need execute to optimize 
-                                                            the overall performance.  
+                                                            system. 
    
                                                      </p>
                                                      
                                                         <p class="paragraphFontStyle"> 
                                                             
-                                                                This is not unlike how we go about and reason our way through the tasks we execute each day. 
-                                                                Even from a single machine’s perspective, it must be able to use it’s local resources and 
+                                                                Each componenet needs to juggle the tasks it needs to execute to optimize 
+                                                                the overall performance of the system. This is not unlike how we reason our way through 
+                                                                the tasks we execute each day. Even from a single machine’s perspective, 
+                                                                it must be able to use it’s local resources and 
                                                                 execute its tasks in an optimal way, and that might involve executing tasks concurrently or 
                                                                 in parallel.
                                                          </p>
@@ -210,58 +210,45 @@
 
                                                          <p class="paragraphFontStyle"> 
                                                                  
-                                                                To better understand how knowing these concepts helps build a distributed systems 
+                                                                Having a better understanding of these concepts helps build a distributed system
                                                                 whose components co-operate in a seamless and optimized way to execute a tasks. If done correctly, 
-                                                                we can see metrics such an an increased through and reduced latency, better data flow and so forth.
-                                                                Let’s consider this basic example in which we have we have a simple data pipeline as shown below:
-                                                        </p>
-
-                                                        <img src="../images/4-queen.png" style=" width: 30%;"/>
-
-                                                        <p class="paragraphFontStyle"> 
-                                                                
-                                                                As shown in the image, the idea is to have an application that produces content into a Kafka 
-                                                                cluster(link to note on Kafka) and then have a consumer application that consumes the messages 
+                                                                metrics such throughput and latency will be optimized. Imagine there is an application that produces content 
+                                                                into a Kafka cluster(a messaging system), and there is also  a consumer application that consumes the messages 
                                                                 from Kafka on the other end. This consumer application will then process the messages and update 
                                                                 some database.
-                                                       </p>
+                                                        </p>
 
                                                        <p class="paragraphFontStyle"> 
                                                             
-                                                            If we imagine a scenario where none of the applications are utilizing the concepts of concurrency and 
+                                                            If none of the applications in this scenerio are utilizing concurrency and/or
                                                             parallelism, this is what would most likely happen:
                                                         </p>
 
                                                        <blockquote>
                                                             <ol>
                                                                 <li>
-                                                                        The application would receive one piece of content 
+                                                                        The consumer application would receive one piece of content at a time
                                                                 </li>
                                                                 <li>
-                                                                        Process that content
+                                                                        Process that content while other tasks wait
                                                                 </li>
                                                                 <li>
-                                                                        Put that content to db
-                                                                </li>
-
-                                                                <li>
-                                                                        Do the same for the other content coming from Kafka
+                                                                        Put the processed content to the database
                                                                 </li>
                                                             </ol>
                                                         </blockquote>
 
                                                         <p class="paragraphFontStyle"> 
-                                                                This would result in the overall flow of data in the system being significant slow. Especially in situations where there is a lot of content being pushed into the Kafka cluster, 
-                                                                it’d be very hard to get changes out on time.
+                                                                This would result in a significant delay to the overall flow of data in the system and is therefore far from ideal.
                                                        </p>
 
 
                                                        <p class="paragraphFontStyle"> 
                                                            
-                                                            Further improvements can be made by having one independent ‘piece’ of the consumer application retrieve content from Kafka, then another ‘piece’ would process the content and update to the 
-                                                            db. We can maybe have more than one piece of the application update the database. This is just a minor improvement and there are of course more imporvements that can be made 
-                                                            to the system. And a lot of the decisions would depend on what exactly the application is doing, the nature of data it’s dealing with and the configurations of Kafka and 
-                                                            the database. But the general idea is the same: if we have a better understanding of concepts of concurrency and concurrent programming, we can make better and more informed
+                                                            Improvements can be made to the system by having one independent ‘piece’ of the consumer application retrieve content from Kafka, then another ‘piece’ would process the content and update to the 
+                                                            database. There can also be more than one piece of the application update the database. This are just minor improvement, and there are of course more improvements that can be made 
+                                                            to the system. A lot of these improvements would depend on what exactly the application is doing, the nature of data it’s dealing with and the configurations of Kafka and 
+                                                            the database. But the underlying idea is the same: having a better understanding of concepts such as concurrency helps to make better and more informed
                                                             decisions when being part of system design discussions and implementing changes.
                                                         </p>
 
@@ -283,7 +270,7 @@
                                                          may look something like this:
                                                 </p>
 
-                                                <img src="../images/single_thread_producer_consumer.png" style=" width: 30%;"/>
+                                                <img src="../images/single_thread_producer_consumer.png" style=" width: 80%;"/>
 
                                       
 
@@ -293,7 +280,7 @@
                                                         and producers operate in separate threads. In this case, the flow may look something like this in java: 
                                                 </p>
                                                
-                                                <img src="../images/multithreaded_consumer_producer.png" style=" width: 30%;"/>
+                                                <img src="../images/multithreaded_consumer_producer.png" style=" width: 80%;"/>
 
                                                 <p class="paragraphFontStyle"> 
                                                         Now let’s introduce more scenarios to the problem. Imagine we want to push numbers that are divisible by 7 into the queue. 
@@ -301,7 +288,7 @@
                                                         will be responsible for checking divisibility and pushing to the queue.
                                                 </p>
 
-                                                <img src="../images/race_condition_producer_consumer.png" style=" width: 30%;"/>
+                                                <img src="../images/race_condition_producer_consumer.png" style=" width: 80%;"/>
 
 
                                                 <p class="paragraphFontStyle"> 
@@ -344,7 +331,7 @@
  
                                                  </p>
 
-                                                 <img src="../images/monitors_consumer_producer.png" style=" width: 30%;"/>
+                                                 <img src="../images/monitors_consumer_producer.png" style=" width: 80%;"/>
 
                                                  <p class="paragraphFontStyle"> 
                                                       

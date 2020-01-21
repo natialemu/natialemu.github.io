@@ -357,6 +357,14 @@
 			NoteTileId: "systemDesignNote3",
 			NoteLink: "kafka.html",
 			NoteTileImage: "kafka_tile1.png"
+		 };
+		 
+		 var concurrency = {
+			NoteTitle:"Concurency, parallelism & distributed systems",
+			NoteDescription: "Concurrency & parallelism in the context of distributed systems",
+			NoteTileId: "systemDesignNote1",
+			NoteLink: "concurrency.html",
+			NoteTileImage: "consistent_hashing_tile1.png"
          };
 
 		/*
@@ -399,6 +407,8 @@
 	   $("#systemDesignContent").append(html);
 	   html =note_modal_template(kafka);
 	   $("#systemDesignContent").append(html);
+	   html =note_modal_template(concurrency);
+	   $("#systemDesignContent").append(html);
 
 
 	   	//populate the system design part section 
@@ -408,14 +418,9 @@
 	   html = note_modal_template(commandPattern);
 	   $("#appDesignNotes").append(html);
 
-	
-	  
-
-
              function addBorder(element1){
                  element1.css('border-bottom','2.5px solid #2e3134');
-				 
-
+				
              }
 
              function removeBorder(element1){

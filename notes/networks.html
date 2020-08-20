@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Networks</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="#"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Resume
+											</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+                    </nav>
+                    
+
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                    <a href="#" class="active"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                            Networks
+                                                    </a>
+                                        </li>
+                             
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="bipartite_matching.html"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                    Bipartite matching
+                                                </a>
+                                        </li>
+
+
+    
+                                 
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: #fff;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Algorithms</p>
+                            <p class="head-shot-short-desc">Network Flow, Ford fulkerson, Edmund karp </p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Networks
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> Networks are data structures that share a lot of structural similarities to  graphs. 
+                                                    Networks can structurally be thought of as weighted graphs and then some more. Each edge in a network has non-negative 
+                                                    'Flow' &  'capacity' weights.
+
+                                                </p>
+
+                                                <img src="../images/network-flow.jpg" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                    Every network consists of a source and a sink(in some cases there  may be more than one source and sink). 
+                                                    Sources will generate flow while sinks will drain the flow. Since networks represent closed systems, any 
+                                                    flow that is generated by a source must be eventually drained via a sink. This is called the conservation 
+                                                    of flow.
+
+
+                                                </p>
+
+                                                <p class="paragraphFontStyle">
+                                                    For example, if a network represents a water pipeline, the nodes of the network represent junctions(water pipe intersections),
+                                                     edges represent pipes that connect the junctions, capacities may represent the maximum rate of water that can flow through a 
+                                                     pipe, and flows will represent the actual rate of water flowing through a the pipe at a time. One common question associated 
+                                                     with this problem may be "What is the max rate of water that can be pushed from the faucet to the sink given the water flow 
+                                                     has to obey the capacity constraints. "
+
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                    The term 'flow value' represents the overall amount of flow generated by every source in a network. Similarly, the term 
+                                                    'maximum flow' represents the maximum 'flow value' possible given the capacity constraints of the network.
+
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> In an unweighted graph,  'closeness' is just the number of levels a vertex 'v' 
+                                                        is from the source. So when traversing the graph starting from a source, every vertex that is an edge away from the source is put into 
+                                                        the collection above. There is no other vertex closer to the source than these vertices. So it looks like the vertices that are encountered first 
+                                                        while traversing the graph are the closest. So really, the ideal collection would be one that supports a first in first out kind of operation which is a queue. 
+                                                        This algorithm is called Breadth-first search(BFS).
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        Here's code which implements BFS:
+                                                </p>
+
+                                                <img src="../images/bfs_code.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> Now if the graph is a weighted graph, it is not enough to define 'closeness' 
+                                                    as just the number of edges a vertex sits from the source. This is because each edge has a weight that determines how 
+                                                    far a vertex is from a source.
+                                                </p>
+
+                                                <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
+
+
+                                                <p class="paragraphFontStyle"> Instead, the 'closesness' is more accurately defined as 
+                                                        the sum of weights along the path that leads to a vertex from the source. So in this case, the first set of vertices encountered 
+                                                        will not neccessarily be the closest. There could be vertices farther away from the source whose sum of weights is smaller than vertices that 
+                                                        are closer to the source. So, as we traverse the graph, we might discover
+                                                        new paths to an already visisted vertex, and this path may be  closer to the source. 
+                                                        
+
+                                            </p>
+                                            <p class="paragraphFontStyle">
+                                                    The 'fringe' data structure defined in the psuedocode above needs 
+                                                    to be one that supports operations for efficiently prioritizing vertices with the smallest sum of weights from the source.
+                                                    So at any point, the fringe needs to be able to return the vertex with the smallest weight. 
+                                                    The ideal data structure for this is a priority queue where the priority of the elements is determined
+                                                     based on how close they are to the source at any point. These values may change as new vertices and new paths to already discovered vertices are found, but 
+                                                     regardless, the priority queue will efficiently keep track of the closest vertex. This version of the shortest path algorithm is known as Dijkstra's Algorithm.
+                                            </p>
+
+                                                <img src="../images/dijkstra_code.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle"> With both algorithms, not only do you get paths, but the paths are also guaranteed 
+                                                    to be the shortest. So, in addition to determining connectivity between nodes, the algorithms also provide the shortest 
+                                                    distance between nodes. 
+                                                </p>
+
+                                                <p class="paragraphFontStyle"> However, this instrinsic characterstic of these two algorithms,
+                                                        which is the fact that they explore every closest node first before progressing 
+                                                        to explore farther, can be a detterent in areas such as navigation. 
+                                                </p>
+
+                
+
+                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from San Franciso to New York
+    
+                                                </p>
+                                               
+                                                <img src="../images/san_fran_nyc.png" style=" width: 50%;"/>
+
+                                                <p class="paragraphFontStyle">  
+                                                        If you use Dijkstra to find the shortest path, it will first explore places 
+                                                        closest to San Fransico first. It will even explore points that are on the pacific ocean first
+                                                         despite the fact that is clearly not the right path to take. 
+    
+                                                 </p>
+
+                                                    <p class="paragraphFontStyle">  
+                                                            To address this, we can make a minor change to how "closeness" is defined in Dijkstra. 
+                                                            Instead of just defining closeness as the sum of weights along a path from the source, 
+                                                            a third variable, known as a heuristic, can be added to that value in order to guide the algorithm. 
+                                                            
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            This heuristic can be the straight line distance from the current vertex to the destination. 
+                                                            Because of this added variable to the definition of closeness, vertices further to the left of 
+                                                            San Francisco will not appear to be as close to the source. So, this version of the shortest path algorithm 
+                                                            will explore areas more towords the target. This slight variation of Dijkstra's algorithm is called the A* algorithm. 
+
+                                                    </p>
+
+                                                    <img src="../images/a_star_code.png" style=" width: 50%;"/>
+                                     
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related content</h2>
+                       
+
+
+
+
+                    
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="https://www.youtube.com/watch?v=ySN5Wnu88nE">More on A* search algorithm</a>
+                                                    </h4>
+                                                    <p class="related-content__content">
+                                                        A short video explaining the A* shortest path algorithm
+                                                    </p>
+                                                </div>
+                                            </div>
+    
+                                            <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s13/www/lectures/lecture13.pdf">Bellman-ford algorithm</a>
+                                                        </h4>
+                                                        <p class="related-content__content">
+                                                            An algorithm for finding shortest path in a graph that contains cycles
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                             <!--item 2-->
+                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                    <div class="related-content__item">
+                                                        <h4 class="related-content__title">
+                                                            <a  class="relatedContentLink" href="linked_structures.html">Traversing linked structures</a>
+                                                        </h4>
+                                                        <p class="related-content__content">
+                                                            Different ways of traversing any linked structure such as graphs 
+                                                        </p>
+                                                    </div>
+                                                </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2020 Study space
+
+			  <a href="../index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="../notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="../resources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

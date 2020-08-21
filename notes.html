@@ -330,6 +330,22 @@
 			NoteTileImage: "shortest_paths_tile1.png"
          };
 
+		 var networkNotes = {
+			NoteTitle:"Networks",
+			NoteDescription: "Networks as data structures & flows in a network ",
+			NoteTileId: "algoNote3",
+			NoteLink: "networks.html",
+			NoteTileImage: "network-flow.jpg"
+         };
+
+		 var bipartiteMatching = {
+			NoteTitle:"Bipartite matching",
+			NoteDescription: "Using biparitite graphs & matching for combinatorial optimization",
+			NoteTileId: "algoNote3",
+			NoteLink: "bipartite_matching.html",
+			NoteTileImage: "bipartite_matching.jpg"
+         };
+
 		/*
 		System Design notes
 		*/
@@ -395,6 +411,14 @@
 	   
 	   html =note_modal_template(shortestPath);
 	   $("#algorithmsContent").append(html);
+
+	   html = note_modal_template(networkNotes);
+	   $("#algorithmsContent").append(html);
+
+	   html = note_modal_template(bipartiteMatching);
+	   $("#algorithmsContent").append(html);
+	   
+
 	   
 
 	   

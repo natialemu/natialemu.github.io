@@ -163,9 +163,9 @@
 
         
 
-                                                <p class="paragraphFontStyle"> Networks are data structures that share a lot of structural similarities to  graphs. 
+                                                <p class="paragraphFontStyle"> Networks are data structures that share lots of structural similarities to  graphs. 
                                                     Networks can structurally be thought of as weighted graphs and then some more. Each edge in a network has non-negative 
-                                                    'Flow' &  'capacity' weights.
+                                                    'flow' &  'capacity' weights.
 
                                                 </p>
 
@@ -179,6 +179,8 @@
 
 
                                                 </p>
+                                                <img src="../images/water-pipe.jpg" style=" width: 60%;"/>
+
 
                                                 <p class="paragraphFontStyle">
                                                     For example, if a network represents a water pipeline, the nodes of the network represent junctions(water pipe intersections),
@@ -199,90 +201,90 @@
 
 
 
-                                                <p class="paragraphFontStyle"> In an unweighted graph,  'closeness' is just the number of levels a vertex 'v' 
-                                                        is from the source. So when traversing the graph starting from a source, every vertex that is an edge away from the source is put into 
-                                                        the collection above. There is no other vertex closer to the source than these vertices. So it looks like the vertices that are encountered first 
-                                                        while traversing the graph are the closest. So really, the ideal collection would be one that supports a first in first out kind of operation which is a queue. 
-                                                        This algorithm is called Breadth-first search(BFS).
+                                                <p class="paragraphFontStyle"> 
+                                                        So, what type of behaviors are commonly associated with networks? The two most common ones are <strong> 1.</strong>finding the 
+                                                        value of the maximum flow within the network and <strong> 2. </strong>finding the 'Minimum cut' of a network. The 'minimum cut' 
+                                                        represents a set of edges, with minimum overall capacity, that will disconnect the network(i.e flow from source 
+                                                        to sink is not possible). These two might present themselves in different ways in real life problems. There is a 
+                                                        very interesting theorem <a href="https://www.cs.princeton.edu/courses/archive/spr04/cos226/lectures/maxflow.4up.pdf"> max-flow min-cut </a> 
+                                                        which basically says the value of these two quantities is equal. 
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        Here's code which implements BFS:
+                                                        Finding the maximum flow is basically an optimization problem: What should the amount of flow in each edge be so that the overall 
+                                                        flow value is maximized. Due to this, a lot of real life problems can be reduced to and be represented using a network data structure.
+                                                         Several combinatorial optimization problems that can be modeled by <a href="bipartite_matching.html">bipartite graphs</a> and solved via bipartite matching algorithms can
+                                                          be reduced to Network flow algorithms.  
                                                 </p>
 
-                                                <img src="../images/bfs_code.png" style=" width: 50%;"/>
-
-                                                <p class="paragraphFontStyle"> Now if the graph is a weighted graph, it is not enough to define 'closeness' 
-                                                    as just the number of edges a vertex sits from the source. This is because each edge has a weight that determines how 
-                                                    far a vertex is from a source.
+                                                <p class="paragraphFontStyle"> 
+                                                        One of the main reasons why networks are powerful is because of the fact that there are known efficient algorithms for solving network flow 
+                                                        problems. For example, the famous " 8 Queens" problem is usually solved via recursion & backtracking and possibly optimized via 
+                                                        dynamic programming. Depending on the variation of the problem, this approach will solve the "8 Queens" problem in polynomial 
+                                                        time. However, by eventually reducing this problem to a network flow problem, it can be solved in a time analogous to 
+                                                        just a few iterations of depth first search/breadth first search. Another example of a problem that can be reduced to a flow network problem
+                                                        is that of <a href="https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/edgedisjoint.pdf">edge-disjoint paths</a>
                                                 </p>
 
-                                                <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
 
-
-                                                <p class="paragraphFontStyle"> Instead, the 'closesness' is more accurately defined as 
-                                                        the sum of weights along the path that leads to a vertex from the source. So in this case, the first set of vertices encountered 
-                                                        will not neccessarily be the closest. There could be vertices farther away from the source whose sum of weights is smaller than vertices that 
-                                                        are closer to the source. So, as we traverse the graph, we might discover
-                                                        new paths to an already visisted vertex, and this path may be  closer to the source. 
-                                                        
+                                                <p class="paragraphFontStyle"> 
+                                                        Most algorithms that solve network problems usually deal with a 
+                                                        single source and a single sink. However, this won't be a problem
+                                                         since such type of variations  that include more than one source 
+                                                         and sink can be <a href="https://cs.idc.ac.il/~smozes/msms2slides.pdf">reduced </a> 
+                                                         to networks with a single source & sink.  
 
                                             </p>
-                                            <p class="paragraphFontStyle">
-                                                    The 'fringe' data structure defined in the psuedocode above needs 
-                                                    to be one that supports operations for efficiently prioritizing vertices with the smallest sum of weights from the source.
-                                                    So at any point, the fringe needs to be able to return the vertex with the smallest weight. 
-                                                    The ideal data structure for this is a priority queue where the priority of the elements is determined
-                                                     based on how close they are to the source at any point. These values may change as new vertices and new paths to already discovered vertices are found, but 
-                                                     regardless, the priority queue will efficiently keep track of the closest vertex. This version of the shortest path algorithm is known as Dijkstra's Algorithm.
-                                            </p>
-
-                                                <img src="../images/dijkstra_code.png" style=" width: 50%;"/>
-
-                                                <p class="paragraphFontStyle"> With both algorithms, not only do you get paths, but the paths are also guaranteed 
-                                                    to be the shortest. So, in addition to determining connectivity between nodes, the algorithms also provide the shortest 
-                                                    distance between nodes. 
+                                            <p class="paragraphFontStyle"> 
+                                                    A few important terms related network flow algorithms: 
                                                 </p>
+                                            
+                                            <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                                <strong>Reverse edge: </strong> the reverse edge 'e' 'of an edge 'e' is directed 
+                                                                in the opposite direction. It always has a capacity of zero and a flow added
+                                                                 to a reverse edge will negate that of the original edge. These edges 
+                                                                 will not have any side effect in the overall net flow of a network since 
+                                                                 they have zero capacity. Not having an edge is basically the same
+                                                                  as having an edge of capacity zero.                                                      
+                                                        </li>
+                                                        <li>
+                                                                <strong> Residual capacity: </strong> the amount of flow that can be pushed to an 
+                                                                edge. This is difference between the capacity of an edge and its current flow.                                                          
+                                                        </li>
+                                                        <li>
+                                                                <strong> Residual network: </strong> 
+                                                                This is the original network with reverse edges and residual capacity added to it.                                                          
+                                                        </li>
+                                                        <li>
+                                                                <strong> Augmenting path: </strong> 
+                                                                an s-t path in which every edge in the path has a non-zero residual capacity.                                                          
+                                                        </li>
+                                                    </ul>
+                                            </blockquote>
 
-                                                <p class="paragraphFontStyle"> However, this instrinsic characterstic of these two algorithms,
-                                                        which is the fact that they explore every closest node first before progressing 
-                                                        to explore farther, can be a detterent in areas such as navigation. 
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                    Given a residual network, one algorithm that solves for the max flow repeatedly attempts to find an augmenting
+                                                    path. For each agumenting path the algorithm finds, it finds the edge along the path with the smallest residual capacity, and 
+                                                    pushes that value as a flow to every edge along the augmenting path. The algorithm terminates when there is no longer an augmenting
+                                                    path.
                                                 </p>
-
                 
 
-                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from San Franciso to New York
-    
-                                                </p>
-                                               
-                                                <img src="../images/san_fran_nyc.png" style=" width: 50%;"/>
-
                                                 <p class="paragraphFontStyle">  
-                                                        If you use Dijkstra to find the shortest path, it will first explore places 
-                                                        closest to San Fransico first. It will even explore points that are on the pacific ocean first
-                                                         despite the fact that is clearly not the right path to take. 
-    
-                                                 </p>
-
-                                                    <p class="paragraphFontStyle">  
-                                                            To address this, we can make a minor change to how "closeness" is defined in Dijkstra. 
-                                                            Instead of just defining closeness as the sum of weights along a path from the source, 
-                                                            a third variable, known as a heuristic, can be added to that value in order to guide the algorithm. 
-                                                            
-                                                    </p>
-
-                                                    <p class="paragraphFontStyle">
-                                                            This heuristic can be the straight line distance from the current vertex to the destination. 
-                                                            Because of this added variable to the definition of closeness, vertices further to the left of 
-                                                            San Francisco will not appear to be as close to the source. So, this version of the shortest path algorithm 
-                                                            will explore areas more towords the target. This slight variation of Dijkstra's algorithm is called the A* algorithm. 
-
-                                                    </p>
-
-                                                    <img src="../images/a_star_code.png" style=" width: 50%;"/>
-                                     
+                                                        If the algorithm used to find the augmenting path is depth-first search, 
+                                                        this algorithm is known as Ford-Fulkerson's algorithm. 
+                                                        If breadth-first search is used, it's called Edmund-Karp's algorithm. 
+                                                        Analysis of these two algorithms can be found <a href="ttps://www.cs.cornell.edu/courses/cs4820/2012sp/handouts/edmondskarp.pdf "> here </a>, while
+                                                        the ful implementation of the algorithms can be found <a href="https://algs4.cs.princeton.edu/64maxflow/FordFulkerson.java.html"> here </a>. 
+                                                </p>
+                 
                                 
                                                 
 
@@ -313,37 +315,14 @@
                                             <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
                                                 <div class="related-content__item">
                                                     <h4 class="related-content__title">
-                                                        <a  class="relatedContentLink" href="https://www.youtube.com/watch?v=ySN5Wnu88nE">More on A* search algorithm</a>
+                                                        <a  class="relatedContentLink" href="https://people.eecs.berkeley.edu/~vazirani/algorithms/chap7.pdf">Linear programming & Networks</a>
                                                     </h4>
                                                     <p class="related-content__content">
-                                                        A short video explaining the A* shortest path algorithm
+                                                        Flows in a network as special cases of linear programming
                                                     </p>
                                                 </div>
                                             </div>
-    
-                                            <!--item 2-->
-                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                    <div class="related-content__item">
-                                                        <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s13/www/lectures/lecture13.pdf">Bellman-ford algorithm</a>
-                                                        </h4>
-                                                        <p class="related-content__content">
-                                                            An algorithm for finding shortest path in a graph that contains cycles
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                             <!--item 2-->
-                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                    <div class="related-content__item">
-                                                        <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="linked_structures.html">Traversing linked structures</a>
-                                                        </h4>
-                                                        <p class="related-content__content">
-                                                            Different ways of traversing any linked structure such as graphs 
-                                                        </p>
-                                                    </div>
-                                                </div>
+     
     
                                     </div>
                                 </div>

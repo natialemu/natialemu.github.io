@@ -163,122 +163,228 @@
 
         
 
-                                                <p class="paragraphFontStyle"> Graphs are used to express non-hierarchically related items.
-                                                     They can represent networks such as pipelines & roads, processes such as Markov chains or
-                                                      some sort of partial ordering such as makefiles. 
+                                             <img src="../images/bipartite_graphs.gif" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                        Undirected graphs whose vertices can be colored with exactly two colors in such a way 
+                                                        that every edge in the graph connects vertices of alternating colors are known 
+                                                        as Bipartite graphs.  
                                                 </p>
 
-                                                <img src="../images/edge_relationship.png" style=" width: 60%;"/>
 
-                                                <p class="paragraphFontStyle"> A common operation peformed on graphs is 
-                                                        finding the shortest path between vertices in a graph. Depending on the relationship that the edges in the graph
-                                                        represent, the shortest path of a graph can provide meaningful insights. For example, for a graph that represents a network of
-                                                        roads, the edges represent roads that connect intersections. If each edge has a weight that represents the length of each
-                                                        road, then the shortest path in this context refers to the shortest distance to get from one intersection to another. On the other hand,
-                                                        if the weight of each edge represents the time it takes to get from one intersection to an adjacent intersection, then the shortest path in this context will be
-                                                        the quickest path to take to get from one intersection to antoher. 
-                                                        
+                                                <img src="../images/bipartite_matching.jpg" style=" width: 60%;"/>
 
-
+                                                <p class="paragraphFontStyle"> 
+                                                        A 'bipartite matching' is a set of edges in a bipartite graph that have 
+                                                        exclusive ownership of the pair of vertices each edge in the matching connects.                 
                                                 </p>
 
                                                 <p class="paragraphFontStyle">
-                                                        Regardless of what the graph represents, the algorithm for finding the shortest path is the same. Here's a psuedocode of an algorithm that finds the shortest path in any graph:
 
-                                                </p>
-
-                                                <img src="../images/shortest_path_algo.png" style=" width: 60%;"/>
-
-
-                                                <p class="paragraphFontStyle"> The goal is to traverse the graph in order of each vertex's 'closeness' to the 
-                                                        source. The 'fringe' data structure in the picture above needs to support operations for finding the closest of the visited vertices. 
-                                                </p>
-
-
-
-                                                <p class="paragraphFontStyle"> In an unweighted graph,  'closeness' is just the number of levels a vertex 'v' 
-                                                        is from the source. So when traversing the graph starting from a source, every vertex that is an edge away from the source is put into 
-                                                        the collection above. There is no other vertex closer to the source than these vertices. So it looks like the vertices that are encountered first 
-                                                        while traversing the graph are the closest. So really, the ideal collection would be one that supports a first in first out kind of operation which is a queue. 
-                                                        This algorithm is called Breadth-first search(BFS).
+                                                        For example, the highlighted edges in the two graphs above are two possible matching sets. 
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        Here's code which implements BFS:
+                                                        Most problems associated with bipartite matching boils down the these two problems: 
                                                 </p>
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    <strong>Finding the maximal matching: </strong>  the largest matching set                                                      
+                                                            </li>
+                                                            <li>
+                                                                    <strong> Finding the <a href="http://www.princeton.edu/~aaa/Public/Teaching/ORF523/ORF523_Lec6.pdf"> minimum vertex cover:</a> </strong> 
+                                                                    this is the minimum set of vertices that spans every edge in the graph.                                                          
+                                                            </li>
+                                                  
+                                                        </ul>
+                                                </blockquote>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                    A bipartite graph is said to have a perfect matching if every colored vertex can 
+                                                    be matched to some uncolored vertex and vice versa. There are two main pre-requisites 
+                                                    for a perfect matching to exist. <strong>1. </strong> The number of colored and uncolored vertices must be the same, and
+                                                    <strong>2. </strong>Each connected component of a the bipartite graph must be a <a href="https://en.wikipedia.org/wiki/Complete_bipartite_graph "> complete bipartite graph</a>>.  
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                        The interesting thing about bipartite matching problems is the fact 
+                                                        that they can be reduced to  <a href="networks.html"> Network flow </a> problems. To convert a 
+                                                        bipartite graph into a Network: 
+                                                </p>
+
+                                                <blockquote>
+                                                        <ul>
+                                                            <li>
+                                                                    Introduce a source vertex & add a directed edge from the
+                                                                     source to every colored vertex 
+
+                                                            </li>
+                                                            <li>
+                                                                    Introduce a sink vertex and add a directed edge from every uncolored vertex to the sink
+
+                                                            </li>
+                                                            <li>
+                                                                    Change every undirected edge in the bipartite graph to a directed edge going from colored vertices to uncolored vertices 
+
+                                                            </li>
+                                                            <li>
+                                                                    Assign a capacity of 1 to each vertex in the network. 
+
+                                                            </li>
+                                                  
+                                                        </ul>
+                                                </blockquote>
 
                                                 <img src="../images/bfs_code.png" style=" width: 50%;"/>
 
-                                                <p class="paragraphFontStyle"> Now if the graph is a weighted graph, it is not enough to define 'closeness' 
-                                                    as just the number of edges a vertex sits from the source. This is because each edge has a weight that determines how 
-                                                    far a vertex is from a source.
+                                                <p class="paragraphFontStyle"> Solving for the maximal matching of the original 
+                                                    bipartite graph is equivalent to solving for the maximum 
+                                                    flow of the corresponding network. Once the algorithm finds the 
+                                                    maximal flow of the corresponding network, any edge in the resulting 
+                                                    network that has positive flow and is in the original bipartite graph 
+                                                    will also be in the matching set.  
+
+ 
                                                 </p>
 
                                                 <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
 
 
-                                                <p class="paragraphFontStyle"> Instead, the 'closesness' is more accurately defined as 
-                                                        the sum of weights along the path that leads to a vertex from the source. So in this case, the first set of vertices encountered 
-                                                        will not neccessarily be the closest. There could be vertices farther away from the source whose sum of weights is smaller than vertices that 
-                                                        are closer to the source. So, as we traverse the graph, we might discover
-                                                        new paths to an already visisted vertex, and this path may be  closer to the source. 
+                                                <p class="paragraphFontStyle"> 
+                                                        Finding the minimum vertex cover for bipartite graphs is equivalent to finding 
+                                                        the min-cut set of the corresponding network. 
+
                                                         
 
-                                            </p>
+                                                 </p>
                                             <p class="paragraphFontStyle">
-                                                    The 'fringe' data structure defined in the psuedocode above needs 
-                                                    to be one that supports operations for efficiently prioritizing vertices with the smallest sum of weights from the source.
-                                                    So at any point, the fringe needs to be able to return the vertex with the smallest weight. 
-                                                    The ideal data structure for this is a priority queue where the priority of the elements is determined
-                                                     based on how close they are to the source at any point. These values may change as new vertices and new paths to already discovered vertices are found, but 
-                                                     regardless, the priority queue will efficiently keep track of the closest vertex. This version of the shortest path algorithm is known as Dijkstra's Algorithm.
+                                                    
+                                                    This is important because a lot of combinatorics problems can be represented as bipartite graphs 
+                                                    and solved by matching algorithms. So by reducing matching algorithms to network flow algorithms, 
+                                                    it is possible to efficiently solve complex combinatorics problems. 
                                             </p>
 
-                                                <img src="../images/dijkstra_code.png" style=" width: 50%;"/>
-
-                                                <p class="paragraphFontStyle"> With both algorithms, not only do you get paths, but the paths are also guaranteed 
-                                                    to be the shortest. So, in addition to determining connectivity between nodes, the algorithms also provide the shortest 
-                                                    distance between nodes. 
+                                                <p class="paragraphFontStyle"> 
+                                                        Assignment problems  are one class of problems that can be solved via bipartite matching. 
+                                                        Assume there are 'N' workers, and 'M' machines. Not all of the 'N' workers know how to 
+                                                        operate every machine, and not every machine can be operated by all employees. 
+                                                        The goal is to assign workers to machines & minimize the overall number of 
+                                                        idle machines and employees while doing so.
                                                 </p>
 
-                                                <p class="paragraphFontStyle"> However, this instrinsic characterstic of these two algorithms,
-                                                        which is the fact that they explore every closest node first before progressing 
-                                                        to explore farther, can be a detterent in areas such as navigation. 
+                                                <p class="paragraphFontStyle"> 
+                                                        Let  N colored vertices represent the workers, and M uncolored vertices represent 
+                                                        the machines. There is an edge between two alternating colored vertices v and w 
+                                                        only if employee v knows how to operate  machine w. 
                                                 </p>
 
                 
 
-                                                <p class="paragraphFontStyle">  For example, say you want to find the shortest path from San Franciso to New York
-    
+                                                <p class="paragraphFontStyle">  
+                                                        For the above bipartite graph,  an edge will be in a matching set M only if its two vertices are not be shared by any other edge 
+                                                        in the matching. In other words, no other employee will use machine 'w' 
+                                                        and no other machine will be operated by employee 'v'. 
+
+                                                    
                                                 </p>
                                                
-                                                <img src="../images/san_fran_nyc.png" style=" width: 50%;"/>
 
                                                 <p class="paragraphFontStyle">  
-                                                        If you use Dijkstra to find the shortest path, it will first explore places 
-                                                        closest to San Fransico first. It will even explore points that are on the pacific ocean first
-                                                         despite the fact that is clearly not the right path to take. 
-    
+                                                       
+                                                        Another problem that can efficiently be solved via bipartite matching is the N-Bishops problem. 
+                                                        The goal is to find the maximum number of bishops that can be placed on an NxN chessboard without 
+                                                        any two bishop pieces attacking each other.    
                                                  </p>
 
                                                     <p class="paragraphFontStyle">  
-                                                            To address this, we can make a minor change to how "closeness" is defined in Dijkstra. 
-                                                            Instead of just defining closeness as the sum of weights along a path from the source, 
-                                                            a third variable, known as a heuristic, can be added to that value in order to guide the algorithm. 
-                                                            
+                                                        This problem can be split into two sub problems: One for bishops that move along dimensions that span only white cells and one for bishops move on dimensions that span black cells. 
+                                                        This is because bishops in alternating colored cells will never attack each other. So these two problems can be solved independently. 
+
+                                                        
                                                     </p>
 
                                                     <p class="paragraphFontStyle">
-                                                            This heuristic can be the straight line distance from the current vertex to the destination. 
-                                                            Because of this added variable to the definition of closeness, vertices further to the left of 
-                                                            San Francisco will not appear to be as close to the source. So, this version of the shortest path algorithm 
-                                                            will explore areas more towords the target. This slight variation of Dijkstra's algorithm is called the A* algorithm. 
+                                                            A cell that a bishop is placed on is an intersection of two diagonal lines in which one has positive slope and the other has 
+                                                            negative slope. Bishops will only attack each other if they share either one of the slopped dimensions. 
+                                                            So the goal is to place bishops in such a way that they are placed in cells that don't share a 
+                                                            positive slopped or negative slopped line. 
+                                                            
+
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            
+                                                            The colored vertices in the bipartite graph can represent the positive slopped dimensions that span the board, and uncolored vertices can 
+                                                            represent the negative slopped dimensions that span the board. There is an edge between alternating 
+                                                            colored vertices to represent a cell. So if there is an edge between v and w, that represents
+                                                             the cell formed by the intersection of vertical dimension v and horizontal dimension w.   
+                                                            
+
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            
+                                                            Placing an edge in a matching for the bipartite graph corresponds to placing rooks on a cell. 
+                                                            Placing rooks in cells(edges) that are in a matching will guarantee that they won't 
+                                                            attach each other since those edges do not share either dimension. 
+                                                            
+
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            So the maximum matching in this case will represent the maximum number
+                                                             of "safe" cells to place bishops on.  
+
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            Another way to solve the problem would be to rotate the board by 45 degrees. 
+                                                            By doing so, bishops in this new rotated board will behave as rooks. Solving this version of the problem via bipartite matching may require less overhead. 
+                                                            
+
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            The only caveat with this approach is that there are certain invalid cells in the newly rotated board. Bishops can only be placed in the cells spanning 
+                                                            the shaded diamond region of the rotated rectangle. To account for this, when constructing 
+                                                            the bipartite graph for the rotated board, if a cell formed by vertices v and w is invalid, do not add 
+                                                            an edge in the bipartite graph. 
+                                                            
 
                                                     </p>
 
-                                                    <img src="../images/a_star_code.png" style=" width: 50%;"/>
+                                                    <p class="paragraphFontStyle">
+                                                            The only caveat with this approach is that there are certain invalid cells in the newly rotated board. Bishops can only be placed in the cells spanning 
+                                                            the shaded diamond region of the rotated rectangle. To account for this, when constructing 
+                                                            the bipartite graph for the rotated board, if a cell formed by vertices v and w is invalid, do not add 
+                                                            an edge in the bipartite graph. 
+                                                        
+                                                    </p>
+
+                                                    <p class="paragraphFontStyle">
+                                                            The <a href="decision_making.html"> N Queens problem</a>, which is a slightly more complicated version of the N bishops problem, can simillarly be solved via
+                                                            bipartite matching. The key thing here is the fact that a queen is essentially a combination of a rook & a bishop. So, the problem can be divided into two sub problems which 
+                                                            can be combined after each one is solved independently. When combining the solutions to the two sub-problems, the important thing to remember is that cells that are safe for 
+                                                            both rooks and bishops are also safe for queens as well.
+                                                        
+                                                    </p>
+
+
+
+
                                      
                                 
                                                 
@@ -318,29 +424,7 @@
                                                 </div>
                                             </div>
     
-                                            <!--item 2-->
-                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                    <div class="related-content__item">
-                                                        <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="https://www.cs.cmu.edu/afs/cs/academic/class/15210-s13/www/lectures/lecture13.pdf">Bellman-ford algorithm</a>
-                                                        </h4>
-                                                        <p class="related-content__content">
-                                                            An algorithm for finding shortest path in a graph that contains cycles
-                                                        </p>
-                                                    </div>
-                                                </div>
-
-                                                             <!--item 2-->
-                                            <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
-                                                    <div class="related-content__item">
-                                                        <h4 class="related-content__title">
-                                                            <a  class="relatedContentLink" href="linked_structures.html">Traversing linked structures</a>
-                                                        </h4>
-                                                        <p class="related-content__content">
-                                                            Different ways of traversing any linked structure such as graphs 
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                       
     
                                     </div>
                                 </div>

@@ -149,181 +149,199 @@
                     </div>
                     <div class="desk--eight-twelfths story-page__head-shot-caption">
                             <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">System design</p>
-                            <p class="head-shot-short-desc">Distributed systems, multi-threaded programming, concurrency</p>          
+                            <p class="head-shot-short-desc">Concurrency and multithreading</p>          
                     </div>
                 </div>
 
             </div>
             <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
                 <h1  class="content-title content-title--story">
-                    Concurency, parallelism & distributed systems
+                    Concurency & multi-threading
                 </h1>
 
         
 
                                                 <p class="paragraphFontStyle"> 
-                                                    We go about most of our day juggling multiple tasks. We start our day by making 
-                                                    breakfast, and while breakfast is getting ready, we stretch in the mean time or 
-                                                    prepare things to read for our commute to work.
+                                                   
+                                                    Concurrency refers to the ability of a system to process multiple tasks independent of one another. 
+                                                    However, these concurrent tasks may or may not be executed simultaneously. The ability to 
+                                                    execute tasks concurrently is at the core of distributed systems. In distributed systems, a network of 
+                                                    nodes and their resources mimic a single machine with each component executing its task independently. 
+                                                    They interact with one another to execute a  set of procedures. So, utilizing concepts of parallelism & 
+                                                    concurrency helps build a distributed system whose components co-operate in a seamless and well orchestrated
+                                                     manner to execute the necessary protocols
+
                                                      </p>
 
                                                      <p class="paragraphFontStyle">
                                                         
-                                                            At the office, we initiate a deployment process for a change we want to deploy, and 
-                                                            while the application is deploying, we will either start to work on a different technical task, or 
-                                                            decide to take a coffee break. Then while the coffee machine is in the process of making a Latte,
-                                                            we go and quickly grab some snacks from the kitchen counter. 
+                                                        Let's zoom in and see what concurrency means within the context of a single machine. 
+                                                        Threads and processes are two technical abstractions that play a key role in the concurrent 
+                                                        execution of tasks. They represent  independently executable `pieces `that a processor deals with. 
                                                     </p>
                                                     <p class="paragraphFontStyle">
                                                             
-                                                            We're quite adept at wisely handling multiple tasks throughout the day. At the same time, however, we can only do a single thing. 
-                                                            We can’t get coffee while we’re in the process of initiating a deployment process; we can’t stretch while we’re actively cooking breakfast. 
-                                                            We also can’t juggle our way through every type of task. Some tasks 
-                                                            will  depend on other tasks. Regardless, we synchronize and execute our actions in a such way as to 
-                                                            optimize our day. These situations are analogous to the concepts of concurrency and parallelism. 
-                                                            Parallelism refers to the ability of a system to execute multiple tasks at the exact same time, 
-                                                            while concurrency refers to the ability of a system to process multiple tasks independent of one 
-                                                            another. However, concurrent tasks may or may NOT be executed simultaneously. If a system can execute 
-                                                            tasks in parallel, then it must be a concurrent system as well. The other way around, however, is 
-                                                            not the case.
+                                                           
+                                                        A thread is the simplest independently executable piece of code by the operating system, 
+                                                        and a process is just a running instance of a program (a set of instructions). There may
+                                                         be more than one thread that's at play within a process, and each thread diverts 
+                                                         functionality away from the main sequence of execution and operates in its own 
+                                                         sequence of execution. In the case of a single machine with a single processor, that 
+                                                         one processor will juggle through these threads & processes. If there is more than 
+                                                         one processor,  parallel execution of multiple threads and processes will be possible. 
+
                                                      </p>
 
 
                                                      <p class="paragraphFontStyle"> 
                                                         
-                                                            These two concepts play a special role in distributed systems in which a vast 
-                                                            number of resources are connected over a network, interact with one another, and execute a 
-                                                            set of tasks. In distributed systems, a network of nodes and their resources mimick a single 
-                                                            machine with each component executing its task independently and in parallel.
-                                                     </p>
-                                                     
-                                                        <p class="paragraphFontStyle"> 
-                                                                The way components in a distributed system juggle through their tasks is not unlike how we reason our way through 
-                                                                the tasks we execute each day. Each machine must be able to use its local resources and 
-                                                                execute its tasks in an optimal way. 
-                                                         </p>
+                                                        The code below highlights how three sets of instructions are can run concurrently. Two  
+                                                        'producer' threads cooperate to generate numbers and push those that are divisible by 7 
+                                                        to a queue. While on a different thread, a consumer goes to the queue and attempts to consume messages.
+                            
 
-
-                                                         <p class="paragraphFontStyle"> 
-                                                                 
-                                                                So integrating concepts of parallelism & concurrency helps build a distributed system
-                                                                whose components co-operate in a seamless and well orchestrated manner to execute the neccessary protocols. 
-                                                                For exampke, imagine there is an application that produces messages 
-                                                                into a Kafka cluster(a messaging system), and there is also  a consumer application that consumes the messages 
-                                                                from Kafka on the other end. This consumer application will then process the messages and update 
-                                                                some database.
-                                                        </p>
-
-                                                       <p class="paragraphFontStyle"> 
-                                                            
-                                                            If none of the applications in this scenerio are utilizing concurrency and/or
-                                                            parallelism, this is what's most likely to happen:
-                                                        </p>
-
-                                                       <blockquote>
-                                                            <ol>
-                                                                <li>
-                                                                        The consumer application would receive one message at a time
-                                                                </li>
-                                                                <li>
-                                                                        Process that content while other tasks wait
-                                                                </li>
-                                                                <li>
-                                                                        Put the processed content to the database
-                                                                </li>
-                                                            </ol>
-                                                        </blockquote>
-
-                                                        <p class="paragraphFontStyle"> 
-                                                                This would result in a significant delay to the overall flow of data in the system and is therefore far from ideal.
-                                                       </p>
-
-
-                                                       <p class="paragraphFontStyle"> 
-                                                           
-                                                            One improvement that can be made to the consumer application is to have one independent ‘piece’ of the application retrieve content from Kafka, then another ‘piece’ would process the content and update the 
-                                                            database. There can be more than one piece of the application update the database. Each 'piece' is capable of executing its tasks independently. This is just a minor improvement, however, and there are more improvements that can be made 
-                                                            to the system. A lot of the improvements would depend on what exactly the application is doing, the nature of data it’s dealing with, and the configurations of Kafka & 
-                                                            the database. 
-                                                        </p>
-
-                                                        <p class="paragraphFontStyle">
-                                                                 Two possible technical terms that describe the independently executeable `pieces` are
-                                                                 'Threads' & 'Processes'. A thread is the simplest independently executable piece of code by the operating system, 
-                                                                and a process is simply a running instance of a program (a set of instructions). Threads divert functionality away from the main sequence of execution and operate 
-                                                                in their own sequence of execution within a single process. It may be a single processor that’s 
-                                                                juggling through these threads & processes, or there may be more than one processor(in which case parallelism is possible). 
-                                                        </p>
-
-                                            
-
-                                                <p class="paragraphFontStyle"> 
-                                                        Example: There is a message queue, and, in the interest of simplicity, there is one application that will produce messages to the queue, and also consume messages from the queue.
-                                                        The sequence of events in a single threaded environment will look something like this:
-                                                </p>
-
-                                                <img src="../images/single_thread_producer_consumer.png" style=" width: 80%;"/>
-
-                                      
-
-                                                <p class="paragraphFontStyle"> 
-                                                    
-                                                        This particular approach doesn’t make much sense. At the very least producers and consumers should be independent entities. So, it makes more sense to have the consumers
-                                                        and producers operate in separate threads. 
-                                                </p>
-                                               
-                                                <img src="../images/multithreaded_consumer_producer.png" style=" width: 80%;"/>
-
-                                                <p class="paragraphFontStyle"> 
-                                                        Now say the producer is modified so that only numbers that are divisible by 7 are pushed into the queue. And to make things run faster,
-                                                        There are now two producer threads. One producer thread will be responsible for repeatedly incrementing the shared number while the other thread 
-                                                        will be responsible for checking the divisibility of the number and pushing it to the queue.
-                                                </p>
+                                                    </p>
 
                                                 <img src="../images/race_condition_producer_consumer.png" style=" width: 80%;"/>
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                    
-                                                        The code in the picture above won’t always produce the desired result. Numbers that aren’t divisible by 7 could be pushed into the queue. This could happen 
-                                                        due to the lack of co-ordination between the two threads when accessing shared data(also known as the 'critical section'). If the value of message is the number 7, 
-                                                        the producer thread responsible for sending the messages will checks the number's divisibility, and before it sends the message, it could be switched out by the OS. 
-                                                        The other producer thread may then go and increment the current value of the message to either 8 or 9. By the time the sender thread is active again and sends the message, 
-                                                        the number in the message will no longer be divisible by 7. This event is known as a race condition, and it happens when multiple threads try to race their way through the shared data.
+                                                    Even though the code above, correctly highlights how threads can operate, it won’t 
+                                                    always produce the desired result. Numbers that aren’t divisible by 7 could be 
+                                                    pushed into the queue. This could happen due to the lack of co-ordination 
+                                                    between the two threads when accessing the queue which is shared by both 
+                                                    threads(also known as the 'critical section'). If the value of message is the 
+                                                    number 7, for example, the producer thread responsible for sending the messages will 
+                                                    check its divisibility, and before it pushes it to the queue, it could be switched out 
+                                                    by the OS. The other producer thread may then go and increment the current value of the 
+                                                    message to either 8 or 9. By the time the sender thread is active again and sends the 
+                                                    message, the number in the message will no longer be divisible by 7. This event is 
+                                                    known as a race condition, and it happens when multiple threads try to race their 
+                                                    way through the shared data. 
+
                                                 </p>
 
                                                 <p class="paragraphFontStyle"> 
-                                                        There are two OS concurrency constructs that help prevent race conditions. The first construct is known as a Mutex. It can be thought of as a lock used to guard
-                                                         the critical section. Once a thread acquires a mutex, only that thread can access the critical section. It will have to let go of the lock for other threads 
-                                                         to gain access.  Once a thread releases a mutex, most mutex implementations arbitarily choose one of the waiting threads. 
+                                                    So, when operating in a multi-threaded environment, there are generally two important 
+                                                    things to keep in mind. The first one is the ability to create a thread safe data 
+                                                    structure., and the other one is the ability to manage multiple threads for concurrent 
+                                                    execution of tasks.
+
                                                 </p>
 
 
                                                  <p class="paragraphFontStyle"> 
-                                                      
-                                                         The second concurrency construct that helps prevent race conditions is a semaphore. A semaphore is used to restrict access to a critical section to a
-                                                         fixed number of threads. It’s analogous to trying to get a reservation at a cafe. If there is no table available at the cafe, new customers can’t get in. But when a table frees 
-                                                         up then a new person can enter the cafe. Thread pools, for example, are implemented using semaphores. If the consumer application in the 
-                                                         Kafka-based data pipeline example above has a consumer thread pool size of 8, that means a maximum of eight threads at a time can consume from Kafka. 
+                                                    It's important to create a thread safe data structure to ensure that threads have a correct 
+                                                    and consistent view of the structures that they're dealing with. Otherwise, race conditions 
+                                                    may occur and the results of the multi-threaded program could be unpredictable and may not 
+                                                    have the desired result. 
+
                                                  </p>
 
                                                  <p class="paragraphFontStyle"> 
-                                                      
-                                                        Semaphores are also used as a signaling mechanism between threads. Semaphores can be used in the above message queue example 
-                                                        to have the producer thread signal the consumer thread/s that content has been pushed into the queue.
+                                                    There are various OS level and programming level concurrency abstractions available to achieve thread safety. 
+                                                    Semaphores and mutexes two fundamental OS level abstractions that facilitate proper synchronization between threads. 
+                                                    A mutex can be thought of as a lock used to guard the critical section. Once a thread acquires a mutex, only that 
+                                                    thread can access the critical section. It will have to let go of the lock for other threads to gain access. 
+                                                    Once a thread releases a mutex, most mutex implementations arbitrarily choose one of the waiting threads.
                                                  </p>
 
                                                  <p class="paragraphFontStyle"> 
-                                                      
-                                                        Another important concurrency construct that is specific to programming languages than the OS is a Monitor. It combines the functionalities of a mutex 
-                                                        and a semaphore, but it’s best to think of a Monitor as a Mutex with an an extra feature. The reason is because only a single thread can enter the monitor 
-                                                        and access the critical section at a time. This extra feature that monitors have is the concept of condition variables. Based on the state of these condition variables, a 
-                                                        thread can either lock and access a critical section or wait until the criteria for the condition variable is satisfied by another thread. Monitors can also 
-                                                        be used as a signaling mechanism between the producer and consumer threads in the above example.
- 
+
+                                                    A semaphore, on the other hand, is used to restrict access to a critical section to a fixed number of threads. 
+                                                    It’s analogous to trying to get a reservation at a café or a parking lot. If there is no table available at the 
+                                                    café, new customers will have to wait until a table frees up. Semaphores are also used as a signaling mechanism 
+                                                    to better orchestrate co-operation and synchronization among threads. Semaphores can be used in the above 
+                                                    producer-consumer example to have one of the producer threads signal the consumer thread that content has 
+                                                    been pushed into the queue.
                                                  </p>
 
-                                                 <img src="../images/monitors_consumer_producer.png" style=" width: 80%;"/>
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    There are also a few language level concurrency constructs widely used for thread safety. In java, <a href="http://web.mit.edu/javadev/doc/tutorial/java/threads/monitors.html">monitors</a>, 
+                                                    <a href="https://www.baeldung.com/java-cyclic-barrier">cyclic barriers</a>, and <a href="https://www.baeldung.com/java-countdown-latch">countdown latches</a> are a few examples.  A monitor combines the functionalities of a mutex 
+                                                    and a semaphore, but it’s better to think of a monitor as a mutex with a few added features. It resembles 
+                                                    a mutex because only a single thread can enter the monitor and access the critical section at a time. The 
+                                                    added feature that monitors introduce is the concept of condition variables. Based on the state of these 
+                                                    condition variables, a thread can either lock and access the critical section protected by the monitor or 
+                                                    wait until the condition variable is satisfied by another thread.
+                                                 </p>
+
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    Creating a thread safe data structure is by itself is not enough without properly managing the lifecycle and execution
+                                                     of the threads. Java provides different ways of achieving this. The simplest(least convenient) is directly using the 
+                                                     <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">Thread class </a>. The thread class has a 'run' behavior that  can run any 'executable' or 'runnable' task in a new
+                                                      sequence of execution. A <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">Runnable</a> task is mostly used to encapsulate tasks that don't return any result, while 
+                                                      <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html">Callable</a> tasks encapsulate tasks that produce and return some result at the end. Even though the Thread class is 
+                                                      the most basic unit of concurrency in java, it is rarely used in practice. That is because java provides a better 
+                                                      framework, known as the executor framework, that manages different aspects of a thread's lifecycle.
+
+                                                 </p>
+
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    One important feature of Executors in the executor framework is that they decouple the submission of a task with 
+                                                    that of its execution. To achieve this, Java provides different executor implementations such as thread pools. 
+                                                    A thread pool is an executor which reduces the overhead associated with creation and destruction of threads.
+                                                     Once threads in a thread pool are done executing their tasks, they will fall back to the 'pool' and await the 
+                                                     execution of other tasks. This orchestration is efficiently managed by different types of thread pools, and Java 
+                                                     provides a couple of types of thread pools such as:
+
+                                                 </p>
+
+                                                 <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                                <strong>Fixed thread pool </strong>
+                                                                creates a thread pool with the desired number of threads. 
+
+                                                        </li>
+                                                        <li>
+                                                            <strong>Single thread pool </strong>
+                                                            creates a thread pool with just one thread in the pool.
+
+                                                        </li>
+                                                        <li>
+                                                            <strong>Cached thread pool </strong>
+                                                            creates a thread pool with a dynamically
+                                                        </li>
+                                                        <li>
+                                                            <strong>Scheduled thread pool </strong>
+                                                            creates a thread pool that executes its tasks in scheduled intervals.
+
+                                                        </li>
+                                              
+                                                    </ul>
+                                            </blockquote>
+
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    The complete list of thread pools available can be found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html">here</a>.
+
+                                                 </p>
+
+                                                 
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    When executing Callable or Runnable tasks in a multi-threaded context, it's important to handle the results of the 
+                                                    execution appropriately. Java provides the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future interface</a> to handle the results of this asynchronous execution. 
+                                                    Sometimes it may not be enough to just invoke a Runnable subroutine asynchronously and let the calling thread 
+                                                    continue to do its thing. Instead, the calling thread may depend on the results of a Callable task before it can 
+                                                    progress any further with its task execution. A Future encapsulates the results of an asynchronously executed task. 
+                                                    The Future API provides different ways to handle and process the results of an asynchronous calls.
+
+                                                 </p>
+
+                                                 
+                                                 <p class="paragraphFontStyle"> 
+
+                                                    <a href=" https://github.com/natialemu/problem-solving/blob/master/2020/Other/BestMeetingPoint.java">Here</a> is an example of a piece of code that uses the executors framework to manage threads and also implements thread 
+                                                    safety. The description of the problem can be found <a href="https://leetcode.com/problems/best-meeting-point/">here</a>.
+
+
+                                                 </p>
+
 
                                         
                                                 

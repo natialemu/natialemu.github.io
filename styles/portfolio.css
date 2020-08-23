@@ -2676,6 +2676,16 @@ a:link {
 .sectionDesc {
     margin: 0 20% 0 20%;
 }
+#externalLink {
+    text-decoration: underline;
+    color: #424242;
+    font-weight: bolder;
+    transition: color 0.3s !important;
+}
+#externalLink:hover {
+    color: #000 !important;
+    transition-timing-function: ease-in-out !important;
+}
 *, *:before, *:after {
     box-sizing: border-box;
 }

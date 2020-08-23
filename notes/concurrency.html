@@ -258,8 +258,8 @@
 
                                                  <p class="paragraphFontStyle"> 
 
-                                                    There are also a few language level concurrency constructs widely used for thread safety. In java, <a href="http://web.mit.edu/javadev/doc/tutorial/java/threads/monitors.html">monitors</a>, 
-                                                    <a href="https://www.baeldung.com/java-cyclic-barrier">cyclic barriers</a>, and <a href="https://www.baeldung.com/java-countdown-latch">countdown latches</a> are a few examples.  A monitor combines the functionalities of a mutex 
+                                                    There are also a few language level concurrency constructs widely used for thread safety. In java, <a id="externalLink" href="http://web.mit.edu/javadev/doc/tutorial/java/threads/monitors.html">monitors</a>, 
+                                                    <a id="externalLink" href="https://www.baeldung.com/java-cyclic-barrier">cyclic barriers</a>, and <a id="externalLink" href="https://www.baeldung.com/java-countdown-latch">countdown latches</a> are a few examples.  A monitor combines the functionalities of a mutex 
                                                     and a semaphore, but it’s better to think of a monitor as a mutex with a few added features. It resembles 
                                                     a mutex because only a single thread can enter the monitor and access the critical section at a time. The 
                                                     added feature that monitors introduce is the concept of condition variables. Based on the state of these 
@@ -271,9 +271,9 @@
 
                                                     Creating a thread safe data structure is by itself is not enough without properly managing the lifecycle and execution
                                                      of the threads. Java provides different ways of achieving this. The simplest(least convenient) is directly using the 
-                                                     <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">Thread class </a>. The thread class has a 'run' behavior that  can run any 'executable' or 'runnable' task in a new
-                                                      sequence of execution. A <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">Runnable</a> task is mostly used to encapsulate tasks that don't return any result, while 
-                                                      <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html">Callable</a> tasks encapsulate tasks that produce and return some result at the end. Even though the Thread class is 
+                                                     <a id="externalLink" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html">Thread class </a>. The thread class has a 'run' behavior that  can run any 'executable' or 'runnable' task in a new
+                                                      sequence of execution. A <a id="externalLink" href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">Runnable</a> task is mostly used to encapsulate tasks that don't return any result, while 
+                                                      <a id="externalLink" href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html">Callable</a> tasks encapsulate tasks that produce and return some result at the end. Even though the Thread class is 
                                                       the most basic unit of concurrency in java, it is rarely used in practice. That is because java provides a better 
                                                       framework, known as the executor framework, that manages different aspects of a thread's lifecycle.
 
@@ -317,7 +317,7 @@
 
                                                  <p class="paragraphFontStyle"> 
 
-                                                    The complete list of thread pools available can be found <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html">here</a>.
+                                                    The complete list of thread pools available can be found <a id="externalLink" href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html">here</a>.
 
                                                  </p>
 
@@ -325,7 +325,7 @@
                                                  <p class="paragraphFontStyle"> 
 
                                                     When executing Callable or Runnable tasks in a multi-threaded context, it's important to handle the results of the 
-                                                    execution appropriately. Java provides the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future interface</a> to handle the results of this asynchronous execution. 
+                                                    execution appropriately. Java provides the <a id="externalLink" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future interface</a> to handle the results of this asynchronous execution. 
                                                     Sometimes it may not be enough to just invoke a Runnable subroutine asynchronously and let the calling thread 
                                                     continue to do its thing. Instead, the calling thread may depend on the results of a Callable task before it can 
                                                     progress any further with its task execution. A Future encapsulates the results of an asynchronously executed task. 
@@ -336,8 +336,8 @@
                                                  
                                                  <p class="paragraphFontStyle"> 
 
-                                                    <a href=" https://github.com/natialemu/problem-solving/blob/master/2020/Other/BestMeetingPoint.java">Here</a> is an example of a piece of code that uses the executors framework to manage threads and also implements thread 
-                                                    safety. The description of the problem can be found <a href="https://leetcode.com/problems/best-meeting-point/">here</a>.
+                                                    <a id="externalLink" href=" https://github.com/natialemu/problem-solving/blob/master/2020/Other/BestMeetingPoint.java">Here</a> is an example of a piece of code that uses the executors framework to manage threads and also implements thread 
+                                                    safety. The description of the problem can be found <a id="externalLink" href="https://leetcode.com/problems/best-meeting-point/">here</a>.
 
 
                                                  </p>
@@ -357,16 +357,6 @@
             <div class="grid">
                 <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
                     <h2 class="related-content__header">Related content</h2>
-                        <!-- <div class="related-content__item related-content__item--compact">
-                                <h3 class="related-content__title">Note 1</h3>
-                                <p class="related-content__content related-content__content--always-open">Blah blah blah short description of note 1</p>
-                                <a href="#" class="related-content__link">See More</a>
-                        </div> -->
-                        <!-- <div class="related-content__item related-content__item--compact">
-                                <h3 class="related-content__title">Note 2</h3>
-                                <p class="related-content__content related-content__content--always-open">Lorem ipsum blah blah descirption fo note 2 lorem ipsum shit</p>
-                                <a href="#" class="related-content__link" >See More</a>
-                        </div> -->
 
 
 

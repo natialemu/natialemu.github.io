@@ -176,32 +176,19 @@
 
                                                 <p class="paragraphFontStyle"> 
                                                         A 'bipartite matching' is a set of edges in a bipartite graph that have 
-                                                        exclusive ownership of the pair of vertices each edge in the matching connects.                 
-                                                </p>
-
-                                                <p class="paragraphFontStyle">
-
-                                                        For example, the highlighted edges in the two graphs above are two possible matching sets. 
+                                                        exclusive ownership of the pair of vertices each edge in the matching connects. 
+                                                        For example, the highlighted edges in the two graphs above are two possible matching sets.                 
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
-                                                        Most problems associated with bipartite matching boils down the these two problems: 
+                                                        Most problems associated with bipartite matching boils down to two goals. The first goal is to find the maximal 
+                                                        matching. This is simly the largest matching set. The second goal is to find the <a href="http://www.princeton.edu/~aaa/Public/Teaching/ORF523/ORF523_Lec6.pdf"> minimum vertex cover</a>
+                                                        which is the minimum set of vertices that spans every edge in the graph.
                                                 </p>
 
-                                                <blockquote>
-                                                        <ul>
-                                                            <li>
-                                                                    <strong>Finding the maximal matching: </strong>  the largest matching set                                                      
-                                                            </li>
-                                                            <li>
-                                                                    <strong> Finding the <a href="http://www.princeton.edu/~aaa/Public/Teaching/ORF523/ORF523_Lec6.pdf"> minimum vertex cover:</a> </strong> 
-                                                                    this is the minimum set of vertices that spans every edge in the graph.                                                          
-                                                            </li>
-                                                  
-                                                        </ul>
-                                                </blockquote>
+
 
 
 
@@ -209,14 +196,14 @@
                                                     A bipartite graph is said to have a perfect matching if every colored vertex can 
                                                     be matched to some uncolored vertex and vice versa. There are two main pre-requisites 
                                                     for a perfect matching to exist. <strong>1. </strong> The number of colored and uncolored vertices must be the same, and
-                                                    <strong>2. </strong>Each connected component of a the bipartite graph must be a <a href="https://en.wikipedia.org/wiki/Complete_bipartite_graph "> complete bipartite graph</a>>.  
+                                                    <strong>2. </strong>Each connected component of a the bipartite graph must be a <a href="https://en.wikipedia.org/wiki/Complete_bipartite_graph "> complete bipartite graph</a>.  
                                                 </p>
 
 
 
                                                 <p class="paragraphFontStyle"> 
                                                         The interesting thing about bipartite matching problems is the fact 
-                                                        that they can be reduced to  <a href="networks.html"> Network flow </a> problems. To convert a 
+                                                        that they can be reduced to  <a href="networks.html"> network flow </a> problems. To convert a 
                                                         bipartite graph into a Network: 
                                                 </p>
 
@@ -243,28 +230,19 @@
                                                         </ul>
                                                 </blockquote>
 
-                                                <img src="../images/bfs_code.png" style=" width: 50%;"/>
 
                                                 <p class="paragraphFontStyle"> Solving for the maximal matching of the original 
                                                     bipartite graph is equivalent to solving for the maximum 
                                                     flow of the corresponding network. Once the algorithm finds the 
                                                     maximal flow of the corresponding network, any edge in the resulting 
                                                     network that has positive flow and is in the original bipartite graph 
-                                                    will also be in the matching set.  
+                                                    will also be in the matching set. Similarly, finding the minimum vertex cover for bipartite graphs is 
+                                                    equivalent to finding the min-cut set of the corresponding network. 
 
  
                                                 </p>
 
-                                                <img src="../images/bfs_for_weighted_graph.png" style=" width: 50%;"/>
 
-
-                                                <p class="paragraphFontStyle"> 
-                                                        Finding the minimum vertex cover for bipartite graphs is equivalent to finding 
-                                                        the min-cut set of the corresponding network. 
-
-                                                        
-
-                                                 </p>
                                             <p class="paragraphFontStyle">
                                                     
                                                     This is important because a lot of combinatorics problems can be represented as bipartite graphs 
@@ -285,6 +263,9 @@
                                                         the machines. There is an edge between two alternating colored vertices v and w 
                                                         only if employee v knows how to operate  machine w. 
                                                 </p>
+
+                                                <img src="../images/workers_machine_bipartite_graph.jpg" style=" width: 50%;"/>
+
 
                 
 
@@ -327,24 +308,25 @@
                                                             represent the negative slopped dimensions that span the board. There is an edge between alternating 
                                                             colored vertices to represent a cell. So if there is an edge between v and w, that represents
                                                              the cell formed by the intersection of vertical dimension v and horizontal dimension w.   
-                                                            
-
                                                         
                                                     </p>
+
+                                                    <img src="../images/n_queens_bipartite_matching.jpg" style=" width: 70%;"/>
+
 
                                                     <p class="paragraphFontStyle">
                                                             
                                                             Placing an edge in a matching for the bipartite graph corresponds to placing rooks on a cell. 
                                                             Placing rooks in cells(edges) that are in a matching will guarantee that they won't 
-                                                            attach each other since those edges do not share either dimension. 
+                                                            attach each other since those edges do not share either dimension. So the maximum matching in this 
+                                                            case will represent the maximum number of "safe" cells to place bishops on. 
                                                             
 
                                                         
                                                     </p>
 
                                                     <p class="paragraphFontStyle">
-                                                            So the maximum matching in this case will represent the maximum number
-                                                             of "safe" cells to place bishops on.  
+                                                             
 
                                                         
                                                     </p>
@@ -376,9 +358,9 @@
 
                                                     <p class="paragraphFontStyle">
                                                             The <a href="decision_making.html"> N Queens problem</a>, which is a slightly more complicated version of the N bishops problem, can simillarly be solved via
-                                                            bipartite matching. The key thing here is the fact that a queen is essentially a combination of a rook & a bishop. So, the problem can be divided into two sub problems which 
-                                                            can be combined after each one is solved independently. When combining the solutions to the two sub-problems, the important thing to remember is that cells that are safe for 
-                                                            both rooks and bishops are also safe for queens as well.
+                                                            bipartite matching. The key thing here is the fact that a queen is essentially a combination of a rook & a bishop. So, the problem can be divided into a bishop sub problem and 
+                                                            a rook sub-problem. These two subproblems can be combined after each one is solved independently. When combining the solutions to the two sub-problems, the important 
+                                                            thing to remember is that cells that are safe for both rooks and bishops are also safe for queens as well.
                                                         
                                                     </p>
 

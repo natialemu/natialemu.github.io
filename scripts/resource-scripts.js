@@ -9,33 +9,33 @@ $(function(){
      */
     var leetCode = {
         ProblemSolvingTitle:"Leet code",
-        ProblemSolvingDescription: "Practice data structures and algorithm by solving problems on Leet code",
+        ProblemSolvingDescription: "Data structures and algorithm problems mostly geared towards technical interviews",
         ProblemSolvingLink: "https://leetcode.com/"
      };
 
 
      var codeJam = {
         ProblemSolvingTitle:"Google code jam",
-        ProblemSolvingDescription: "Participate in Google's annual code jam competitions",
+        ProblemSolvingDescription: "Google's annual code jam competition archives",
         ProblemSolvingLink: "https://codingcompetitions.withgoogle.com/codejam"
      };
 
 
      var kattis = {
         ProblemSolvingTitle:"Kattis",
-        ProblemSolvingDescription: "Kattis is a platform to practice problem solving skills",
+        ProblemSolvingDescription: "Kattis programming problem archives",
         ProblemSolvingLink: "https://open.kattis.com/"
      };
       /**
-      * Append PS practice content to page
+      * Append algorithms practice content to page
       */
-     var html = resource_modal_template(leetCode);
-     $("#problemSolvingPracticeContent").append(html);
-
-     html = resource_modal_template(codeJam);
+     var html = resource_modal_template(codeJam);
      $("#problemSolvingPracticeContent").append(html);
 
      html = resource_modal_template(kattis);
+     $("#problemSolvingPracticeContent").append(html);
+
+     html = resource_modal_template(leetCode);
      $("#problemSolvingPracticeContent").append(html);
 
 
@@ -52,38 +52,38 @@ $(function(){
      */
     var mitIntroToAlgorithms = {
         ProblemSolvingLearningTitle:"Introduction to algorithms",
-        ProblemSolvingLearningDescription: "Learn basics of problem solving, data structures and algorithms",
+        ProblemSolvingLearningDescription: "Basics of problem solving, data structures and algorithms",
         ProblemSolvingLearningLink: "https://leetcode.com/"
      };
 
      var dataStructures = {
         ProblemSolvingLearningTitle:"Data structures",
-        ProblemSolvingLearningDescription: "Analyse the efficiency of a variety of techniques for structuring data",
+        ProblemSolvingLearningDescription: "Analysis of the efficiency of a variety of techniques for structuring data",
         ProblemSolvingLearningLink: "https://inst.eecs.berkeley.edu/~cs61b/fa18/"
      };
 
 
      var discreteMath = {
         ProblemSolvingLearningTitle:"Discrete mathematics",
-        ProblemSolvingLearningDescription: "Develop logical reasoning by focusing on proofs & definitions",
+        ProblemSolvingLearningDescription: "Logical reasoning with focus on proofs & definitions",
         ProblemSolvingLearningLink: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/"
      }
 
      var designAndAnalysisOfAlgorithms = {
         ProblemSolvingLearningTitle:"Design and analysis of algorithms",
-        ProblemSolvingLearningDescription: "Learn to design and analysis of algorithms",
+        ProblemSolvingLearningDescription: "Design and analysis of algorithms",
         ProblemSolvingLearningLink: "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/"
      }
 
      var advancedAlgorithms = {
         ProblemSolvingLearningTitle:"Advanced algorithms",
-        ProblemSolvingLearningDescription: "Covers advanced topics in algorithms design",
+        ProblemSolvingLearningDescription: "Advanced topics in algorithms design",
         ProblemSolvingLearningLink: "http://www.infocobuild.com/education/audio-video-courses/computer-science/cs224-fall2014-harvard.html"
      }
 
      var modernApplicationsOfAlgorithms = {
         ProblemSolvingLearningTitle:"Modern applications of algorithms",
-        ProblemSolvingLearningDescription: "This course focuses on algorithms that are at the core of most modern tools",
+        ProblemSolvingLearningDescription: "Applications of algorithms that are at the core of most modern tools",
         ProblemSolvingLearningLink: "https://web.stanford.edu/class/cs168/"
      }
 

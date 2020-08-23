@@ -2686,6 +2686,10 @@ a:link {
     color: #000 !important;
     transition-timing-function: ease-in-out !important;
 }
+blockquote {
+    font-size: small;
+    font-style: normal !important;
+}
 *, *:before, *:after {
     box-sizing: border-box;
 }

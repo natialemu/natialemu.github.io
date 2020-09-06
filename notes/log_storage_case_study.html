@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title> Log storage system</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                   <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+                    </nav>
+                    
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                             
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="#" class="active" aria-label="Selected Link: Teams" role="menuitem" >
+                                                        Log storage system
+                                                </a>
+                                        </li>
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="linked_structures.html"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                        Traversals
+                                                </a>
+                                        </li>
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                            <a href="decision_making.html"   role="menuitem"  >
+                                                Decision making
+                                            </a>
+                                        </li>
+
+    
+                                 
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: #fff;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1">Log storage system</p>
+                            <p class="head-shot-short-desc">Data structure design, Binary search trees, Tries, Maps</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Case study: Designing a log storage data structure
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle"> 
+                                                    The goal is to design and implement a data structure that stores logs and has the following behaviors:
+
+                                                </p>
+
+                                                
+                                                <blockquote>
+                                                    <ul>
+                                                        <li>
+                                                            It can add a single log, along with its timestamp, to the data structure. In 
+                                                            other words, given some log and its timestamp, store the log in the data structure.
+
+                                                        </li>
+                                                        <li>
+                                                            It can return a list of logs that fall in a provided time range 
+                                                            [Start, End]. A granularity(the time precision under consideration) is also part
+                                                             of the input. For example, if Start = “2017:01:01:23:59:59”, End = “2017:01:02:23:59:59”, 
+                                                             and the desired granularity = 'DAY', then the data structure needs to expose
+                                                              a behavior that finds all logs with timestamps in the range of [Jan. 1st 2017, Jan. 2nd 2017].
+                               
+                                                        </li>
+                                                        
+                                                        
+                                                    </ul>
+                                            </blockquote>
+
+                                                
+
+                                                <p class="paragraphFontStyle"> 
+                                                    Forget the problem a second and consider three data structures: HashMaps, Binary Search Trees and Tries.
+
+                                                </p>
+
+                                                <img src="../images/bst_1.jpg" style=" width: 50%;"/>
+
+                                                
+
+                                                <p class="paragraphFontStyle"> 
+                                                 
+                                                   <a id="externalLink" href="https://algs4.cs.princeton.edu/32bst/"> Binary Search Trees </a> are "binary trees" that satisfy the following property: For each node in the 
+                                                    binary search tree N, nodes to the left of 'N' have smaller keys than N while nodes to the right of 
+                                                    'N' have keys that are larger than N. No operations of a BST can violate this property. 
+                                                    This means that any point, the nodes in a binary search tree will maintain this 
+                                                    'sorted' structure. This unique property will be important later on. 
+                                                    Traversing nodes in a BST "in-order" means visiting all nodes in a BST in sorted order. 
+                                                </p>
+
+                                                <img src="../images/tries_and_strings.jpg" style=" width: 60%;"/>
+
+                                                <p class="paragraphFontStyle"> 
+                                                <a id="externalLink" href="https://www.cs.princeton.edu/courses/archive/fall12/cos226/lectures/52Tries.pdf" >Tries</a>, structurally speaking, are also trees. However, their use is widely associated with Strings. This is because all strings 
+                                                    are a linearly indexed chain of characters. This characteristics of strings makes them ideal to store in Tries. 
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                       
+                                                    The levels in a trees can be used to represent the different indices of a string. So, if trees are used to 
+                                                    store such type of structures, they become tries. However, tries are not just limited to strings. 
+                                                    Any other structure that exhibits similar characteristics can be stored in  tries. Although 
+                                                    there are different implementation of tries, the most space efficient implementation is using a
+                                                    <a id="externalLink" href=" https://www.cs.princeton.edu/courses/archive/fall12/cos226/lectures/52Tries.pdf">Ternary Search Trie</a>.
+
+                                                </p>
+
+
+                                                <img src="../images/hash_tables.jpg" style=" width: 40%;"/>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                   <a id="externalLink" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html"> Maps</a> are abstract data types that support, among others, the following two core operations:
+                                                    put(K key, V value) &  get(K key). In most programming languages, Maps are implemented in more than one way. In Java, for example,
+                                                     the most common implementations are
+                                                      <a id="externalLink" href="https://algs4.cs.princeton.edu/34hash/">HashMaps</a>(Implemented via Hash Tables), 
+                                                      <a id="externalLink" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">LinkedHashMaps</a>(Implemented via Linked lists), and 
+                                                      <a id="externalLink" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">TreeMaps</a>(Implemented via a type of balanced binary search trees known as 
+                                                      <a id="externalLink" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/video-lectures/lecture-10-red-black-trees-rotations-insertions-deletions/lec10.pdf">red black trees</a>).
+                                                </p>
+
+
+                                     
+
+                                                <p class="paragraphFontStyle"> 
+
+                                                    So, how do these data structures help in solving the above problem? Forget the concept of granularities for a second. The goal would just be  to design
+                                                  a data structure that stores logs. However, when retrieving 
+                                                    the logs, it may help if the logs are stored in some sorted order based on their timestamps.  
+                                                    Otherwise, the algorithm has to go through each log to see if its timestamp is in the desired 
+                                                    range.  One problem with maintaining a sorted order is that any new logs added to the data structure 
+                                                    could potentially disrupt the sorted order and it may be costly to re-order or sort the logs every 
+                                                    time a log is added to the data structure.
+                                                      
+                                                </p>
+
+
+
+
+
+
+                                                <p class="paragraphFontStyle">   
+                                                       
+                                                    There are a few data structures that maintain their sorted order even when their content changes. 
+                                                    A <a id="externalLink" href="https://www.cs.princeton.edu/courses/archive/spring13/cos226/lectures/24PriorityQueues-JH.pdf">heap</a> is one data structure that maintains its order under dynamic circumstances. However, heaps 
+                                                    aren't that useful when performing range queries. Instead, a binary search tree is more useful here. 
+                                                    If the collection used to store the logs is implemented using a binary search tree, then both the behaviors
+                                                     to add logs and retrieve a range of logs would be reasonably optimized. The key of the nodes 
+                                                     in binary search tree used to main the sorted order can be the timestamp of the logs, and 
+                                                     events with the same timestamp can be stored in a list in the node. Keep in mind that every circumstance
+                                                      is different and there may be situations where the read behavior(getting the logs) is much more important 
+                                                      than the write(retrieving a range of logs) and vice versa.  In that case, it's better to select a data structure 
+                                                      that optimizes the desired behavior even if that means degrading the performance of the other behavior.
+    
+                                                </p>
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                    
+                                                    But how would the binary search tree based data structure deal with granularities. One way would be to store
+                                                     multiple copies of all the logs per granularity. In more technical terms, a hash map can map each granularity to 
+                                                     a corresponding BST-based collection of logs whose timestamps are used to maintain the BST sort order. 
+
+    
+                                                </p>
+
+    
+                                                <p class="paragraphFontStyle">  
+                                                       
+                                                    This means every time a log is added to the log storage system, a new timestamp would 
+                                                    be calculated for every granularity, and then the log, along with its corresponding timestamp, 
+                                                    would be inserted in each of the BSTs. For example, if a log occurred at timestamp "2017:01:01:23:59:59", 
+                                                    then the first step would be to calculate the timestamp at each granularity. This means storing six copies of 
+                                                    the log in six BSTs at the following timestamps: '2017', '2017:01', '2017:01:01', '2017:01:01:23', '2017:01:01:23:59', 
+                                                    '2017:01:01:23:59:59'. 
+    
+                                                </p>
+                                                <img src="../images/bst_example.jpg" style=" width: 100%;"/>
+
+
+
+
+
+
+
+                                                <p class="paragraphFontStyle">  
+                                                    Retrieving a range of logs based on the provided granularity would just be a matter 
+                                                    of traversing a subset of the logs in the BST. The BST-based implementation of this 
+                                                    data structure can be found <a id="externalLink" href="https://github.com/natialemu/problem-solving/blob/master/2020/Other/LogStorageClient.java">here</a>.
+                            
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle">  
+                                                    One interesting property of the timestamps is that the timestamp '2017:01:01:23:59:59' is just a chain
+                                                     of all the individual timestamps at each granularity. In other words, the timestamp  '2017:01:01:23:59:59' 
+                                                     can be written as a combination of '2017' + '01' + '01' + '23' + '59' + '59'. The original timestamp 
+                                                     is merely an ordered sequence of timestamps at each granularity. This linear chained structure is analogous
+                                                      to the structural similarities between that of strings and the characters that make up the strings. 
+                                                       
+    
+                                                </p>
+
+
+                                                <p class="paragraphFontStyle">  
+                                                        
+                                                       
+                                                    So, just like multiple strings can be efficiently stored and manipulated using Tries,
+                                                     multiple logs can also be stored in a Trie based on each of their timestamps. Just 
+                                                     like the first level of the Trie represents the characters at the zeroth index of strings, 
+                                                     the first level would similarly represent the year(or highest granularity level) of logs. 
+                                                     The deeper into the Trie the algorithm goes, the more precise the timestamps get. With this 
+                                                     approach, if an event occurred on "Monday October 17th 2018" and the desired granularity is 'Month', 
+                                                     then the algorithm should look for logs that occurred in "October 17th 2018". In a similar procedure 
+                                                     to that of a BST, retrieving a range of logs based on the provided granularity would just be a matter
+                                                      of traversing a subset of the nodes in the Trie. The full implementation of the Trie version of the Log
+                                                       Storage data structure can be found <a id="externalLink" href="https://github.com/natialemu/problem-solving/blob/master/2020/Other/LogStorageClient.java">here</a>.
+
+                                                </p>
+
+                                                <img src="../images/ternary_trie_example.jpg" style=" width: 100%;"/>
+
+
+                                     
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related contents</h2>
+
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <!-- <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="shortest_paths.html">Case study: designing a cache system</a>
+                                                    </h4>
+                                                    <p class="related-content__content">
+                                                        Design a cache cluster
+                                                    </p>
+                                                </div>
+                                            </div> -->
+    
+                                         
+
+                                       
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2020 Study space
+
+			  <a href="../index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="../notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="../esources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>

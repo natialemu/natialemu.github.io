@@ -353,6 +353,21 @@
 			NoteLink: "log_storage_case_study.html",
 			NoteTileImage: "bst_1.jpg"
 		 }
+		 var shortestSuperstring = {
+			NoteTitle:"Case study: Super string",
+			NoteDescription: "Designing a cache with Least frequently used eviction policy",
+			NoteTileId: "algoNote3",
+			NoteLink: "super_string_case_study.html",
+			NoteTileImage: "optimal_tour.jpg"
+		 }
+
+		 var lfuCache = {
+			NoteTitle:"Case study: LFU cache",
+			NoteDescription: "An algorithm that finds the shortest super string",
+			NoteTileId: "algoNote3",
+			NoteLink: "lfu_cache_case_study.html",
+			NoteTileImage: "min_heap.jpg"
+		 }
 
 		/*
 		System Design notes
@@ -427,6 +442,12 @@
 	   $("#algorithmsContent").append(html);
 
 	   html = note_modal_template(logStorageSystem);
+	   $("#algorithmsContent").append(html);
+
+	   html = note_modal_template(shortestSuperstring);
+	   $("#algorithmsContent").append(html);
+
+	   html = note_modal_template(lfuCache);
 	   $("#algorithmsContent").append(html);
 
 	   

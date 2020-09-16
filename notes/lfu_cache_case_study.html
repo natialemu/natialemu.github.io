@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link href="../styles/maia.experimental.css" rel="stylesheet">
+
+    <link href="../styles/portfolio.css" rel="stylesheet">
+
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- JQuery-->
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,600&amp;subset=latin-ext" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script src="../scripts/handlebars-v4.0.5.js"></script>	<!-- handlebar library -->
+    <script src="../scripts/bootstrap.min.js"></script> <!-- bootsrap libraries -->
+    <script src="../scripts/jquery.lettering.js"></script>	<!-- lettering library -->
+    <script src="../scripts/jquery.textillate.js"></script>	<!-- textillate library -->
+
+
+    <title>LFU cache</title>
+</head>
+
+<body>
+
+	               <!-- progress indicator-->
+                <div class="progress-indicator" aria-valuemin="0" aria-valuemax="100" role="progressbar">
+						<div class="progress-indicator__wrapper">
+						  <div class="progress-indicator__bar1"></div>
+						  <div class="progress-indicator__bar2"></div>
+						</div>
+				</div>
+	
+				<!-- Header-->
+				<header role="banner" class="page-header has-submenu">
+					<nav class="page-header__drawer sticky-header">
+						<div class="page-header__content content-controls content-controls--flex">
+	
+							<!-- for the home logo-->
+							<div class="page-nav__header">
+								<div class="page-logo-lockup gc-header-dt__lockup">
+									<div title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+										<div class="page-logo-text gc-header-dt__product-logo">
+											<span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text">Study space</span>
+										</div>
+									</div>
+								</div>
+	
+							</div>
+	
+							<!--Container for the nav bars-->
+							<div class="gc-header-dt__nav">
+								<ul class="gc-header-dt__nav-list">
+
+									<li class="gc-header-dt__nav-list-item">
+											<a href="../index.html"  aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+												Home
+											</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../notes.html"  class="active" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Notes
+										</a>
+									</li>
+									<li class="gc-header-dt__nav-list-item">
+										<a href="../resources.html" aria-label="Selected Link: Teams" data-ga-action="Header nav_Select" data-ga-label="Teams" role="menuitem">
+											Resources
+										</a>
+									</li>
+								</ul>
+	
+							</div>
+						
+						</div>
+	
+                    </nav>
+                    
+                    <nav class="page-header__drawer sticky-header" >
+                            <div class="page-header__content content-controls content-controls--flex" style="background-color: rgb(240,240,240);">
+        
+                                <!-- for the home logo-->
+                                <div class="page-nav__header">
+                                    <div class="page-logo-lockup gc-header-dt__lockup">
+                                        <a href="#" title="Google Careers" aria-label="Google Careers" class="page-logo gc-header-dt__logo" data-ga-action="Header nav_Select" data-ga-label="Google Careers logo" role="menuitem">
+                                            <div class="page-logo-text gc-header-dt__product-logo">
+                                                <span aria-hidden="true" class="page-logo-text-span gc-header-dt__product-logo-text"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+        
+                                </div>
+        
+                                <!--Container for the nav bars-->
+                                <div class="gc-header-dt__nav" style="margin-left: 11.8rem;">
+                                    <ul class="gc-header-dt__nav-list">
+
+                             
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="#" class="active" aria-label="Selected Link: Teams" role="menuitem" >
+                                                        LFU cache
+                                                </a>
+                                        </li>
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                                <a href="linked_structures.html"  aria-label="Selected Link: Teams" role="menuitem" >
+                                                        Traversals
+                                                </a>
+                                        </li>
+
+                                        <li class="gc-header-dt__nav-list-item">
+                                            <a href="decision_making.html"   role="menuitem"  >
+                                                Recursive structures
+                                            </a>
+                                        </li>
+
+    
+                                 
+                                    </ul>
+        
+                                </div>
+                            
+                            </div>
+        
+                        </nav>
+	
+                </header>
+
+<div class="page-body" data-modal-source id="a11y-main" role="main" tabindex="0">
+    <div>
+        <!-- <div class="blogPageLeftSide" id="knapsackLeftSide"></div> -->
+        <div class="content-header--story"></div>
+
+
+    </div>
+
+    <div class="content-container content-row story-page story-page--restricted story-page--bottom">
+        <div class="grid">
+
+            <div class="grid__item desk--three-twelfths push--desk--one-twelfth tablet--four-twelfths">
+                <div class="story-page__head-shot-container">
+                    <div class="grid__item desk--four-twelfths story-page__head-shot-image" style="background-color: #fff;">
+                    </div>
+                    <div class="desk--eight-twelfths story-page__head-shot-caption">
+                            <p class="story-page__head-shot-caption--text story-page__head-shot-name" tabindex="-1"> LFU cache</p>
+                            <p class="head-shot-short-desc">Data structure design, Heaps, Binary search, Binary search trees</p>          
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid__item desk--eight-twelfths push--desk--one-twelfth tablet--eight-twelfths story-page__story">
+                <h1  class="content-title content-title--story">
+                    Case study: A cache with a least recently used eviction policy
+                </h1>
+
+        
+
+                                                <p class="paragraphFontStyle">
+                                                    The goal here is to design a data structure that behaves kind of like a cache. The cache will have a capacity and 
+                                                    an eviction policy based on the least recently used item.  It will have an API for retrieving an object from the 
+                                                    data structure via a key, and it will also have an API for adding a new key value pair to the data structure.
+                                                </p>
+
+                                                
+
+                                                <p class="paragraphFontStyle"> 
+                                                    Two data structures/algorithms that will prove to be useful later on are Heaps & Binary search.
+
+                                                </p>
+
+                                                <img src="../images/min_and_max_heaps.jpg" style=" width: 70%;"/>
+
+                                                
+
+                                                <p class="paragraphFontStyle"> 
+                                                    A <a id="externalLink" href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html">binary heap</a> 
+                                                    is a "complete binary tree" such that for every node X in the tree, all other nodes under X are either
+                                                     larger or smaller than X. If every nodes under X are smaller, the heap is called a max heap, and if all nodes under 
+                                                     X are larger, the heap becomes a min heap. This property is maintained regardless of wether an operation performed 
+                                                     on the heap. This means the node with the smallest key will always be at the root of the heap. If the root is removed,
+                                                      then a new minimum will take its place. The details of how a heap maintains its structure  when various behaviors
+                                                       are applied to it is highlighted <a id="externalLink" href="https://inst.eecs.berkeley.edu/~cs61bl/r//cur/queues-heaps/binary-heaps.html?topic=lab20.topic&step=5&course=">here</a>,
+                                                        and the implementation of a heap can be found <a id="externalLink" href="https://algs4.cs.princeton.edu/24pq/MinPQ.java.html">here</a>.
+
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+
+                                                    <a id="externalLink" href="https://webdocs.cs.ualberta.ca/~holte/T26/binary-search.html">Binary search</a> is a very powerful algorithm that is primarily used to efficiently search through sorted elements
+                                                     in a set. Due to the sorted nature of the elements, the algorithm, while searching for an item in the set,
+                                                      can deterministically eliminate half of the elements in every iteration. The algorithm divides the set into
+                                                       two, and based on some criteria, in this case comparing the target element to the pivot, it will disregard
+                                                        one half while continuing to sift through the other. This means it can go through all the elements of the
+                                                         array in logarithmic number of rounds with respect to the number of elements in the array. An implementation
+                                                          of binary search can be found <a id="externalLink" href="https://algs4.cs.princeton.edu/11model/BinarySearch.java.html">here</a>.
+                                                </p>
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                       
+
+                                                    So, the goal is to essentially create a data structure that stores key value pairs. If the goal was to store
+                                                     key value pairs with no additional constraints, a <a id="externalLink" href="https://algs4.cs.princeton.edu/34hash/">hash table</a> would be the best choice. However, what if the
+                                                      cache fills up? Some elements will need to be evicted to make space for any new additions. And the element
+                                                       that's evicted needs to be the least frequently used element (based on problem's description). So, whenever
+                                                        elements are queried, the data structure needs to update and keep track of the  count of each element. 
+                                                        This way when it comes to eviction, it just needs to find the element with the smallest count and then 
+                                                        remove that element. This is where a heap may prove to be useful. A heap will always maintain its
+                                                         structure even when various operations are applied to it. So if the elements are stored in a min 
+                                                         heap with the frequency of the elements being used to maintain the order of the nodes in the heap,
+                                                          it'll be easy to find which element has the minimum frequency at any point.
+                                                </p>
+
+
+
+
+
+                                                <p class="paragraphFontStyle"> 
+                                                    However, this approach presents its own problems. If the elements are only stored in a heap, then finding
+                                                     an element via its key will be very inefficient while finding its frequency will be optimized. So, maybe 
+                                                     somehow combining hash tables & heaps together will produce a more desirable solution. For any key and 
+                                                     value pair in the hash table, the value could point to the element in the heap. With this approach, retrieving
+                                                      an element using its key will be more efficient. Whenever an element is queried and its frequency is 
+                                                      updated, the heap will rebalance itself to maintain its structure and adhere to its property. Adding 
+                                                      a new key and value pair to the data structure  will cost as much as adding a new item into the heap.
+
+                                                  
+
+                                                </p>
+
+
+                                     
+
+                                                <p class="paragraphFontStyle"> 
+
+                                                    Another data structure that can be used to instead of a heap is a binary search tree. It can implement
+                                                     all the necessary behaviors in similar asymptotic time as that of a heap.
+
+                                                      
+                                                </p>
+
+
+
+
+
+
+                                                <p class="paragraphFontStyle">   
+                                                    What if instead of using a heap to store the elements, an array is used? The bottleneck with this approach 
+                                                    will be finding the element with the minimum frequency. But if the array is sorted, then the element with 
+                                                    the smallest frequency will always be on one end of the array. The question then becomes how much would it
+                                                     cost to maintain the array's sorted order for every operation that modifies an element's frequency? Whenever
+                                                      an element's count is increased, it may need to be moved to a different location in the array for the array
+                                                       to maintain It's sorted order. However, the frequency of an element can only increase by 1 per query. 
+                                                       This means swapping the element X with another element Y whose frequency is one more than X will be enough.
+                                                        In the best case, Y will just be next to X. In cases where there may be multiple elements with the same
+                                                         frequency as X, binary search can be used to find Y. Once X's new location is found, it can be swapped Y.
+                                                          Although the asymptotic runtime of the behaviors of the cache data structure implemented with this approach
+                                                           is similar to that of using a heap, in practice, this may before efficient especially in situations where
+                                                            the frequencies of the elements are distinct or uniformly distributed. The full implementation of an lfu cache implemented
+                                                            using a heap can be found <a id="externalLink" href="https://github.com/natialemu/problem-solving/blob/master/2020/Other/LFUCache.java">here</a>
+    
+                                                </p>
+
+
+
+
+
+
+
+
+                            
+                                
+                                                
+
+
+                                          
+            </div>
+        </div>
+    </div>
+
+    <div class="page-row-2">
+        <div class="content-container">
+            <div class="grid">
+                <div class="grid__item desk--eight-twelfths push--desk--four-twelfths tablet--eight-twelfths push--tablet--four-twelfths">
+                    <h2 class="related-content__header">Related contents</h2>
+
+
+
+
+                        <!-- test 3-->
+                        <div class="content-container mobile--hide" style="padding-left: 0;">
+                                <div class="content-row content-row--flush-bottom related-content related-content--padded">
+                                    <div class="grid">
+                                            <!-- <div class="grid__item tablet--one-half related-content__item--shifted desk--one-third">
+                                                <div class="related-content__item">
+                                                    <h4 class="related-content__title">
+                                                        <a  class="relatedContentLink" href="shortest_paths.html">Case study: designing a cache system</a>
+                                                    </h4>
+                                                    <p class="related-content__content">
+                                                        Design a cache cluster
+                                                    </p>
+                                                </div>
+                                            </div> -->
+    
+                                         
+
+                                       
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="hashcode-footer mdl-mini-footer">
+	    <div class="mdl-mini-footer__left-section">
+		   <p class="mdl-typography--font-light">
+
+              © 2020 Study space
+
+			  <a href="../index.html">
+			      Go to homepage
+			  </a>
+
+			  <a href="../notes.html">
+			      Read notes
+			  </a>
+
+			  <a href="../esources.html">
+			      Browse through resources
+			  </a>
+
+			  <a href="https://www.linkedin.com/in/nathnael-alemu-1b78bb107/">
+			      View LinkedIn
+			  </a>
+
+		   </p>
+		</div>
+
+	</footer>
+
+
+</body>
+
+
+</html>
